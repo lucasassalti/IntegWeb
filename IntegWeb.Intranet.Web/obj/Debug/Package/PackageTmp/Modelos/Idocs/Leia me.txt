@@ -1,0 +1,32 @@
+Cada pasta representa um tipo de documento, conforme abaixo:
+	1: "Aviso Pagamento - Suplementado";
+	2: "Extrato Previdenciário";
+	3: "Informe Rendimento Assistidos";
+	4: "Extrato Cobrança - Autopatrocinados";
+	5: "Extrato Cobrança - Seguros e Pecúlio";
+	6: "Carta Revisão INSS";
+	7: "Não Utiliza";
+	8: "Extrato Cobrança - Saúde";
+	9: "Extrato Mensal Utilização - AMH";
+	10 "Extrato Mensal Utilização - PES";
+	11: "Crédito Reembolso";
+	12: "Extrato Anual Utilização";
+	13: "Carta de Cobrança ExtraJudicial Adm";
+	14: "Informe Rendimento Credenciados";
+	15: "Termo Quitação Serviços Prestados";
+	16: "Aviso Pagamento - Complementados";
+
+Cada pasta deve ter um arquivo HTML com o nome "Template_Corpo_Email.htm".
+O corpo do email será enviado com o conteudo deste arquivo.
+
+
+Dentro do arquivo "Template_Corpo_Email.htm", os serquintes textos serão trocados:
+	"TipoDocumento" -- exemplo:  "Extrato Cobrança - Saúde"
+	"NomeParticipante" -- exemplo:  "TIAGO PINHEIRO"
+	"EmpresaParticipante" -- exemplo:  "4"
+	"RegistroParticipante" -- exemplo:  "2260"
+	"NumeroRepresentanteParticipante" -- exemplo:  "0"
+	"DiaAtual" -- exemplo:  "04/11/2013"
+	"HoraAtual" -- exemplo:  "09:56"
+
+Demais configuracoes deverão ser realizadas no código da aplicação.

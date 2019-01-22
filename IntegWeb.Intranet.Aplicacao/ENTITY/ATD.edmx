@@ -1,0 +1,851 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="EMPREGADO" EntityType="Model.Store.EMPREGADO" store:Type="Tables" Schema="ATT" />
+          <EntitySet Name="FCESP_EXT_AMH_EXCECAO" EntityType="Model.Store.FCESP_EXT_AMH_EXCECAO" store:Type="Tables" Schema="OPPORTUNITY" />
+          <EntitySet Name="FCESP_EXT_AMH_EXCECAO_LOG" EntityType="Model.Store.FCESP_EXT_AMH_EXCECAO_LOG" store:Type="Tables" Schema="OPPORTUNITY" />
+          <EntitySet Name="FUN_TBL_EXCLUSAO_REVISTA" EntityType="Model.Store.FUN_TBL_EXCLUSAO_REVISTA" store:Type="Tables" Schema="OWN_FUNCESP" />
+          <EntitySet Name="FUN_TBL_EXCLUSAO_REVISTA_LOG" EntityType="Model.Store.FUN_TBL_EXCLUSAO_REVISTA_LOG" store:Type="Tables" Schema="OWN_FUNCESP" />
+          <EntitySet Name="FUN_TBL_USUARIO" EntityType="Model.Store.FUN_TBL_USUARIO" store:Type="Tables" Schema="OWN_FUNCESP" />
+          <EntitySet Name="TB_PRIORIZACHAMADO" EntityType="Model.Store.TB_PRIORIZACHAMADO" store:Type="Tables" Schema="OWN_FUNCESP" />
+          <EntitySet Name="VW_PRIORIZACHAMADO" EntityType="Model.Store.VW_PRIORIZACHAMADO" store:Type="Views" store:Schema="OWN_FUNCESP" store:Name="VW_PRIORIZACHAMADO">
+            <DefiningQuery>SELECT 
+      "VW_PRIORIZACHAMADO"."CHAMADO" AS "CHAMADO", 
+      "VW_PRIORIZACHAMADO"."TITULO" AS "TITULO", 
+      "VW_PRIORIZACHAMADO"."AREA" AS "AREA", 
+      "VW_PRIORIZACHAMADO"."ANALISTA" AS "ANALISTA", 
+      "VW_PRIORIZACHAMADO"."ID_USUARIO" AS "ID_USUARIO", 
+      "VW_PRIORIZACHAMADO"."STATUS" AS "STATUS", 
+      "VW_PRIORIZACHAMADO"."DT_INCLUSAO" AS "DT_INCLUSAO", 
+      "VW_PRIORIZACHAMADO"."DT_TERMINO" AS "DT_TERMINO", 
+      "VW_PRIORIZACHAMADO"."DT_STATUS" AS "DT_STATUS", 
+      "VW_PRIORIZACHAMADO"."OBS" AS "OBS"
+      FROM "OWN_FUNCESP"."VW_PRIORIZACHAMADO" "VW_PRIORIZACHAMADO"</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="CF_EMPREGADO_003" Association="Model.Store.CF_EMPREGADO_003">
+            <End Role="EMPREGADO" EntitySet="EMPREGADO" />
+            <End Role="EMPREGADO1" EntitySet="EMPREGADO" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="EMPREGADO">
+          <Key>
+            <PropertyRef Name="COD_EMPRS" />
+            <PropertyRef Name="NUM_RGTRO_EMPRG" />
+          </Key>
+          <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="3" />
+          <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="10" />
+          <Property Name="NUM_DIGVR_EMPRG" Type="number" Precision="1" />
+          <Property Name="NOM_PAI_EMPRG" Type="varchar2" MaxLength="255" />
+          <Property Name="NOM_MAE_EMPRG" Type="varchar2" MaxLength="255" />
+          <Property Name="NUM_MATR_PARTF" Type="number" Precision="6" />
+          <Property Name="COD_CONFL_EMPRG" Type="number" Precision="1" />
+          <Property Name="COD_CTTRB_EMPRG" Type="number" Precision="1" />
+          <Property Name="COD_DDD_EMPRG" Type="varchar2" MaxLength="4" />
+          <Property Name="QTD_MESTRB_EMPRG" Type="number" Precision="4" />
+          <Property Name="COD_DDI_EMPRG" Type="varchar2" MaxLength="7" />
+          <Property Name="COD_ESTCV_EMPRG" Type="number" Precision="1" />
+          <Property Name="COD_SEXO_EMPRG" Type="char" MaxLength="1" />
+          <Property Name="DAT_ADMSS_EMPRG" Type="date" />
+          <Property Name="DAT_DESLG_EMPRG" Type="date" />
+          <Property Name="DAT_NASCM_EMPRG" Type="date" />
+          <Property Name="DCR_ENDER_EMPRG" Type="varchar2" MaxLength="140" />
+          <Property Name="NOM_BAIRRO_EMPRG" Type="varchar2" MaxLength="60" />
+          <Property Name="NOM_EMPRG" Type="varchar2" MaxLength="50" />
+          <Property Name="NOM_PAIS_EMPRG" Type="varchar2" MaxLength="30" />
+          <Property Name="NUM_CPF_EMPRG" Type="number" Precision="11" />
+          <Property Name="NUM_CI_EMPRG" Type="varchar2" MaxLength="15" />
+          <Property Name="COD_OREXCI_EMPRG" Type="varchar2" MaxLength="15" />
+          <Property Name="COD_UFCI_EMPRG" Type="varchar2" MaxLength="3" />
+          <Property Name="NUM_CTCOR_EMPRG" Type="varchar2" MaxLength="15" />
+          <Property Name="NUM_CXPTL_EMPRG" Type="number" Precision="8" />
+          <Property Name="NUM_GRSAL_EMPRG" Type="number" Precision="2" />
+          <Property Name="NUM_RAMAL_EMPRG" Type="number" Precision="4" />
+          <Property Name="NUM_TELEF_EMPRG" Type="number" Precision="8" />
+          <Property Name="VLR_SALAR_EMPRG" Type="number" Precision="18" Scale="4" />
+          <Property Name="NUM_CTPRF_EMPRG" Type="number" Precision="15" />
+          <Property Name="NUM_SRCTP_EMPRG" Type="varchar2" MaxLength="5" />
+          <Property Name="QTD_INSS_EMPRG" Type="number" Precision="4" />
+          <Property Name="COD_CEP_EMPRG" Type="number" Precision="8" />
+          <Property Name="NUM_CARGO" Type="number" Precision="8" />
+          <Property Name="NUM_FILIAL" Type="number" Precision="4" />
+          <Property Name="COD_BANCO" Type="number" Precision="3" />
+          <Property Name="COD_AGBCO" Type="number" Precision="7" />
+          <Property Name="NUM_CR" Type="number" Precision="8" />
+          <Property Name="COD_MUNICI" Type="varchar2" MaxLength="7" />
+          <Property Name="COD_ESTADO" Type="varchar2" MaxLength="2" />
+          <Property Name="NUM_ORGAO" Type="number" Precision="5" />
+          <Property Name="COD_MTDSL" Type="number" Precision="2" />
+          <Property Name="NOM_CIDRS_EMPRG" Type="varchar2" MaxLength="50" />
+          <Property Name="COD_UNDFD_EMPRG" Type="varchar2" MaxLength="2" />
+          <Property Name="DCR_OBSERVACAO" Type="varchar2" MaxLength="100" />
+          <Property Name="MRC_PLSAUD_EMPRG" Type="char" MaxLength="1" />
+          <Property Name="COD_EMAIL_EMPRG" Type="varchar2" MaxLength="50" />
+          <Property Name="NUM_PISPAS_EMPRG" Type="number" Precision="11" />
+          <Property Name="DAT_FALEC_EMPRG" Type="date" />
+          <Property Name="DCR_NATURAL_EMPRG" Type="varchar2" MaxLength="30" />
+          <Property Name="DAT_EXPCI_EMPRG" Type="date" />
+          <Property Name="DCR_COMPL_EMPRG" Type="varchar2" MaxLength="120" />
+          <Property Name="DCR_OCPPROF_EMPRG" Type="varchar2" MaxLength="50" />
+          <Property Name="NUM_CELUL_EMPRG" Type="number" Precision="9" />
+          <Property Name="DCR_NACNL_EMPRG" Type="varchar2" MaxLength="30" />
+          <Property Name="TIP_CTCOR_EMPRG" Type="char" MaxLength="5" />
+          <Property Name="COD_UFNAT_EMPRG" Type="char" MaxLength="2" />
+          <Property Name="VLR_01_EMPRG" Type="number" Precision="13" Scale="2" />
+          <Property Name="NUM_TELRES_EMPRG" Type="varchar2" MaxLength="30" />
+          <Property Name="COD_DDDCEL_EMPRG" Type="char" MaxLength="4" />
+          <Property Name="QTD_DIATRB_EMPRG" Type="number" Precision="4" />
+          <Property Name="QTD_ANOTRB_EMPRG" Type="number" Precision="4" />
+          <Property Name="QTD_DIAANT_EMPRG" Type="number" Precision="4" />
+          <Property Name="QTD_MESANT_EMPRG" Type="number" Precision="4" />
+          <Property Name="QTD_ANOANT_EMPRG" Type="number" Precision="4" />
+          <Property Name="NUM_TITULO_EMPRG" Type="number" Precision="12" />
+          <Property Name="NUM_ZONA_EMPRG" Type="number" Precision="3" />
+          <Property Name="NUM_SECAO_EMPRG" Type="number" Precision="4" />
+          <Property Name="NUM_RGORIG_EMPRG" Type="char" MaxLength="20" />
+          <Property Name="DAT_ULT_RCD_EMPRG" Type="date" />
+          <Property Name="AGCCODCODIGODAAGENCIA" Type="number" Precision="3" />
+          <Property Name="STECOD" Type="number" Precision="5" />
+          <Property Name="NUM_CPFCTC_EMPRG" Type="number" Precision="11" />
+          <Property Name="NOM_SEGTIT_EMPRG" Type="varchar2" MaxLength="50" />
+          <Property Name="NUM_ENDER_EMPRG" Type="number" Precision="6" />
+          <Property Name="COD_EMPRSRPTANT_EMPRG" Type="number" Precision="3" />
+          <Property Name="NUM_RGTRORPTANT_EMPRG" Type="number" Precision="10" />
+          <Property Name="NUM_DDDFAX_EMPRG" Type="char" MaxLength="4" />
+          <Property Name="NUM_FAX_EMPRG" Type="number" Precision="8" />
+          <Property Name="NUM_DDIFAX_EMPRG" Type="char" MaxLength="7" />
+          <Property Name="ATECODATRIBUTOEMPRG" Type="number" Precision="3" />
+          <Property Name="VLR_PATRIMONIAL_EMPRG" Type="number" Precision="13" Scale="2" />
+          <Property Name="VLR_RENDIMENTO_EMPRG" Type="number" Precision="13" Scale="2" />
+          <Property Name="DCR_SITPPE_EMPRG" Type="varchar2" MaxLength="2500" />
+          <Property Name="DCR_RENDIMENTO_EMPRG" Type="varchar2" MaxLength="2500" />
+          <Property Name="NAT_DOCIDNT_EMPRG" Type="char" MaxLength="40" />
+          <Property Name="PAICOD" Type="number" Precision="6" />
+          <Property Name="COD_ESTRUT_EMPRG" Type="varchar2" MaxLength="50" />
+          <Property Name="DCR_IDIOMA_EMPRG" Type="varchar2" MaxLength="40" />
+          <Property Name="MRC_NEGSEF_EMPRG" Type="char" MaxLength="1" />
+          <Property Name="NUM_IP_EMPRG" Type="varchar2" MaxLength="50" />
+          <Property Name="MRC_NAOPART_EMPRG" Type="char" MaxLength="1" />
+          <Property Name="NUM_CELUL2_EMPRG" Type="varchar2" MaxLength="30" />
+          <Property Name="DAT_OBTSRS_EMPRG" Type="date" />
+          <Property Name="DCR_MOTOBT_EMPRG" Type="varchar2" MaxLength="50" />
+          <Property Name="EMPRGIDCTIPOMARCACAO" Type="char" MaxLength="2" />
+          <Property Name="DAT_PREVAPOS_EMPRG" Type="date" />
+          <Property Name="EMPRGIDCGRPSANGUINEO" Type="char" MaxLength="2" />
+          <Property Name="EMPRGIDCFATORRH" Type="char" MaxLength="1" />
+          <Property Name="EMPRGNUMNATUREZA" Type="varchar2" MaxLength="15" />
+          <Property Name="EMPRGORGEMINATUREZA" Type="varchar2" MaxLength="25" />
+          <Property Name="EMPRGUNFORGEMINATUREZA" Type="char" MaxLength="2" />
+          <Property Name="EMPRGDTHEMINATUREZA" Type="date" />
+          <Property Name="TLGCODTIPOLOGRAD" Type="number" Precision="3" />
+          <Property Name="DCR_LOGRAD" Type="varchar2" MaxLength="70" />
+          <Property Name="NOM_EMPGR_ANS" Type="varchar2" MaxLength="255" />
+          <Property Name="EMPRGCODDDI2" Type="char" MaxLength="7" />
+          <Property Name="EMPRGCODDDD2" Type="char" MaxLength="4" />
+          <Property Name="EMPRGNUMTELEF2" Type="number" Precision="8" />
+          <Property Name="EMPRGDESEMAIL2" Type="varchar2" MaxLength="50" />
+          <Property Name="NUM_SIAPE_EMPRG" Type="varchar2" MaxLength="10" />
+          <Property Name="NUM_MATFNC_EMPRG" Type="varchar2" MaxLength="10" />
+          <Property Name="NUM_CNS_EMPRG" Type="varchar2" MaxLength="20" />
+          <Property Name="PESCODPESSOA" Type="number" Precision="10" />
+          <Property Name="DCR_APOS1_EMPRG" Type="varchar2" MaxLength="50" />
+          <Property Name="DAT_INIAPOS1_EMPRG" Type="date" />
+          <Property Name="DAT_FIMAPOS1_EMPREG" Type="date" />
+          <Property Name="DCR_APOS2_EMPRG" Type="varchar2" MaxLength="50" />
+          <Property Name="DAT_INIAPOS2_EMPRG" Type="date" />
+          <Property Name="DAT_FIMAPOS2_EMPREG" Type="date" />
+          <Property Name="DCR_APOS3_EMPRG" Type="varchar2" MaxLength="50" />
+          <Property Name="DAT_INIAPOS3_EMPRG" Type="date" />
+          <Property Name="DAT_FIMAPOS3_EMPREG" Type="date" />
+          <Property Name="DCR_APOS4_EMPRG" Type="varchar2" MaxLength="50" />
+          <Property Name="DAT_INIAPOS4_EMPRG" Type="date" />
+          <Property Name="DAT_FIMAPOS4_EMPREG" Type="date" />
+          <Property Name="DAT_PRIEMP_EMPRG" Type="date" />
+          <Property Name="MRC_ASSOC_EMPRG" Type="char" MaxLength="1" />
+          <Property Name="MRC_DEFFIS_EMPRG" Type="char" MaxLength="1" />
+          <Property Name="GDECOD" Type="number" Precision="2" />
+          <Property Name="PAICODNASCIMENTO" Type="number" Precision="6" />
+          <Property Name="PAICODRESIDENCIA" Type="number" Precision="6" />
+          <Property Name="PAICODCIDADANIA1" Type="number" Precision="6" />
+          <Property Name="PAICODCIDADANIA2" Type="number" Precision="6" />
+          <Property Name="NUM_GRNCRD_EMPRG" Type="varchar2" MaxLength="15" />
+          <Property Name="DAT_VLDGRNCRD_EMPRG" Type="date" />
+          <Property Name="NUM_DDICEL_EMPRG" Type="varchar2" MaxLength="7" />
+          <Property Name="DAT_RECAD_EMPRG" Type="date" />
+          <Property Name="MRC_RES_EXT_EMPRG" Type="char" MaxLength="1" />
+          <Property Name="NOM_PAIS_EXT_1" Type="varchar2" MaxLength="85" />
+          <Property Name="NOM_PAIS_EXT_2" Type="varchar2" MaxLength="85" />
+          <Property Name="NOM_PAIS_EXT_3" Type="varchar2" MaxLength="85" />
+          <Property Name="PAICODPAISEXT1" Type="number" Precision="6" />
+          <Property Name="PAICODPAISEXT2" Type="number" Precision="6" />
+          <Property Name="PAICODPAISEXT3" Type="number" Precision="6" />
+          <Property Name="MRC_DOC_GRNCRD" Type="char" MaxLength="1" />
+          <Property Name="NOM_CJGE_EMPRG" Type="varchar2" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="FCESP_EXT_AMH_EXCECAO">
+          <Key>
+            <PropertyRef Name="COD_EMPRS" />
+            <PropertyRef Name="NUM_RGTRO_EMPRG" />
+            <PropertyRef Name="NUM_CPF_EMPRG" />
+          </Key>
+          <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="3" />
+          <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="11" />
+          <Property Name="NUM_CPF_EMPRG" Type="number" Nullable="false" Precision="11" />
+          <Property Name="NUM_IDNTF_RPTANT" Type="number" Precision="6" />
+          <Property Name="USER_INC" Type="varchar2" MaxLength="30" />
+          <Property Name="DT_INC" Type="date" />
+          <Property Name="ID_CHAMADO" Type="number" />
+        </EntityType>
+        <EntityType Name="FCESP_EXT_AMH_EXCECAO_LOG">
+          <Key>
+            <PropertyRef Name="ID_LOG" />
+          </Key>
+          <Property Name="ID_LOG" Type="number" Nullable="false" />
+          <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="3" />
+          <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="11" />
+          <Property Name="NUM_CPF_EMPRG" Type="number" Precision="11" />
+          <Property Name="NUM_IDNTF_RPTANT" Type="number" Precision="6" />
+          <Property Name="TP_ACAO" Type="varchar2" MaxLength="1" />
+          <Property Name="USER_INC" Type="varchar2" MaxLength="30" />
+          <Property Name="DATA_INC" Type="date" />
+        </EntityType>
+        <EntityType Name="FUN_TBL_EXCLUSAO_REVISTA">
+          <Key>
+            <PropertyRef Name="COD_EMPRS" />
+            <PropertyRef Name="NUM_RGTRO_EMPRG" />
+          </Key>
+          <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="3" />
+          <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="10" />
+          <Property Name="NUM_IDNTF_RPTANT" Type="number" Precision="6" />
+          <Property Name="DATA_INC" Type="date" />
+          <Property Name="USU_INC" Type="varchar2" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="FUN_TBL_EXCLUSAO_REVISTA_LOG">
+          <Key>
+            <PropertyRef Name="ID_LOG" />
+          </Key>
+          <Property Name="ID_LOG" Type="number" Nullable="false" />
+          <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="3" />
+          <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="10" />
+          <Property Name="NUM_IDNTF_RPTANT" Type="number" Precision="6" />
+          <Property Name="DATA_ATU" Type="date" />
+          <Property Name="TP_ATU" Type="varchar2" MaxLength="1" />
+          <Property Name="USU_INC" Type="varchar2" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="FUN_TBL_USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="number" Nullable="false" />
+          <Property Name="NOME" Type="varchar2" MaxLength="400" />
+          <Property Name="LOGIN" Type="varchar2" MaxLength="400" />
+          <Property Name="EMAIL" Type="varchar2" MaxLength="400" />
+          <Property Name="DEPARTAMENTO" Type="varchar2" MaxLength="400" />
+          <Property Name="DT_INCLUSAO" Type="date" />
+          <Property Name="STATUS" Type="number" />
+        </EntityType>
+        <EntityType Name="TB_PRIORIZACHAMADO">
+          <Key>
+            <PropertyRef Name="CHAMADO" />
+          </Key>
+          <Property Name="CHAMADO" Type="number" Nullable="false" />
+          <Property Name="TITULO" Type="varchar2" MaxLength="200" />
+          <Property Name="AREA" Type="varchar2" MaxLength="10" />
+          <Property Name="ID_USUARIO" Type="number" />
+          <Property Name="STATUS" Type="varchar2" MaxLength="20" />
+          <Property Name="DT_INCLUSAO" Type="date" />
+          <Property Name="DT_TERMINO" Type="date" />
+          <Property Name="OBS" Type="varchar2" MaxLength="500" />
+          <Property Name="DT_STATUS" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OWN_FUNCESP.VW_PRIORIZACHAMADO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_PRIORIZACHAMADO">
+          <Key>
+            <PropertyRef Name="CHAMADO" />
+          </Key>
+          <Property Name="CHAMADO" Type="number" Nullable="false" />
+          <Property Name="TITULO" Type="varchar2" MaxLength="200" />
+          <Property Name="AREA" Type="varchar2" MaxLength="10" />
+          <Property Name="ANALISTA" Type="varchar2" MaxLength="802" />
+          <Property Name="ID_USUARIO" Type="number" />
+          <Property Name="STATUS" Type="varchar2" MaxLength="20" />
+          <Property Name="DT_INCLUSAO" Type="date" />
+          <Property Name="DT_TERMINO" Type="date" />
+          <Property Name="DT_STATUS" Type="date" />
+          <Property Name="OBS" Type="varchar2" MaxLength="500" />
+        </EntityType>
+        <Association Name="CF_EMPREGADO_003">
+          <End Role="EMPREGADO" Type="Model.Store.EMPREGADO" Multiplicity="0..1" />
+          <End Role="EMPREGADO1" Type="Model.Store.EMPREGADO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPREGADO">
+              <PropertyRef Name="COD_EMPRS" />
+              <PropertyRef Name="NUM_RGTRO_EMPRG" />
+            </Principal>
+            <Dependent Role="EMPREGADO1">
+              <PropertyRef Name="COD_EMPRSRPTANT_EMPRG" />
+              <PropertyRef Name="NUM_RGTRORPTANT_EMPRG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="INTRA_Entity_Conn" p1:LazyLoadingEnabled="true" >
+          <EntitySet Name="TB_PRIORIZACHAMADO" EntityType="Model.TB_PRIORIZACHAMADO" />
+          <EntitySet Name="FUN_TBL_USUARIO" EntityType="Model.FUN_TBL_USUARIO" />
+          <EntitySet Name="VW_PRIORIZACHAMADO" EntityType="Model.VW_PRIORIZACHAMADO" />
+          <EntitySet Name="FUN_TBL_EXCLUSAO_REVISTA" EntityType="Model.FUN_TBL_EXCLUSAO_REVISTA" />
+          <EntitySet Name="FUN_TBL_EXCLUSAO_REVISTA_LOG" EntityType="Model.FUN_TBL_EXCLUSAO_REVISTA_LOG" />
+          <EntitySet Name="EMPREGADO" EntityType="Model.EMPREGADO" />
+          <AssociationSet Name="CF_EMPREGADO_003" Association="Model.CF_EMPREGADO_003">
+            <End Role="EMPREGADO" EntitySet="EMPREGADO" />
+            <End Role="EMPREGADO1" EntitySet="EMPREGADO" />
+          </AssociationSet>
+          <EntitySet Name="FCESP_EXT_AMH_EXCECAO" EntityType="Model.FCESP_EXT_AMH_EXCECAO" />
+          <EntitySet Name="FCESP_EXT_AMH_EXCECAO_LOG" EntityType="Model.FCESP_EXT_AMH_EXCECAO_LOG" />
+        </EntityContainer>
+        <EntityType Name="TB_PRIORIZACHAMADO">
+          <Key>
+            <PropertyRef Name="CHAMADO" />
+          </Key>
+          <Property Type="Decimal" Name="CHAMADO" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="String" Name="TITULO" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AREA" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STATUS" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DT_INCLUSAO" Precision="0" />
+          <Property Type="DateTime" Name="DT_TERMINO" Precision="0" />
+          <Property Type="Decimal" Name="ID_USUARIO" Precision="38" Scale="0" />
+          <Property Type="String" Name="OBS" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DT_STATUS" />
+        </EntityType>
+        <EntityType Name="FUN_TBL_USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Type="Decimal" Name="ID_USUARIO" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="String" Name="NOME" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOGIN" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMAIL" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DEPARTAMENTO" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DT_INCLUSAO" Precision="0" />
+          <Property Type="Decimal" Name="STATUS" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="VW_PRIORIZACHAMADO">
+          <Key>
+            <PropertyRef Name="CHAMADO" />
+          </Key>
+          <Property Type="Decimal" Name="CHAMADO" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="String" Name="TITULO" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AREA" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ANALISTA" MaxLength="802" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STATUS" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DT_INCLUSAO" Precision="0" />
+          <Property Type="DateTime" Name="DT_TERMINO" Precision="0" />
+          <Property Type="Decimal" Name="ID_USUARIO" Precision="38" Scale="0" />
+          <Property Type="String" Name="OBS" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DT_STATUS" />
+        </EntityType>
+        <EntityType Name="FUN_TBL_EXCLUSAO_REVISTA">
+          <Key>
+            <PropertyRef Name="COD_EMPRS" />
+            <PropertyRef Name="NUM_RGTRO_EMPRG" />
+          </Key>
+          <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+          <Property Type="Int32" Name="NUM_RGTRO_EMPRG" Nullable="false" />
+          <Property Type="Int32" Name="NUM_IDNTF_RPTANT" />
+          <Property Type="DateTime" Name="DATA_INC" />
+          <Property Type="String" Name="USU_INC" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FUN_TBL_EXCLUSAO_REVISTA_LOG">
+          <Key>
+            <PropertyRef Name="ID_LOG" />
+          </Key>
+          <Property Type="Decimal" Name="ID_LOG" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+          <Property Type="Int32" Name="NUM_RGTRO_EMPRG" Nullable="false" />
+          <Property Type="Int32" Name="NUM_IDNTF_RPTANT" />
+          <Property Type="DateTime" Name="DATA_ATU" />
+          <Property Type="String" Name="TP_ATU" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USU_INC" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EMPREGADO">
+          <Key>
+            <PropertyRef Name="COD_EMPRS" />
+            <PropertyRef Name="NUM_RGTRO_EMPRG" />
+          </Key>
+          <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+          <Property Type="Int32" Name="NUM_RGTRO_EMPRG" Nullable="false" />
+          <Property Type="Int16" Name="NUM_DIGVR_EMPRG" />
+          <Property Type="String" Name="NOM_PAI_EMPRG" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NOM_MAE_EMPRG" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="NUM_MATR_PARTF" />
+          <Property Type="Int16" Name="COD_CONFL_EMPRG" />
+          <Property Type="Int16" Name="COD_CTTRB_EMPRG" />
+          <Property Type="String" Name="COD_DDD_EMPRG" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="QTD_MESTRB_EMPRG" />
+          <Property Type="String" Name="COD_DDI_EMPRG" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="COD_ESTCV_EMPRG" />
+          <Property Type="String" Name="COD_SEXO_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="DAT_ADMSS_EMPRG" />
+          <Property Type="DateTime" Name="DAT_DESLG_EMPRG" />
+          <Property Type="DateTime" Name="DAT_NASCM_EMPRG" />
+          <Property Type="String" Name="DCR_ENDER_EMPRG" MaxLength="140" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NOM_BAIRRO_EMPRG" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NOM_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NOM_PAIS_EMPRG" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="NUM_CPF_EMPRG" />
+          <Property Type="String" Name="NUM_CI_EMPRG" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COD_OREXCI_EMPRG" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COD_UFCI_EMPRG" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NUM_CTCOR_EMPRG" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="NUM_CXPTL_EMPRG" />
+          <Property Type="Int16" Name="NUM_GRSAL_EMPRG" />
+          <Property Type="Int16" Name="NUM_RAMAL_EMPRG" />
+          <Property Type="Int32" Name="NUM_TELEF_EMPRG" />
+          <Property Type="Decimal" Name="VLR_SALAR_EMPRG" Precision="18" Scale="4" />
+          <Property Type="Int64" Name="NUM_CTPRF_EMPRG" />
+          <Property Type="String" Name="NUM_SRCTP_EMPRG" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="QTD_INSS_EMPRG" />
+          <Property Type="Int32" Name="COD_CEP_EMPRG" />
+          <Property Type="Int32" Name="NUM_CARGO" />
+          <Property Type="Int16" Name="NUM_FILIAL" />
+          <Property Type="Int16" Name="COD_BANCO" />
+          <Property Type="Int32" Name="COD_AGBCO" />
+          <Property Type="Int32" Name="NUM_CR" />
+          <Property Type="String" Name="COD_MUNICI" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COD_ESTADO" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="NUM_ORGAO" />
+          <Property Type="Int16" Name="COD_MTDSL" />
+          <Property Type="String" Name="NOM_CIDRS_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COD_UNDFD_EMPRG" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DCR_OBSERVACAO" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MRC_PLSAUD_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="COD_EMAIL_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="NUM_PISPAS_EMPRG" />
+          <Property Type="DateTime" Name="DAT_FALEC_EMPRG" />
+          <Property Type="String" Name="DCR_NATURAL_EMPRG" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DAT_EXPCI_EMPRG" />
+          <Property Type="String" Name="DCR_COMPL_EMPRG" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DCR_OCPPROF_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="NUM_CELUL_EMPRG" />
+          <Property Type="String" Name="DCR_NACNL_EMPRG" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TIP_CTCOR_EMPRG" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="COD_UFNAT_EMPRG" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="Decimal" Name="VLR_01_EMPRG" Precision="13" Scale="2" />
+          <Property Type="String" Name="NUM_TELRES_EMPRG" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COD_DDDCEL_EMPRG" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Int16" Name="QTD_DIATRB_EMPRG" />
+          <Property Type="Int16" Name="QTD_ANOTRB_EMPRG" />
+          <Property Type="Int16" Name="QTD_DIAANT_EMPRG" />
+          <Property Type="Int16" Name="QTD_MESANT_EMPRG" />
+          <Property Type="Int16" Name="QTD_ANOANT_EMPRG" />
+          <Property Type="Int64" Name="NUM_TITULO_EMPRG" />
+          <Property Type="Int16" Name="NUM_ZONA_EMPRG" />
+          <Property Type="Int16" Name="NUM_SECAO_EMPRG" />
+          <Property Type="String" Name="NUM_RGORIG_EMPRG" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="DAT_ULT_RCD_EMPRG" />
+          <Property Type="Int16" Name="AGCCODCODIGODAAGENCIA" />
+          <Property Type="Int16" Name="STECOD" />
+          <Property Type="Int64" Name="NUM_CPFCTC_EMPRG" />
+          <Property Type="String" Name="NOM_SEGTIT_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="NUM_ENDER_EMPRG" />
+          <Property Type="String" Name="NUM_DDDFAX_EMPRG" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="NUM_FAX_EMPRG" />
+          <Property Type="String" Name="NUM_DDIFAX_EMPRG" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Type="Int16" Name="ATECODATRIBUTOEMPRG" />
+          <Property Type="Decimal" Name="VLR_PATRIMONIAL_EMPRG" Precision="13" Scale="2" />
+          <Property Type="Decimal" Name="VLR_RENDIMENTO_EMPRG" Precision="13" Scale="2" />
+          <Property Type="String" Name="DCR_SITPPE_EMPRG" MaxLength="2500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DCR_RENDIMENTO_EMPRG" MaxLength="2500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAT_DOCIDNT_EMPRG" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="PAICOD" />
+          <Property Type="String" Name="COD_ESTRUT_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DCR_IDIOMA_EMPRG" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MRC_NEGSEF_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="NUM_IP_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MRC_NAOPART_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="NUM_CELUL2_EMPRG" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DAT_OBTSRS_EMPRG" />
+          <Property Type="String" Name="DCR_MOTOBT_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPRGIDCTIPOMARCACAO" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="DAT_PREVAPOS_EMPRG" />
+          <Property Type="String" Name="EMPRGIDCGRPSANGUINEO" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="EMPRGIDCFATORRH" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="EMPRGNUMNATUREZA" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPRGORGEMINATUREZA" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPRGUNFORGEMINATUREZA" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="EMPRGDTHEMINATUREZA" />
+          <Property Type="Int16" Name="TLGCODTIPOLOGRAD" />
+          <Property Type="String" Name="DCR_LOGRAD" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NOM_EMPGR_ANS" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPRGCODDDI2" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="EMPRGCODDDD2" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="EMPRGNUMTELEF2" />
+          <Property Type="String" Name="EMPRGDESEMAIL2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NUM_SIAPE_EMPRG" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NUM_MATFNC_EMPRG" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NUM_CNS_EMPRG" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="PESCODPESSOA" />
+          <Property Type="String" Name="DCR_APOS1_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DAT_INIAPOS1_EMPRG" />
+          <Property Type="DateTime" Name="DAT_FIMAPOS1_EMPREG" />
+          <Property Type="String" Name="DCR_APOS2_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DAT_INIAPOS2_EMPRG" />
+          <Property Type="DateTime" Name="DAT_FIMAPOS2_EMPREG" />
+          <Property Type="String" Name="DCR_APOS3_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DAT_INIAPOS3_EMPRG" />
+          <Property Type="DateTime" Name="DAT_FIMAPOS3_EMPREG" />
+          <Property Type="String" Name="DCR_APOS4_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DAT_INIAPOS4_EMPRG" />
+          <Property Type="DateTime" Name="DAT_FIMAPOS4_EMPREG" />
+          <Property Type="DateTime" Name="DAT_PRIEMP_EMPRG" />
+          <Property Type="String" Name="MRC_ASSOC_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="MRC_DEFFIS_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Int16" Name="GDECOD" />
+          <Property Type="Int32" Name="PAICODNASCIMENTO" />
+          <Property Type="Int32" Name="PAICODRESIDENCIA" />
+          <Property Type="Int32" Name="PAICODCIDADANIA1" />
+          <Property Type="Int32" Name="PAICODCIDADANIA2" />
+          <Property Type="String" Name="NUM_GRNCRD_EMPRG" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DAT_VLDGRNCRD_EMPRG" />
+          <Property Type="String" Name="NUM_DDICEL_EMPRG" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DAT_RECAD_EMPRG" />
+          <Property Type="String" Name="MRC_RES_EXT_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="NOM_PAIS_EXT_1" MaxLength="85" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NOM_PAIS_EXT_2" MaxLength="85" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NOM_PAIS_EXT_3" MaxLength="85" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="PAICODPAISEXT1" />
+          <Property Type="Int32" Name="PAICODPAISEXT2" />
+          <Property Type="Int32" Name="PAICODPAISEXT3" />
+          <Property Type="String" Name="MRC_DOC_GRNCRD" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="NOM_CJGE_EMPRG" MaxLength="80" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EMPREGADO1" Relationship="Model.CF_EMPREGADO_003" FromRole="EMPREGADO" ToRole="EMPREGADO1" />
+          <NavigationProperty Name="EMPREGADO2" Relationship="Model.CF_EMPREGADO_003" FromRole="EMPREGADO1" ToRole="EMPREGADO" />
+        </EntityType>
+        <Association Name="CF_EMPREGADO_003">
+          <End Type="Model.EMPREGADO" Role="EMPREGADO" Multiplicity="0..1" />
+          <End Type="Model.EMPREGADO" Role="EMPREGADO1" Multiplicity="*" />
+        </Association>
+        <EntityType Name="FCESP_EXT_AMH_EXCECAO">
+          <Key>
+            <PropertyRef Name="COD_EMPRS" />
+            <PropertyRef Name="NUM_RGTRO_EMPRG" />
+            <PropertyRef Name="NUM_CPF_EMPRG" />
+          </Key>
+          <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+          <Property Type="Int64" Name="NUM_RGTRO_EMPRG" Nullable="false" />
+          <Property Type="Int64" Name="NUM_CPF_EMPRG" Nullable="false" />
+          <Property Type="Int32" Name="NUM_IDNTF_RPTANT" />
+          <Property Type="String" Name="USER_INC" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DT_INC" />
+          <Property Type="Decimal" Name="ID_CHAMADO" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="FCESP_EXT_AMH_EXCECAO_LOG">
+          <Key>
+            <PropertyRef Name="ID_LOG" />
+          </Key>
+          <Property Type="Decimal" Name="ID_LOG" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+          <Property Type="Int64" Name="NUM_RGTRO_EMPRG" Nullable="false" />
+          <Property Type="Int64" Name="NUM_CPF_EMPRG" />
+          <Property Type="Int32" Name="NUM_IDNTF_RPTANT" />
+          <Property Type="String" Name="TP_ACAO" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USER_INC" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DATA_INC" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="INTRA_Entity_Conn" >
+          <EntitySetMapping Name="TB_PRIORIZACHAMADO">
+            <EntityTypeMapping TypeName="Model.TB_PRIORIZACHAMADO">
+              <MappingFragment StoreEntitySet="TB_PRIORIZACHAMADO">
+                <ScalarProperty Name="DT_STATUS" ColumnName="DT_STATUS" />
+                <ScalarProperty Name="OBS" ColumnName="OBS" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="DT_TERMINO" ColumnName="DT_TERMINO" />
+                <ScalarProperty Name="DT_INCLUSAO" ColumnName="DT_INCLUSAO" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="AREA" ColumnName="AREA" />
+                <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+                <ScalarProperty Name="CHAMADO" ColumnName="CHAMADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FUN_TBL_USUARIO">
+            <EntityTypeMapping TypeName="Model.FUN_TBL_USUARIO">
+              <MappingFragment StoreEntitySet="FUN_TBL_USUARIO">
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="DT_INCLUSAO" ColumnName="DT_INCLUSAO" />
+                <ScalarProperty Name="DEPARTAMENTO" ColumnName="DEPARTAMENTO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_PRIORIZACHAMADO">
+            <EntityTypeMapping TypeName="Model.VW_PRIORIZACHAMADO">
+              <MappingFragment StoreEntitySet="VW_PRIORIZACHAMADO">
+                <ScalarProperty Name="DT_STATUS" ColumnName="DT_STATUS" />
+                <ScalarProperty Name="OBS" ColumnName="OBS" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="DT_TERMINO" ColumnName="DT_TERMINO" />
+                <ScalarProperty Name="DT_INCLUSAO" ColumnName="DT_INCLUSAO" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="ANALISTA" ColumnName="ANALISTA" />
+                <ScalarProperty Name="AREA" ColumnName="AREA" />
+                <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+                <ScalarProperty Name="CHAMADO" ColumnName="CHAMADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FUN_TBL_EXCLUSAO_REVISTA">
+            <EntityTypeMapping TypeName="Model.FUN_TBL_EXCLUSAO_REVISTA">
+              <MappingFragment StoreEntitySet="FUN_TBL_EXCLUSAO_REVISTA">
+                <ScalarProperty Name="USU_INC" ColumnName="USU_INC" />
+                <ScalarProperty Name="DATA_INC" ColumnName="DATA_INC" />
+                <ScalarProperty Name="NUM_IDNTF_RPTANT" ColumnName="NUM_IDNTF_RPTANT" />
+                <ScalarProperty Name="NUM_RGTRO_EMPRG" ColumnName="NUM_RGTRO_EMPRG" />
+                <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FUN_TBL_EXCLUSAO_REVISTA_LOG">
+            <EntityTypeMapping TypeName="Model.FUN_TBL_EXCLUSAO_REVISTA_LOG">
+              <MappingFragment StoreEntitySet="FUN_TBL_EXCLUSAO_REVISTA_LOG">
+                <ScalarProperty Name="USU_INC" ColumnName="USU_INC" />
+                <ScalarProperty Name="TP_ATU" ColumnName="TP_ATU" />
+                <ScalarProperty Name="DATA_ATU" ColumnName="DATA_ATU" />
+                <ScalarProperty Name="NUM_IDNTF_RPTANT" ColumnName="NUM_IDNTF_RPTANT" />
+                <ScalarProperty Name="NUM_RGTRO_EMPRG" ColumnName="NUM_RGTRO_EMPRG" />
+                <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+                <ScalarProperty Name="ID_LOG" ColumnName="ID_LOG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPREGADO">
+            <EntityTypeMapping TypeName="Model.EMPREGADO">
+              <MappingFragment StoreEntitySet="EMPREGADO">
+                <ScalarProperty Name="NOM_CJGE_EMPRG" ColumnName="NOM_CJGE_EMPRG" />
+                <ScalarProperty Name="MRC_DOC_GRNCRD" ColumnName="MRC_DOC_GRNCRD" />
+                <ScalarProperty Name="PAICODPAISEXT3" ColumnName="PAICODPAISEXT3" />
+                <ScalarProperty Name="PAICODPAISEXT2" ColumnName="PAICODPAISEXT2" />
+                <ScalarProperty Name="PAICODPAISEXT1" ColumnName="PAICODPAISEXT1" />
+                <ScalarProperty Name="NOM_PAIS_EXT_3" ColumnName="NOM_PAIS_EXT_3" />
+                <ScalarProperty Name="NOM_PAIS_EXT_2" ColumnName="NOM_PAIS_EXT_2" />
+                <ScalarProperty Name="NOM_PAIS_EXT_1" ColumnName="NOM_PAIS_EXT_1" />
+                <ScalarProperty Name="MRC_RES_EXT_EMPRG" ColumnName="MRC_RES_EXT_EMPRG" />
+                <ScalarProperty Name="DAT_RECAD_EMPRG" ColumnName="DAT_RECAD_EMPRG" />
+                <ScalarProperty Name="NUM_DDICEL_EMPRG" ColumnName="NUM_DDICEL_EMPRG" />
+                <ScalarProperty Name="DAT_VLDGRNCRD_EMPRG" ColumnName="DAT_VLDGRNCRD_EMPRG" />
+                <ScalarProperty Name="NUM_GRNCRD_EMPRG" ColumnName="NUM_GRNCRD_EMPRG" />
+                <ScalarProperty Name="PAICODCIDADANIA2" ColumnName="PAICODCIDADANIA2" />
+                <ScalarProperty Name="PAICODCIDADANIA1" ColumnName="PAICODCIDADANIA1" />
+                <ScalarProperty Name="PAICODRESIDENCIA" ColumnName="PAICODRESIDENCIA" />
+                <ScalarProperty Name="PAICODNASCIMENTO" ColumnName="PAICODNASCIMENTO" />
+                <ScalarProperty Name="GDECOD" ColumnName="GDECOD" />
+                <ScalarProperty Name="MRC_DEFFIS_EMPRG" ColumnName="MRC_DEFFIS_EMPRG" />
+                <ScalarProperty Name="MRC_ASSOC_EMPRG" ColumnName="MRC_ASSOC_EMPRG" />
+                <ScalarProperty Name="DAT_PRIEMP_EMPRG" ColumnName="DAT_PRIEMP_EMPRG" />
+                <ScalarProperty Name="DAT_FIMAPOS4_EMPREG" ColumnName="DAT_FIMAPOS4_EMPREG" />
+                <ScalarProperty Name="DAT_INIAPOS4_EMPRG" ColumnName="DAT_INIAPOS4_EMPRG" />
+                <ScalarProperty Name="DCR_APOS4_EMPRG" ColumnName="DCR_APOS4_EMPRG" />
+                <ScalarProperty Name="DAT_FIMAPOS3_EMPREG" ColumnName="DAT_FIMAPOS3_EMPREG" />
+                <ScalarProperty Name="DAT_INIAPOS3_EMPRG" ColumnName="DAT_INIAPOS3_EMPRG" />
+                <ScalarProperty Name="DCR_APOS3_EMPRG" ColumnName="DCR_APOS3_EMPRG" />
+                <ScalarProperty Name="DAT_FIMAPOS2_EMPREG" ColumnName="DAT_FIMAPOS2_EMPREG" />
+                <ScalarProperty Name="DAT_INIAPOS2_EMPRG" ColumnName="DAT_INIAPOS2_EMPRG" />
+                <ScalarProperty Name="DCR_APOS2_EMPRG" ColumnName="DCR_APOS2_EMPRG" />
+                <ScalarProperty Name="DAT_FIMAPOS1_EMPREG" ColumnName="DAT_FIMAPOS1_EMPREG" />
+                <ScalarProperty Name="DAT_INIAPOS1_EMPRG" ColumnName="DAT_INIAPOS1_EMPRG" />
+                <ScalarProperty Name="DCR_APOS1_EMPRG" ColumnName="DCR_APOS1_EMPRG" />
+                <ScalarProperty Name="PESCODPESSOA" ColumnName="PESCODPESSOA" />
+                <ScalarProperty Name="NUM_CNS_EMPRG" ColumnName="NUM_CNS_EMPRG" />
+                <ScalarProperty Name="NUM_MATFNC_EMPRG" ColumnName="NUM_MATFNC_EMPRG" />
+                <ScalarProperty Name="NUM_SIAPE_EMPRG" ColumnName="NUM_SIAPE_EMPRG" />
+                <ScalarProperty Name="EMPRGDESEMAIL2" ColumnName="EMPRGDESEMAIL2" />
+                <ScalarProperty Name="EMPRGNUMTELEF2" ColumnName="EMPRGNUMTELEF2" />
+                <ScalarProperty Name="EMPRGCODDDD2" ColumnName="EMPRGCODDDD2" />
+                <ScalarProperty Name="EMPRGCODDDI2" ColumnName="EMPRGCODDDI2" />
+                <ScalarProperty Name="NOM_EMPGR_ANS" ColumnName="NOM_EMPGR_ANS" />
+                <ScalarProperty Name="DCR_LOGRAD" ColumnName="DCR_LOGRAD" />
+                <ScalarProperty Name="TLGCODTIPOLOGRAD" ColumnName="TLGCODTIPOLOGRAD" />
+                <ScalarProperty Name="EMPRGDTHEMINATUREZA" ColumnName="EMPRGDTHEMINATUREZA" />
+                <ScalarProperty Name="EMPRGUNFORGEMINATUREZA" ColumnName="EMPRGUNFORGEMINATUREZA" />
+                <ScalarProperty Name="EMPRGORGEMINATUREZA" ColumnName="EMPRGORGEMINATUREZA" />
+                <ScalarProperty Name="EMPRGNUMNATUREZA" ColumnName="EMPRGNUMNATUREZA" />
+                <ScalarProperty Name="EMPRGIDCFATORRH" ColumnName="EMPRGIDCFATORRH" />
+                <ScalarProperty Name="EMPRGIDCGRPSANGUINEO" ColumnName="EMPRGIDCGRPSANGUINEO" />
+                <ScalarProperty Name="DAT_PREVAPOS_EMPRG" ColumnName="DAT_PREVAPOS_EMPRG" />
+                <ScalarProperty Name="EMPRGIDCTIPOMARCACAO" ColumnName="EMPRGIDCTIPOMARCACAO" />
+                <ScalarProperty Name="DCR_MOTOBT_EMPRG" ColumnName="DCR_MOTOBT_EMPRG" />
+                <ScalarProperty Name="DAT_OBTSRS_EMPRG" ColumnName="DAT_OBTSRS_EMPRG" />
+                <ScalarProperty Name="NUM_CELUL2_EMPRG" ColumnName="NUM_CELUL2_EMPRG" />
+                <ScalarProperty Name="MRC_NAOPART_EMPRG" ColumnName="MRC_NAOPART_EMPRG" />
+                <ScalarProperty Name="NUM_IP_EMPRG" ColumnName="NUM_IP_EMPRG" />
+                <ScalarProperty Name="MRC_NEGSEF_EMPRG" ColumnName="MRC_NEGSEF_EMPRG" />
+                <ScalarProperty Name="DCR_IDIOMA_EMPRG" ColumnName="DCR_IDIOMA_EMPRG" />
+                <ScalarProperty Name="COD_ESTRUT_EMPRG" ColumnName="COD_ESTRUT_EMPRG" />
+                <ScalarProperty Name="PAICOD" ColumnName="PAICOD" />
+                <ScalarProperty Name="NAT_DOCIDNT_EMPRG" ColumnName="NAT_DOCIDNT_EMPRG" />
+                <ScalarProperty Name="DCR_RENDIMENTO_EMPRG" ColumnName="DCR_RENDIMENTO_EMPRG" />
+                <ScalarProperty Name="DCR_SITPPE_EMPRG" ColumnName="DCR_SITPPE_EMPRG" />
+                <ScalarProperty Name="VLR_RENDIMENTO_EMPRG" ColumnName="VLR_RENDIMENTO_EMPRG" />
+                <ScalarProperty Name="VLR_PATRIMONIAL_EMPRG" ColumnName="VLR_PATRIMONIAL_EMPRG" />
+                <ScalarProperty Name="ATECODATRIBUTOEMPRG" ColumnName="ATECODATRIBUTOEMPRG" />
+                <ScalarProperty Name="NUM_DDIFAX_EMPRG" ColumnName="NUM_DDIFAX_EMPRG" />
+                <ScalarProperty Name="NUM_FAX_EMPRG" ColumnName="NUM_FAX_EMPRG" />
+                <ScalarProperty Name="NUM_DDDFAX_EMPRG" ColumnName="NUM_DDDFAX_EMPRG" />
+                <ScalarProperty Name="NUM_ENDER_EMPRG" ColumnName="NUM_ENDER_EMPRG" />
+                <ScalarProperty Name="NOM_SEGTIT_EMPRG" ColumnName="NOM_SEGTIT_EMPRG" />
+                <ScalarProperty Name="NUM_CPFCTC_EMPRG" ColumnName="NUM_CPFCTC_EMPRG" />
+                <ScalarProperty Name="STECOD" ColumnName="STECOD" />
+                <ScalarProperty Name="AGCCODCODIGODAAGENCIA" ColumnName="AGCCODCODIGODAAGENCIA" />
+                <ScalarProperty Name="DAT_ULT_RCD_EMPRG" ColumnName="DAT_ULT_RCD_EMPRG" />
+                <ScalarProperty Name="NUM_RGORIG_EMPRG" ColumnName="NUM_RGORIG_EMPRG" />
+                <ScalarProperty Name="NUM_SECAO_EMPRG" ColumnName="NUM_SECAO_EMPRG" />
+                <ScalarProperty Name="NUM_ZONA_EMPRG" ColumnName="NUM_ZONA_EMPRG" />
+                <ScalarProperty Name="NUM_TITULO_EMPRG" ColumnName="NUM_TITULO_EMPRG" />
+                <ScalarProperty Name="QTD_ANOANT_EMPRG" ColumnName="QTD_ANOANT_EMPRG" />
+                <ScalarProperty Name="QTD_MESANT_EMPRG" ColumnName="QTD_MESANT_EMPRG" />
+                <ScalarProperty Name="QTD_DIAANT_EMPRG" ColumnName="QTD_DIAANT_EMPRG" />
+                <ScalarProperty Name="QTD_ANOTRB_EMPRG" ColumnName="QTD_ANOTRB_EMPRG" />
+                <ScalarProperty Name="QTD_DIATRB_EMPRG" ColumnName="QTD_DIATRB_EMPRG" />
+                <ScalarProperty Name="COD_DDDCEL_EMPRG" ColumnName="COD_DDDCEL_EMPRG" />
+                <ScalarProperty Name="NUM_TELRES_EMPRG" ColumnName="NUM_TELRES_EMPRG" />
+                <ScalarProperty Name="VLR_01_EMPRG" ColumnName="VLR_01_EMPRG" />
+                <ScalarProperty Name="COD_UFNAT_EMPRG" ColumnName="COD_UFNAT_EMPRG" />
+                <ScalarProperty Name="TIP_CTCOR_EMPRG" ColumnName="TIP_CTCOR_EMPRG" />
+                <ScalarProperty Name="DCR_NACNL_EMPRG" ColumnName="DCR_NACNL_EMPRG" />
+                <ScalarProperty Name="NUM_CELUL_EMPRG" ColumnName="NUM_CELUL_EMPRG" />
+                <ScalarProperty Name="DCR_OCPPROF_EMPRG" ColumnName="DCR_OCPPROF_EMPRG" />
+                <ScalarProperty Name="DCR_COMPL_EMPRG" ColumnName="DCR_COMPL_EMPRG" />
+                <ScalarProperty Name="DAT_EXPCI_EMPRG" ColumnName="DAT_EXPCI_EMPRG" />
+                <ScalarProperty Name="DCR_NATURAL_EMPRG" ColumnName="DCR_NATURAL_EMPRG" />
+                <ScalarProperty Name="DAT_FALEC_EMPRG" ColumnName="DAT_FALEC_EMPRG" />
+                <ScalarProperty Name="NUM_PISPAS_EMPRG" ColumnName="NUM_PISPAS_EMPRG" />
+                <ScalarProperty Name="COD_EMAIL_EMPRG" ColumnName="COD_EMAIL_EMPRG" />
+                <ScalarProperty Name="MRC_PLSAUD_EMPRG" ColumnName="MRC_PLSAUD_EMPRG" />
+                <ScalarProperty Name="DCR_OBSERVACAO" ColumnName="DCR_OBSERVACAO" />
+                <ScalarProperty Name="COD_UNDFD_EMPRG" ColumnName="COD_UNDFD_EMPRG" />
+                <ScalarProperty Name="NOM_CIDRS_EMPRG" ColumnName="NOM_CIDRS_EMPRG" />
+                <ScalarProperty Name="COD_MTDSL" ColumnName="COD_MTDSL" />
+                <ScalarProperty Name="NUM_ORGAO" ColumnName="NUM_ORGAO" />
+                <ScalarProperty Name="COD_ESTADO" ColumnName="COD_ESTADO" />
+                <ScalarProperty Name="COD_MUNICI" ColumnName="COD_MUNICI" />
+                <ScalarProperty Name="NUM_CR" ColumnName="NUM_CR" />
+                <ScalarProperty Name="COD_AGBCO" ColumnName="COD_AGBCO" />
+                <ScalarProperty Name="COD_BANCO" ColumnName="COD_BANCO" />
+                <ScalarProperty Name="NUM_FILIAL" ColumnName="NUM_FILIAL" />
+                <ScalarProperty Name="NUM_CARGO" ColumnName="NUM_CARGO" />
+                <ScalarProperty Name="COD_CEP_EMPRG" ColumnName="COD_CEP_EMPRG" />
+                <ScalarProperty Name="QTD_INSS_EMPRG" ColumnName="QTD_INSS_EMPRG" />
+                <ScalarProperty Name="NUM_SRCTP_EMPRG" ColumnName="NUM_SRCTP_EMPRG" />
+                <ScalarProperty Name="NUM_CTPRF_EMPRG" ColumnName="NUM_CTPRF_EMPRG" />
+                <ScalarProperty Name="VLR_SALAR_EMPRG" ColumnName="VLR_SALAR_EMPRG" />
+                <ScalarProperty Name="NUM_TELEF_EMPRG" ColumnName="NUM_TELEF_EMPRG" />
+                <ScalarProperty Name="NUM_RAMAL_EMPRG" ColumnName="NUM_RAMAL_EMPRG" />
+                <ScalarProperty Name="NUM_GRSAL_EMPRG" ColumnName="NUM_GRSAL_EMPRG" />
+                <ScalarProperty Name="NUM_CXPTL_EMPRG" ColumnName="NUM_CXPTL_EMPRG" />
+                <ScalarProperty Name="NUM_CTCOR_EMPRG" ColumnName="NUM_CTCOR_EMPRG" />
+                <ScalarProperty Name="COD_UFCI_EMPRG" ColumnName="COD_UFCI_EMPRG" />
+                <ScalarProperty Name="COD_OREXCI_EMPRG" ColumnName="COD_OREXCI_EMPRG" />
+                <ScalarProperty Name="NUM_CI_EMPRG" ColumnName="NUM_CI_EMPRG" />
+                <ScalarProperty Name="NUM_CPF_EMPRG" ColumnName="NUM_CPF_EMPRG" />
+                <ScalarProperty Name="NOM_PAIS_EMPRG" ColumnName="NOM_PAIS_EMPRG" />
+                <ScalarProperty Name="NOM_EMPRG" ColumnName="NOM_EMPRG" />
+                <ScalarProperty Name="NOM_BAIRRO_EMPRG" ColumnName="NOM_BAIRRO_EMPRG" />
+                <ScalarProperty Name="DCR_ENDER_EMPRG" ColumnName="DCR_ENDER_EMPRG" />
+                <ScalarProperty Name="DAT_NASCM_EMPRG" ColumnName="DAT_NASCM_EMPRG" />
+                <ScalarProperty Name="DAT_DESLG_EMPRG" ColumnName="DAT_DESLG_EMPRG" />
+                <ScalarProperty Name="DAT_ADMSS_EMPRG" ColumnName="DAT_ADMSS_EMPRG" />
+                <ScalarProperty Name="COD_SEXO_EMPRG" ColumnName="COD_SEXO_EMPRG" />
+                <ScalarProperty Name="COD_ESTCV_EMPRG" ColumnName="COD_ESTCV_EMPRG" />
+                <ScalarProperty Name="COD_DDI_EMPRG" ColumnName="COD_DDI_EMPRG" />
+                <ScalarProperty Name="QTD_MESTRB_EMPRG" ColumnName="QTD_MESTRB_EMPRG" />
+                <ScalarProperty Name="COD_DDD_EMPRG" ColumnName="COD_DDD_EMPRG" />
+                <ScalarProperty Name="COD_CTTRB_EMPRG" ColumnName="COD_CTTRB_EMPRG" />
+                <ScalarProperty Name="COD_CONFL_EMPRG" ColumnName="COD_CONFL_EMPRG" />
+                <ScalarProperty Name="NUM_MATR_PARTF" ColumnName="NUM_MATR_PARTF" />
+                <ScalarProperty Name="NOM_MAE_EMPRG" ColumnName="NOM_MAE_EMPRG" />
+                <ScalarProperty Name="NOM_PAI_EMPRG" ColumnName="NOM_PAI_EMPRG" />
+                <ScalarProperty Name="NUM_DIGVR_EMPRG" ColumnName="NUM_DIGVR_EMPRG" />
+                <ScalarProperty Name="NUM_RGTRO_EMPRG" ColumnName="NUM_RGTRO_EMPRG" />
+                <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="CF_EMPREGADO_003" TypeName="Model.CF_EMPREGADO_003" StoreEntitySet="EMPREGADO">
+            <EndProperty Name="EMPREGADO1">
+              <ScalarProperty Name="NUM_RGTRO_EMPRG" ColumnName="NUM_RGTRO_EMPRG" />
+              <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+            </EndProperty>
+            <EndProperty Name="EMPREGADO">
+              <ScalarProperty Name="NUM_RGTRO_EMPRG" ColumnName="NUM_RGTRORPTANT_EMPRG" />
+              <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRSRPTANT_EMPRG" />
+            </EndProperty>
+            <Condition ColumnName="COD_EMPRSRPTANT_EMPRG" IsNull="false" />
+            <Condition ColumnName="NUM_RGTRORPTANT_EMPRG" IsNull="false" />
+          </AssociationSetMapping>
+          <EntitySetMapping Name="FCESP_EXT_AMH_EXCECAO">
+            <EntityTypeMapping TypeName="Model.FCESP_EXT_AMH_EXCECAO">
+              <MappingFragment StoreEntitySet="FCESP_EXT_AMH_EXCECAO">
+                <ScalarProperty Name="ID_CHAMADO" ColumnName="ID_CHAMADO" />
+                <ScalarProperty Name="DT_INC" ColumnName="DT_INC" />
+                <ScalarProperty Name="USER_INC" ColumnName="USER_INC" />
+                <ScalarProperty Name="NUM_IDNTF_RPTANT" ColumnName="NUM_IDNTF_RPTANT" />
+                <ScalarProperty Name="NUM_CPF_EMPRG" ColumnName="NUM_CPF_EMPRG" />
+                <ScalarProperty Name="NUM_RGTRO_EMPRG" ColumnName="NUM_RGTRO_EMPRG" />
+                <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FCESP_EXT_AMH_EXCECAO_LOG">
+            <EntityTypeMapping TypeName="Model.FCESP_EXT_AMH_EXCECAO_LOG">
+              <MappingFragment StoreEntitySet="FCESP_EXT_AMH_EXCECAO_LOG">
+                <ScalarProperty Name="DATA_INC" ColumnName="DATA_INC" />
+                <ScalarProperty Name="USER_INC" ColumnName="USER_INC" />
+                <ScalarProperty Name="TP_ACAO" ColumnName="TP_ACAO" />
+                <ScalarProperty Name="NUM_IDNTF_RPTANT" ColumnName="NUM_IDNTF_RPTANT" />
+                <ScalarProperty Name="NUM_CPF_EMPRG" ColumnName="NUM_CPF_EMPRG" />
+                <ScalarProperty Name="NUM_RGTRO_EMPRG" ColumnName="NUM_RGTRO_EMPRG" />
+                <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+                <ScalarProperty Name="ID_LOG" ColumnName="ID_LOG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

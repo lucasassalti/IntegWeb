@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a8f3822c2d9f4180b2c47c738fae6856" Name="Diagram1" ZoomLevel="86" >
+        <EntityTypeShape EntityType="Model.TB_PRIORIZACHAMADO" Width="2.625" PointX="5.875" PointY="0.5" />
+        <EntityTypeShape EntityType="Model.FUN_TBL_USUARIO" Width="2" PointX="3.25" PointY="0.5" />
+        <EntityTypeShape EntityType="Model.VW_PRIORIZACHAMADO" Width="1.5" PointX="0.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.FUN_TBL_EXCLUSAO_REVISTA" Width="2.875" PointX="4" PointY="4" />
+        <EntityTypeShape EntityType="Model.FUN_TBL_EXCLUSAO_REVISTA_LOG" Width="2.875" PointX="0.5" PointY="3.875" />
+        <EntityTypeShape EntityType="Model.EMPREGADO" Width="1.5" PointX="0.5" PointY="6.5" />
+        <AssociationConnector Association="Model.CF_EMPREGADO_003" />
+        <EntityTypeShape EntityType="Model.FCESP_EXT_AMH_EXCECAO" Width="2.375" PointX="4.625" PointY="6.625" />
+        <EntityTypeShape EntityType="Model.FCESP_EXT_AMH_EXCECAO_LOG" Width="2.375" PointX="2.125" PointY="6.625" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

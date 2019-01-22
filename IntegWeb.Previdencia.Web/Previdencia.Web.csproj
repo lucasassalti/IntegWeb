@@ -1,0 +1,1777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <IgnoreDeployManagedRuntimeVersion>True</IgnoreDeployManagedRuntimeVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B334A668-6F8B-4A57-A219-D70D644216E9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntegWeb.Previdencia.Web</RootNamespace>
+    <AssemblyName>IntegWeb.Previdencia.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.4.0.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AcertoDemonstrativo.aspx" />
+    <Content Include="AdesaoProposta.aspx" />
+    <Content Include="AdmVerba.aspx" />
+    <Content Include="AlteracaoTempoServico.aspx" />
+    <Content Include="ArquivoEnvio.aspx" />
+    <Content Include="ArquivoRepasse.aspx" />
+    <Content Include="BateCadastralCarga.aspx" />
+    <Content Include="BeneficiarioTipo.aspx" />
+    <Content Include="CadAcaoJudicial.aspx" />
+    <Content Include="CadAjusteCep.aspx" />
+    <Content Include="CadComponentes.aspx" />
+    <Content Include="CadParamSimulador.aspx" />
+    <Content Include="CadVerba.aspx" />
+    <Content Include="CargaProtheus.aspx" />
+    <Content Include="CartasReport.aspx" />
+    <Content Include="Cobertura_SAP.aspx" />
+    <Content Include="CoefPensao.aspx" />
+    <Content Include="Content\blank.gif" />
+    <Content Include="Content\fancybox_loading%402x.gif" />
+    <Content Include="Content\fancybox_loading.gif" />
+    <Content Include="Content\fancybox_overlay.png" />
+    <Content Include="Content\fancybox_sprite%402x.png" />
+    <Content Include="Content\fancybox_sprite.png" />
+    <Content Include="Content\helpers\fancybox_buttons.png" />
+    <Content Include="Content\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Content\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Content\helpers\jquery.fancybox-media.js" />
+    <Content Include="Content\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Content\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Content\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery.fancybox.css" />
+    <Content Include="Content\jquery.fancybox.js" />
+    <Content Include="Content\jquery.fancybox.pack.js" />
+    <Content Include="Content\themes\jquery.fancybox-1.3.1.css" />
+    <Content Include="Contribuicao.aspx" />
+    <Content Include="ControlCapitalizacao.aspx" />
+    <Content Include="AvisoPagamento.aspx" />
+    <Content Include="CadValorReferencia.aspx" />
+    <Content Include="CadDepJudicial.aspx" />
+    <Content Include="ArquivoPatrocinadora.aspx" />
+    <Content Include="ArquivoControle.aspx" />
+    <Content Include="ArquivoParam.aspx" />
+    <Content Include="ControleMedctr.aspx" />
+    <Content Include="img\i_cancel.png" />
+    <Content Include="RatAtuDepJudicial.aspx" />
+    <Content Include="SaldoFundoSobra.aspx" />
+    <Content Include="VerbasAutopatrocinio.aspx" />
+    <Content Include="DeParaAutopatroc.aspx" />
+    <Content Include="DeParaAutopatroc_Verba.aspx" />
+    <Content Include="CtrlDevCorrespondencia.aspx" />
+    <Content Include="CtrlDevCorrespondenciaManut.aspx" />
+    <Content Include="GrupoAdmPatrocinadora.aspx" />
+    <Content Include="img\delete.png" />
+    <Content Include="img\financial.png" />
+    <Content Include="img\history.png" />
+    <Content Include="img\i_empty.png" />
+    <Content Include="img\i_minus_3.png" />
+    <Content Include="img\i_search.png" />
+    <Content Include="img\upload.png" />
+    <Content Include="ImportaDadosCassi.aspx" />
+    <Content Include="js\build_uploadify.js" />
+    <Content Include="RelCustoJudicial.aspx" />
+    <Content Include="js\uploadify\jquery.uploadify.js" />
+    <Content Include="js\uploadify\jquery.uploadify.min.js" />
+    <Content Include="js\uploadify\uploadify-cancel.png" />
+    <Content Include="js\uploadify\uploadify.css" />
+    <Content Include="js\uploadify\uploadify.swf" />
+    <Content Include="RecadastramentoCtrl.aspx" />
+    <Content Include="RecadastramentoBase.aspx" />
+    <Content Include="css\Content\blank.gif" />
+    <Content Include="css\Content\fancybox_loading%402x.gif" />
+    <Content Include="css\Content\fancybox_loading.gif" />
+    <Content Include="css\Content\fancybox_overlay.png" />
+    <Content Include="css\Content\fancybox_sprite%402x.png" />
+    <Content Include="css\Content\fancybox_sprite.png" />
+    <Content Include="css\Content\helpers\fancybox_buttons.png" />
+    <Content Include="css\Content\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="css\Content\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="css\Content\helpers\jquery.fancybox-media.js" />
+    <Content Include="css\Content\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="css\Content\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="css\Content\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\Content\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\Content\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\Content\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\Content\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\Content\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\Content\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\Content\jquery-ui.css" />
+    <Content Include="css\Content\jquery.fancybox.css" />
+    <Content Include="css\Content\jquery.fancybox.js" />
+    <Content Include="css\Content\jquery.fancybox.pack.js" />
+    <Content Include="css\Content\login.css" />
+    <Content Include="css\Content\Site.css" />
+    <Content Include="css\Content\style.css" />
+    <Content Include="css\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\Content\themes\base\jquery-ui.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\Content\themes\jquery.fancybox-1.3.1.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\navi.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\themes\base\images\animated-overlay.gif" />
+    <Content Include="css\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\themes\base\jquery-ui.css" />
+    <Content Include="css\themes\base\jquery.ui.accordion.css" />
+    <Content Include="css\themes\base\jquery.ui.all.css" />
+    <Content Include="css\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="css\themes\base\jquery.ui.base.css" />
+    <Content Include="css\themes\base\jquery.ui.button.css" />
+    <Content Include="css\themes\base\jquery.ui.core.css" />
+    <Content Include="css\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="css\themes\base\jquery.ui.dialog.css" />
+    <Content Include="css\themes\base\jquery.ui.menu.css" />
+    <Content Include="css\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="css\themes\base\jquery.ui.resizable.css" />
+    <Content Include="css\themes\base\jquery.ui.selectable.css" />
+    <Content Include="css\themes\base\jquery.ui.slider.css" />
+    <Content Include="css\themes\base\jquery.ui.spinner.css" />
+    <Content Include="css\themes\base\jquery.ui.tabs.css" />
+    <Content Include="css\themes\base\jquery.ui.theme.css" />
+    <Content Include="css\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="css\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="css\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="css\themes\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="css\themes\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="css\themes\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="css\themes\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="css\themes\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="css\themes\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="css\themes\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\themes\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="css\themes\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="css\themes\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="css\themes\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\themes\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="css\themes\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="css\themes\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="css\themes\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\themes\ui-lightness\jquery-ui.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.accordion.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.all.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.autocomplete.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.base.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.button.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.core.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.datepicker.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.dialog.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.menu.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.progressbar.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.resizable.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.selectable.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.slider.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.spinner.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.tabs.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.theme.css" />
+    <Content Include="css\themes\ui-lightness\jquery.ui.tooltip.css" />
+    <Content Include="css\themes\ui-lightness\minified\images\animated-overlay.gif" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="css\themes\ui-lightness\minified\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\themes\ui-lightness\minified\jquery-ui.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.accordion.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.button.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.core.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.dialog.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.menu.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.resizable.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.selectable.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.slider.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.spinner.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.tabs.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\themes\ui-lightness\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="DevolucaoProposta.aspx" />
+    <Content Include="Exportacao.aspx" />
+    <Content Include="ExtratoPrevidenciario.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="img\arrow-down.gif" />
+    <Content Include="img\arrow-up.gif" />
+    <Content Include="img\assinatura_email.jpg" />
+    <Content Include="img\bg_arr_left.png" />
+    <Content Include="img\bg_arr_nav.png" />
+    <Content Include="img\bg_box_head.jpg" />
+    <Content Include="img\bg_login_top.jpg" />
+    <Content Include="img\bg_logo.png" />
+    <Content Include="img\bg_top.jpg" />
+    <Content Include="img\bg_top1.jpg" />
+    <Content Include="img\bg_top2.jpg" />
+    <Content Include="img\carregando.gif" />
+    <Content Include="img\icone_pdf.jpg" />
+    <Content Include="img\i_add.png" />
+    <Content Include="img\i_add_page.png" />
+    <Content Include="img\i_add_user.png" />
+    <Content Include="img\i_archive.png" />
+    <Content Include="img\i_block_users.png" />
+    <Content Include="img\i_category.png" />
+    <Content Include="img\i_config.png" />
+    <Content Include="img\i_contact.png" />
+    <Content Include="img\i_delete.png" />
+    <Content Include="img\i_edit.png" />
+    <Content Include="img\i_error.png" />
+    <Content Include="img\i_ok.png" />
+    <Content Include="img\i_page.png" />
+    <Content Include="img\i_photo.png" />
+    <Content Include="img\i_report.png" />
+    <Content Include="img\i_users.png" />
+    <Content Include="img\i_view_page.png" />
+    <Content Include="img\i_warning.png" />
+    <Content Include="img\Load.gif" />
+    <Content Include="img\processando.gif" />
+    <Content Include="ImportVr.aspx" />
+    <Content Include="IncideJuros.aspx" />
+    <Content Include="Includes\ucLogin.ascx" />
+    <Content Include="Includes\ucReport.ascx" />
+    <Content Include="index.aspx" />
+    <Content Include="js\funcoes_gerais.js" />
+    <Content Include="js\highcharts.js" />
+    <Content Include="js\highcharts_init.js" />
+    <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery-1.7.2.min.js" />
+    <Content Include="js\jquery-ui-1.10.3.custom.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.fancybox.js" />
+    <Content Include="js\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="js\jquery.mousewheel.pack.js" />
+    <Content Include="js\jquery.quicksearch.js" />
+    <Content Include="js\Mascara.js" />
+    <Content Include="login.aspx" />
+    <Content Include="Pensao.aspx" />
+    <Content Include="ProcessaContrib.aspx" />
+    <Content Include="RelatorioWeb.aspx" />
+    <Content Include="IndiceRevisaoLei.aspx" />
+    <Content Include="RelSaoFrancisco.aspx" />
+    <Content Include="RevisaoLei.aspx" />
+    <Content Include="ServicoTipo.aspx" />
+    <Content Include="SimulacaoBD.aspx" />
+    <Content Include="SisOb.aspx" />
+    <Content Include="SisObConsulta.aspx" />
+    <Content Include="TrocaEmpresa.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebFile.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcertoDemonstrativo.aspx.cs">
+      <DependentUpon>AcertoDemonstrativo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcertoDemonstrativo.aspx.designer.cs">
+      <DependentUpon>AcertoDemonstrativo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdesaoProposta.aspx.cs">
+      <DependentUpon>AdesaoProposta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdesaoProposta.aspx.designer.cs">
+      <DependentUpon>AdesaoProposta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdmVerba.aspx.cs">
+      <DependentUpon>AdmVerba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdmVerba.aspx.designer.cs">
+      <DependentUpon>AdmVerba.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AlteracaoTempoServico.aspx.cs">
+      <DependentUpon>AlteracaoTempoServico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlteracaoTempoServico.aspx.designer.cs">
+      <DependentUpon>AlteracaoTempoServico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArquivoEnvio.aspx.cs">
+      <DependentUpon>ArquivoEnvio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArquivoEnvio.aspx.designer.cs">
+      <DependentUpon>ArquivoEnvio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArquivoRepasse.aspx.cs">
+      <DependentUpon>ArquivoRepasse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArquivoRepasse.aspx.designer.cs">
+      <DependentUpon>ArquivoRepasse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BateCadastralCarga.aspx.cs">
+      <DependentUpon>BateCadastralCarga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BateCadastralCarga.aspx.designer.cs">
+      <DependentUpon>BateCadastralCarga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArquivoPatrocinadora.ashx.cs">
+      <DependentUpon>ArquivoPatrocinadora.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BeneficiarioTipo.aspx.cs">
+      <DependentUpon>BeneficiarioTipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BeneficiarioTipo.aspx.designer.cs">
+      <DependentUpon>BeneficiarioTipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadAcaoJudicial.aspx.cs">
+      <DependentUpon>CadAcaoJudicial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadAcaoJudicial.aspx.designer.cs">
+      <DependentUpon>CadAcaoJudicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadAjusteCep.aspx.cs">
+      <DependentUpon>CadAjusteCep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadAjusteCep.aspx.designer.cs">
+      <DependentUpon>CadAjusteCep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadComponentes.aspx.cs">
+      <DependentUpon>CadComponentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadComponentes.aspx.designer.cs">
+      <DependentUpon>CadComponentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadParamSimulador.aspx.cs">
+      <DependentUpon>CadParamSimulador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadParamSimulador.aspx.designer.cs">
+      <DependentUpon>CadParamSimulador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadVerba.aspx.cs">
+      <DependentUpon>CadVerba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadVerba.aspx.designer.cs">
+      <DependentUpon>CadVerba.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CargaProtheus.aspx.cs">
+      <DependentUpon>CargaProtheus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CargaProtheus.aspx.designer.cs">
+      <DependentUpon>CargaProtheus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CartasReport.aspx.cs">
+      <DependentUpon>CartasReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CartasReport.aspx.designer.cs">
+      <DependentUpon>CartasReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cobertura_SAP.aspx.cs">
+      <DependentUpon>Cobertura_SAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cobertura_SAP.aspx.designer.cs">
+      <DependentUpon>Cobertura_SAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoefPensao.aspx.cs">
+      <DependentUpon>CoefPensao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoefPensao.aspx.designer.cs">
+      <DependentUpon>CoefPensao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contribuicao.aspx.cs">
+      <DependentUpon>Contribuicao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contribuicao.aspx.designer.cs">
+      <DependentUpon>Contribuicao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlCapitalizacao.aspx.cs">
+      <DependentUpon>ControlCapitalizacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlCapitalizacao.aspx.designer.cs">
+      <DependentUpon>ControlCapitalizacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AvisoPagamento.aspx.cs">
+      <DependentUpon>AvisoPagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AvisoPagamento.aspx.designer.cs">
+      <DependentUpon>AvisoPagamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadValorReferencia.aspx.cs">
+      <DependentUpon>CadValorReferencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadValorReferencia.aspx.designer.cs">
+      <DependentUpon>CadValorReferencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadDepJudicial.aspx.cs">
+      <DependentUpon>CadDepJudicial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadDepJudicial.aspx.designer.cs">
+      <DependentUpon>CadDepJudicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArquivoPatrocinadora.aspx.cs">
+      <DependentUpon>ArquivoPatrocinadora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArquivoPatrocinadora.aspx.designer.cs">
+      <DependentUpon>ArquivoPatrocinadora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArquivoControle.aspx.cs">
+      <DependentUpon>ArquivoControle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArquivoControle.aspx.designer.cs">
+      <DependentUpon>ArquivoControle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArquivoParam.aspx.cs">
+      <DependentUpon>ArquivoParam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArquivoParam.aspx.designer.cs">
+      <DependentUpon>ArquivoParam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControleMedctr.aspx.cs">
+      <DependentUpon>ControleMedctr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControleMedctr.aspx.designer.cs">
+      <DependentUpon>ControleMedctr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RatAtuDepJudicial.aspx.cs">
+      <DependentUpon>RatAtuDepJudicial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RatAtuDepJudicial.aspx.designer.cs">
+      <DependentUpon>RatAtuDepJudicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Cadastro\Rel_Demo_Repasse_Produto.cs">
+      <DependentUpon>Rel_Demo_Repasse_Produto.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Cadastro\Rel_Nota_Debito.cs">
+      <DependentUpon>Rel_Nota_Debito.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\Capitalizacao\Rel_Segcod.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Segcod.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Capitalizacao\Rel_Situacao_Partic_Envio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Situacao_Partic_Envio.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Relat_Val_credenciados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Relat_Val_credenciados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Acao_Judicial.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Acao_Judicial.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_beneficio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_beneficio.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Gerencial_Acao_Judicial.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Gerencial_Acao_Judicial.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SaldoFundoSobra.aspx.cs">
+      <DependentUpon>SaldoFundoSobra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaldoFundoSobra.aspx.designer.cs">
+      <DependentUpon>SaldoFundoSobra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerbasAutopatrocinio.aspx.cs">
+      <DependentUpon>VerbasAutopatrocinio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerbasAutopatrocinio.aspx.designer.cs">
+      <DependentUpon>VerbasAutopatrocinio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeParaAutopatroc.aspx.cs">
+      <DependentUpon>DeParaAutopatroc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeParaAutopatroc.aspx.designer.cs">
+      <DependentUpon>DeParaAutopatroc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeParaAutopatroc_Verba.aspx.cs">
+      <DependentUpon>DeParaAutopatroc_Verba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeParaAutopatroc_Verba.aspx.designer.cs">
+      <DependentUpon>DeParaAutopatroc_Verba.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlDevCorrespondencia.aspx.cs">
+      <DependentUpon>CtrlDevCorrespondencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CtrlDevCorrespondencia.aspx.designer.cs">
+      <DependentUpon>CtrlDevCorrespondencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlDevCorrespondenciaManut.aspx.cs">
+      <DependentUpon>CtrlDevCorrespondenciaManut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CtrlDevCorrespondenciaManut.aspx.designer.cs">
+      <DependentUpon>CtrlDevCorrespondenciaManut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoAdmPatrocinadora.aspx.cs">
+      <DependentUpon>GrupoAdmPatrocinadora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GrupoAdmPatrocinadora.aspx.designer.cs">
+      <DependentUpon>GrupoAdmPatrocinadora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportaDadosCassi.aspx.cs">
+      <DependentUpon>ImportaDadosCassi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportaDadosCassi.aspx.designer.cs">
+      <DependentUpon>ImportaDadosCassi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Cadastro\Rel_Critica_Arquivo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Critica_Arquivo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Cadastro\Rel_Demo_Repasse.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Demo_Repasse.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Cadastro\Rel_Autopatrocinio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Autopatrocinio.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Capitalizacao\Rel_EnvArq_Cancel_Contrib.cs">
+      <DependentUpon>Rel_EnvArq_Cancel_Contrib.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Relatorios\Capitalizacao\Rel_EnvArq_Conf_Mov_Anual.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_EnvArq_Conf_Mov_Anual.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Capitalizacao\REL_EnvArq_Conf_Mov_Mensal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REL_EnvArq_Conf_Mov_Mensal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Capitalizacao\Rel_EnvArq_Detalhe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_EnvArq_Detalhe.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Capitalizacao\Rel_EnvArq_Resumo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_EnvArq_Resumo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_Ctr_Auto.cs">
+      <DependentUpon>Rel_Lista_Ctr_Auto.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Calc_Prov_IR_Civel.cs">
+      <DependentUpon>Rel_Calc_Prov_IR_Civel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Calc_Prov_IR_Igpdi.cs">
+      <DependentUpon>Rel_Calc_Prov_IR_Igpdi.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Calc_Prov_IR_Trabalhista.cs">
+      <DependentUpon>Rel_Calc_Prov_IR_Trabalhista.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\Capitalizacao\rel_inclusao_periodo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rel_inclusao_periodo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Carta_Plano_Previdenciario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Carta_Plano_Previdenciario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_Ctr_Bnf_Def.cs">
+      <DependentUpon>Rel_Lista_Ctr_Bnf_Def.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_Ctr_Ant_Sald.cs">
+      <DependentUpon>Rel_Lista_Ctr_Ant_Sald.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Recad_Benef.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Recad_Benef.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Rev_Efet_Situacao1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Rev_Efet_Situacao.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Rev_Efet_Sit_Perfil1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Rev_Efet_Sit_Perfil.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Rev_Efet_Sit_Plano1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Rev_Efet_Sit_Plano.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Rev_Efet_Sit_Pleito1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Rev_Efet_Sit_Pleito.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Sao_FranciscoCANC.cs">
+      <DependentUpon>Rel_Sao_FranciscoCANC.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Sao_FranciscoINC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Sao_FranciscoINC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RelCustoJudicial.aspx.cs">
+      <DependentUpon>RelCustoJudicial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelCustoJudicial.aspx.designer.cs">
+      <DependentUpon>RelCustoJudicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecadastramentoCtrl.aspx.cs">
+      <DependentUpon>RecadastramentoCtrl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecadastramentoCtrl.aspx.designer.cs">
+      <DependentUpon>RecadastramentoCtrl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecadastramentoBase.aspx.cs">
+      <DependentUpon>RecadastramentoBase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecadastramentoBase.aspx.designer.cs">
+      <DependentUpon>RecadastramentoBase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtratoPrevidenciario.aspx.cs">
+      <DependentUpon>ExtratoPrevidenciario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtratoPrevidenciario.aspx.designer.cs">
+      <DependentUpon>ExtratoPrevidenciario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Includes\ucReport.ascx.cs">
+      <DependentUpon>ucReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Includes\ucReport.ascx.designer.cs">
+      <DependentUpon>ucReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Popup.Master.cs">
+      <DependentUpon>Popup.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popup.Master.designer.cs">
+      <DependentUpon>Popup.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DevolucaoProposta.aspx.cs">
+      <DependentUpon>DevolucaoProposta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DevolucaoProposta.aspx.designer.cs">
+      <DependentUpon>DevolucaoProposta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exportacao.aspx.cs">
+      <DependentUpon>Exportacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exportacao.aspx.designer.cs">
+      <DependentUpon>Exportacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ImportVr.aspx.cs">
+      <DependentUpon>ImportVr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportVr.aspx.designer.cs">
+      <DependentUpon>ImportVr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncideJuros.aspx.cs">
+      <DependentUpon>IncideJuros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncideJuros.aspx.designer.cs">
+      <DependentUpon>IncideJuros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Includes\ucLogin.ascx.cs">
+      <DependentUpon>ucLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Includes\ucLogin.ascx.designer.cs">
+      <DependentUpon>ucLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pensao.aspx.cs">
+      <DependentUpon>Pensao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pensao.aspx.designer.cs">
+      <DependentUpon>Pensao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.Master.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Principal.Master.designer.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessaContrib.aspx.cs">
+      <DependentUpon>ProcessaContrib.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcessaContrib.aspx.designer.cs">
+      <DependentUpon>ProcessaContrib.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorios\Capitalizacao\Rel_Status_Partic.cs">
+      <DependentUpon>Rel_Status_Partic.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\Capitalizacao\Rel_Situacao_Partic.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Situacao_Partic.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Capitalizacao\Rel_Etiqueta_Cartas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Etiqueta_Cartas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Concessao\Rel_Dados_Previdenciarios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Dados_Previdenciarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Concessao\Rel_Extrato_Prev.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Extrato_Prev.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Concessao\Rel_Extrato_Prev_Detalhado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Extrato_Prev_Detalhado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Pagamentos\Rel_Carta_Recad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Carta_Recad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Pagamentos\Rel_Recad_Invalid.cs">
+      <DependentUpon>Rel_Recad_Invalid.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\Pagamentos\Rel_Recad_fora_prazo.cs">
+      <DependentUpon>Rel_Recad_fora_prazo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\Pagamentos\Rel_Recad_arquivo_agenda.cs">
+      <DependentUpon>Rel_Recad_arquivo_agenda.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\Pagamentos\Rel_Nao_Recadastrados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Nao_Recadastrados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_Tela.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Relatorio_Tela.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_BenefCorreto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_BenefCorreto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_BenefErrado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_BenefErrado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Calc_Res_Mat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Calc_Res_Mat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Cst_Judic_Corrig.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Cst_Judic_Corrig.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Dados_Cadastrais.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Dados_Cadastrais.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Demonstr_Calc_bd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Demonstr_Calc_bd.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Demonstr_Calc_bpd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Demonstr_Calc_bpd.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Demonstr_Calc_bsps.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Demonstr_Calc_bsps.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Demonstr_Calc_psap.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Demonstr_Calc_psap.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Demonstr_Calc_res_bsps.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Demonstr_Calc_res_bsps.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Devolucao.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Devolucao.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Val_Ficha_Financeira.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Val_Ficha_Financeira.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Historico.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Historico.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Incid_Aberta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Incid_Aberta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_Consolidado_Vr.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_Consolidado_Vr.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_Consolida_civ.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_Consolida_civ.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_Consolida_igpdi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_Consolida_igpdi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_Consolida_trb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_Consolida_trb.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_ctr.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_ctr.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_retro_civel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_retro_civel.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_retro_igpdi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_retro_igpdi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_retro_trab.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_retro_trab.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_srb_bd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_srb_bd.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_srb_bsps.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_srb_bsps.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_srb_psap.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_srb_psap.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_src_bd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_src_bd.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_src_bd.rpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_src_bd.rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Lista_vr_segr.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Lista_vr_segr.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_perc_pensao.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_perc_pensao.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Rest_Doc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Rest_Doc.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_SemTemp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_SemTemp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_SemTpAnt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_SemTpAnt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Sem_Benef.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Sem_Benef.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_TempCorreto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_TempCorreto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_TempErrado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_TempErrado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_TempPlano.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_TempPlano.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RelatorioWeb.aspx.cs">
+      <DependentUpon>RelatorioWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatorioWeb.aspx.designer.cs">
+      <DependentUpon>RelatorioWeb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndiceRevisaoLei.aspx.cs">
+      <DependentUpon>IndiceRevisaoLei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndiceRevisaoLei.aspx.designer.cs">
+      <DependentUpon>IndiceRevisaoLei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RelSaoFrancisco.aspx.cs">
+      <DependentUpon>RelSaoFrancisco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelSaoFrancisco.aspx.designer.cs">
+      <DependentUpon>RelSaoFrancisco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RevisaoLei.aspx.cs">
+      <DependentUpon>RevisaoLei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RevisaoLei.aspx.designer.cs">
+      <DependentUpon>RevisaoLei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicoTipo.aspx.cs">
+      <DependentUpon>ServicoTipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServicoTipo.aspx.designer.cs">
+      <DependentUpon>ServicoTipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimulacaoBD.aspx.cs">
+      <DependentUpon>SimulacaoBD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimulacaoBD.aspx.designer.cs">
+      <DependentUpon>SimulacaoBD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SisOb.aspx.cs">
+      <DependentUpon>SisOb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SisOb.aspx.designer.cs">
+      <DependentUpon>SisOb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SisObConsulta.aspx.cs">
+      <DependentUpon>SisObConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SisObConsulta.aspx.designer.cs">
+      <DependentUpon>SisObConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrocaEmpresa.aspx.cs">
+      <DependentUpon>TrocaEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrocaEmpresa.aspx.designer.cs">
+      <DependentUpon>TrocaEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadFile.ashx.cs">
+      <DependentUpon>UploadFile.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFile.aspx.cs">
+      <DependentUpon>WebFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFile.aspx.designer.cs">
+      <DependentUpon>WebFile.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Principal.Master" />
+    <Content Include="Popup.Master" />
+    <Content Include="ArquivoPatrocinadora.ashx" />
+    <Content Include="js\jquery-1.4.1.js" />
+    <None Include="Properties\PublishProfiles\Previdencia.pubxml" />
+    <Content Include="UploadFile.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntegWeb.Entidades\Entidades.csproj">
+      <Project>{d2275f51-1452-4e87-875d-a83e3e2612ce}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Framework\Framework.csproj">
+      <Project>{d13806fb-639b-4319-9699-c1a1658f2a17}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Previdencia.Aplicacao\Previdencia.Aplicacao.csproj">
+      <Project>{93597edc-a54e-485d-ad0f-2432998f0161}</Project>
+      <Name>Previdencia.Aplicacao</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Relatorio_Tela.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Relatorio_Tela.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_BenefCorreto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_BenefCorreto.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_BenefErrado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_BenefErrado.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Dados_Cadastrais.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Dados_Cadastrais.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Demonstr_Calc_bd.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Demonstr_Calc_bd.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Demonstr_Calc_bpd.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Demonstr_Calc_bpd.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Demonstr_Calc_bsps.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Demonstr_Calc_bsps.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Demonstr_Calc_psap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Demonstr_Calc_psap.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Demonstr_Calc_res_bsps.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Demonstr_Calc_res_bsps.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Devolucao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Devolucao.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Historico.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Historico.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Incid_Aberta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Incid_Aberta.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_Consolida_civ.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_Consolida_civ.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_Consolida_igpdi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_Consolida_igpdi.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_Consolida_trb.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_Consolida_trb.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_ctr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_ctr.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_retro_civel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_retro_civel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_retro_igpdi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_retro_igpdi.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_retro_trab.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_retro_trab.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_srb_bd.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_srb_bd.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_srb_bsps.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_srb_bsps.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_srb_psap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_srb_psap.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_src_bd.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_src_bd.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_src_bd.rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_src_bd.rpt.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_perc_pensao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_perc_pensao.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Rest_Doc.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Rest_Doc.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_SemTemp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_SemTemp.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_SemTpAnt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_SemTpAnt.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Sem_Benef.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Sem_Benef.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_TempCorreto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_TempCorreto.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_TempErrado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_TempErrado.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_TempPlano.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_TempPlano.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Rel_Calc_Res_Mat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Calc_Res_Mat.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Rel_Lista_Consolidado_Vr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_Consolidado_Vr.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_vr_segr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_vr_segr.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Capitalizacao\Rel_Etiqueta_Cartas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Etiqueta_Cartas.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Concessao\Rel_Dados_Previdenciarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Dados_Previdenciarios.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Concessao\Rel_Extrato_Prev.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Extrato_Prev.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Concessao\Rel_Extrato_Prev_Detalhado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Extrato_Prev_Detalhado.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Capitalizacao\Rel_Situacao_Partic.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Situacao_Partic.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Capitalizacao\Rel_Status_Partic.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Status_Partic.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Pagamentos\Rel_Carta_Recad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Carta_Recad.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Rel_Cst_Judic_Corrig.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Cst_Judic_Corrig.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Cadastro\Rel_Demo_Repasse.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Demo_Repasse.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Capitalizacao\Rel_EnvArq_Detalhe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_EnvArq_Detalhe.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Capitalizacao\Rel_EnvArq_Resumo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_EnvArq_Resumo.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Capitalizacao\Rel_EnvArq_Cancel_Contrib.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_EnvArq_Cancel_Contrib.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Capitalizacao\Rel_EnvArq_Conf_Mov_Anual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_EnvArq_Conf_Mov_Anual.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_Ctr_Ant_Sald.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_Ctr_Ant_Sald.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_Ctr_Bnf_Def.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_Ctr_Bnf_Def.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Cadastro\Rel_Critica_Arquivo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Critica_Arquivo.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Cadastro\Rel_Nota_Debito.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Nota_Debito.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Cadastro\Rel_Autopatrocinio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Autopatrocinio.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Capitalizacao\REL_EnvArq_Conf_Mov_Mensal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REL_EnvArq_Conf_Mov_Mensal.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Capitalizacao\rel_inclusao_periodo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rel_inclusao_periodo.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Cadastro\Rel_Demo_Repasse_Produto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Demo_Repasse_Produto.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Capitalizacao\Rel_Segcod.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Segcod.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="Relatorios\Capitalizacao\Rel_Situacao_Partic_Envio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Situacao_Partic_Envio.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Relat_Val_credenciados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Relat_Val_credenciados.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Rel_Acao_Judicial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Acao_Judicial.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Rel_beneficio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_beneficio.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Rel_Carta_Plano_Previdenciario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Carta_Plano_Previdenciario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Relatorios\Rel_Calc_Prov_IR_Trabalhista.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Calc_Prov_IR_Trabalhista.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Calc_Prov_IR_Igpdi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Calc_Prov_IR_Igpdi.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Calc_Prov_IR_Civel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Calc_Prov_IR_Civel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Lista_Ctr_Auto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Lista_Ctr_Auto.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Recad_Benef.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Recad_Benef.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="Relatorios\Rel_Gerencial_Acao_Judicial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Gerencial_Acao_Judicial.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Rel_Rev_Efet_Situacao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Rev_Efet_Situacao1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Rel_Rev_Efet_Sit_Perfil.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Rev_Efet_Sit_Perfil1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Rel_Rev_Efet_Sit_Plano.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Rev_Efet_Sit_Plano1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Rel_Rev_Efet_Sit_Pleito.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Rev_Efet_Sit_Pleito1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Rel_Sao_FranciscoCANC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Sao_FranciscoCANC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Rel_Sao_FranciscoINC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Sao_FranciscoINC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Rel_Val_Ficha_Financeira.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Val_Ficha_Financeira.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Pagamentos\Rel_Recad_Invalid.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Recad_Invalid.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Pagamentos\Rel_Recad_fora_prazo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Recad_fora_prazo.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Pagamentos\Rel_Recad_arquivo_agenda.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Recad_arquivo_agenda.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Pagamentos\Rel_Nao_Recadastrados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Nao_Recadastrados.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61439</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1686/</IISUrl>
+          <NTLMAuthentication>True</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

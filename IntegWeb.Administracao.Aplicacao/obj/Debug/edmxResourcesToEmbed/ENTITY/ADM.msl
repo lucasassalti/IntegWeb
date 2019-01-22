@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FUNCESPIntegracaoAdministracaoAplicacaoDALStoreContainer" CdmEntityContainer="EntitiesConn">
+    <EntitySetMapping Name="FUN_TBL_RELATORIO">
+      <EntityTypeMapping TypeName="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_TBL_RELATORIO">
+        <MappingFragment StoreEntitySet="FUN_TBL_RELATORIO">
+          <ScalarProperty Name="ID_RELATORIO" ColumnName="ID_RELATORIO" />
+          <ScalarProperty Name="RELATORIO" ColumnName="RELATORIO" />
+          <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+          <ScalarProperty Name="ARQUIVO" ColumnName="ARQUIVO" />
+          <ScalarProperty Name="ID_TIPO_RELATORIO" ColumnName="ID_TIPO_RELATORIO" />
+          <ScalarProperty Name="RELATORIO_EXTENSAO" ColumnName="RELATORIO_EXTENSAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FUN_TBL_RELATORIO_PARAM">
+      <EntityTypeMapping TypeName="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_TBL_RELATORIO_PARAM">
+        <MappingFragment StoreEntitySet="FUN_TBL_RELATORIO_PARAM">
+          <ScalarProperty Name="ORDEM" ColumnName="ORDEM" />
+          <ScalarProperty Name="PERMITE_NULL" ColumnName="PERMITE_NULL" />
+          <ScalarProperty Name="VISIVEL" ColumnName="VISIVEL" />
+          <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
+          <ScalarProperty Name="VALOR_INICIAL" ColumnName="VALOR_INICIAL" />
+          <ScalarProperty Name="DROPDOWLIST_CONSULTA" ColumnName="DROPDOWLIST_CONSULTA" />
+          <ScalarProperty Name="COMPONENTE_WEB" ColumnName="COMPONENTE_WEB" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="PARAMETRO" ColumnName="PARAMETRO" />
+          <ScalarProperty Name="ID_RELATORIO" ColumnName="ID_RELATORIO" />
+          <ScalarProperty Name="ID_RELATORIO_PARAMETRO" ColumnName="ID_RELATORIO_PARAMETRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FUN_TBL_TIPO_RELATORIO">
+      <EntityTypeMapping TypeName="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_TBL_TIPO_RELATORIO">
+        <MappingFragment StoreEntitySet="FUN_TBL_TIPO_RELATORIO">
+          <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="NM_TIPO" ColumnName="NM_TIPO" />
+          <ScalarProperty Name="ID_TIPO_RELATORIO" ColumnName="ID_TIPO_RELATORIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="543d7ec3c7a944248e2afdc6770e61dd" Name="Diagram1" ZoomLevel="42" >
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.DEPENDENTE" Width="1.5" PointX="0.62018587841660988" PointY="24.338309880503598" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.EMPREGADO" Width="1.5" PointX="2.8775874575961322" PointY="22.995738949159037" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FC_TBL_PARAMETRO" Width="1.5" PointX="8.875" PointY="20.5" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.REPRES_UNIAO_FSS" Width="1.5" PointX="4.125" PointY="14.75" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.AAT_TBL_DEB_CONTA" Width="1.5" PointX="8.875" PointY="15.375" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.AAT_TBL_DEB_CONTA_PRODUTO" Width="1.5" PointX="14.375" PointY="16.75" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.AAT_TBL_RET_DEB_CONTA" Width="1.5" PointX="8.875" PointY="11" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.AAT_TBL_RET_DEB_CONTA_CRITICAS" Width="1.5" PointX="6.6627691344650319" PointY="0.62129949062191858" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.AAT_TBL_RET_DEB_CONTA_MOTIVO" Width="1.5" PointX="1.8277940106707598" PointY="9.5494721725347791" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FUN_TBL_PARAMETRO_LOG" Width="1.5" PointX="10.75" PointY="20.5" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS" Width="1.5" PointX="8.8889023255970816" PointY="26.3360813531727" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS_LOG" Width="1.5" PointX="10.875" PointY="14.75" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS_STATUS" Width="1.5" PointX="0.98269647405608385" PointY="21.977122257452979" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS_TIPO" Width="1.5" PointX="10.428680547712688" PointY="1.8560369172394449" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.MEDCTR" Width="1.5" PointX="7.75" PointY="24.125" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.CF_EMPREGADO_003" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_FUN_TBL_PARAMETRO_LOG" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_AAT_PROD_DEB_CONTA" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_AAT_RET_DEB_CONTA_MOTIVO" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_AAT_TBL_RET_DEB_CONTA_CRIT" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_PRE_TBL_CARGA_PROTHEUS_STAT" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_PRE_TBL_CARGA_PROTHEUS_TIPO" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.AGENCIA" Width="1.5" PointX="0.25276871223597264" PointY="3.4171722547231114" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_AGBCO_EMPRG" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_AGBCO_REPRES" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.EMPRESA" Width="1.5" PointX="13" PointY="9.625" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_EMPRS_EMPRG" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.EMPRG_DPDTE" Width="1.5" PointX="10.875" PointY="23.375" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_AGBCO_EMPDEP" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_DPDTE_EMPDEP" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_EMPRG_EMPDEP" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_EMPDEP_REPRES" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.CC_INTEGR_CT" Width="1.5" PointX="10.059384706457792" PointY="28.651034249295961" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.GB_INTEGR_CT" Width="1.5" PointX="4.4882269932367969" PointY="5.1233340823665889" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.CTD010" Width="1.5" PointX="11.125" PointY="4.375" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.CTH010" Width="1.5" PointX="4.1951517538144962" PointY="18.84350610656827" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.CTT010" Width="1.5" PointX="6.5" PointY="3.125" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.CV0010" Width="1.5" PointX="14.75" PointY="9.625" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.SB1010" Width="1.5" PointX="16.75" PointY="1.5" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.SX5010" Width="1.5" PointX="6.9379325094343773" PointY="21.112809131440152" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.HIST_CADASTRO_COMPLEM_FSS" Width="1.5" PointX="2.56782278724379" PointY="9.8170605794606089" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.HIST_CADASTRO_FSS" Width="1.5" PointX="5.1773436652390963" PointY="19.298868173406863" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_AGBCO_HSCDCP" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_HISCAD_AGBCO" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_DPDTE_HSCDCP" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_HISCAD_DPDTE" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_EMPRG_HSCDCP" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_HISCAD_EMPRG" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FUN_TBL_ATU_CC" Width="1.5" PointX="1.1259943959889909" PointY="8.5858611504481459" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FUN_TBL_ATU_CC_HIST" Width="1.5" PointX="4.5" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.AAT_TBL_EMPRESTIMO_DESCONTO" Width="1.5" PointX="9.375" PointY="4.375" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.AAT_TBL_BOLETO" Width="1.5" PointX="12.625" PointY="39.625" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.AAT_TBL_BOLETO_ITEM" Width="1.5" PointX="14.875" PointY="39.625" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.AAT_TBL_BOLETO_TIPO" Width="1.75" PointX="10.125" PointY="39.625" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_AAT_TBL_BOLETO" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_AAT_TBL_BOLETO_TIPO" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.AAT_TBL_BOLETO_SUBTIPO" Width="2.75" PointX="9.5" PointY="46.375" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_AAT_TBL_BOLETO_SUBTIPO" />
+        <AssociationConnector Association="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FK_AAT_TBL_BOLETO_TIPO_SUB" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FIN_TBL_RES_ABERT_FINANCEIRA" Width="1.5" PointX="13.5" PointY="1.625" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FIN_TBL_BOL_CRM" Width="1.5" PointX="14.375" PointY="20.5" />
+        <EntityTypeShape EntityType="FUNCESP.Integracao.Financeira.Aplicacao.DAL.FIN_TBL_BOL_CRM_AUD" Width="1.5" PointX="14.375" PointY="25.375" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

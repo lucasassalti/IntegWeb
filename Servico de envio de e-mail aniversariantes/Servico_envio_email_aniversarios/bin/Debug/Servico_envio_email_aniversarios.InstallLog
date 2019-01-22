@@ -1,0 +1,165 @@
+﻿Instalando o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Instalando o serviço Fcesp_envio_email_aniversarios...
+Criando a origem de EventLog Fcesp_envio_email_aniversarios no log Application...
+Revertendo o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Restaurando o log de eventos para o estado anterior da origem Fcesp_envio_email_aniversarios.
+Ocorreu uma exceção durante a fase de reversão do instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: Fonte não encontrada, mas alguns ou todos os logs de evento não puderam ser pesquisados. Logs inacessíveis: Security.
+Ocorreu uma exceção durante a fase de reversão da instalação. Essa exceção será ignorada e a reversão continuará. Mas talvez o computador não reverta totalmente para o estado inicial após a conclusão da reversão.
+Instalando o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Instalando o serviço Fcesp_envio_email_aniversarios...
+Criando a origem de EventLog Fcesp_envio_email_aniversarios no log Application...
+Revertendo o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Restaurando o log de eventos para o estado anterior da origem Fcesp_envio_email_aniversarios.
+Ocorreu uma exceção durante a fase de reversão do instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: Fonte não encontrada, mas alguns ou todos os logs de evento não puderam ser pesquisados. Logs inacessíveis: Security.
+Ocorreu uma exceção durante a fase de reversão da instalação. Essa exceção será ignorada e a reversão continuará. Mas talvez o computador não reverta totalmente para o estado inicial após a conclusão da reversão.
+Instalando o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Instalando o serviço Fcesp_envio_email_aniversarios...
+Criando a origem de EventLog Fcesp_envio_email_aniversarios no log Application...
+Revertendo o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Restaurando o log de eventos para o estado anterior da origem Fcesp_envio_email_aniversarios.
+Instalando o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Instalando o serviço Fcesp_envio_email_aniversarios...
+Criando a origem de EventLog Fcesp_envio_email_aniversarios no log Application...
+Revertendo o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Restaurando o log de eventos para o estado anterior da origem Fcesp_envio_email_aniversarios.
+Desinstalando o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Removendo a origem do EventLog Fcesp_envio_email_aniversarios.
+Serviço Fcesp_envio_email_aniversarios está sendo removido do sistema...
+Serviço Fcesp_envio_email_aniversarios foi removido com êxito do sistema.
+Instalando o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Instalando o serviço Fcesp_envio_email_aniversarios...
+Serviço Fcesp_envio_email_aniversarios foi instalado com êxito.
+Criando a origem de EventLog Fcesp_envio_email_aniversarios no log Application...
+Confirmando o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Desinstalando o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Removendo a origem do EventLog Fcesp_envio_email_aniversarios.
+Serviço Fcesp_envio_email_aniversarios está sendo removido do sistema...
+Serviço Fcesp_envio_email_aniversarios foi removido com êxito do sistema.
+Instalando o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Instalando o serviço Fcesp_envio_email_aniversarios...
+Serviço Fcesp_envio_email_aniversarios foi instalado com êxito.
+Criando a origem de EventLog Fcesp_envio_email_aniversarios no log Application...
+Confirmando o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Desinstalando o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Removendo a origem do EventLog Fcesp_envio_email_aniversarios.
+Serviço Fcesp_envio_email_aniversarios está sendo removido do sistema...
+Serviço Fcesp_envio_email_aniversarios foi removido com êxito do sistema.
+Instalando o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Instalando o serviço Fcesp_envio_email_aniversarios...
+Criando a origem de EventLog Fcesp_envio_email_aniversarios no log Application...
+Revertendo o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Restaurando o log de eventos para o estado anterior da origem Fcesp_envio_email_aniversarios.
+Ocorreu uma exceção durante a fase de reversão do instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: Fonte não encontrada, mas alguns ou todos os logs de evento não puderam ser pesquisados. Logs inacessíveis: Security.
+Ocorreu uma exceção durante a fase de reversão da instalação. Essa exceção será ignorada e a reversão continuará. Mas talvez o computador não reverta totalmente para o estado inicial após a conclusão da reversão.
+Desinstalando o assembly 'D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Removendo a origem do EventLog Fcesp_envio_email_aniversarios.
+Ocorreu uma exceção durante a desinstalação do instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: Fonte não encontrada, mas alguns ou todos os logs de evento não puderam ser pesquisados. Logs inacessíveis: Security.
+Ocorreu uma exceção ao desinstalar. Essa exceção será ignorada e a desinstalação continuará. Mas talvez o aplicativo não seja totalmente desinstalado após a conclusão da desinstalação.
+Instalando o assembly 'D:\IntegWeb\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\IntegWeb\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\IntegWeb\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Instalando o serviço Fcesp_envio_email_aniversarios...
+Serviço Fcesp_envio_email_aniversarios foi instalado com êxito.
+Criando a origem de EventLog Fcesp_envio_email_aniversarios no log Application...
+Confirmando o assembly 'D:\IntegWeb\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\IntegWeb\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\IntegWeb\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Desinstalando o assembly 'D:\IntegWeb\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\IntegWeb\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\IntegWeb\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Removendo a origem do EventLog Fcesp_envio_email_aniversarios.
+Serviço Fcesp_envio_email_aniversarios está sendo removido do sistema...
+Serviço Fcesp_envio_email_aniversarios foi removido com êxito do sistema.
+Tentativa de parar o serviço Fcesp_envio_email_aniversarios.
+Desinstalando o assembly 'D:\IntegWeb\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   logfile = D:\IntegWeb\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.InstallLog
+   assemblypath = D:\IntegWeb\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Debug\Servico_envio_email_aniversarios.exe
+Removendo a origem do EventLog Fcesp_envio_email_aniversarios.
+Aviso: a origem Fcesp_envio_email_aniversarios não está registrada no computador local.
+Serviço Fcesp_envio_email_aniversarios está sendo removido do sistema...
+Serviço Fcesp_envio_email_aniversarios foi removido com êxito do sistema.
+Tentativa de parar o serviço Fcesp_envio_email_aniversarios.

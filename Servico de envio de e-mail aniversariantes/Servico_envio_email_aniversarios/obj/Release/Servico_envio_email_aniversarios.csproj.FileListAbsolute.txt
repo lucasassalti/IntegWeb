@@ -1,0 +1,6 @@
+D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Release\Servico_envio_email_aniversarios.exe.config
+D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Release\Servico_envio_email_aniversarios.exe
+D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\bin\Release\Servico_envio_email_aniversarios.pdb
+D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\obj\Release\Servico_envio_email_aniversarios.csprojResolveAssemblyReference.cache
+D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\obj\Release\Servico_envio_email_aniversarios.exe
+D:\tfsFuncesp\IntegWeb\Servico de envio de e-mail aniversariantes\Servico_envio_email_aniversarios\obj\Release\Servico_envio_email_aniversarios.pdb

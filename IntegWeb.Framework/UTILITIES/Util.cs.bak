@@ -1,0 +1,166 @@
+﻿using IntegWeb.Entidades;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;  
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+//using System.Reflection;
+using System.Xml;
+using System.Xml.Schema;
+using System.Xml.Linq;
+
+namespace IntegWeb.Framework
+{
+    public static class Util
+    {
+        public static string LimparCNPJ(string cnpj)
+        {
+            return cnpj.Replace(".", "").Replace("/", "").Replace("-", "");
+        }
+
+        public static string LimparCPF(string cpf)
+        {
+            return cpf.Replace(".", "").Replace("/", "").Replace("-", "");
+        }
+
+        public static string FormatarCNPJ(string cnpj)
+        {
+            return String.Format(@"{0:00\.000\.000\/0000\-00}", Convert.ToInt64(cnpj));
+        }
+
+        public static string FormatarCPF(string cpf)
+        {
+            return String.Format(@"{0:000\.000\.000\-00}", Convert.ToInt64(cpf));
+        }
+
+        public static string FormatarData(DateTime data)
+        {
+            return data.ToString("dd/MM/yyyy");
+        }
+
+        public static string FormatarValorMoeda(decimal valor)
+        {
+            return String.Format("{0:F}", valor);
+        }
+
+        public static DateTime? String2Date(string valor)
+        {
+            DateTime dtReturn;
+            if (DateTime.TryParse(valor, out dtReturn)) {
+                return dtReturn;
+            } else {
+                return null;
+            }
+        }
+
+        public static Decimal? String2Decimal(string valor)
+        {
+            Decimal dcReturn;
+            if (Decimal.TryParse(valor, out dcReturn))
+            {
+                return dcReturn;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static Int32? String2Int32(string valor)
+        {
+            Int32 iReturn;
+            if (Int32.TryParse(valor, out iReturn))
+            {
+                return iReturn;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static Int64? String2Int64(string valor)
+        {
+            Int64 iReturn;
+            if (Int64.TryParse(valor, out iReturn))
+            {
+                return iReturn;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static Resultado XmlValidator(string sXML, string sXSD)
+        {
+            Resultado res = new Resultado();
+
+            XmlSchemaSet Xss = new XmlSchemaSet();
+            Xss.Add("", XmlReader.Create(new StringReader(sXSD)));
+
+            XDocument doc1 = XDocument.Parse(sXML);
+            string err = "";
+            bool errors = false;
+            doc1.Validate(Xss, (o, e) =>
+            {
+                err += e.Message;
+                errors = true;
+            });
+
+            if (errors)
+            {
+                res.Erro(err);
+            }
+            else
+            {
+                res.Sucesso(string.Empty);
+            }
+
+            return res;
+        }
+
+        public static IQueryable<TEntity> OrderBy<TEntity>(this IQueryable<TEntity> source, string orderByProperty,
+                                  bool desc)
+        {
+            string command = desc ? "OrderByDescending" : "OrderBy";
+            var type = typeof(TEntity);
+            var property = String.IsNullOrEmpty(orderByProperty) ? type.GetProperties().First() : type.GetProperty(orderByProperty);
+            var parameter = Expression.Parameter(type, "p");
+            var propertyAccess = Expression.MakeMemberAccess(parameter, property);
+            var orderByExpression = Expression.Lambda(propertyAccess, parameter);
+            var resultExpression = Expression.Call(typeof(Queryable), command, new Type[] { type, property.PropertyType },
+                                          source.Expression, Expression.Quote(orderByExpression));
+            return source.Provider.CreateQuery<TEntity>(resultExpression);            
+        }
+
+        public static IQueryable<TEntity> GetData<TEntity>(this IQueryable<TEntity> source, int startRowIndex, int maximumRows, string sortParameter)
+        {
+            bool sortDirectionDesc = false;
+            if (sortParameter != string.Empty)
+            {
+                sortDirectionDesc = !sortParameter.EndsWith(" DESC");
+                sortParameter = sortParameter.Replace(" DESC", "");
+            }            
+            return (from c in source
+                    select c)
+                    .OrderBy(sortParameter, sortDirectionDesc)
+                    .Skip(startRowIndex)
+                    .Take(maximumRows);
+        }
+
+        public static int SelectCount<TEntity>(this IQueryable<TEntity> source)
+        {
+            return (from c in source select c).Count();
+        }
+
+        public enum OrderDirection
+        {
+            Ascending,
+            Descending
+        }
+
+    }
+}

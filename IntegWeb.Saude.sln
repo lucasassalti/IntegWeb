@@ -1,0 +1,96 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "IntegWeb.Entidades\Entidades.csproj", "{D2275F51-1452-4E87-875D-A83E3E2612CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "IntegWeb.Framework\Framework.csproj", "{D13806FB-639B-4319-9699-C1A1658F2A17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saude.Aplicacao", "IntegWeb.Saude.Aplicacao\Saude.Aplicacao.csproj", "{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saude.Web", "IntegWeb.Saude.Web\Saude.Web.csproj", "{3816C8BF-F506-499C-A5BB-AAE600092957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Previdencia.Aplicacao", "IntegWeb.Previdencia.Aplicacao\Previdencia.Aplicacao.csproj", "{93597EDC-A54E-485D-AD0F-2432998F0161}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://fcespwebd001:8080/tfs/funcespcollection
+		SccProjectUniqueName0 = IntegWeb.Entidades\\Entidades.csproj
+		SccProjectName0 = IntegWeb.Entidades
+		SccAuxPath0 = http://fcespwebd001:8080/tfs/funcespcollection
+		SccLocalPath0 = IntegWeb.Entidades
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = IntegWeb.Framework\\Framework.csproj
+		SccProjectName1 = IntegWeb.Framework
+		SccAuxPath1 = http://fcespwebd001:8080/tfs/funcespcollection
+		SccLocalPath1 = IntegWeb.Framework
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = IntegWeb.Saude.Aplicacao\\Saude.Aplicacao.csproj
+		SccProjectName2 = IntegWeb.Saude.Aplicacao
+		SccAuxPath2 = http://fcespwebd001:8080/tfs/funcespcollection
+		SccLocalPath2 = IntegWeb.Saude.Aplicacao
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = IntegWeb.Saude.Web\\Saude.Web.csproj
+		SccProjectName3 = IntegWeb.Saude.Web
+		SccAuxPath3 = http://fcespwebd001:8080/tfs/funcespcollection
+		SccLocalPath3 = IntegWeb.Saude.Web
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = IntegWeb.Previdencia.Aplicacao\\Previdencia.Aplicacao.csproj
+		SccProjectName4 = IntegWeb.Previdencia.Aplicacao
+		SccAuxPath4 = http://fcespwebd001:8080/tfs/funcespcollection
+		SccLocalPath4 = IntegWeb.Previdencia.Aplicacao
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Debug|x86.ActiveCfg = Debug|x86
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Debug|x86.Build.0 = Debug|x86
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Release|x86.ActiveCfg = Release|x86
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Release|x86.Build.0 = Release|x86
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Debug|x86.ActiveCfg = Debug|x86
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Debug|x86.Build.0 = Debug|x86
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Release|x86.ActiveCfg = Release|x86
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Release|x86.Build.0 = Release|x86
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Debug|x86.ActiveCfg = Debug|x86
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Debug|x86.Build.0 = Debug|x86
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Release|x86.ActiveCfg = Release|x86
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Release|x86.Build.0 = Release|x86
+		{3816C8BF-F506-499C-A5BB-AAE600092957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3816C8BF-F506-499C-A5BB-AAE600092957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3816C8BF-F506-499C-A5BB-AAE600092957}.Debug|x86.ActiveCfg = Debug|x86
+		{3816C8BF-F506-499C-A5BB-AAE600092957}.Debug|x86.Build.0 = Debug|x86
+		{3816C8BF-F506-499C-A5BB-AAE600092957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3816C8BF-F506-499C-A5BB-AAE600092957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3816C8BF-F506-499C-A5BB-AAE600092957}.Release|x86.ActiveCfg = Release|x86
+		{3816C8BF-F506-499C-A5BB-AAE600092957}.Release|x86.Build.0 = Release|x86
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Debug|x86.ActiveCfg = Debug|x86
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Debug|x86.Build.0 = Debug|x86
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Release|x86.ActiveCfg = Release|x86
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

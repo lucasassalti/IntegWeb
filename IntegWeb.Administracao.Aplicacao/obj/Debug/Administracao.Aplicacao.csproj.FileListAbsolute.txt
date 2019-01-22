@@ -1,0 +1,16 @@
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\bin\Debug\IntegWeb.Administracao.Aplicacao.dll.config
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\bin\Debug\IntegWeb.Administracao.Aplicacao.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\bin\Debug\IntegWeb.Administracao.Aplicacao.pdb
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\bin\Debug\EntityFramework.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\bin\Debug\IntegWeb.Entidades.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\bin\Debug\IntegWeb.Framework.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\bin\Debug\Oracle.DataAccess.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\bin\Debug\EPPlus.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\bin\Debug\DocumentFormat.OpenXml.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\bin\Debug\itextsharp.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\bin\Debug\IntegWeb.Entidades.pdb
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\bin\Debug\IntegWeb.Framework.pdb
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\bin\Debug\EntityFramework.xml
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\obj\Debug\Administracao.Aplicacao.csprojResolveAssemblyReference.cache
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\obj\Debug\IntegWeb.Administracao.Aplicacao.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Administracao.Aplicacao\obj\Debug\IntegWeb.Administracao.Aplicacao.pdb

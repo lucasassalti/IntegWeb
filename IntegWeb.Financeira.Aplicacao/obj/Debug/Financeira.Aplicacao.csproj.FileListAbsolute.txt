@@ -1,0 +1,16 @@
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\bin\Debug\IntegWeb.Financeira.Aplicacao.dll.config
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\bin\Debug\IntegWeb.Financeira.Aplicacao.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\bin\Debug\IntegWeb.Financeira.Aplicacao.pdb
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\bin\Debug\EntityFramework.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\bin\Debug\IntegWeb.Entidades.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\bin\Debug\IntegWeb.Framework.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\bin\Debug\Oracle.DataAccess.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\bin\Debug\EPPlus.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\bin\Debug\DocumentFormat.OpenXml.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\bin\Debug\itextsharp.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\bin\Debug\IntegWeb.Entidades.pdb
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\bin\Debug\IntegWeb.Framework.pdb
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\bin\Debug\EntityFramework.xml
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\obj\Debug\Financeira.Aplicacao.csprojResolveAssemblyReference.cache
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\obj\Debug\IntegWeb.Financeira.Aplicacao.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Financeira.Aplicacao\obj\Debug\IntegWeb.Financeira.Aplicacao.pdb

@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93597EDC-A54E-485D-AD0F-2432998F0161}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntegWeb.Previdencia.Aplicacao</RootNamespace>
+    <AssemblyName>IntegWeb.Previdencia.Aplicacao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Cadastro\ArqPatrocinadoraBLL.cs" />
+    <Compile Include="BLL\Cadastro\AfastamentoBLL.cs" />
+    <Compile Include="BLL\Cadastro\ArqPatrocinaCargaBLL.cs" />
+    <Compile Include="BLL\Cadastro\ArqPatrocinaDemonsBLL.cs" />
+    <Compile Include="BLL\Cadastro\ArqPatrocinadoraEnvioBLL.cs" />
+    <Compile Include="BLL\Cadastro\ArqPatrocinadoraRepasseBLL.cs" />
+    <Compile Include="BLL\Cadastro\CadAjusteCepBLL.cs" />
+    <Compile Include="BLL\Cadastro\ArqParametrosBLL.cs" />
+    <Compile Include="BLL\Cadastro\ArqPatrocinaNotaDebitoBLL.cs" />
+    <Compile Include="BLL\Cadastro\CtrlDevCorrespondenciaBLL.cs" />
+    <Compile Include="BLL\Cadastro\CtrlDevCorrespondenciaManutBLL.cs" />
+    <Compile Include="BLL\Cadastro\DadosCartaoCassiBLL.cs" />
+    <Compile Include="BLL\Cadastro\EmpregadoAtualizacaoBLL.cs" />
+    <Compile Include="BLL\Cadastro\EmpresaBLL.cs" />
+    <Compile Include="BLL\Cadastro\FinanceiroBLL.cs" />
+    <Compile Include="BLL\Cadastro\CriticasBLL.cs" />
+    <Compile Include="BLL\Cadastro\EmpregadoBLL.cs" />
+    <Compile Include="BLL\Cadastro\GrupoAdmPatrocinadoraBLL.cs" />
+    <Compile Include="BLL\Cadastro\CargosBLL.cs" />
+    <Compile Include="BLL\Cadastro\Layouts\LAY_ARQ_ENVIO.cs" />
+    <Compile Include="BLL\Cadastro\Layouts\LAY_EMPREGADO.cs" />
+    <Compile Include="BLL\Cadastro\Layouts\LAY_ORGAO.cs" />
+    <Compile Include="BLL\Cadastro\Layouts\LAY_FICHA_FINANCEIRA.cs" />
+    <Compile Include="BLL\Cadastro\Layouts\LAYOUT_UTIL.cs" />
+    <Compile Include="BLL\Cadastro\Layouts\LAY_AFASTAMENTO.cs" />
+    <Compile Include="BLL\Calculo Acao Judicial\AcaoJudicialBLL.cs" />
+    <Compile Include="BLL\Calculo Acao Judicial\CoeficientePensaoBLL.cs" />
+    <Compile Include="BLL\Calculo Acao Judicial\DepositoJudicialBLL.cs" />
+    <Compile Include="BLL\Calculo Acao Judicial\RatAtuDepJudicialBLL.cs" />
+    <Compile Include="BLL\Calculo Acao Judicial\ValorReferenciaBLL.cs" />
+    <Compile Include="BLL\Calculo Acao Judicial\FichaFinanceiraBLL.cs" />
+    <Compile Include="BLL\Calculo Acao Judicial\IncideJurosBLL.cs" />
+    <Compile Include="BLL\Calculo Acao Judicial\IndiceRevisaoBLL.cs" />
+    <Compile Include="BLL\Calculo Acao Judicial\RevisaoLeiBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\BenefRecusadoBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\AvisoPagamentoBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\AvisoRepresentanteBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\SaldoFundoSobraBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\VerbasAutopatrocinioBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\DeParaAutopatrocBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\DeParaAutopatrocVerbaBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\CadParamSimuladorBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\CoberturaSAPBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\DevolucaoPropostaBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\PropostaAdesaoBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\TempoRecusadoBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\TipoBeneficioBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\TipoServicoBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\ContribEsporadicaBLL.cs" />
+    <Compile Include="BLL\Capitalizacao\TrocaEmpresaBLL.cs" />
+    <Compile Include="BLL\CargaProtheus\CadProtheusBLL.cs" />
+    <Compile Include="BLL\CargaProtheus\ControleMedctrBLL.cs" />
+    <Compile Include="BLL\Concessao\AlteracaoTempoServicoBLL.cs" />
+    <Compile Include="DAL\Cadastro\CadComponentesDAL.cs" />
+    <Compile Include="DAL\Cadastro\EmpregadoAtualizacaoDAL.cs" />
+    <Compile Include="DAL\Concessao\AlteracaoTempoServicoDAL.cs" />
+    <Compile Include="BLL\Concessao\BateCadastralCargaBLL.cs" />
+    <Compile Include="BLL\Concessao\CadAcaoJudicialBLL.cs" />
+    <Compile Include="BLL\Concessao\extratoPrevidenciarioBLL.cs" />
+    <Compile Include="BLL\Pagamentos Previdenciarios\ArquivoSisObBLL.cs" />
+    <Compile Include="BLL\Pagamentos Previdenciarios\ParticipanteBLL.cs" />
+    <Compile Include="BLL\Pagamentos Previdenciarios\RecadastramentoBLL.cs" />
+    <Compile Include="BLL\Pagamentos Previdenciarios\PensaoBLL.cs" />
+    <Compile Include="BLL\Pagamentos Previdenciarios\SimulaBDBLL.cs" />
+    <Compile Include="DAL\Cadastro\ArqPatrocinadoraDAL.cs" />
+    <Compile Include="DAL\Cadastro\AfastamentoDAL.cs" />
+    <Compile Include="DAL\Cadastro\ArqPatrocinaCargaDAL.cs" />
+    <Compile Include="DAL\Cadastro\ArqPatrocinaDemonsDAL.cs" />
+    <Compile Include="DAL\Cadastro\ArqPatrocinadoraEnvioDAL.cs" />
+    <Compile Include="DAL\Cadastro\ArqPatrocinadoraRepasseDAL.cs" />
+    <Compile Include="DAL\Cadastro\CadAjusteCepDAL.cs" />
+    <Compile Include="DAL\Cadastro\ArqParametrosDAL.cs" />
+    <Compile Include="DAL\Cadastro\ArqPatrocinaNotaDebitoDAL.cs" />
+    <Compile Include="DAL\Cadastro\CargosDAL.cs" />
+    <Compile Include="DAL\Cadastro\CtrlDevCorrespondenciaDAL.cs" />
+    <Compile Include="DAL\Cadastro\CtrlDevCorrespondenciaManutDAL.cs" />
+    <Compile Include="DAL\Cadastro\DadosCartaoCassiDAL.cs" />
+    <Compile Include="DAL\Cadastro\EmpresaDAL.cs" />
+    <Compile Include="DAL\Cadastro\FinanceiroDAL.cs" />
+    <Compile Include="DAL\Cadastro\CriticasDAL.cs" />
+    <Compile Include="DAL\Cadastro\EmpregadoDAL.cs" />
+    <Compile Include="DAL\Cadastro\GrupoAdmPatrocinadoraDAL.cs" />
+    <Compile Include="DAL\Calculo Acao Judicial\AcaoJudicialDAL.cs" />
+    <Compile Include="DAL\Calculo Acao Judicial\CoeficientePensaoDAL.cs" />
+    <Compile Include="DAL\Calculo Acao Judicial\DepositoJudicialDAL.cs" />
+    <Compile Include="DAL\Calculo Acao Judicial\RatAtuDepJudicialDAL.cs" />
+    <Compile Include="DAL\Calculo Acao Judicial\ValorReferenciaDAL.cs" />
+    <Compile Include="DAL\Calculo Acao Judicial\FichaFinanceiraDal.cs" />
+    <Compile Include="DAL\Calculo Acao Judicial\IncideJurosDAL.cs" />
+    <Compile Include="DAL\Calculo Acao Judicial\IndiceRevisaoDAL.cs" />
+    <Compile Include="DAL\Calculo Acao Judicial\RevisaoLeiDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\BenefRecusadoDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\AvisoPagamentoDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\AvisoRepresentanteDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\SaldoFundoSobraDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\VerbasAutopatrocinioDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\DeParaAutopatrocDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\DeParaAutopatrocVerbaDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\CadParamSimuladorDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\CoberturaSAPDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\DevolucaoPropostaDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\PropostaAdesaoDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\TempRecusadoDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\TipoBeneficioDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\TipoServicoDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\ContribEsporadicaDAL.cs" />
+    <Compile Include="DAL\Capitalizacao\TrocaEmpresaDAL.cs" />
+    <Compile Include="DAL\CargaProtheus\CadProtheusDAL.cs" />
+    <Compile Include="DAL\CargaProtheus\ControleMedctrDAL.cs" />
+    <Compile Include="DAL\Concessao\BateCadastralCargaDAL.cs" />
+    <Compile Include="DAL\Concessao\CadAcaoJudicialDAL.cs" />
+    <Compile Include="DAL\Concessao\extratoPrevidenciarioDAL.cs" />
+    <Compile Include="DAL\Pagamentos Previdenciarios\ArquivoSisObDAL.cs" />
+    <Compile Include="DAL\Pagamentos Previdenciarios\ParticipanteDAL.cs" />
+    <Compile Include="DAL\Pagamentos Previdenciarios\RecadastramentoDAL.cs" />
+    <Compile Include="DAL\Pagamentos Previdenciarios\PensaoDAL.cs" />
+    <Compile Include="DAL\Pagamentos Previdenciarios\SimulaBDDAL.cs" />
+    <Compile Include="ENUM\EmpregadoTipo.cs" />
+    <Compile Include="ENTITY\AAT_TBL_BOLETO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\AAT_TBL_BOLETO_ITEM.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\ADESAO_PLANO_PARTIC_FSS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\AFASTAMENTO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\AGENCIA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\ASSISTIDO_INSS_FSS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\ASSOCIACAO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\ASSOCIACAO_VERBA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\ATT_CHARGER_DEPARA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\BENEFICIO_PARTIC_FSS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CAD_TBL_CONTROLECASSI.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CAD_TBL_CTRLDEV_CORRESP.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CAD_TBL_CTRLDEV_FLUXOACAO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CAD_TBL_CTRLDEV_TIPOACAO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CAD_TBL_CTRLDEV_TIPODOCUMENTO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CAD_TBL_CTRLDEV_TIPOMOTDEV.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CARGOS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\COTACAO_MES_UM.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CTA_TBL_PAIS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CTFSS_TIPBNF.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\DEPENDENTE.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\EMPREGADO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\EMPREGADO_ATUALIZACAO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\EMPRESA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\EMPRG_DPDTE.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\ESTADO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FC_CAD_TBL_MOV_DADOS_BANC.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FC_CAD_TBL_MOV_DADOS_CAD.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FICHA_FINANCEIRA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\HIST_PART_CAPIT_FSS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\IRE_EMPREST_RECEBE.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\MOTIVO_DESLIG_FSS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\MUNICIPIO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\ORGAO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PARTIAL\AFASTAMENTO.cs" />
+    <Compile Include="ENTITY\PARTIAL\PRE_TBL_ARQ_PAT_DEMONSTRATIVO.cs" />
+    <Compile Include="ENTITY\PARTIAL\FICHA_FINANCEIRA.cs" />
+    <Compile Include="ENTITY\PARTIAL\EMPREGADO.cs" />
+    <Compile Include="ENTITY\PARTIAL\ORGAO.cs" />
+    <Compile Include="ENTITY\PARTIAL\PRE_TBL_ARQ_PATROCINA_CRITICA.cs" />
+    <Compile Include="ENTITY\PARTIAL\PRE_TBL_ARQ_PATROCINA_TIPO.cs" />
+    <Compile Include="ENTITY\PARTIAL\PRE_TBL_ARQ_PATROCINA_LINHA.cs" />
+    <Compile Include="ENTITY\PARTIAL\PRE_TBL_ARQ_PATROCINA.cs" />
+    <Compile Include="ENTITY\PARTIAL\PRE_TBL_RECADASTRAMENTO.cs" />
+    <Compile Include="ENTITY\PARTIAL\PRE_TBL_CONTRIB_ESPORADICA.cs" />
+    <Compile Include="ENTITY\PARTIAL\PRE_TBL_DEPOSITO_JUDIC.cs" />
+    <Compile Include="ENTITY\PARTIAL\PRE_TBL_DEPOSITO_JUDIC_PGTO.cs" />
+    <Compile Include="ENTITY\PARTICIPANTE_FSS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PATROCINADORA_FSS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PLANO_BENEFICIO_FSS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PREVIDENCIA.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PREVIDENCIA.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PREVIDENCIA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PREVIDENCIA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PREVIDENCIA.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ACAO_JUDIC.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ACAO_VR_TIPLTO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_AREA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_ENVIO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_ENVIO_HIST.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_ENVIO_STATUS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_ENVIO_TIPO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_ENV_REPASSE.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_ENV_REPASSE_LINHA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_NOTA_DEBITO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_PARAM.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_PATROCINA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_PATROCINA_CARGA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_PATROCINA_CRITICA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_PATROCINA_LINHA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_PATROCINA_LOG.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_PATROCINA_STATUS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_PATROCINA_TIPO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_PAT_DEMONSTRA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_PAT_DEMONSTRA_DET.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_PAT_VERBA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_PAT_VERBA_PRODUTO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_ARQ_SALDO_FUNDO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_CARGA_PROTHEUS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_CARGA_PROTHEUS_LOG.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_CARGA_PROTHEUS_STATUS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_CARGA_PROTHEUS_TIPO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_CONTRIB_ESPORADICA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_DEPOSITO_JUDIC.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_DEPOSITO_JUDIC_PGTO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_GRUPO_EMPRS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_JUR_DEP_JUDICIAL.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_POR_CONT.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_POR_DREF.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_POR_UREF.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_RECADASTRAMENTO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_RECADASTRAMENTO_TIPO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_VW_ARQ_PAT_DEMONSTRATIVO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\REPRES_DEPEND_FSS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\REPRES_UNIAO_FSS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_DADOS_CARTAO_CASSI.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SCRTBLCDECOMPEMPREGADO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_CEP.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_CONVENENTE.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_DEPARA_EMPRESTIMO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_DESC_PLANO_CONTAS.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_PARTICIP_PLANO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_SCR_DEPARA_AUTOPATROC.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_SCR_DEPARA_AUTOPATROC_VERBA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_SCR_DEPARA_MATRICULA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_SCR_SUBGRUPO_FINANC_VERBA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_SCR_VERBAS_AUTOPATROC.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TIPO_AFASTAMENTO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TP_MOVTO.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\UNIDADE_MONETARIA.cs">
+      <DependentUpon>PREVIDENCIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntegWeb.Entidades\Entidades.csproj">
+      <Project>{d2275f51-1452-4e87-875d-a83e3e2612ce}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Framework\Framework.csproj">
+      <Project>{d13806fb-639b-4319-9699-c1a1658f2a17}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\FUNCESP.Integracao.Entidades.dll" />
+    <Content Include="bin\Debug\FUNCESP.Integracao.Entidades.pdb" />
+    <Content Include="bin\Debug\FUNCESP.Integracao.Framework.dll" />
+    <Content Include="bin\Debug\FUNCESP.Integracao.Framework.pdb" />
+    <Content Include="bin\Debug\FUNCESP.Integracao.Previdencia.Aplicacao.dll" />
+    <Content Include="bin\Debug\FUNCESP.Integracao.Previdencia.Aplicacao.pdb" />
+    <Content Include="bin\Debug\itextsharp.dll" />
+    <Content Include="bin\Release\FUNCESP.Integracao.Entidades.dll" />
+    <Content Include="bin\Release\FUNCESP.Integracao.Entidades.pdb" />
+    <Content Include="bin\Release\FUNCESP.Integracao.Framework.dll" />
+    <Content Include="bin\Release\FUNCESP.Integracao.Framework.pdb" />
+    <Content Include="bin\Release\FUNCESP.Integracao.Previdencia.Aplicacao.dll" />
+    <Content Include="bin\Release\FUNCESP.Integracao.Previdencia.Aplicacao.pdb" />
+    <Content Include="bin\Release\itextsharp.dll" />
+    <Content Include="ENTITY\obj\Debug\FUNCESP.Integracao.Previdencia.Aplicacao.csproj.FileListAbsolute.txt" />
+    <Content Include="ENTITY\obj\Debug\FUNCESP.Integracao.Previdencia.Aplicacao.dll" />
+    <Content Include="ENTITY\obj\Debug\FUNCESP.Integracao.Previdencia.Aplicacao.pdb" />
+    <Content Include="ENTITY\obj\Release\FUNCESP.Integracao.Previdencia.Aplicacao.csproj.FileListAbsolute.txt" />
+    <Content Include="ENTITY\obj\Release\FUNCESP.Integracao.Previdencia.Aplicacao.dll" />
+    <Content Include="ENTITY\obj\Release\FUNCESP.Integracao.Previdencia.Aplicacao.pdb" />
+    <EmbeddedResource Include="MODELOS\email_patrocinadora_processamento_concluido.html" />
+    <EmbeddedResource Include="MODELOS\assinatura_email_portal.jpg" />
+    <EmbeddedResource Include="MODELOS\email_patrocinadora_mov_mensal.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="ENTITY\PREVIDENCIA.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PREVIDENCIA.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="ENTITY\PREVIDENCIA.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PREVIDENCIA.edmx</DependentUpon>
+      <LastGenOutput>PREVIDENCIA.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ENTITY\PREVIDENCIA.edmx.diagram">
+      <DependentUpon>PREVIDENCIA.edmx</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ENTITY\PREVIDENCIA.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PREVIDENCIA.edmx</DependentUpon>
+      <LastGenOutput>PREVIDENCIA.cs</LastGenOutput>
+    </None>
+    <None Include="ENTITY\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="ENTITY\obj\Debug\FUNCESP.Integracao.Previdencia.Aplicacao.csprojResolveAssemblyReference.cache" />
+    <None Include="ENTITY\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="ENTITY\obj\Release\FUNCESP.Integracao.Previdencia.Aplicacao.csprojResolveAssemblyReference.cache" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ENTITY\obj\Debug\TempPE\" />
+    <Folder Include="ENTITY\obj\Release\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

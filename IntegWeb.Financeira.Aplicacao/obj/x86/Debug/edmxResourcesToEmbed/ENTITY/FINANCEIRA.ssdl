@@ -1,0 +1,1889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EntityConn.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="12.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="EntityConnStoreContainer">
+    <EntitySet Name="AGENCIA" EntityType="EntityConn.Store.AGENCIA" store:Type="Tables" Schema="ATT" />
+    <EntitySet Name="DEPENDENTE" EntityType="EntityConn.Store.DEPENDENTE" store:Type="Tables" Schema="ATT" />
+    <EntitySet Name="EMPREGADO" EntityType="EntityConn.Store.EMPREGADO" store:Type="Tables" Schema="ATT" />
+    <EntitySet Name="EMPRESA" EntityType="EntityConn.Store.EMPRESA" store:Type="Tables" Schema="ATT" />
+    <EntitySet Name="EMPRG_DPDTE" EntityType="EntityConn.Store.EMPRG_DPDTE" store:Type="Tables" Schema="ATT" />
+    <EntitySet Name="FC_TBL_PARAMETRO" EntityType="EntityConn.Store.FC_TBL_PARAMETRO" store:Type="Tables" Schema="ATT" />
+    <EntitySet Name="HIST_CADASTRO_COMPLEM_FSS" EntityType="EntityConn.Store.HIST_CADASTRO_COMPLEM_FSS" store:Type="Tables" Schema="ATT" />
+    <EntitySet Name="HIST_CADASTRO_FSS" EntityType="EntityConn.Store.HIST_CADASTRO_FSS" store:Type="Tables" Schema="ATT" />
+    <EntitySet Name="REPRES_UNIAO_FSS" EntityType="EntityConn.Store.REPRES_UNIAO_FSS" store:Type="Tables" Schema="ATT" />
+    <EntitySet Name="AAT_TBL_BOLETO" EntityType="EntityConn.Store.AAT_TBL_BOLETO" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="AAT_TBL_BOLETO_ITEM" EntityType="EntityConn.Store.AAT_TBL_BOLETO_ITEM" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="AAT_TBL_BOLETO_SUBTIPO" EntityType="EntityConn.Store.AAT_TBL_BOLETO_SUBTIPO" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="AAT_TBL_BOLETO_TIPO" EntityType="EntityConn.Store.AAT_TBL_BOLETO_TIPO" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="AAT_TBL_DEB_CONTA" EntityType="EntityConn.Store.AAT_TBL_DEB_CONTA" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="AAT_TBL_DEB_CONTA_PRODUTO" EntityType="EntityConn.Store.AAT_TBL_DEB_CONTA_PRODUTO" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="AAT_TBL_EMPRESTIMO_DESCONTO" EntityType="EntityConn.Store.AAT_TBL_EMPRESTIMO_DESCONTO" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="AAT_TBL_RET_DEB_CONTA" EntityType="EntityConn.Store.AAT_TBL_RET_DEB_CONTA" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="AAT_TBL_RET_DEB_CONTA_CRITICAS" EntityType="EntityConn.Store.AAT_TBL_RET_DEB_CONTA_CRITICAS" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="AAT_TBL_RET_DEB_CONTA_MOTIVO" EntityType="EntityConn.Store.AAT_TBL_RET_DEB_CONTA_MOTIVO" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="FIN_TBL_BOL_CRM" EntityType="EntityConn.Store.FIN_TBL_BOL_CRM" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="FIN_TBL_BOL_CRM_AUD" EntityType="EntityConn.Store.FIN_TBL_BOL_CRM_AUD" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="FIN_TBL_RES_ABERT_FINANCEIRA" EntityType="EntityConn.Store.FIN_TBL_RES_ABERT_FINANCEIRA" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="FUN_TBL_ATU_CC" EntityType="EntityConn.Store.FUN_TBL_ATU_CC" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="FUN_TBL_ATU_CC_HIST" EntityType="EntityConn.Store.FUN_TBL_ATU_CC_HIST" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="FUN_TBL_PARAMETRO_LOG" EntityType="EntityConn.Store.FUN_TBL_PARAMETRO_LOG" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="PRE_TBL_CARGA_PROTHEUS" EntityType="EntityConn.Store.PRE_TBL_CARGA_PROTHEUS" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="PRE_TBL_CARGA_PROTHEUS_LOG" EntityType="EntityConn.Store.PRE_TBL_CARGA_PROTHEUS_LOG" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="PRE_TBL_CARGA_PROTHEUS_STATUS" EntityType="EntityConn.Store.PRE_TBL_CARGA_PROTHEUS_STATUS" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="PRE_TBL_CARGA_PROTHEUS_TIPO" EntityType="EntityConn.Store.PRE_TBL_CARGA_PROTHEUS_TIPO" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="MEDCTR" EntityType="EntityConn.Store.MEDCTR" store:Type="Tables" Schema="OWN_INTPROTHEUS" />
+    <EntitySet Name="CC_INTEGR_CT" EntityType="EntityConn.Store.CC_INTEGR_CT" store:Type="Tables" Schema="OWN_POLI" />
+    <EntitySet Name="GB_INTEGR_CT" EntityType="EntityConn.Store.GB_INTEGR_CT" store:Type="Tables" Schema="OWN_POLI" />
+    <EntitySet Name="CTD010" EntityType="EntityConn.Store.CTD010" store:Type="Tables" Schema="OWN_PROTHEUS" />
+    <EntitySet Name="CTH010" EntityType="EntityConn.Store.CTH010" store:Type="Tables" Schema="OWN_PROTHEUS" />
+    <EntitySet Name="CTT010" EntityType="EntityConn.Store.CTT010" store:Type="Tables" Schema="OWN_PROTHEUS" />
+    <EntitySet Name="CV0010" EntityType="EntityConn.Store.CV0010" store:Type="Tables" Schema="OWN_PROTHEUS" />
+    <EntitySet Name="SB1010" EntityType="EntityConn.Store.SB1010" store:Type="Tables" Schema="OWN_PROTHEUS" />
+    <EntitySet Name="SX5010" EntityType="EntityConn.Store.SX5010" store:Type="Tables" Schema="OWN_PROTHEUS" />
+    <AssociationSet Name="CF_EMPREGADO_003" Association="EntityConn.Store.CF_EMPREGADO_003">
+      <End Role="EMPREGADO" EntitySet="EMPREGADO" />
+      <End Role="EMPREGADO1" EntitySet="EMPREGADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AAT_PROD_DEB_CONTA" Association="EntityConn.Store.FK_AAT_PROD_DEB_CONTA">
+      <End Role="AAT_TBL_DEB_CONTA_PRODUTO" EntitySet="AAT_TBL_DEB_CONTA_PRODUTO" />
+      <End Role="AAT_TBL_DEB_CONTA" EntitySet="AAT_TBL_DEB_CONTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AAT_RET_DEB_CONTA_MOTIVO" Association="EntityConn.Store.FK_AAT_RET_DEB_CONTA_MOTIVO">
+      <End Role="AAT_TBL_RET_DEB_CONTA_MOTIVO" EntitySet="AAT_TBL_RET_DEB_CONTA_MOTIVO" />
+      <End Role="AAT_TBL_RET_DEB_CONTA" EntitySet="AAT_TBL_RET_DEB_CONTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AAT_TBL_BOLETO" Association="EntityConn.Store.FK_AAT_TBL_BOLETO">
+      <End Role="AAT_TBL_BOLETO" EntitySet="AAT_TBL_BOLETO" />
+      <End Role="AAT_TBL_BOLETO_ITEM" EntitySet="AAT_TBL_BOLETO_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AAT_TBL_BOLETO_SUBTIPO" Association="EntityConn.Store.FK_AAT_TBL_BOLETO_SUBTIPO">
+      <End Role="AAT_TBL_BOLETO_SUBTIPO" EntitySet="AAT_TBL_BOLETO_SUBTIPO" />
+      <End Role="AAT_TBL_BOLETO" EntitySet="AAT_TBL_BOLETO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AAT_TBL_BOLETO_TIPO" Association="EntityConn.Store.FK_AAT_TBL_BOLETO_TIPO">
+      <End Role="AAT_TBL_BOLETO_TIPO" EntitySet="AAT_TBL_BOLETO_TIPO" />
+      <End Role="AAT_TBL_BOLETO" EntitySet="AAT_TBL_BOLETO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AAT_TBL_BOLETO_TIPO_SUB" Association="EntityConn.Store.FK_AAT_TBL_BOLETO_TIPO_SUB">
+      <End Role="AAT_TBL_BOLETO_TIPO" EntitySet="AAT_TBL_BOLETO_TIPO" />
+      <End Role="AAT_TBL_BOLETO_SUBTIPO" EntitySet="AAT_TBL_BOLETO_SUBTIPO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AAT_TBL_RET_DEB_CONTA_CRIT" Association="EntityConn.Store.FK_AAT_TBL_RET_DEB_CONTA_CRIT">
+      <End Role="AAT_TBL_RET_DEB_CONTA" EntitySet="AAT_TBL_RET_DEB_CONTA" />
+      <End Role="AAT_TBL_RET_DEB_CONTA_CRITICAS" EntitySet="AAT_TBL_RET_DEB_CONTA_CRITICAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AGBCO_EMPDEP" Association="EntityConn.Store.FK_AGBCO_EMPDEP">
+      <End Role="AGENCIA" EntitySet="AGENCIA" />
+      <End Role="EMPRG_DPDTE" EntitySet="EMPRG_DPDTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AGBCO_EMPRG" Association="EntityConn.Store.FK_AGBCO_EMPRG">
+      <End Role="AGENCIA" EntitySet="AGENCIA" />
+      <End Role="EMPREGADO" EntitySet="EMPREGADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AGBCO_HSCDCP" Association="EntityConn.Store.FK_AGBCO_HSCDCP">
+      <End Role="AGENCIA" EntitySet="AGENCIA" />
+      <End Role="HIST_CADASTRO_COMPLEM_FSS" EntitySet="HIST_CADASTRO_COMPLEM_FSS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AGBCO_REPRES" Association="EntityConn.Store.FK_AGBCO_REPRES">
+      <End Role="AGENCIA" EntitySet="AGENCIA" />
+      <End Role="REPRES_UNIAO_FSS" EntitySet="REPRES_UNIAO_FSS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DPDTE_EMPDEP" Association="EntityConn.Store.FK_DPDTE_EMPDEP">
+      <End Role="DEPENDENTE" EntitySet="DEPENDENTE" />
+      <End Role="EMPRG_DPDTE" EntitySet="EMPRG_DPDTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DPDTE_HSCDCP" Association="EntityConn.Store.FK_DPDTE_HSCDCP">
+      <End Role="DEPENDENTE" EntitySet="DEPENDENTE" />
+      <End Role="HIST_CADASTRO_COMPLEM_FSS" EntitySet="HIST_CADASTRO_COMPLEM_FSS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPDEP_REPRES" Association="EntityConn.Store.FK_EMPDEP_REPRES">
+      <End Role="EMPRG_DPDTE" EntitySet="EMPRG_DPDTE" />
+      <End Role="REPRES_UNIAO_FSS" EntitySet="REPRES_UNIAO_FSS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPRG_EMPDEP" Association="EntityConn.Store.FK_EMPRG_EMPDEP">
+      <End Role="EMPREGADO" EntitySet="EMPREGADO" />
+      <End Role="EMPRG_DPDTE" EntitySet="EMPRG_DPDTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPRG_HSCDCP" Association="EntityConn.Store.FK_EMPRG_HSCDCP">
+      <End Role="EMPREGADO" EntitySet="EMPREGADO" />
+      <End Role="HIST_CADASTRO_COMPLEM_FSS" EntitySet="HIST_CADASTRO_COMPLEM_FSS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPRS_EMPRG" Association="EntityConn.Store.FK_EMPRS_EMPRG">
+      <End Role="EMPRESA" EntitySet="EMPRESA" />
+      <End Role="EMPREGADO" EntitySet="EMPREGADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HISCAD_AGBCO" Association="EntityConn.Store.FK_HISCAD_AGBCO">
+      <End Role="AGENCIA" EntitySet="AGENCIA" />
+      <End Role="HIST_CADASTRO_FSS" EntitySet="HIST_CADASTRO_FSS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HISCAD_DPDTE" Association="EntityConn.Store.FK_HISCAD_DPDTE">
+      <End Role="DEPENDENTE" EntitySet="DEPENDENTE" />
+      <End Role="HIST_CADASTRO_FSS" EntitySet="HIST_CADASTRO_FSS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HISCAD_EMPRG" Association="EntityConn.Store.FK_HISCAD_EMPRG">
+      <End Role="EMPREGADO" EntitySet="EMPREGADO" />
+      <End Role="HIST_CADASTRO_FSS" EntitySet="HIST_CADASTRO_FSS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRE_TBL_CARGA_PROTHEUS_STAT" Association="EntityConn.Store.FK_PRE_TBL_CARGA_PROTHEUS_STAT">
+      <End Role="PRE_TBL_CARGA_PROTHEUS_STATUS" EntitySet="PRE_TBL_CARGA_PROTHEUS_STATUS" />
+      <End Role="PRE_TBL_CARGA_PROTHEUS" EntitySet="PRE_TBL_CARGA_PROTHEUS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRE_TBL_CARGA_PROTHEUS_TIPO" Association="EntityConn.Store.FK_PRE_TBL_CARGA_PROTHEUS_TIPO">
+      <End Role="PRE_TBL_CARGA_PROTHEUS_TIPO" EntitySet="PRE_TBL_CARGA_PROTHEUS_TIPO" />
+      <End Role="PRE_TBL_CARGA_PROTHEUS" EntitySet="PRE_TBL_CARGA_PROTHEUS" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AGENCIA">
+    <Key>
+      <PropertyRef Name="COD_BANCO" />
+      <PropertyRef Name="COD_AGBCO" />
+    </Key>
+    <Property Name="COD_BANCO" Type="number" Nullable="false" Precision="3" />
+    <Property Name="COD_AGBCO" Type="number" Nullable="false" Precision="7" />
+    <Property Name="NOM_AGBCO" Type="varchar2" MaxLength="40" />
+    <Property Name="COD_ESTADO" Type="varchar2" MaxLength="2" />
+    <Property Name="COD_MUNICI" Type="varchar2" MaxLength="7" />
+    <Property Name="NOM_PRACA_AGBCO" Type="varchar2" MaxLength="30" />
+    <Property Name="COD_UNDFD_AGBCO" Type="varchar2" MaxLength="2" />
+    <Property Name="NOM_CIDAD_AGBCO" Type="varchar2" MaxLength="40" />
+    <Property Name="COD_DIGVER_AGBCO" Type="char" MaxLength="1" />
+    <Property Name="PAICOD" Type="number" Precision="6" />
+  </EntityType>
+  <EntityType Name="DEPENDENTE">
+    <Key>
+      <PropertyRef Name="NUM_IDNTF_DPDTE" />
+    </Key>
+    <Property Name="NUM_IDNTF_DPDTE" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NOM_DPDTE" Type="varchar2" MaxLength="255" />
+    <Property Name="NOM_PAI_DPDTE" Type="varchar2" MaxLength="255" />
+    <Property Name="NOM_MAE_DPDTE" Type="varchar2" MaxLength="255" />
+    <Property Name="COD_SEXO" Type="char" MaxLength="1" />
+    <Property Name="DAT_NASCT_DPDTE" Type="date" />
+    <Property Name="COD_ESCLA" Type="number" Precision="3" />
+    <Property Name="COD_SRCER" Type="number" Precision="2" />
+    <Property Name="COD_ESTCV_DPDTE" Type="number" Precision="1" />
+    <Property Name="NOM_PAIS_DPDTE" Type="varchar2" MaxLength="30" />
+    <Property Name="NUM_CXPTL" Type="number" Precision="8" />
+    <Property Name="DCR_ENDER_DPDTE" Type="varchar2" MaxLength="80" />
+    <Property Name="NUM_CPF_DPDTE" Type="number" Precision="11" />
+    <Property Name="NUM_CI_DPDTE" Type="varchar2" MaxLength="15" />
+    <Property Name="COD_OREXCI_DPDTE" Type="varchar2" MaxLength="15" />
+    <Property Name="COD_UFCI_DPDTE" Type="varchar2" MaxLength="3" />
+    <Property Name="NOM_BAIRRO_DPDTE" Type="varchar2" MaxLength="60" />
+    <Property Name="COD_MUNICI" Type="varchar2" MaxLength="7" />
+    <Property Name="COD_CEP_DPDTE" Type="number" Precision="8" />
+    <Property Name="COD_SITDEP" Type="number" Precision="2" />
+    <Property Name="COD_ESTADO" Type="varchar2" MaxLength="2" />
+    <Property Name="NOM_CIDRS_DPDTE" Type="varchar2" MaxLength="50" />
+    <Property Name="MRC_INVALI_DPDTE" Type="char" MaxLength="1" />
+    <Property Name="COD_UNDFD" Type="varchar2" MaxLength="2" />
+    <Property Name="COD_EMAIL_DPDTE" Type="varchar2" MaxLength="50" />
+    <Property Name="NUM_TELEF_DPDTE" Type="number" Precision="8" />
+    <Property Name="NUM_DDI_DPDTE" Type="varchar2" MaxLength="7" />
+    <Property Name="NUM_DDD_DPDTE" Type="varchar2" MaxLength="4" />
+    <Property Name="DAT_FALEC_DPDTE" Type="date" />
+    <Property Name="DAT_EXPCI_DPDTE" Type="date" />
+    <Property Name="DCR_NATURAL_DPDTE" Type="char" MaxLength="30" />
+    <Property Name="DCR_COMPL_DPDTE" Type="char" MaxLength="50" />
+    <Property Name="NUM_CELUL_DPDTE" Type="number" Precision="9" />
+    <Property Name="COD_DDDCEL_DPDTE" Type="char" MaxLength="4" />
+    <Property Name="NUM_TITULO_DPDTE" Type="number" Precision="12" />
+    <Property Name="NUM_ZONA_DPDTE" Type="number" Precision="3" />
+    <Property Name="NUM_SECAO_DPDTE" Type="number" Precision="4" />
+    <Property Name="COD_ORIGEM_DPDTE" Type="varchar2" MaxLength="10" />
+    <Property Name="NUM_PISPAS_DPDTE" Type="number" Precision="11" />
+    <Property Name="NUM_RAMAL_DPDTE" Type="number" Precision="4" />
+    <Property Name="DAT_ULT_RCD_DPDTE" Type="date" />
+    <Property Name="AGCCODCODIGODAAGENCIA" Type="number" Precision="3" />
+    <Property Name="NUM_ENDER_DPDTE" Type="number" Precision="6" />
+    <Property Name="NUM_DDDFAX_DPDTE" Type="char" MaxLength="4" />
+    <Property Name="NUM_FAX_DPDTE" Type="number" Precision="8" />
+    <Property Name="NUM_DDIFAX_DPDTE" Type="char" MaxLength="7" />
+    <Property Name="DCR_NACNL_DPDTE" Type="varchar2" MaxLength="30" />
+    <Property Name="NAT_DOCIDNT_DPDTE" Type="char" MaxLength="40" />
+    <Property Name="DCR_OCPROF_DPDTE" Type="char" MaxLength="40" />
+    <Property Name="NOM_CONJUGE_DPDTE" Type="varchar2" MaxLength="255" />
+    <Property Name="PAICOD" Type="number" Precision="6" />
+    <Property Name="DPDTEIDCGRPSANGUINEO" Type="char" MaxLength="2" />
+    <Property Name="DPDTEIDCFATORRH" Type="char" MaxLength="1" />
+    <Property Name="DPDTENUMNATUREZA" Type="varchar2" MaxLength="15" />
+    <Property Name="DPDTEORGEMINATUREZA" Type="varchar2" MaxLength="25" />
+    <Property Name="DPDTEUNFORGEMINATUREZA" Type="char" MaxLength="2" />
+    <Property Name="DPDTEDTHEMINATUREZA" Type="date" />
+    <Property Name="DPDTENUMDECLARACAONASCVIVO" Type="varchar2" MaxLength="20" />
+    <Property Name="TLGCODTIPOLOGRAD" Type="number" Precision="3" />
+    <Property Name="DCR_LOGRAD" Type="varchar2" MaxLength="70" />
+    <Property Name="DEPENDCODDDI2" Type="char" MaxLength="7" />
+    <Property Name="DEPENDCODDDD2" Type="char" MaxLength="4" />
+    <Property Name="DEPENDNUMTELEF2" Type="number" Precision="8" />
+    <Property Name="DEPENDDESEMAIL2" Type="varchar2" MaxLength="50" />
+    <Property Name="COD_UFNAT_DPDTE" Type="char" MaxLength="2" />
+    <Property Name="NUM_CNS_DPDTE" Type="varchar2" MaxLength="20" />
+    <Property Name="NUM_RGORIG_DPDTE" Type="varchar2" MaxLength="20" />
+    <Property Name="PESCODPESSOA" Type="number" Precision="10" />
+    <Property Name="PAICODNASCIMENTO" Type="number" Precision="6" />
+    <Property Name="PAICODRESIDENCIA" Type="number" Precision="6" />
+    <Property Name="PAICODCIDADANIA1" Type="number" Precision="6" />
+    <Property Name="PAICODCIDADANIA2" Type="number" Precision="6" />
+    <Property Name="NUM_GRNCRD_DPDTE" Type="varchar2" MaxLength="15" />
+    <Property Name="DAT_VLDGRNCRD_DPDTE" Type="date" />
+    <Property Name="NUM_DDICEL_DPDTE" Type="varchar2" MaxLength="7" />
+    <Property Name="PAICODRESIDENCIA2" Type="number" Precision="6" />
+    <Property Name="PAICODRESIDENCIA3" Type="number" Precision="6" />
+    <Property Name="NUM_IDT_FISCAL1" Type="varchar2" MaxLength="50" />
+    <Property Name="NUM_IDT_FISCAL2" Type="varchar2" MaxLength="50" />
+    <Property Name="NUM_IDT_FISCAL3" Type="varchar2" MaxLength="50" />
+    <Property Name="DPDTE_COD_POSTAL_EXT" Type="varchar2" MaxLength="15" />
+    <Property Name="DPDTE_DES_PRVNC_EST" Type="varchar2" MaxLength="120" />
+  </EntityType>
+  <EntityType Name="EMPREGADO">
+    <Key>
+      <PropertyRef Name="COD_EMPRS" />
+      <PropertyRef Name="NUM_RGTRO_EMPRG" />
+    </Key>
+    <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="3" />
+    <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_DIGVR_EMPRG" Type="number" Precision="1" />
+    <Property Name="NOM_PAI_EMPRG" Type="varchar2" MaxLength="255" />
+    <Property Name="NOM_MAE_EMPRG" Type="varchar2" MaxLength="255" />
+    <Property Name="NUM_MATR_PARTF" Type="number" Precision="6" />
+    <Property Name="COD_CONFL_EMPRG" Type="number" Precision="1" />
+    <Property Name="COD_CTTRB_EMPRG" Type="number" Precision="1" />
+    <Property Name="COD_DDD_EMPRG" Type="varchar2" MaxLength="4" />
+    <Property Name="QTD_MESTRB_EMPRG" Type="number" Precision="4" />
+    <Property Name="COD_DDI_EMPRG" Type="varchar2" MaxLength="7" />
+    <Property Name="COD_ESTCV_EMPRG" Type="number" Precision="1" />
+    <Property Name="COD_SEXO_EMPRG" Type="char" MaxLength="1" />
+    <Property Name="DAT_ADMSS_EMPRG" Type="date" />
+    <Property Name="DAT_DESLG_EMPRG" Type="date" />
+    <Property Name="DAT_NASCM_EMPRG" Type="date" />
+    <Property Name="DCR_ENDER_EMPRG" Type="varchar2" MaxLength="140" />
+    <Property Name="NOM_BAIRRO_EMPRG" Type="varchar2" MaxLength="60" />
+    <Property Name="NOM_EMPRG" Type="varchar2" MaxLength="50" />
+    <Property Name="NOM_PAIS_EMPRG" Type="varchar2" MaxLength="30" />
+    <Property Name="NUM_CPF_EMPRG" Type="number" Precision="11" />
+    <Property Name="NUM_CI_EMPRG" Type="varchar2" MaxLength="15" />
+    <Property Name="COD_OREXCI_EMPRG" Type="varchar2" MaxLength="15" />
+    <Property Name="COD_UFCI_EMPRG" Type="varchar2" MaxLength="3" />
+    <Property Name="NUM_CTCOR_EMPRG" Type="varchar2" MaxLength="15" />
+    <Property Name="NUM_CXPTL_EMPRG" Type="number" Precision="8" />
+    <Property Name="NUM_GRSAL_EMPRG" Type="number" Precision="2" />
+    <Property Name="NUM_RAMAL_EMPRG" Type="number" Precision="4" />
+    <Property Name="NUM_TELEF_EMPRG" Type="number" Precision="9" />
+    <Property Name="VLR_SALAR_EMPRG" Type="number" Precision="18" Scale="4" />
+    <Property Name="NUM_CTPRF_EMPRG" Type="number" Precision="15" />
+    <Property Name="NUM_SRCTP_EMPRG" Type="varchar2" MaxLength="5" />
+    <Property Name="QTD_INSS_EMPRG" Type="number" Precision="4" />
+    <Property Name="COD_CEP_EMPRG" Type="number" Precision="8" />
+    <Property Name="NUM_CARGO" Type="number" Precision="8" />
+    <Property Name="NUM_FILIAL" Type="number" Precision="4" />
+    <Property Name="COD_BANCO" Type="number" Precision="3" />
+    <Property Name="COD_AGBCO" Type="number" Precision="7" />
+    <Property Name="NUM_CR" Type="number" Precision="8" />
+    <Property Name="COD_MUNICI" Type="varchar2" MaxLength="7" />
+    <Property Name="COD_ESTADO" Type="varchar2" MaxLength="2" />
+    <Property Name="NUM_ORGAO" Type="number" Precision="5" />
+    <Property Name="COD_MTDSL" Type="number" Precision="2" />
+    <Property Name="NOM_CIDRS_EMPRG" Type="varchar2" MaxLength="50" />
+    <Property Name="COD_UNDFD_EMPRG" Type="varchar2" MaxLength="2" />
+    <Property Name="DCR_OBSERVACAO" Type="varchar2" MaxLength="100" />
+    <Property Name="MRC_PLSAUD_EMPRG" Type="char" MaxLength="1" />
+    <Property Name="COD_EMAIL_EMPRG" Type="varchar2" MaxLength="100" />
+    <Property Name="NUM_PISPAS_EMPRG" Type="number" Precision="11" />
+    <Property Name="DAT_FALEC_EMPRG" Type="date" />
+    <Property Name="DCR_NATURAL_EMPRG" Type="varchar2" MaxLength="30" />
+    <Property Name="DAT_EXPCI_EMPRG" Type="date" />
+    <Property Name="DCR_COMPL_EMPRG" Type="varchar2" MaxLength="120" />
+    <Property Name="DCR_OCPPROF_EMPRG" Type="varchar2" MaxLength="50" />
+    <Property Name="NUM_CELUL_EMPRG" Type="number" Precision="9" />
+    <Property Name="DCR_NACNL_EMPRG" Type="varchar2" MaxLength="30" />
+    <Property Name="TIP_CTCOR_EMPRG" Type="char" MaxLength="5" />
+    <Property Name="COD_UFNAT_EMPRG" Type="char" MaxLength="2" />
+    <Property Name="VLR_01_EMPRG" Type="number" Precision="13" Scale="2" />
+    <Property Name="NUM_TELRES_EMPRG" Type="varchar2" MaxLength="30" />
+    <Property Name="COD_DDDCEL_EMPRG" Type="char" MaxLength="4" />
+    <Property Name="QTD_DIATRB_EMPRG" Type="number" Precision="4" />
+    <Property Name="QTD_ANOTRB_EMPRG" Type="number" Precision="4" />
+    <Property Name="QTD_DIAANT_EMPRG" Type="number" Precision="4" />
+    <Property Name="QTD_MESANT_EMPRG" Type="number" Precision="4" />
+    <Property Name="QTD_ANOANT_EMPRG" Type="number" Precision="4" />
+    <Property Name="NUM_TITULO_EMPRG" Type="number" Precision="12" />
+    <Property Name="NUM_ZONA_EMPRG" Type="number" Precision="3" />
+    <Property Name="NUM_SECAO_EMPRG" Type="number" Precision="4" />
+    <Property Name="NUM_RGORIG_EMPRG" Type="char" MaxLength="20" />
+    <Property Name="DAT_ULT_RCD_EMPRG" Type="date" />
+    <Property Name="AGCCODCODIGODAAGENCIA" Type="number" Precision="3" />
+    <Property Name="STECOD" Type="number" Precision="5" />
+    <Property Name="NUM_CPFCTC_EMPRG" Type="number" Precision="11" />
+    <Property Name="NOM_SEGTIT_EMPRG" Type="varchar2" MaxLength="50" />
+    <Property Name="NUM_ENDER_EMPRG" Type="number" Precision="6" />
+    <Property Name="COD_EMPRSRPTANT_EMPRG" Type="number" Precision="3" />
+    <Property Name="NUM_RGTRORPTANT_EMPRG" Type="number" Precision="10" />
+    <Property Name="NUM_DDDFAX_EMPRG" Type="char" MaxLength="4" />
+    <Property Name="NUM_FAX_EMPRG" Type="number" Precision="8" />
+    <Property Name="NUM_DDIFAX_EMPRG" Type="char" MaxLength="7" />
+    <Property Name="ATECODATRIBUTOEMPRG" Type="number" Precision="3" />
+    <Property Name="VLR_PATRIMONIAL_EMPRG" Type="number" Precision="13" Scale="2" />
+    <Property Name="VLR_RENDIMENTO_EMPRG" Type="number" Precision="13" Scale="2" />
+    <Property Name="DCR_SITPPE_EMPRG" Type="varchar2" MaxLength="2500" />
+    <Property Name="DCR_RENDIMENTO_EMPRG" Type="varchar2" MaxLength="2500" />
+    <Property Name="NAT_DOCIDNT_EMPRG" Type="char" MaxLength="40" />
+    <Property Name="PAICOD" Type="number" Precision="6" />
+    <Property Name="COD_ESTRUT_EMPRG" Type="varchar2" MaxLength="50" />
+    <Property Name="DCR_IDIOMA_EMPRG" Type="varchar2" MaxLength="40" />
+    <Property Name="MRC_NEGSEF_EMPRG" Type="char" MaxLength="1" />
+    <Property Name="NUM_IP_EMPRG" Type="varchar2" MaxLength="50" />
+    <Property Name="MRC_NAOPART_EMPRG" Type="char" MaxLength="1" />
+    <Property Name="NUM_CELUL2_EMPRG" Type="varchar2" MaxLength="30" />
+    <Property Name="DAT_OBTSRS_EMPRG" Type="date" />
+    <Property Name="DCR_MOTOBT_EMPRG" Type="varchar2" MaxLength="50" />
+    <Property Name="EMPRGIDCTIPOMARCACAO" Type="char" MaxLength="2" />
+    <Property Name="DAT_PREVAPOS_EMPRG" Type="date" />
+    <Property Name="EMPRGIDCGRPSANGUINEO" Type="char" MaxLength="2" />
+    <Property Name="EMPRGIDCFATORRH" Type="char" MaxLength="1" />
+    <Property Name="EMPRGNUMNATUREZA" Type="varchar2" MaxLength="15" />
+    <Property Name="EMPRGORGEMINATUREZA" Type="varchar2" MaxLength="25" />
+    <Property Name="EMPRGUNFORGEMINATUREZA" Type="char" MaxLength="2" />
+    <Property Name="EMPRGDTHEMINATUREZA" Type="date" />
+    <Property Name="TLGCODTIPOLOGRAD" Type="number" Precision="3" />
+    <Property Name="DCR_LOGRAD" Type="varchar2" MaxLength="70" />
+    <Property Name="NOM_EMPGR_ANS" Type="varchar2" MaxLength="255" />
+    <Property Name="EMPRGCODDDI2" Type="char" MaxLength="7" />
+    <Property Name="EMPRGCODDDD2" Type="char" MaxLength="4" />
+    <Property Name="EMPRGNUMTELEF2" Type="number" Precision="8" />
+    <Property Name="EMPRGDESEMAIL2" Type="varchar2" MaxLength="100" />
+    <Property Name="NUM_SIAPE_EMPRG" Type="varchar2" MaxLength="10" />
+    <Property Name="NUM_MATFNC_EMPRG" Type="varchar2" MaxLength="10" />
+    <Property Name="NUM_CNS_EMPRG" Type="varchar2" MaxLength="20" />
+    <Property Name="PESCODPESSOA" Type="number" Precision="10" />
+    <Property Name="DCR_APOS1_EMPRG" Type="varchar2" MaxLength="50" />
+    <Property Name="DAT_INIAPOS1_EMPRG" Type="date" />
+    <Property Name="DAT_FIMAPOS1_EMPREG" Type="date" />
+    <Property Name="DCR_APOS2_EMPRG" Type="varchar2" MaxLength="50" />
+    <Property Name="DAT_INIAPOS2_EMPRG" Type="date" />
+    <Property Name="DAT_FIMAPOS2_EMPREG" Type="date" />
+    <Property Name="DCR_APOS3_EMPRG" Type="varchar2" MaxLength="50" />
+    <Property Name="DAT_INIAPOS3_EMPRG" Type="date" />
+    <Property Name="DAT_FIMAPOS3_EMPREG" Type="date" />
+    <Property Name="DCR_APOS4_EMPRG" Type="varchar2" MaxLength="50" />
+    <Property Name="DAT_INIAPOS4_EMPRG" Type="date" />
+    <Property Name="DAT_FIMAPOS4_EMPREG" Type="date" />
+    <Property Name="DAT_PRIEMP_EMPRG" Type="date" />
+    <Property Name="MRC_ASSOC_EMPRG" Type="char" MaxLength="1" />
+    <Property Name="MRC_DEFFIS_EMPRG" Type="char" MaxLength="1" />
+    <Property Name="GDECOD" Type="number" Precision="2" />
+    <Property Name="PAICODNASCIMENTO" Type="number" Precision="6" />
+    <Property Name="PAICODRESIDENCIA" Type="number" Precision="6" />
+    <Property Name="PAICODCIDADANIA1" Type="number" Precision="6" />
+    <Property Name="PAICODCIDADANIA2" Type="number" Precision="6" />
+    <Property Name="NUM_GRNCRD_EMPRG" Type="varchar2" MaxLength="15" />
+    <Property Name="DAT_VLDGRNCRD_EMPRG" Type="date" />
+    <Property Name="NUM_DDICEL_EMPRG" Type="varchar2" MaxLength="7" />
+    <Property Name="DAT_RECAD_EMPRG" Type="date" />
+    <Property Name="MRC_RES_EXT_EMPRG" Type="char" MaxLength="1" />
+    <Property Name="NOM_PAIS_EXT_1" Type="varchar2" MaxLength="85" />
+    <Property Name="NOM_PAIS_EXT_2" Type="varchar2" MaxLength="85" />
+    <Property Name="NOM_PAIS_EXT_3" Type="varchar2" MaxLength="85" />
+    <Property Name="PAICODPAISEXT1" Type="number" Precision="6" />
+    <Property Name="PAICODPAISEXT2" Type="number" Precision="6" />
+    <Property Name="PAICODPAISEXT3" Type="number" Precision="6" />
+    <Property Name="MRC_DOC_GRNCRD" Type="char" MaxLength="1" />
+    <Property Name="NOM_CJGE_EMPRG" Type="varchar2" MaxLength="80" />
+    <Property Name="PAICODRESIDENCIA2" Type="number" Precision="6" />
+    <Property Name="PAICODRESIDENCIA3" Type="number" Precision="6" />
+    <Property Name="NUM_IDT_FISCAL1" Type="varchar2" MaxLength="50" />
+    <Property Name="NUM_IDT_FISCAL2" Type="varchar2" MaxLength="50" />
+    <Property Name="NUM_IDT_FISCAL3" Type="varchar2" MaxLength="50" />
+    <Property Name="EMPRG_COD_POSTAL_EXT" Type="varchar2" MaxLength="15" />
+    <Property Name="EMPRG_DES_PRVNC_EST" Type="varchar2" MaxLength="120" />
+  </EntityType>
+  <EntityType Name="EMPRESA">
+    <Key>
+      <PropertyRef Name="COD_EMPRS" />
+    </Key>
+    <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="3" />
+    <Property Name="NOM_ABRVO_EMPRS" Type="varchar2" MaxLength="15" />
+    <Property Name="NOM_RZSOC_EMPRS" Type="varchar2" MaxLength="50" />
+    <Property Name="TIPO_EMPRS" Type="varchar2" MaxLength="40" />
+    <Property Name="NUM_CGC_EMPRS" Type="number" Precision="14" />
+    <Property Name="DCR_ENDER_EMPRS" Type="varchar2" MaxLength="80" />
+    <Property Name="DCR_COMPL_EMPRS" Type="varchar2" MaxLength="50" />
+    <Property Name="NOM_BAIRRO_EMPRS" Type="varchar2" MaxLength="60" />
+    <Property Name="COD_CEP_EMPRS" Type="number" Precision="8" />
+    <Property Name="COD_ESTADO" Type="varchar2" MaxLength="2" />
+    <Property Name="COD_MUNICI" Type="varchar2" MaxLength="7" />
+    <Property Name="COD_UNDFD_EMPRS" Type="varchar2" MaxLength="2" />
+    <Property Name="NOM_CIDADE_EMPRS" Type="varchar2" MaxLength="50" />
+    <Property Name="COD_DDI_EMPRS" Type="varchar2" MaxLength="7" />
+    <Property Name="COD_DDD_EMPRS" Type="varchar2" MaxLength="4" />
+    <Property Name="NUM_TELEF_EMPRS" Type="number" Precision="8" />
+    <Property Name="TIP_EMPRS" Type="char" MaxLength="1" />
+    <Property Name="NUM_FUNDAC_EMPRS" Type="number" Precision="3" />
+    <Property Name="NUM_GRUPO_EMPRS" Type="number" Precision="3" />
+    <Property Name="NUM_EMPRESA_EMPRS" Type="number" Precision="3" />
+    <Property Name="COD_ORIGEM_EMPRS" Type="varchar2" MaxLength="10" />
+    <Property Name="NUM_ENDER_EMPRS" Type="number" Precision="6" />
+    <Property Name="TEPCODTIPOEMPRESA" Type="number" Precision="2" />
+    <Property Name="PAICOD" Type="number" Precision="6" />
+    <Property Name="PAICODREGISTRO" Type="number" Precision="6" />
+    <Property Name="PAICODOPERACAO" Type="number" Precision="6" />
+    <Property Name="COD_ORGAO_PUBLICO" Type="varchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="EMPRG_DPDTE">
+    <Key>
+      <PropertyRef Name="COD_EMPRS" />
+      <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      <PropertyRef Name="NUM_IDNTF_DPDTE" />
+    </Key>
+    <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="3" />
+    <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_IDNTF_DPDTE" Type="number" Nullable="false" Precision="10" />
+    <Property Name="VLR_DSPCN_EMPDEP" Type="number" Precision="11" Scale="2" />
+    <Property Name="PCT_DSCPN_EMPDEP" Type="number" Precision="7" Scale="4" />
+    <Property Name="COD_NTPER_EMPDEP" Type="number" Precision="2" />
+    <Property Name="NUM_CTCOR_EMPDEP" Type="varchar2" MaxLength="15" />
+    <Property Name="COD_BANCO" Type="number" Precision="3" />
+    <Property Name="COD_AGBCO" Type="number" Precision="7" />
+    <Property Name="COD_GRADPC" Type="number" Precision="2" />
+    <Property Name="TIP_CTCOR_EMPDEP" Type="char" MaxLength="5" />
+    <Property Name="NUM_CPFCTC_EMPDEP" Type="number" Precision="11" />
+    <Property Name="NOM_SEGTIT_EMPDEP" Type="varchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FC_TBL_PARAMETRO">
+    <Key>
+      <PropertyRef Name="ID_PARAMETRO" />
+    </Key>
+    <Property Name="ID_PARAMETRO" Type="number" Nullable="false" />
+    <Property Name="ID_SISTEMA" Type="number" Nullable="false" />
+    <Property Name="NOM_PARAMETRO" Type="varchar2" MaxLength="200" />
+    <Property Name="VALOR_PARAMETRO" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="HIST_CADASTRO_COMPLEM_FSS">
+    <Key>
+      <PropertyRef Name="NUM_SQNCL_HSCDCP" />
+    </Key>
+    <Property Name="NUM_SQNCL_HSCDCP" Type="number" Nullable="false" Precision="8" />
+    <Property Name="TIP_PROCES_TPPCCD" Type="varchar2" MaxLength="6" />
+    <Property Name="COD_EMPRS" Type="number" Precision="3" />
+    <Property Name="NUM_RGTRO_EMPRG" Type="number" Precision="10" />
+    <Property Name="NUM_IDNTF_RPTANT" Type="number" Precision="6" />
+    <Property Name="NUM_IDNTF_DPDTE" Type="number" Precision="8" />
+    <Property Name="DAT_INIVIG_HSCDCP" Type="date" />
+    <Property Name="DAT_FIMVIG_HSCDCP" Type="date" />
+    <Property Name="COD_BANCO" Type="number" Precision="3" />
+    <Property Name="COD_AGBCO" Type="number" Precision="7" />
+    <Property Name="NUM_CTCOR_HSCDCP" Type="varchar2" MaxLength="15" />
+    <Property Name="TIP_CTCOR_HSCDCP" Type="varchar2" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="HIST_CADASTRO_FSS">
+    <Key>
+      <PropertyRef Name="NUM_SQNCL_HISCAD" />
+    </Key>
+    <Property Name="NUM_SQNCL_HISCAD" Type="number" Nullable="false" />
+    <Property Name="NUM_IDNTF_RPTANT" Type="number" Precision="6" />
+    <Property Name="NUM_IDNTF_DPDTE" Type="number" Precision="10" />
+    <Property Name="DAT_INIVIG_HISCAD" Type="date" />
+    <Property Name="DAT_FIMVIG_HISCAD" Type="date" />
+    <Property Name="COD_EMPRS" Type="number" Precision="3" />
+    <Property Name="NUM_RGTRO_EMPRG" Type="number" Precision="10" />
+    <Property Name="COD_BANCO" Type="number" Precision="3" />
+    <Property Name="COD_AGBCO" Type="number" Precision="7" />
+    <Property Name="NUM_CTCOR_HISCAD" Type="varchar2" MaxLength="15" />
+    <Property Name="TIP_PROCES_HISCAD" Type="varchar2" MaxLength="6" />
+    <Property Name="TIP_CTCOR_HISCAD" Type="char" MaxLength="5" />
+    <Property Name="NUM_CPFCTC_HISCAD" Type="number" Precision="11" />
+    <Property Name="NOM_SEGTIT_HISCAD" Type="varchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="REPRES_UNIAO_FSS">
+    <Key>
+      <PropertyRef Name="NUM_IDNTF_RPTANT" />
+    </Key>
+    <Property Name="NUM_IDNTF_RPTANT" Type="number" Nullable="false" Precision="6" />
+    <Property Name="COD_EMPRS" Type="number" Precision="3" />
+    <Property Name="NUM_RGTRO_EMPRG" Type="number" Precision="10" />
+    <Property Name="NUM_IDNTF_DPDTE" Type="number" Precision="10" />
+    <Property Name="COD_BANCO" Type="number" Precision="3" />
+    <Property Name="COD_AGBCO" Type="number" Precision="7" />
+    <Property Name="COD_ESTADO_REPRES" Type="varchar2" MaxLength="2" />
+    <Property Name="COD_MUNICI_REPRES" Type="varchar2" MaxLength="7" />
+    <Property Name="DCR_ENDER_REPRES" Type="varchar2" MaxLength="80" />
+    <Property Name="NOM_BAIRRO_REPRES" Type="varchar2" MaxLength="60" />
+    <Property Name="NOM_PAIS_REPRES" Type="varchar2" MaxLength="30" />
+    <Property Name="NOM_REPRES" Type="varchar2" MaxLength="255" />
+    <Property Name="NUM_CPF_REPRES" Type="number" Precision="11" />
+    <Property Name="NUM_CTCOR_REPRES" Type="varchar2" MaxLength="15" />
+    <Property Name="NUM_CXPTL_REPRES" Type="number" Precision="8" />
+    <Property Name="COD_CEP_REPRES" Type="number" Precision="8" />
+    <Property Name="NOM_CIDRS_REPRES" Type="varchar2" MaxLength="50" />
+    <Property Name="COD_UNDFD_REPRES" Type="varchar2" MaxLength="2" />
+    <Property Name="NOM_PAI_REPRES" Type="varchar2" MaxLength="255" />
+    <Property Name="NOM_MAE_REPRES" Type="varchar2" MaxLength="255" />
+    <Property Name="COD_SEXO_REPRES" Type="char" MaxLength="1" />
+    <Property Name="DAT_NASCM_REPRES" Type="date" />
+    <Property Name="COD_ESCLA_REPRES" Type="number" Precision="3" />
+    <Property Name="COD_SRCER_REPRES" Type="number" Precision="2" />
+    <Property Name="COD_ESTCV_REPRES" Type="number" Precision="1" />
+    <Property Name="NUM_CI_REPRES" Type="varchar2" MaxLength="15" />
+    <Property Name="COD_OREXCI_REPRES" Type="varchar2" MaxLength="15" />
+    <Property Name="COD_UFCI_REPRES" Type="varchar2" MaxLength="3" />
+    <Property Name="NUM_TELEF_REPRES" Type="number" Precision="8" />
+    <Property Name="NUM_DDI_REPRES" Type="varchar2" MaxLength="7" />
+    <Property Name="NUM_DDD_REPRES" Type="varchar2" MaxLength="4" />
+    <Property Name="DAT_FALEC_REPRES" Type="date" />
+    <Property Name="DAT_EXPCI_REPRES" Type="date" />
+    <Property Name="DCR_NATURAL_REPRES" Type="varchar2" MaxLength="30" />
+    <Property Name="TIP_CTCOR_REPRES" Type="number" Precision="5" />
+    <Property Name="DCR_COMPL_REPRES" Type="char" MaxLength="50" />
+    <Property Name="NUM_CELUL_REPRES" Type="number" Precision="9" />
+    <Property Name="COD_DDDCEL_REPRES" Type="char" MaxLength="4" />
+    <Property Name="COD_EMAIL_REPRES" Type="varchar2" MaxLength="50" />
+    <Property Name="NUM_TITULO_REPRES" Type="number" Precision="12" />
+    <Property Name="NUM_ZONA_REPRES" Type="number" Precision="3" />
+    <Property Name="NUM_SECAO_REPRES" Type="number" Precision="4" />
+    <Property Name="NUM_PISPAS_REPRES" Type="number" Precision="11" />
+    <Property Name="NUM_RAMAL_REPRES" Type="number" Precision="4" />
+    <Property Name="AGCCODCODIGODAAGENCIA" Type="number" Precision="3" />
+    <Property Name="NUM_CPFCTC_REPRES" Type="number" Precision="11" />
+    <Property Name="NOM_SEGTIT_REPRES" Type="varchar2" MaxLength="50" />
+    <Property Name="TPRTPREPRESENTANCAO" Type="number" Precision="3" />
+    <Property Name="NUM_ENDER_REPRES" Type="number" Precision="6" />
+    <Property Name="NUM_DDDFAX_REPRES" Type="char" MaxLength="4" />
+    <Property Name="NUM_FAX_REPRES" Type="number" Precision="8" />
+    <Property Name="NUM_DDIFAX_REPRES" Type="char" MaxLength="7" />
+    <Property Name="DCR_NACNL_REPRES" Type="varchar2" MaxLength="30" />
+    <Property Name="NAT_DOCIDNT_REPRES" Type="char" MaxLength="40" />
+    <Property Name="DCR_OCPROF_REPRES" Type="char" MaxLength="40" />
+    <Property Name="NOM_CONJUGE_REPRES" Type="varchar2" MaxLength="255" />
+    <Property Name="PAICOD" Type="number" Precision="6" />
+    <Property Name="REPRESIDCGRPSANGUINEO" Type="char" MaxLength="2" />
+    <Property Name="REPRESIDCFATORRH" Type="char" MaxLength="1" />
+    <Property Name="REPRESNUMNATUREZA" Type="varchar2" MaxLength="15" />
+    <Property Name="REPRESORGEMINATUREZA" Type="varchar2" MaxLength="25" />
+    <Property Name="REPRESUNFORGEMINATUREZA" Type="char" MaxLength="2" />
+    <Property Name="REPRESDTHEMINATUREZA" Type="date" />
+    <Property Name="TLGCODTIPOLOGRAD" Type="number" Precision="3" />
+    <Property Name="DCR_LOGRAD" Type="varchar2" MaxLength="70" />
+    <Property Name="REPRESUNICODDDI2" Type="char" MaxLength="7" />
+    <Property Name="REPRESUNICODDDD2" Type="char" MaxLength="4" />
+    <Property Name="REPRESUNINUMTELEF2" Type="number" Precision="8" />
+    <Property Name="REPRESUNIDESEMAIL2" Type="varchar2" MaxLength="50" />
+    <Property Name="NUM_RGORIG_REPRES" Type="varchar2" MaxLength="20" />
+    <Property Name="PESCODPESSOA" Type="number" Precision="10" />
+    <Property Name="COD_UFNAT_REPRES" Type="char" MaxLength="2" />
+    <Property Name="NUM_CNS_REPRES" Type="varchar2" MaxLength="20" />
+    <Property Name="PAICODNASCIMENTO" Type="number" Precision="6" />
+    <Property Name="PAICODRESIDENCIA" Type="number" Precision="6" />
+    <Property Name="PAICODCIDADANIA1" Type="number" Precision="6" />
+    <Property Name="PAICODCIDADANIA2" Type="number" Precision="6" />
+    <Property Name="NUM_GRNCRD_REPRES" Type="varchar2" MaxLength="15" />
+    <Property Name="DAT_VLDGRNCRD_REPRES" Type="date" />
+    <Property Name="NUM_DDICEL_REPRES" Type="varchar2" MaxLength="7" />
+  </EntityType>
+  <EntityType Name="AAT_TBL_BOLETO">
+    <Key>
+      <PropertyRef Name="COD_BOLETO" />
+    </Key>
+    <Property Name="COD_BOLETO" Type="number" Nullable="false" Precision="14" />
+    <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="3" />
+    <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_DIVR_EMPRG" Type="number" Precision="1" />
+    <Property Name="COD_BOLETO_TIPO" Type="number" Precision="3" />
+    <Property Name="NUM_DOCTO" Type="varchar2" MaxLength="10" />
+    <Property Name="NUM_DCMCOB_BLPGT" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_CPF" Type="number" Nullable="false" Precision="15" />
+    <Property Name="NOM_EMPR" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="DAT_VENCT_LCEMP" Type="date" Nullable="false" />
+    <Property Name="VLR_DOCTO" Type="number" Nullable="false" Precision="14" Scale="2" />
+    <Property Name="CALC_DIGITO" Type="number" Nullable="false" Precision="1" />
+    <Property Name="TXT_FIX1" Type="varchar2" MaxLength="120" />
+    <Property Name="TXT_FIX2" Type="varchar2" MaxLength="120" />
+    <Property Name="TXT_FIX3" Type="varchar2" MaxLength="120" />
+    <Property Name="TXT_FIX4" Type="varchar2" MaxLength="120" />
+    <Property Name="LOCAL_PAGTO" Type="varchar2" Nullable="false" MaxLength="80" />
+    <Property Name="COD_BANCO" Type="number" Nullable="false" Precision="5" />
+    <Property Name="COD_DIGITO_BANCO" Type="number" Nullable="false" Precision="1" />
+    <Property Name="CEDENTE" Type="varchar2" Nullable="false" MaxLength="80" />
+    <Property Name="AGENCIA" Type="varchar2" Nullable="false" MaxLength="25" />
+    <Property Name="COD_CEDENTE" Type="varchar2" Nullable="false" MaxLength="25" />
+    <Property Name="DT_PROCESSAMENTO" Type="date" Nullable="false" />
+    <Property Name="DCR_ESPECIEDOC" Type="varchar2" MaxLength="20" />
+    <Property Name="DCR_ACEITE" Type="varchar2" MaxLength="20" />
+    <Property Name="DCR_USOBANCO" Type="varchar2" MaxLength="20" />
+    <Property Name="DCR_CARTEIRA" Type="varchar2" MaxLength="20" />
+    <Property Name="DCR_ESPECIE" Type="varchar2" MaxLength="20" />
+    <Property Name="DCR_QUANTIDADE" Type="varchar2" MaxLength="20" />
+    <Property Name="LIN_DIGITAVEL" Type="varchar2" Nullable="false" MaxLength="54" />
+    <Property Name="INSTRUCOES1" Type="varchar2" MaxLength="80" />
+    <Property Name="INSTRUCOES2" Type="varchar2" MaxLength="80" />
+    <Property Name="INSTRUCOES3" Type="varchar2" MaxLength="80" />
+    <Property Name="INSTRUCOES4" Type="varchar2" MaxLength="80" />
+    <Property Name="INSTRUCOES5" Type="varchar2" MaxLength="80" />
+    <Property Name="DCR_OBSERVACAO" Type="varchar2" MaxLength="80" />
+    <Property Name="DCR_ENDER_EMPRG" Type="varchar2" Nullable="false" MaxLength="80" />
+    <Property Name="BAIRRO_EMPRG" Type="varchar2" MaxLength="60" />
+    <Property Name="COD_CEP_EMPRG" Type="varchar2" Nullable="false" MaxLength="8" />
+    <Property Name="NOM_CIDRS_EMPRG" Type="varchar2" Nullable="false" MaxLength="40" />
+    <Property Name="COD_UNDFD_EMPRG" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="COD_BARRAS" Type="varchar2" Nullable="false" MaxLength="44" />
+    <Property Name="TXT_FIXO_ECT1" Type="varchar2" MaxLength="25" />
+    <Property Name="TXT_FIXO_ECT2" Type="varchar2" MaxLength="25" />
+    <Property Name="TXT_FIXO_ECT3" Type="varchar2" MaxLength="25" />
+    <Property Name="TXT_FIXO_ECT4" Type="varchar2" MaxLength="25" />
+    <Property Name="TXT_FIXO_ECT5" Type="varchar2" MaxLength="25" />
+    <Property Name="TXT_FIXO_ECT6" Type="varchar2" MaxLength="25" />
+    <Property Name="NUM_LOTE" Type="number" Precision="6" />
+    <Property Name="CODBARRAS_ECT" Type="varchar2" Nullable="false" MaxLength="34" />
+    <Property Name="SEQ_POSTAGEM" Type="number" Nullable="false" Precision="5" />
+    <Property Name="LOG_INCLUSAO" Type="varchar2" Nullable="false" MaxLength="30" />
+    <Property Name="DTH_INCLUSAO" Type="date" Nullable="false" />
+    <Property Name="LOG_EXCLUSAO" Type="varchar2" MaxLength="30" />
+    <Property Name="DTH_EXCLUSAO" Type="date" />
+    <Property Name="COD_BOLETO_SUBTIPO" Type="number" Precision="3" />
+  </EntityType>
+  <EntityType Name="AAT_TBL_BOLETO_ITEM">
+    <Key>
+      <PropertyRef Name="COD_BOLETO_ITEM" />
+    </Key>
+    <Property Name="COD_BOLETO_ITEM" Type="number" Nullable="false" Precision="14" />
+    <Property Name="COD_BOLETO" Type="number" Nullable="false" Precision="14" />
+    <Property Name="NUM_SEQ_DETALHE" Type="number" Nullable="false" Precision="3" />
+    <Property Name="COD_DETALHE" Type="number" Precision="10" />
+    <Property Name="DTH_REFERENCIA" Type="date" />
+    <Property Name="DTH_VENCIMENTO" Type="date" />
+    <Property Name="DSC_DETALHE" Type="varchar2" MaxLength="60" />
+    <Property Name="VLR_VALOR" Type="number" Precision="14" Scale="2" />
+  </EntityType>
+  <EntityType Name="AAT_TBL_BOLETO_SUBTIPO">
+    <Key>
+      <PropertyRef Name="COD_BOLETO_SUBTIPO" />
+    </Key>
+    <Property Name="COD_BOLETO_SUBTIPO" Type="number" Nullable="false" Precision="3" />
+    <Property Name="COD_BOLETO_TIPO" Type="number" Nullable="false" Precision="3" />
+    <Property Name="DCR_BOLETO_SUBTIPO" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AAT_TBL_BOLETO_TIPO">
+    <Key>
+      <PropertyRef Name="COD_BOLETO_TIPO" />
+    </Key>
+    <Property Name="COD_BOLETO_TIPO" Type="number" Nullable="false" Precision="3" />
+    <Property Name="NOM_BOLETO" Type="varchar2" MaxLength="80" />
+    <Property Name="NOM_BOLETO_ABREV" Type="varchar2" MaxLength="60" />
+    <Property Name="DCR_LOCAL_PAGTO" Type="varchar2" MaxLength="80" />
+    <Property Name="DCR_CEDENTE" Type="varchar2" MaxLength="80" />
+    <Property Name="DCR_BANCO" Type="varchar2" MaxLength="5" />
+    <Property Name="DCR_AGENCIA" Type="varchar2" MaxLength="25" />
+    <Property Name="DCR_CONTA" Type="varchar2" MaxLength="10" />
+    <Property Name="DCR_DIGITO" Type="char" MaxLength="1" />
+    <Property Name="DCR_TIPOCONTA" Type="varchar2" MaxLength="2" />
+    <Property Name="DCR_NUMDOCUMENTO" Type="varchar2" MaxLength="15" />
+    <Property Name="DCR_ESPECIEDOC" Type="varchar2" MaxLength="10" />
+    <Property Name="DCR_ACEITE" Type="varchar2" MaxLength="10" />
+    <Property Name="DCR_USOBANCO" Type="varchar2" MaxLength="10" />
+    <Property Name="DCR_CARTEIRA" Type="varchar2" MaxLength="10" />
+    <Property Name="DCR_ESPECIE" Type="varchar2" MaxLength="10" />
+    <Property Name="DCR_QUANTIDADE" Type="varchar2" MaxLength="10" />
+    <Property Name="DCR_OBSERVACAO" Type="varchar2" MaxLength="80" />
+    <Property Name="DCR_INSTR1" Type="varchar2" MaxLength="80" />
+    <Property Name="DCR_INSTR2" Type="varchar2" MaxLength="80" />
+    <Property Name="DCR_INSTR3" Type="varchar2" MaxLength="80" />
+    <Property Name="DCR_INSTR4" Type="varchar2" MaxLength="80" />
+    <Property Name="DCR_OPERACAO" Type="varchar2" MaxLength="30" />
+    <Property Name="DCR_DIGITOBANCO" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AAT_TBL_DEB_CONTA">
+    <Key>
+      <PropertyRef Name="COD_PRODUTO" />
+      <PropertyRef Name="DTH_INCLUSAO" />
+      <PropertyRef Name="NUM_CPF" />
+    </Key>
+    <Property Name="COD_EMPRS" Type="number" Precision="3" />
+    <Property Name="NUM_RGTRO_EMPRG" Type="number" Precision="10" />
+    <Property Name="NUM_IDNTF_RPTANT" Type="number" Nullable="false" Precision="7" />
+    <Property Name="COD_PRODUTO" Type="number" Nullable="false" Precision="3" />
+    <Property Name="DTH_INCLUSAO" Type="date" Nullable="false" />
+    <Property Name="NUM_CPF" Type="number" Nullable="false" Precision="15" />
+    <Property Name="ID_DEB_BANC" Type="varchar2" MaxLength="25" />
+    <Property Name="IND_ATIVO" Type="number" Precision="1" />
+    <Property Name="DCR_NOM_ARQ" Type="varchar2" MaxLength="200" />
+    <Property Name="NUM_SEQ_LINHA" Type="number" Precision="7" />
+    <Property Name="LOG_INCLUSAO" Type="varchar2" MaxLength="30" />
+    <Property Name="DTH_EXCLUSAO" Type="date" />
+    <Property Name="COD_BANCO" Type="varchar2" MaxLength="3" />
+    <Property Name="COD_AGENCIA" Type="varchar2" MaxLength="5" />
+    <Property Name="NUM_CONTA" Type="varchar2" MaxLength="15" />
+    <Property Name="TIP_CONTA" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="AAT_TBL_DEB_CONTA_PRODUTO">
+    <Key>
+      <PropertyRef Name="COD_PRODUTO" />
+    </Key>
+    <Property Name="COD_PRODUTO" Type="number" Nullable="false" Precision="3" />
+    <Property Name="DESC_PRODUTO" Type="varchar2" MaxLength="60" />
+    <Property Name="DESC_OBSERV" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AAT_TBL_EMPRESTIMO_DESCONTO">
+    <Key>
+      <PropertyRef Name="COD_EMPRESTIMO_DESCONTO" />
+    </Key>
+    <Property Name="COD_EMPRESTIMO_DESCONTO" Type="number" Nullable="false" Precision="12" />
+    <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="3" />
+    <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_MATR_PARTF" Type="number" Nullable="false" Precision="6" />
+    <Property Name="NUM_IDNTF_RPTANT" Type="number" Nullable="false" Precision="7" />
+    <Property Name="ANO_REF" Type="number" Nullable="false" Precision="4" />
+    <Property Name="MES_REF" Type="number" Nullable="false" Precision="2" />
+    <Property Name="COD_STATUS" Type="number" Nullable="false" Precision="1" />
+    <Property Name="COD_TIPO" Type="varchar2" MaxLength="1" />
+    <Property Name="NUM_CPF" Type="number" Precision="15" />
+    <Property Name="VLR_DIVIDA" Type="number" Precision="11" Scale="2" />
+    <Property Name="VLR_PROV" Type="number" Precision="11" Scale="2" />
+    <Property Name="VLR_DESC" Type="number" Precision="11" Scale="2" />
+    <Property Name="VLR_LIQ" Type="number" Precision="11" Scale="2" />
+    <Property Name="LIMITE" Type="number" Precision="11" Scale="2" />
+    <Property Name="VLR_DO_MES" Type="number" Precision="11" Scale="2" />
+    <Property Name="VLR_DIVIDA_POSS" Type="number" Precision="11" Scale="2" />
+    <Property Name="VLR_ABN_PROV" Type="number" Precision="11" Scale="2" />
+    <Property Name="VLR_ABN_DESC" Type="number" Precision="11" Scale="2" />
+    <Property Name="VLR_ABN_LIQ" Type="number" Precision="11" Scale="2" />
+    <Property Name="VLR_CARGA" Type="number" Precision="11" Scale="2" />
+    <Property Name="DTH_GERACAO" Type="date" />
+    <Property Name="LOG_INCLUSAO" Type="varchar2" Nullable="false" MaxLength="30" />
+    <Property Name="DTH_INCLUSAO" Type="date" Nullable="false" />
+    <Property Name="DTH_EXCLUSAO" Type="date" />
+  </EntityType>
+  <EntityType Name="AAT_TBL_RET_DEB_CONTA">
+    <Key>
+      <PropertyRef Name="DCR_NOM_ARQ" />
+      <PropertyRef Name="NUM_SEQ_LINHA" />
+    </Key>
+    <Property Name="DCR_NOM_ARQ" Type="varchar2" Nullable="false" MaxLength="200" />
+    <Property Name="ID_TP_REGISTRO" Type="varchar2" MaxLength="1" />
+    <Property Name="COD_EMPRESA" Type="varchar2" MaxLength="3" />
+    <Property Name="NUM_REGISTRO" Type="varchar2" MaxLength="9" />
+    <Property Name="NUM_REPRESENTANTE" Type="varchar2" MaxLength="8" />
+    <Property Name="ID_DEB_BANC" Type="varchar2" MaxLength="25" />
+    <Property Name="NUM_NOSSO_NUMERO" Type="varchar2" MaxLength="10" />
+    <Property Name="DTA_VENCIMENTO" Type="varchar2" MaxLength="8" />
+    <Property Name="VLR_DEBITO" Type="varchar2" MaxLength="15" />
+    <Property Name="COD_MOTIVO_RET" Type="varchar2" MaxLength="2" />
+    <Property Name="COD_MOVIMENTO" Type="varchar2" MaxLength="1" />
+    <Property Name="NUM_SEQ_LINHA" Type="number" Nullable="false" Precision="7" />
+    <Property Name="AGENC_DEB_CONTA" Type="varchar2" MaxLength="4" />
+    <Property Name="ID_CLIENTE_BANCO" Type="varchar2" MaxLength="14" />
+  </EntityType>
+  <EntityType Name="AAT_TBL_RET_DEB_CONTA_CRITICAS">
+    <Key>
+      <PropertyRef Name="DCR_NOM_ARQ" />
+      <PropertyRef Name="NUM_SEQ_LINHA" />
+      <PropertyRef Name="COD_CRITICA" />
+    </Key>
+    <Property Name="DCR_NOM_ARQ" Type="varchar2" Nullable="false" MaxLength="200" />
+    <Property Name="NUM_SEQ_LINHA" Type="number" Nullable="false" Precision="7" />
+    <Property Name="COD_CRITICA" Type="varchar2" Nullable="false" MaxLength="7" />
+    <Property Name="DCR_CRITICA" Type="varchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="AAT_TBL_RET_DEB_CONTA_MOTIVO">
+    <Key>
+      <PropertyRef Name="COD_MOTIVO" />
+    </Key>
+    <Property Name="COD_MOTIVO" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DESC_MOTIVO" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="FIN_TBL_BOL_CRM">
+    <Key>
+      <PropertyRef Name="COD_EMPRS" />
+      <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      <PropertyRef Name="NUM_IDNTF_RPTANT" />
+      <PropertyRef Name="NUM_NOSSO_NUMERO" />
+      <PropertyRef Name="NUM_SEQ_GER" />
+    </Key>
+    <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="5" />
+    <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_IDNTF_RPTANT" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_NOSSO_NUMERO" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_SEQ_GER" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NOM_EMP_REP" Type="varchar2" MaxLength="50" />
+    <Property Name="NUM_CPF" Type="number" Precision="11" />
+    <Property Name="DTA_VENCIMENTO" Type="date" />
+    <Property Name="DTH_INCLUSAO_REG" Type="date" />
+    <Property Name="VLR_DOCUMENTO" Type="number" Precision="15" Scale="2" />
+    <Property Name="PROG_UTIL" Type="varchar2" MaxLength="30" />
+    <Property Name="USU_RESP" Type="varchar2" MaxLength="30" />
+    <Property Name="WK_STATION" Type="varchar2" MaxLength="30" />
+    <Property Name="USU_UTIL" Type="varchar2" MaxLength="30" />
+    <Property Name="IP_STATION" Type="varchar2" MaxLength="30" />
+    <Property Name="ID_BOBA_CD_BOLETO" Type="number" Precision="3" />
+    <Property Name="LOBO_TX_OBSERVACAO" Type="varchar2" MaxLength="80" />
+    <Property Name="FL_ACAO" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="FIN_TBL_BOL_CRM_AUD">
+    <Key>
+      <PropertyRef Name="COD_EMPRS" />
+      <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      <PropertyRef Name="NUM_IDNTF_RPTANT" />
+      <PropertyRef Name="NUM_NOSSO_NUMERO" />
+      <PropertyRef Name="NUM_SEQ_GER" />
+    </Key>
+    <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="5" />
+    <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_IDNTF_RPTANT" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_NOSSO_NUMERO" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_SEQ_GER" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NOM_EMP_REP" Type="varchar2" MaxLength="50" />
+    <Property Name="NUM_CPF" Type="number" Precision="11" />
+    <Property Name="DTA_VENCIMENTO" Type="date" />
+    <Property Name="DTH_INCLUSAO_REG" Type="date" />
+    <Property Name="VLR_DOCUMENTO" Type="number" Precision="15" Scale="2" />
+    <Property Name="DTH_PROCESSAMENTO" Type="date" />
+    <Property Name="PROG_UTIL" Type="varchar2" MaxLength="30" />
+    <Property Name="USU_RESP" Type="varchar2" MaxLength="30" />
+    <Property Name="WK_STATION" Type="varchar2" MaxLength="30" />
+    <Property Name="USU_UTIL" Type="varchar2" MaxLength="30" />
+    <Property Name="IP_STATION" Type="varchar2" MaxLength="30" />
+    <Property Name="ID_BOBA_CD_BOLETO" Type="number" Precision="3" />
+    <Property Name="LOBO_TX_OBSERVACAO" Type="varchar2" MaxLength="80" />
+    <Property Name="FL_ACAO" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="FIN_TBL_RES_ABERT_FINANCEIRA">
+    <Key>
+      <PropertyRef Name="ID_REG" />
+    </Key>
+    <Property Name="ID_REG" Type="number" Nullable="false" />
+    <Property Name="COD_EMPRS" Type="number" />
+    <Property Name="ANO_REF" Type="number" Precision="5" />
+    <Property Name="MES_REF" Type="number" Precision="5" />
+    <Property Name="NATUREZA" Type="varchar2" MaxLength="50" />
+    <Property Name="VALOR_PART" Type="number" Precision="13" Scale="2" />
+    <Property Name="VALOR_CRED_BRUTO" Type="number" Precision="13" Scale="2" />
+    <Property Name="IMPOSTO" Type="number" Precision="13" Scale="2" />
+    <Property Name="VALOR_CRED_LIQ" Type="number" Precision="13" Scale="2" />
+    <Property Name="APROVACAO" Type="varchar2" MaxLength="1" />
+    <Property Name="USU_APROVACAO" Type="varchar2" MaxLength="30" />
+    <Property Name="DAT_APROVACAO" Type="date" />
+  </EntityType>
+  <EntityType Name="FUN_TBL_ATU_CC">
+    <Key>
+      <PropertyRef Name="ID_REG" />
+    </Key>
+    <Property Name="ID_REG" Type="number" Nullable="false" />
+    <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="3" />
+    <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_IDNTF_RPTANT" Type="number" Precision="6" />
+    <Property Name="NUM_CPF_EMPRG" Type="number" Precision="11" />
+    <Property Name="COD_BANCO" Type="number" Precision="3" />
+    <Property Name="COD_AGBCO" Type="number" Precision="7" />
+    <Property Name="TIP_CTCOR_EMPRG" Type="varchar2" MaxLength="5" />
+    <Property Name="NUM_CTCOR_EMPRG" Type="varchar2" MaxLength="15" />
+    <Property Name="NOME" Type="varchar2" MaxLength="70" />
+    <Property Name="NOME_ARQ" Type="varchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="FUN_TBL_ATU_CC_HIST">
+    <Key>
+      <PropertyRef Name="ID_REG_HIST" />
+    </Key>
+    <Property Name="ID_REG_HIST" Type="number" Nullable="false" />
+    <Property Name="DAT_PROCESSAMENTO" Type="date" />
+    <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="3" />
+    <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_IDNTF_RPTANT" Type="number" Precision="6" />
+    <Property Name="NOME" Type="varchar2" MaxLength="70" />
+    <Property Name="NUM_CPF_EMPRG" Type="number" Precision="11" />
+    <Property Name="COD_BANCO" Type="number" Precision="3" />
+    <Property Name="COD_AGBCO" Type="number" Precision="7" />
+    <Property Name="TIP_CTCOR_EMPRG" Type="char" MaxLength="5" />
+    <Property Name="NUM_CTCOR_EMPRG" Type="varchar2" MaxLength="15" />
+    <Property Name="USU_GERACAO" Type="varchar2" MaxLength="30" />
+    <Property Name="CRITICA" Type="varchar2" MaxLength="255" />
+    <Property Name="NOME_ARQ" Type="varchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="FUN_TBL_PARAMETRO_LOG">
+    <Key>
+      <PropertyRef Name="ID_LOG" />
+    </Key>
+    <Property Name="ID_LOG" Type="number" Nullable="false" />
+    <Property Name="ID_PARAMETRO" Type="number" Nullable="false" />
+    <Property Name="LOGIN" Type="varchar2" MaxLength="400" />
+    <Property Name="COLUNA_ALTERACAO" Type="varchar2" MaxLength="400" />
+    <Property Name="VALOR_ALTERACAO" Type="varchar2" MaxLength="400" />
+    <Property Name="DAT_ALTERACAO" Type="date" />
+  </EntityType>
+  <EntityType Name="PRE_TBL_CARGA_PROTHEUS">
+    <Key>
+      <PropertyRef Name="ID_PROTHEUS" />
+    </Key>
+    <Property Name="ID_PROTHEUS" Type="number" Nullable="false" Precision="10" />
+    <Property Name="COD_CARGA_PROTHEUS" Type="number" Nullable="false" Precision="10" />
+    <Property Name="DTH_PAGAMENTO" Type="date" />
+    <Property Name="COD_CARGA_TIPO" Type="number" Nullable="false" Precision="6" />
+    <Property Name="COD_CARGA_STATUS" Type="number" Nullable="false" Precision="3" />
+    <Property Name="DTH_EXECUCAO" Type="date" />
+    <Property Name="IND_EXEC_IMEDIATA" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DCR_PARAMETROS" Type="varchar2" MaxLength="500" />
+    <Property Name="LOG_INCLUSAO" Type="varchar2" Nullable="false" MaxLength="30" />
+    <Property Name="DTH_INCLUSAO" Type="date" Nullable="false" />
+    <Property Name="DTH_INCIO_PROCESSO" Type="date" />
+    <Property Name="DTH_FIM_PROCESSO" Type="date" />
+    <Property Name="DTH_SUPLEMENTAR" Type="date" />
+    <Property Name="DTH_COMPLEMENTAR" Type="date" />
+    <Property Name="COD_LOTE" Type="number" Precision="10" />
+    <Property Name="NUM_LOTE" Type="number" Precision="10" />
+    <Property Name="DTH_DOCUMENTO_INICIAL" Type="date" />
+    <Property Name="DTH_DOCUMENTO_FINAL" Type="date" />
+    <Property Name="COD_ASSOCIADO" Type="number" Precision="10" />
+  </EntityType>
+  <EntityType Name="PRE_TBL_CARGA_PROTHEUS_LOG">
+    <Key>
+      <PropertyRef Name="COD_CARGA_PROTHEUS" />
+      <PropertyRef Name="DTH_INCLUSAO" />
+    </Key>
+    <Property Name="COD_CARGA_PROTHEUS" Type="number" Nullable="false" Precision="10" />
+    <Property Name="DTH_INCLUSAO" Type="date" Nullable="false" />
+    <Property Name="LOG_INCLUSAO" Type="varchar2" Nullable="false" MaxLength="30" />
+    <Property Name="COD_ACAO" Type="number" Precision="3" />
+    <Property Name="DCR_ACAO" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="PRE_TBL_CARGA_PROTHEUS_STATUS">
+    <Key>
+      <PropertyRef Name="COD_STATUS" />
+    </Key>
+    <Property Name="COD_STATUS" Type="number" Nullable="false" Precision="3" />
+    <Property Name="DCR_STATUS" Type="varchar2" Nullable="false" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="PRE_TBL_CARGA_PROTHEUS_TIPO">
+    <Key>
+      <PropertyRef Name="COD_CARGA_TIPO" />
+    </Key>
+    <Property Name="COD_CARGA_TIPO" Type="number" Nullable="false" Precision="6" />
+    <Property Name="DCR_CARGA_TIPO" Type="varchar2" MaxLength="200" />
+    <Property Name="IND_PROC_PARCIAL" Type="number" Precision="1" />
+    <Property Name="AREA" Type="varchar2" MaxLength="50" />
+    <Property Name="DCR_PACKAGE_PARAM" Type="varchar2" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="MEDCTR">
+    <Key>
+      <PropertyRef Name="SEQ_MEDCTR" />
+    </Key>
+    <Property Name="NUM_LOTE" Type="number" Nullable="false" Precision="9" />
+    <Property Name="IDREC" Type="varchar2" MaxLength="9" />
+    <Property Name="STATUS" Type="char" MaxLength="1" />
+    <Property Name="XNUMCT" Type="varchar2" Nullable="false" MaxLength="30" />
+    <Property Name="XTPLIQ" Type="varchar2" MaxLength="2" />
+    <Property Name="XTPMED" Type="char" MaxLength="1" />
+    <Property Name="DTREF" Type="varchar2" Nullable="false" MaxLength="8" />
+    <Property Name="DTVENC" Type="varchar2" Nullable="false" MaxLength="8" />
+    <Property Name="NOSSONUMERO" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="PRODUT" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="CCUSTO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="PROGRAMA" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="PATROCINADOR" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="SUBMASSA" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="PROJETO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="VALMED" Type="number" Precision="16" Scale="5" />
+    <Property Name="DTINCL" Type="varchar2" MaxLength="8" />
+    <Property Name="DTINTEG" Type="varchar2" MaxLength="8" />
+    <Property Name="TIPOPAR" Type="char" MaxLength="2" />
+    <Property Name="COD_ASSOC" Type="number" Nullable="false" Precision="3" />
+    <Property Name="COD_CONVENENTE" Type="number" Nullable="false" Precision="6" />
+    <Property Name="COD_EMPRS" Type="number" Nullable="false" Precision="3" />
+    <Property Name="NUM_RGTRO_EMPRG" Type="number" Nullable="false" Precision="10" />
+    <Property Name="NUM_MATR_PARTF" Type="number" Precision="6" />
+    <Property Name="NUM_IDNTF_RPTANT" Type="number" Nullable="false" Precision="6" />
+    <Property Name="NUM_IDNTF_DPDTE" Type="number" Nullable="false" Precision="10" />
+    <Property Name="BANCO" Type="varchar2" MaxLength="3" />
+    <Property Name="AGENCIA" Type="varchar2" MaxLength="5" />
+    <Property Name="DVAGE" Type="varchar2" MaxLength="1" />
+    <Property Name="NUMCON" Type="varchar2" MaxLength="10" />
+    <Property Name="DVNUMCON" Type="varchar2" MaxLength="1" />
+    <Property Name="COMPENSAVEL" Type="varchar2" MaxLength="1" />
+    <Property Name="EVENTO" Type="varchar2" MaxLength="6" />
+    <Property Name="ANO_FATURA" Type="varchar2" MaxLength="4" />
+    <Property Name="NUM_SEQ_FATURA" Type="number" />
+    <Property Name="NUM_SEQ_ATEND" Type="number" />
+    <Property Name="NUM_SEQ_ITEM" Type="number" />
+    <Property Name="ERRO_STATUS3" Type="clob" />
+    <Property Name="TP_PROC" Type="number" Precision="5" />
+    <Property Name="MRC_DBT_ATM" Type="char" MaxLength="1" />
+    <Property Name="TP_BLT" Type="varchar2" MaxLength="4" />
+    <Property Name="FLAG_JUDIC" Type="char" MaxLength="1" />
+    <Property Name="DSC_VERBA" Type="varchar2" MaxLength="80" />
+    <Property Name="SEQ_MEDCTR" Type="number" Nullable="false" Precision="13" />
+    <Property Name="TIPOFOR" Type="char" MaxLength="1" />
+    <Property Name="MRC_PGTO_APRT" Type="char" MaxLength="1" />
+    <Property Name="NF_FATURA_CONVENENTE" Type="varchar2" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="CC_INTEGR_CT">
+    <Key>
+      <PropertyRef Name="CD_EMPRESA" />
+      <PropertyRef Name="CD_PLANO" />
+      <PropertyRef Name="DT_GERACAO_ARQUIVO" />
+      <PropertyRef Name="NO_ARQUIVO" />
+      <PropertyRef Name="DT_CD_MOV" />
+      <PropertyRef Name="NR_CD_MOV" />
+      <PropertyRef Name="SQ_LANC_MOV" />
+    </Key>
+    <Property Name="CD_EMPRESA" Type="number" Nullable="false" Precision="5" />
+    <Property Name="CD_PLANO" Type="number" Nullable="false" Precision="5" />
+    <Property Name="DT_GERACAO_ARQUIVO" Type="date" Nullable="false" />
+    <Property Name="NO_ARQUIVO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="DT_CD_MOV" Type="date" Nullable="false" />
+    <Property Name="NR_CD_MOV" Type="number" Nullable="false" Precision="10" />
+    <Property Name="SQ_LANC_MOV" Type="number" Nullable="false" Precision="10" />
+    <Property Name="CD_ATIVIDADE" Type="number" Precision="5" />
+    <Property Name="CD_CONTA" Type="varchar2" MaxLength="13" />
+    <Property Name="CD_AUXILIAR" Type="varchar2" MaxLength="11" />
+    <Property Name="CD_CCUSTO" Type="varchar2" MaxLength="10" />
+    <Property Name="TP_DOCUM" Type="varchar2" MaxLength="6" />
+    <Property Name="NR_DOCUM" Type="number" Precision="10" />
+    <Property Name="DT_COMPET" Type="date" />
+    <Property Name="VL_LANCAMENTO" Type="number" Precision="15" Scale="2" />
+    <Property Name="IR_DEB_CRED" Type="varchar2" MaxLength="1" />
+    <Property Name="CD_HISTORICO" Type="varchar2" MaxLength="3" />
+    <Property Name="DS_HIST_DIARIO" Type="varchar2" MaxLength="60" />
+    <Property Name="IR_CRITICA_MOV" Type="varchar2" MaxLength="1" />
+    <Property Name="CD_REDUZIDA" Type="number" Precision="10" />
+  </EntityType>
+  <EntityType Name="GB_INTEGR_CT">
+    <Key>
+      <PropertyRef Name="CD_EMPRESA" />
+      <PropertyRef Name="CD_PLANO" />
+      <PropertyRef Name="DT_GERACAO_ARQUIVO" />
+      <PropertyRef Name="NO_ARQUIVO" />
+      <PropertyRef Name="DT_CD_MOV" />
+      <PropertyRef Name="NR_CD_MOV" />
+      <PropertyRef Name="SQ_LANC_MOV" />
+    </Key>
+    <Property Name="CD_EMPRESA" Type="number" Nullable="false" Precision="5" />
+    <Property Name="CD_PLANO" Type="number" Nullable="false" Precision="5" />
+    <Property Name="DT_GERACAO_ARQUIVO" Type="date" Nullable="false" />
+    <Property Name="NO_ARQUIVO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="DT_CD_MOV" Type="date" Nullable="false" />
+    <Property Name="NR_CD_MOV" Type="number" Nullable="false" Precision="10" />
+    <Property Name="SQ_LANC_MOV" Type="number" Nullable="false" Precision="10" />
+    <Property Name="CD_ATIVIDADE" Type="number" Precision="5" />
+    <Property Name="CD_CONTA" Type="varchar2" MaxLength="13" />
+    <Property Name="CD_AUXILIAR" Type="varchar2" MaxLength="11" />
+    <Property Name="CD_CCUSTO" Type="varchar2" MaxLength="10" />
+    <Property Name="TP_DOCUM" Type="varchar2" MaxLength="6" />
+    <Property Name="NR_DOCUM" Type="number" Precision="10" />
+    <Property Name="DT_COMPET" Type="date" />
+    <Property Name="VL_LANCAMENTO" Type="number" Precision="15" Scale="2" />
+    <Property Name="IR_DEB_CRED" Type="varchar2" MaxLength="1" />
+    <Property Name="CD_HISTORICO" Type="varchar2" MaxLength="3" />
+    <Property Name="DS_HIST_DIARIO" Type="varchar2" MaxLength="60" />
+    <Property Name="IR_CRITICA_MOV" Type="varchar2" MaxLength="1" />
+    <Property Name="CD_REDUZIDA" Type="number" Precision="10" />
+  </EntityType>
+  <EntityType Name="CTD010">
+    <Key>
+      <PropertyRef Name="R_E_C_N_O_" />
+    </Key>
+    <Property Name="CTD_FILIAL" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTD_ITEM" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTD_CLASSE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_NORMAL" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_DESC01" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTD_DESC02" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTD_DESC03" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTD_DESC04" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTD_DESC05" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTD_BLOQ" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_DTBLIN" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CTD_DTBLFI" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CTD_DTEXIS" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CTD_DTEXSF" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CTD_ITLP" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTD_ITPON" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTD_BOOK" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="CTD_ITSUP" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTD_RES" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="CTD_CRGNV1" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="CTD_CRGNV2" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="CTD_RGNV3" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="CTD_CLOBRG" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_ACCLVL" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_ITVM" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTD_ITRED" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTD_ACATIV" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_ATOBRG" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_ACAT01" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_AT01OB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_ACAT02" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_AT02OB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_ACAT03" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_AT03OB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_ACAT04" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_AT04OB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTD_TPO04" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTD_TPO01" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTD_TPO02" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTD_TPO03" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="D_E_L_E_T_" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="R_E_C_N_O_" Type="number" Nullable="false" />
+    <Property Name="R_E_C_D_E_L_" Type="number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CTH010">
+    <Key>
+      <PropertyRef Name="R_E_C_N_O_" />
+    </Key>
+    <Property Name="CTH_FILIAL" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTH_CLVL" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTH_CLASSE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTH_NORMAL" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTH_DESC01" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTH_DESC02" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTH_DESC03" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTH_DESC04" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTH_DESC05" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTH_BLOQ" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTH_DTBLIN" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CTH_DTBLFI" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CTH_DTEXIS" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CTH_DTEXSF" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CTH_CLVLLP" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTH_CLPON" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTH_BOOK" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="CTH_CLSUP" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTH_RES" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="CTH_CRGNV1" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="CTH_CRGNV2" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="CTH_CRGNV3" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="CTH_CLVM" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTH_CLRED" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTH_ACATIV" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTH_ATOBRG" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTH_ACAT01" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTH_AT01OB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTH_ACAT02" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTH_AT02OB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTH_ACAT03" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTH_AT03OB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTH_ACAT04" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTH_AT04OB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTH_TPO02" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTH_TPO01" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTH_TPO03" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTH_TPO04" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="D_E_L_E_T_" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="R_E_C_N_O_" Type="number" Nullable="false" />
+    <Property Name="R_E_C_D_E_L_" Type="number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CTT010">
+    <Key>
+      <PropertyRef Name="R_E_C_N_O_" />
+    </Key>
+    <Property Name="CTT_FILIAL" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTT_CUSTO" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTT_CLASSE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_NORMAL" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_DESC01" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTT_DESC02" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTT_DESC03" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTT_DESC04" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTT_DESC05" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTT_BLOQ" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_DTBLIN" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CTT_DTBLFI" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CTT_DTEXIS" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CTT_DTEXSF" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CTT_CCLP" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTT_CCPON" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTT_BOOK" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="CTT_TIPO00" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTT_CCSUP" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTT_TIPO01" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTT_RES" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="CTT_CRGNV1" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="CTT_RGNV2" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="CTT_RGNV3" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="CTT_STATUS" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_FILMAT" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTT_MAT" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="CTT_PERCAC" Type="number" Nullable="false" />
+    <Property Name="CTT_PERFPA" Type="number" Nullable="false" />
+    <Property Name="CTT_NOME" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTT_ENDER" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="CTT_BAIRRO" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="CTT_CEP" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CTT_ESTADO" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTT_MUNIC" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="CTT_TIPO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_CEI" Type="char" Nullable="false" MaxLength="14" />
+    <Property Name="CTT_VALFAT" Type="number" Nullable="false" />
+    <Property Name="CTT_RETIDO" Type="number" Nullable="false" />
+    <Property Name="CTT_LOCAL" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTT_OCORRE" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTT_ITOBRG" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_CLOBRG" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_ACITEM" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_ACCLVL" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_CCVM" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTT_CCRED" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTT_OPERAC" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CTT_CSINCO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_PEREMP" Type="number" Nullable="false" />
+    <Property Name="CTT_RECFAT" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_CODMUN" Type="char" Nullable="false" MaxLength="7" />
+    <Property Name="CTT_ACAT04" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_ACATIV" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_ATOBRG" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_ACAT01" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_AT01OB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_ACAT02" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_AT02OB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_ACAT03" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_AT03OB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_AT04OB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_RHEXP" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="CTT_TPO01" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTT_TPO02" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTT_TPO03" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTT_TPO04" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTT_INTRES" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_RESERV" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_TPLOT" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CTT_TIPO2" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_CEI2" Type="char" Nullable="false" MaxLength="14" />
+    <Property Name="CTT_FPAS" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CTT_CODTER" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="CTT_FAP" Type="number" Nullable="false" />
+    <Property Name="CTT_PERRAT" Type="number" Nullable="false" />
+    <Property Name="CTT_ICTPAT" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_CNAE" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="CTT_TPINCT" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_NRINCT" Type="char" Nullable="false" MaxLength="14" />
+    <Property Name="CTT_TPINPR" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CTT_NRINPR" Type="char" Nullable="false" MaxLength="14" />
+    <Property Name="D_E_L_E_T_" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="R_E_C_N_O_" Type="number" Nullable="false" />
+    <Property Name="R_E_C_D_E_L_" Type="number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CV0010">
+    <Key>
+      <PropertyRef Name="R_E_C_N_O_" />
+    </Key>
+    <Property Name="CV0_FILIAL" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CV0_PLANO" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CV0_ITEM" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="CV0_CODIGO" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="CV0_DESC" Type="char" Nullable="false" MaxLength="30" />
+    <Property Name="CV0_CLASSE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CV0_NORMAL" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CV0_ENTSUP" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="CV0_BLOQUE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CV0_DTIBLQ" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CV0_DTFBLQ" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CV0_DTIEXI" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CV0_DTFEXI" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="CV0_CFGLIV" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CV0_LUCPER" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="CV0_PONTE" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="CV0_ECVM" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="CV0_ECRED" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="D_E_L_E_T_" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="R_E_C_N_O_" Type="number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SB1010">
+    <Key>
+      <PropertyRef Name="R_E_C_N_O_" />
+    </Key>
+    <Property Name="B1_FILIAL" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_COD" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="B1_DESC" Type="char" Nullable="false" MaxLength="30" />
+    <Property Name="B1_TIPO" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_CODITE" Type="char" Nullable="false" MaxLength="27" />
+    <Property Name="B1_UM" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_LOCPAD" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_GRUPO" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="B1_PICM" Type="number" Nullable="false" />
+    <Property Name="B1_IPI" Type="number" Nullable="false" />
+    <Property Name="B1_POSIPI" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="B1_ESPECIE" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_EX_NCM" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_EX_NBM" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_ALIQISS" Type="number" Nullable="false" />
+    <Property Name="B1_CODISS" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="B1_TE" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_TS" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_PICMRET" Type="number" Nullable="false" />
+    <Property Name="B1_PICMENT" Type="number" Nullable="false" />
+    <Property Name="B1_IMPZFRC" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_BITMAP" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="B1_SEGUM" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_CONV" Type="number" Nullable="false" />
+    <Property Name="B1_TIPCONV" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_ALTER" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="B1_QE" Type="number" Nullable="false" />
+    <Property Name="B1_PRV1" Type="number" Nullable="false" />
+    <Property Name="B1_EMIN" Type="number" Nullable="false" />
+    <Property Name="B1_CUSTD" Type="number" Nullable="false" />
+    <Property Name="B1_UCALSTD" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_UPRC" Type="number" Nullable="false" />
+    <Property Name="B1_MCUSTD" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_UCOM" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_PESO" Type="number" Nullable="false" />
+    <Property Name="B1_ESTSEG" Type="number" Nullable="false" />
+    <Property Name="B1_ESTFOR" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_FORPRZ" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_PE" Type="number" Nullable="false" />
+    <Property Name="B1_TIPE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_LE" Type="number" Nullable="false" />
+    <Property Name="B1_LM" Type="number" Nullable="false" />
+    <Property Name="B1_XNATURE" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="B1_CONTA" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="B1_XCTADEB" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="B1_XCTAATF" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="B1_XCLASSE" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_CC" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="B1_ITEMCC" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="B1_LOJPROC" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_CLVL" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="B1_EC05DB" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_EC05CR" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_EC06DB" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_EC06CR" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_TOLER" Type="number" Nullable="false" />
+    <Property Name="B1_UREV" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_DATREF" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_FAMILIA" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_PROC" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_QB" Type="number" Nullable="false" />
+    <Property Name="B1_APROPRI" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_DTREFP1" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_TIPODEC" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_ORIGEM" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_CLASFIS" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_FANTASM" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_RASTRO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_CONINI" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_CONTSOC" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_FORAEST" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_CODBAR" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="B1_GRADE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_FORMLOT" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_COMIS" Type="number" Nullable="false" />
+    <Property Name="B1_FPCOD" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="B1_MONO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_CONTRAT" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_DESC_P" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_DESC_I" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_DESC_GI" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_PERINV" Type="number" Nullable="false" />
+    <Property Name="B1_GRTRIB" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_ANUENTE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_OPC" Type="char" Nullable="false" MaxLength="80" />
+    <Property Name="B1_CODOBS" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_MRP" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_NOTAMIN" Type="number" Nullable="false" />
+    <Property Name="B1_FABRIC" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="B1_PRVALID" Type="number" Nullable="false" />
+    <Property Name="B1_NUMCOP" Type="number" Nullable="false" />
+    <Property Name="B1_IRRF" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_LOCALIZ" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_PRODPAI" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="B1_OPERPAD" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_VLREFUS" Type="number" Nullable="false" />
+    <Property Name="B1_IMPORT" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_DESPIMP" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_SITPROD" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_MODELO" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="B1_SETOR" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_BALANCA" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_TECLA" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_TIPOCQ" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_SOLICIT" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_GRUPCOM" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_QUADPRO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_AGREGCU" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_NALNCCA" Type="char" Nullable="false" MaxLength="7" />
+    <Property Name="B1_BASE3" Type="char" Nullable="false" MaxLength="14" />
+    <Property Name="B1_DESBSE3" Type="char" Nullable="false" MaxLength="60" />
+    <Property Name="B1_NUMCQPR" Type="number" Nullable="false" />
+    <Property Name="B1_NALSH" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_CONTCQP" Type="number" Nullable="false" />
+    <Property Name="B1_REVATU" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_INSS" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_CODEMB" Type="char" Nullable="false" MaxLength="30" />
+    <Property Name="B1_DATASUB" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_ESPECIF" Type="char" Nullable="false" MaxLength="80" />
+    <Property Name="B1_MAT_PRI" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="B1_REDINSS" Type="number" Nullable="false" />
+    <Property Name="B1_REDIRRF" Type="number" Nullable="false" />
+    <Property Name="B1_ALADI" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_TAB_IPI" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_GRUDES" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_REDPIS" Type="number" Nullable="false" />
+    <Property Name="B1_REDCOF" Type="number" Nullable="false" />
+    <Property Name="B1_PCSLL" Type="number" Nullable="false" />
+    <Property Name="B1_PCOFINS" Type="number" Nullable="false" />
+    <Property Name="B1_QTDSER" Type="number" Nullable="false" />
+    <Property Name="B1_PPIS" Type="number" Nullable="false" />
+    <Property Name="B1_MTBF" Type="number" Nullable="false" />
+    <Property Name="B1_MTTR" Type="number" Nullable="false" />
+    <Property Name="B1_FLAGSUG" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_CLASSVE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_MIDIA" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_QTMIDIA" Type="number" Nullable="false" />
+    <Property Name="B1_VLR_IPI" Type="number" Nullable="false" />
+    <Property Name="B1_ENVOBR" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_SERIE" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="B1_FAIXAS" Type="number" Nullable="false" />
+    <Property Name="B1_NROPAG" Type="number" Nullable="false" />
+    <Property Name="B1_ISBN" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="B1_TITORIG" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="B1_LINGUA" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="B1_EDICAO" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_OBSISBN" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="B1_ATIVO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_CORPRI" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_CORSEC" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_NICONE" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="B1_ATRIB1" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_ATRIB2" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_ATRIB3" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_REGSEQ" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_EMAX" Type="number" Nullable="false" />
+    <Property Name="B1_PESBRU" Type="number" Nullable="false" />
+    <Property Name="B1_TIPCAR" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_FRACPER" Type="number" Nullable="false" />
+    <Property Name="B1_REQUIS" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_SELO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_LOTVEN" Type="number" Nullable="false" />
+    <Property Name="B1_OK" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="B1_USAFEFO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_VLR_ICM" Type="number" Nullable="false" />
+    <Property Name="B1_INT_ICM" Type="number" Nullable="false" />
+    <Property Name="B1_CNATREC" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_TNATREC" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="B1_VLRSELO" Type="number" Nullable="false" />
+    <Property Name="B1_CODNOR" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="B1_CPOTENC" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_POTENCI" Type="number" Nullable="false" />
+    <Property Name="B1_QTDACUM" Type="number" Nullable="false" />
+    <Property Name="B1_CRICMS" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_QTDINIC" Type="number" Nullable="false" />
+    <Property Name="B1_IAT" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_IPPT" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_CODPROC" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_QBP" Type="number" Nullable="false" />
+    <Property Name="B1_CLASSE" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_PRODSBP" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_VLCIF" Type="number" Nullable="false" />
+    <Property Name="B1_LOTESBP" Type="number" Nullable="false" />
+    <Property Name="B1_UMOEC" Type="number" Nullable="false" />
+    <Property Name="B1_ESCRIPI" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_UVLRC" Type="number" Nullable="false" />
+    <Property Name="B1_PIS" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_GCCUSTO" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_CCCUSTO" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="B1_VLR_PIS" Type="number" Nullable="false" />
+    <Property Name="B1_MSBLQL" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_PARCEI" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_TALLA" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_DCRE" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="B1_DCR" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="B1_DCRII" Type="number" Nullable="false" />
+    <Property Name="B1_COEFDCR" Type="number" Nullable="false" />
+    <Property Name="B1_DCI" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_DIFCNAE" Type="char" Nullable="false" MaxLength="11" />
+    <Property Name="B1_DTCORTE" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_GDODIF" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_REFBAS" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_VALEPRE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_FUSTF" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_CHASSI" Type="char" Nullable="false" MaxLength="17" />
+    <Property Name="B1_AFABOV" Type="number" Nullable="false" />
+    <Property Name="B1_CODQAD" Type="char" Nullable="false" MaxLength="13" />
+    <Property Name="B1_TPREG" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_VEREAN" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_VIGENC" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_PMACNUT" Type="number" Nullable="false" />
+    <Property Name="B1_PMICNUT" Type="number" Nullable="false" />
+    <Property Name="B1_GRPNATR" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_SELOEN" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_PRODREC" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_DTFIMNT" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_MARKUP" Type="number" Nullable="false" />
+    <Property Name="B1_TPPROD" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_FECP" Type="number" Nullable="false" />
+    <Property Name="B1_TIPOBN" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_DESBSE2" Type="char" Nullable="false" MaxLength="60" />
+    <Property Name="B1_TIPVEC" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_COLOR" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="B1_VLR_COF" Type="number" Nullable="false" />
+    <Property Name="B1_PRFDSUL" Type="number" Nullable="false" />
+    <Property Name="B1_CNAE" Type="char" Nullable="false" MaxLength="9" />
+    <Property Name="B1_RETOPER" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_AFACS" Type="number" Nullable="false" />
+    <Property Name="B1_ALFECRN" Type="number" Nullable="false" />
+    <Property Name="B1_ALFECST" Type="number" Nullable="false" />
+    <Property Name="B1_CFEM" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_CFEMA" Type="number" Nullable="false" />
+    <Property Name="B1_CFEMS" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_CRDPRES" Type="number" Nullable="false" />
+    <Property Name="B1_CRICMST" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_FECPBA" Type="number" Nullable="false" />
+    <Property Name="B1_IDHIST" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="B1_AJUDIF" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_ALFECOP" Type="number" Nullable="false" />
+    <Property Name="B1_FECOP" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_MEPLES" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_MSEXP" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_PAFMD5" Type="char" Nullable="false" MaxLength="32" />
+    <Property Name="B1_PRDORI" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="B1_COFINS" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_CSLL" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_FETHAB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_BASE" Type="char" Nullable="false" MaxLength="14" />
+    <Property Name="B1_IVAAJU" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_PR43080" Type="number" Nullable="false" />
+    <Property Name="B1_ESTRORI" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="B1_CALCFET" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_RICM65" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_PAUTFET" Type="number" Nullable="false" />
+    <Property Name="B1_PRINCMG" Type="number" Nullable="false" />
+    <Property Name="B1_TRIBMUN" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="B1_CODLAN" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="B1_CARGAE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_CODANT" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="B1_REGESIM" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_RSATIVO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_SITTRIB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_TFETHAB" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_TPDP" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_GARANT" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_FRETISS" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_AFETHAB" Type="number" Nullable="false" />
+    <Property Name="B1_PERGART" Type="number" Nullable="false" />
+    <Property Name="B1_ADMIN" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="B1_MOPC" Type="blob" />
+    <Property Name="B1_HREXPO" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="B1_REGRISS" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_IMPNCM" Type="number" Nullable="false" />
+    <Property Name="B1_PORCPRL" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="B1_RPRODEP" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_PRN944I" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_ALFUMAC" Type="number" Nullable="false" />
+    <Property Name="B1_BASE2" Type="char" Nullable="false" MaxLength="14" />
+    <Property Name="B1_CRDEST" Type="number" Nullable="false" />
+    <Property Name="B1_USERLGA" Type="char" Nullable="false" MaxLength="17" />
+    <Property Name="B1_USERLGI" Type="char" Nullable="false" MaxLength="17" />
+    <Property Name="B1_INTEG" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="B1_XCTACRD" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="D_E_L_E_T_" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="R_E_C_N_O_" Type="number" Nullable="false" />
+    <Property Name="R_E_C_D_E_L_" Type="number" Nullable="false" />
+    <Property Name="B1_XCODRET" Type="char" Nullable="false" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="SX5010">
+    <Key>
+      <PropertyRef Name="R_E_C_N_O_" />
+    </Key>
+    <Property Name="X5_FILIAL" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="X5_TABELA" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="X5_CHAVE" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="X5_DESCRI" Type="char" Nullable="false" MaxLength="55" />
+    <Property Name="X5_DESCSPA" Type="char" Nullable="false" MaxLength="55" />
+    <Property Name="X5_DESCENG" Type="char" Nullable="false" MaxLength="55" />
+    <Property Name="D_E_L_E_T_" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="R_E_C_N_O_" Type="number" Nullable="false" />
+  </EntityType>
+  <Association Name="CF_EMPREGADO_003">
+    <End Role="EMPREGADO" Type="EntityConn.Store.EMPREGADO" Multiplicity="0..1" />
+    <End Role="EMPREGADO1" Type="EntityConn.Store.EMPREGADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPREGADO">
+        <PropertyRef Name="COD_EMPRS" />
+        <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      </Principal>
+      <Dependent Role="EMPREGADO1">
+        <PropertyRef Name="COD_EMPRSRPTANT_EMPRG" />
+        <PropertyRef Name="NUM_RGTRORPTANT_EMPRG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AAT_PROD_DEB_CONTA">
+    <End Role="AAT_TBL_DEB_CONTA_PRODUTO" Type="EntityConn.Store.AAT_TBL_DEB_CONTA_PRODUTO" Multiplicity="1" />
+    <End Role="AAT_TBL_DEB_CONTA" Type="EntityConn.Store.AAT_TBL_DEB_CONTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AAT_TBL_DEB_CONTA_PRODUTO">
+        <PropertyRef Name="COD_PRODUTO" />
+      </Principal>
+      <Dependent Role="AAT_TBL_DEB_CONTA">
+        <PropertyRef Name="COD_PRODUTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AAT_RET_DEB_CONTA_MOTIVO">
+    <End Role="AAT_TBL_RET_DEB_CONTA_MOTIVO" Type="EntityConn.Store.AAT_TBL_RET_DEB_CONTA_MOTIVO" Multiplicity="0..1" />
+    <End Role="AAT_TBL_RET_DEB_CONTA" Type="EntityConn.Store.AAT_TBL_RET_DEB_CONTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AAT_TBL_RET_DEB_CONTA_MOTIVO">
+        <PropertyRef Name="COD_MOTIVO" />
+      </Principal>
+      <Dependent Role="AAT_TBL_RET_DEB_CONTA">
+        <PropertyRef Name="COD_MOTIVO_RET" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AAT_TBL_BOLETO">
+    <End Role="AAT_TBL_BOLETO" Type="EntityConn.Store.AAT_TBL_BOLETO" Multiplicity="1" />
+    <End Role="AAT_TBL_BOLETO_ITEM" Type="EntityConn.Store.AAT_TBL_BOLETO_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AAT_TBL_BOLETO">
+        <PropertyRef Name="COD_BOLETO" />
+      </Principal>
+      <Dependent Role="AAT_TBL_BOLETO_ITEM">
+        <PropertyRef Name="COD_BOLETO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AAT_TBL_BOLETO_SUBTIPO">
+    <End Role="AAT_TBL_BOLETO_SUBTIPO" Type="EntityConn.Store.AAT_TBL_BOLETO_SUBTIPO" Multiplicity="0..1" />
+    <End Role="AAT_TBL_BOLETO" Type="EntityConn.Store.AAT_TBL_BOLETO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AAT_TBL_BOLETO_SUBTIPO">
+        <PropertyRef Name="COD_BOLETO_SUBTIPO" />
+      </Principal>
+      <Dependent Role="AAT_TBL_BOLETO">
+        <PropertyRef Name="COD_BOLETO_SUBTIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AAT_TBL_BOLETO_TIPO">
+    <End Role="AAT_TBL_BOLETO_TIPO" Type="EntityConn.Store.AAT_TBL_BOLETO_TIPO" Multiplicity="0..1" />
+    <End Role="AAT_TBL_BOLETO" Type="EntityConn.Store.AAT_TBL_BOLETO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AAT_TBL_BOLETO_TIPO">
+        <PropertyRef Name="COD_BOLETO_TIPO" />
+      </Principal>
+      <Dependent Role="AAT_TBL_BOLETO">
+        <PropertyRef Name="COD_BOLETO_TIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AAT_TBL_BOLETO_TIPO_SUB">
+    <End Role="AAT_TBL_BOLETO_TIPO" Type="EntityConn.Store.AAT_TBL_BOLETO_TIPO" Multiplicity="1" />
+    <End Role="AAT_TBL_BOLETO_SUBTIPO" Type="EntityConn.Store.AAT_TBL_BOLETO_SUBTIPO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AAT_TBL_BOLETO_TIPO">
+        <PropertyRef Name="COD_BOLETO_TIPO" />
+      </Principal>
+      <Dependent Role="AAT_TBL_BOLETO_SUBTIPO">
+        <PropertyRef Name="COD_BOLETO_TIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AAT_TBL_RET_DEB_CONTA_CRIT">
+    <End Role="AAT_TBL_RET_DEB_CONTA" Type="EntityConn.Store.AAT_TBL_RET_DEB_CONTA" Multiplicity="1" />
+    <End Role="AAT_TBL_RET_DEB_CONTA_CRITICAS" Type="EntityConn.Store.AAT_TBL_RET_DEB_CONTA_CRITICAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AAT_TBL_RET_DEB_CONTA">
+        <PropertyRef Name="DCR_NOM_ARQ" />
+        <PropertyRef Name="NUM_SEQ_LINHA" />
+      </Principal>
+      <Dependent Role="AAT_TBL_RET_DEB_CONTA_CRITICAS">
+        <PropertyRef Name="DCR_NOM_ARQ" />
+        <PropertyRef Name="NUM_SEQ_LINHA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AGBCO_EMPDEP">
+    <End Role="AGENCIA" Type="EntityConn.Store.AGENCIA" Multiplicity="0..1" />
+    <End Role="EMPRG_DPDTE" Type="EntityConn.Store.EMPRG_DPDTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AGENCIA">
+        <PropertyRef Name="COD_BANCO" />
+        <PropertyRef Name="COD_AGBCO" />
+      </Principal>
+      <Dependent Role="EMPRG_DPDTE">
+        <PropertyRef Name="COD_BANCO" />
+        <PropertyRef Name="COD_AGBCO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AGBCO_EMPRG">
+    <End Role="AGENCIA" Type="EntityConn.Store.AGENCIA" Multiplicity="0..1" />
+    <End Role="EMPREGADO" Type="EntityConn.Store.EMPREGADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AGENCIA">
+        <PropertyRef Name="COD_BANCO" />
+        <PropertyRef Name="COD_AGBCO" />
+      </Principal>
+      <Dependent Role="EMPREGADO">
+        <PropertyRef Name="COD_BANCO" />
+        <PropertyRef Name="COD_AGBCO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AGBCO_HSCDCP">
+    <End Role="AGENCIA" Type="EntityConn.Store.AGENCIA" Multiplicity="0..1" />
+    <End Role="HIST_CADASTRO_COMPLEM_FSS" Type="EntityConn.Store.HIST_CADASTRO_COMPLEM_FSS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AGENCIA">
+        <PropertyRef Name="COD_BANCO" />
+        <PropertyRef Name="COD_AGBCO" />
+      </Principal>
+      <Dependent Role="HIST_CADASTRO_COMPLEM_FSS">
+        <PropertyRef Name="COD_BANCO" />
+        <PropertyRef Name="COD_AGBCO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AGBCO_REPRES">
+    <End Role="AGENCIA" Type="EntityConn.Store.AGENCIA" Multiplicity="0..1" />
+    <End Role="REPRES_UNIAO_FSS" Type="EntityConn.Store.REPRES_UNIAO_FSS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AGENCIA">
+        <PropertyRef Name="COD_BANCO" />
+        <PropertyRef Name="COD_AGBCO" />
+      </Principal>
+      <Dependent Role="REPRES_UNIAO_FSS">
+        <PropertyRef Name="COD_BANCO" />
+        <PropertyRef Name="COD_AGBCO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DPDTE_EMPDEP">
+    <End Role="DEPENDENTE" Type="EntityConn.Store.DEPENDENTE" Multiplicity="1" />
+    <End Role="EMPRG_DPDTE" Type="EntityConn.Store.EMPRG_DPDTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPENDENTE">
+        <PropertyRef Name="NUM_IDNTF_DPDTE" />
+      </Principal>
+      <Dependent Role="EMPRG_DPDTE">
+        <PropertyRef Name="NUM_IDNTF_DPDTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DPDTE_HSCDCP">
+    <End Role="DEPENDENTE" Type="EntityConn.Store.DEPENDENTE" Multiplicity="0..1" />
+    <End Role="HIST_CADASTRO_COMPLEM_FSS" Type="EntityConn.Store.HIST_CADASTRO_COMPLEM_FSS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPENDENTE">
+        <PropertyRef Name="NUM_IDNTF_DPDTE" />
+      </Principal>
+      <Dependent Role="HIST_CADASTRO_COMPLEM_FSS">
+        <PropertyRef Name="NUM_IDNTF_DPDTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPDEP_REPRES">
+    <End Role="EMPRG_DPDTE" Type="EntityConn.Store.EMPRG_DPDTE" Multiplicity="0..1" />
+    <End Role="REPRES_UNIAO_FSS" Type="EntityConn.Store.REPRES_UNIAO_FSS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPRG_DPDTE">
+        <PropertyRef Name="COD_EMPRS" />
+        <PropertyRef Name="NUM_RGTRO_EMPRG" />
+        <PropertyRef Name="NUM_IDNTF_DPDTE" />
+      </Principal>
+      <Dependent Role="REPRES_UNIAO_FSS">
+        <PropertyRef Name="COD_EMPRS" />
+        <PropertyRef Name="NUM_RGTRO_EMPRG" />
+        <PropertyRef Name="NUM_IDNTF_DPDTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPRG_EMPDEP">
+    <End Role="EMPREGADO" Type="EntityConn.Store.EMPREGADO" Multiplicity="1" />
+    <End Role="EMPRG_DPDTE" Type="EntityConn.Store.EMPRG_DPDTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPREGADO">
+        <PropertyRef Name="COD_EMPRS" />
+        <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      </Principal>
+      <Dependent Role="EMPRG_DPDTE">
+        <PropertyRef Name="COD_EMPRS" />
+        <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPRG_HSCDCP">
+    <End Role="EMPREGADO" Type="EntityConn.Store.EMPREGADO" Multiplicity="0..1" />
+    <End Role="HIST_CADASTRO_COMPLEM_FSS" Type="EntityConn.Store.HIST_CADASTRO_COMPLEM_FSS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPREGADO">
+        <PropertyRef Name="COD_EMPRS" />
+        <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      </Principal>
+      <Dependent Role="HIST_CADASTRO_COMPLEM_FSS">
+        <PropertyRef Name="COD_EMPRS" />
+        <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPRS_EMPRG">
+    <End Role="EMPRESA" Type="EntityConn.Store.EMPRESA" Multiplicity="1" />
+    <End Role="EMPREGADO" Type="EntityConn.Store.EMPREGADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPRESA">
+        <PropertyRef Name="COD_EMPRS" />
+      </Principal>
+      <Dependent Role="EMPREGADO">
+        <PropertyRef Name="COD_EMPRS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HISCAD_AGBCO">
+    <End Role="AGENCIA" Type="EntityConn.Store.AGENCIA" Multiplicity="0..1" />
+    <End Role="HIST_CADASTRO_FSS" Type="EntityConn.Store.HIST_CADASTRO_FSS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AGENCIA">
+        <PropertyRef Name="COD_BANCO" />
+        <PropertyRef Name="COD_AGBCO" />
+      </Principal>
+      <Dependent Role="HIST_CADASTRO_FSS">
+        <PropertyRef Name="COD_BANCO" />
+        <PropertyRef Name="COD_AGBCO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HISCAD_DPDTE">
+    <End Role="DEPENDENTE" Type="EntityConn.Store.DEPENDENTE" Multiplicity="0..1" />
+    <End Role="HIST_CADASTRO_FSS" Type="EntityConn.Store.HIST_CADASTRO_FSS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPENDENTE">
+        <PropertyRef Name="NUM_IDNTF_DPDTE" />
+      </Principal>
+      <Dependent Role="HIST_CADASTRO_FSS">
+        <PropertyRef Name="NUM_IDNTF_DPDTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HISCAD_EMPRG">
+    <End Role="EMPREGADO" Type="EntityConn.Store.EMPREGADO" Multiplicity="0..1" />
+    <End Role="HIST_CADASTRO_FSS" Type="EntityConn.Store.HIST_CADASTRO_FSS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPREGADO">
+        <PropertyRef Name="COD_EMPRS" />
+        <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      </Principal>
+      <Dependent Role="HIST_CADASTRO_FSS">
+        <PropertyRef Name="COD_EMPRS" />
+        <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRE_TBL_CARGA_PROTHEUS_STAT">
+    <End Role="PRE_TBL_CARGA_PROTHEUS_STATUS" Type="EntityConn.Store.PRE_TBL_CARGA_PROTHEUS_STATUS" Multiplicity="1" />
+    <End Role="PRE_TBL_CARGA_PROTHEUS" Type="EntityConn.Store.PRE_TBL_CARGA_PROTHEUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRE_TBL_CARGA_PROTHEUS_STATUS">
+        <PropertyRef Name="COD_STATUS" />
+      </Principal>
+      <Dependent Role="PRE_TBL_CARGA_PROTHEUS">
+        <PropertyRef Name="COD_CARGA_STATUS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRE_TBL_CARGA_PROTHEUS_TIPO">
+    <End Role="PRE_TBL_CARGA_PROTHEUS_TIPO" Type="EntityConn.Store.PRE_TBL_CARGA_PROTHEUS_TIPO" Multiplicity="1" />
+    <End Role="PRE_TBL_CARGA_PROTHEUS" Type="EntityConn.Store.PRE_TBL_CARGA_PROTHEUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRE_TBL_CARGA_PROTHEUS_TIPO">
+        <PropertyRef Name="COD_CARGA_TIPO" />
+      </Principal>
+      <Dependent Role="PRE_TBL_CARGA_PROTHEUS">
+        <PropertyRef Name="COD_CARGA_TIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

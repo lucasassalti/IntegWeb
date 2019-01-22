@@ -1,0 +1,14 @@
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\bin\x86\Debug\IntegWeb.Framework.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\bin\x86\Debug\IntegWeb.Framework.pdb
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\bin\x86\Debug\DocumentFormat.OpenXml.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\bin\x86\Debug\EntityFramework.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\bin\x86\Debug\EPPlus.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\bin\x86\Debug\IntegWeb.Entidades.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\bin\x86\Debug\itextsharp.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\bin\x86\Debug\itextsharp.xmlworker.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\bin\x86\Debug\Oracle.DataAccess.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\bin\x86\Debug\IntegWeb.Entidades.pdb
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\bin\x86\Debug\EntityFramework.xml
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\obj\x86\Debug\Framework.csprojResolveAssemblyReference.cache
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\obj\x86\Debug\IntegWeb.Framework.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Framework\obj\x86\Debug\IntegWeb.Framework.pdb

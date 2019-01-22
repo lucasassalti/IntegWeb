@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="FUNCESPIntegracaoAdministracaoAplicacaoDALStoreContainer">
+    <EntitySet Name="FUN_TBL_RELATORIO" EntityType="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_RELATORIO" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="FUN_TBL_RELATORIO_PARAM" EntityType="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_RELATORIO_PARAM" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <EntitySet Name="FUN_TBL_TIPO_RELATORIO" EntityType="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_TIPO_RELATORIO" store:Type="Tables" Schema="OWN_FUNCESP" />
+    <AssociationSet Name="FUN_FRK_REL" Association="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_FRK_REL">
+      <End Role="FUN_TBL_RELATORIO" EntitySet="FUN_TBL_RELATORIO" />
+      <End Role="FUN_TBL_RELATORIO_PARAM" EntitySet="FUN_TBL_RELATORIO_PARAM" />
+    </AssociationSet>
+    <AssociationSet Name="FUN_FRK_REL_TIP" Association="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_FRK_REL_TIP">
+      <End Role="FUN_TBL_TIPO_RELATORIO" EntitySet="FUN_TBL_TIPO_RELATORIO" />
+      <End Role="FUN_TBL_RELATORIO" EntitySet="FUN_TBL_RELATORIO" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="FUN_TBL_RELATORIO">
+    <Key>
+      <PropertyRef Name="ID_RELATORIO" />
+    </Key>
+    <Property Name="ID_RELATORIO" Type="number" Nullable="false" />
+    <Property Name="RELATORIO" Type="varchar2" Nullable="false" MaxLength="200" />
+    <Property Name="TITULO" Type="varchar2" MaxLength="200" />
+    <Property Name="ARQUIVO" Type="varchar2" MaxLength="2000" />
+    <Property Name="ID_TIPO_RELATORIO" Type="number" Precision="3" />
+    <Property Name="RELATORIO_EXTENSAO" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="FUN_TBL_RELATORIO_PARAM">
+    <Key>
+      <PropertyRef Name="ID_RELATORIO_PARAMETRO" />
+    </Key>
+    <Property Name="ID_RELATORIO_PARAMETRO" Type="number" Nullable="false" />
+    <Property Name="ID_RELATORIO" Type="number" />
+    <Property Name="PARAMETRO" Type="varchar2" Nullable="false" MaxLength="200" />
+    <Property Name="DESCRICAO" Type="varchar2" MaxLength="2000" />
+    <Property Name="TIPO" Type="varchar2" MaxLength="200" />
+    <Property Name="COMPONENTE_WEB" Type="varchar2" MaxLength="200" />
+    <Property Name="DROPDOWLIST_CONSULTA" Type="varchar2" MaxLength="3000" />
+    <Property Name="VALOR_INICIAL" Type="varchar2" MaxLength="200" />
+    <Property Name="HABILITADO" Type="char" MaxLength="1" />
+    <Property Name="VISIVEL" Type="char" MaxLength="1" />
+    <Property Name="PERMITE_NULL" Type="char" MaxLength="1" />
+    <Property Name="ORDEM" Type="number" />
+  </EntityType>
+  <EntityType Name="FUN_TBL_TIPO_RELATORIO">
+    <Key>
+      <PropertyRef Name="ID_TIPO_RELATORIO" />
+    </Key>
+    <Property Name="ID_TIPO_RELATORIO" Type="number" Nullable="false" Precision="3" />
+    <Property Name="NM_TIPO" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="DESCRICAO" Type="varchar2" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <Association Name="FUN_FRK_REL">
+    <End Role="FUN_TBL_RELATORIO" Type="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_RELATORIO" Multiplicity="0..1" />
+    <End Role="FUN_TBL_RELATORIO_PARAM" Type="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_RELATORIO_PARAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FUN_TBL_RELATORIO">
+        <PropertyRef Name="ID_RELATORIO" />
+      </Principal>
+      <Dependent Role="FUN_TBL_RELATORIO_PARAM">
+        <PropertyRef Name="ID_RELATORIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FUN_FRK_REL_TIP">
+    <End Role="FUN_TBL_TIPO_RELATORIO" Type="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_TIPO_RELATORIO" Multiplicity="0..1" />
+    <End Role="FUN_TBL_RELATORIO" Type="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_RELATORIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FUN_TBL_TIPO_RELATORIO">
+        <PropertyRef Name="ID_TIPO_RELATORIO" />
+      </Principal>
+      <Dependent Role="FUN_TBL_RELATORIO">
+        <PropertyRef Name="ID_TIPO_RELATORIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

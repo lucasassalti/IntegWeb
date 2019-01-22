@@ -1,0 +1,1424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FUNCESPIntegracaoSaudeAplicacaoDALStoreContainer" CdmEntityContainer="SAUDE_EntityConn">
+    <EntitySetMapping Name="TB_CENTRO_CUSTO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CENTRO_CUSTO">
+        <MappingFragment StoreEntitySet="TB_CENTRO_CUSTO">
+          <ScalarProperty Name="COD_TAB" ColumnName="COD_TAB" />
+          <ScalarProperty Name="IR_ACEITA_LANC" ColumnName="IR_ACEITA_LANC" />
+          <ScalarProperty Name="AUX_CRE_GLOSA" ColumnName="AUX_CRE_GLOSA" />
+          <ScalarProperty Name="AUX_DEB_GLOSA" ColumnName="AUX_DEB_GLOSA" />
+          <ScalarProperty Name="AUX_CRE_UTIL" ColumnName="AUX_CRE_UTIL" />
+          <ScalarProperty Name="AUX_DEB_UTIL" ColumnName="AUX_DEB_UTIL" />
+          <ScalarProperty Name="CCUSTO_CRE_GLOSA" ColumnName="CCUSTO_CRE_GLOSA" />
+          <ScalarProperty Name="CCUSTO_DEB_GLOSA" ColumnName="CCUSTO_DEB_GLOSA" />
+          <ScalarProperty Name="CCUSTO_CRE_UTIL" ColumnName="CCUSTO_CRE_UTIL" />
+          <ScalarProperty Name="CCUSTO_DEB_UTIL" ColumnName="CCUSTO_DEB_UTIL" />
+          <ScalarProperty Name="COD_PLANO" ColumnName="COD_PLANO" />
+          <ScalarProperty Name="NUM_ORGAO" ColumnName="NUM_ORGAO" />
+          <ScalarProperty Name="SG_CCUSTO" ColumnName="SG_CCUSTO" />
+          <ScalarProperty Name="DS_CCUSTO" ColumnName="DS_CCUSTO" />
+          <ScalarProperty Name="EMPRESA" ColumnName="EMPRESA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_VW_CONSULTA_USUARIO_SUS">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_VW_CONSULTA_USUARIO_SUS">
+        <MappingFragment StoreEntitySet="SAU_VW_CONSULTA_USUARIO_SUS">
+          <ScalarProperty Name="CELULAR_TITULAR" ColumnName="CELULAR_TITULAR" />
+          <ScalarProperty Name="COD_DDD_CEL_TITULAR" ColumnName="COD_DDD_CEL_TITULAR" />
+          <ScalarProperty Name="TELEFONE_TITULAR" ColumnName="TELEFONE_TITULAR" />
+          <ScalarProperty Name="COD_DDD_TEL_TITULAR" ColumnName="COD_DDD_TEL_TITULAR" />
+          <ScalarProperty Name="CEP_TITULAR" ColumnName="CEP_TITULAR" />
+          <ScalarProperty Name="COMPLEMENTO_TITULAR" ColumnName="COMPLEMENTO_TITULAR" />
+          <ScalarProperty Name="NUM_ENDERECO_TITULAR" ColumnName="NUM_ENDERECO_TITULAR" />
+          <ScalarProperty Name="ENDERECO_TITULAR" ColumnName="ENDERECO_TITULAR" />
+          <ScalarProperty Name="DES_PLANO_PERIODO" ColumnName="DES_PLANO_PERIODO" />
+          <ScalarProperty Name="COD_PLANO_PERIODO" ColumnName="COD_PLANO_PERIODO" />
+          <ScalarProperty Name="DAT_CANCELAMENTO" ColumnName="DAT_CANCELAMENTO" />
+          <ScalarProperty Name="DAT_ADESAO" ColumnName="DAT_ADESAO" />
+          <ScalarProperty Name="DAT_NASCIMENTO" ColumnName="DAT_NASCIMENTO" />
+          <ScalarProperty Name="SIT_PARTICIP" ColumnName="SIT_PARTICIP" />
+          <ScalarProperty Name="NOM_PARTICIP" ColumnName="NOM_PARTICIP" />
+          <ScalarProperty Name="NUM_SUB_MATRIC" ColumnName="NUM_SUB_MATRIC" />
+          <ScalarProperty Name="NUM_RGTRO_EMPRG" ColumnName="NUM_RGTRO_EMPRG" />
+          <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+          <ScalarProperty Name="NUM_SEQ_PARTICIP" ColumnName="NUM_SEQ_PARTICIP" />
+          <ScalarProperty Name="COD_IDENTIFICACAO" ColumnName="COD_IDENTIFICACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TBL_CREDITO_RMB">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CREDITO_RMB">
+        <MappingFragment StoreEntitySet="SAU_TBL_CREDITO_RMB">
+          <ScalarProperty Name="NUM_CTCOR_EMPRG" ColumnName="NUM_CTCOR_EMPRG" />
+          <ScalarProperty Name="TIP_CTCOR_EMPRG" ColumnName="TIP_CTCOR_EMPRG" />
+          <ScalarProperty Name="NOM_AGBCO" ColumnName="NOM_AGBCO" />
+          <ScalarProperty Name="COD_AGBCO" ColumnName="COD_AGBCO" />
+          <ScalarProperty Name="NOM_ABRVO_BANCO" ColumnName="NOM_ABRVO_BANCO" />
+          <ScalarProperty Name="COD_BANCO" ColumnName="COD_BANCO" />
+          <ScalarProperty Name="VAL_COMP_REALIZ" ColumnName="VAL_COMP_REALIZ" />
+          <ScalarProperty Name="NOM_RESP" ColumnName="NOM_RESP" />
+          <ScalarProperty Name="NUM_IDNTF_RPTANT" ColumnName="NUM_IDNTF_RPTANT" />
+          <ScalarProperty Name="DAT_PAGAMENTO" ColumnName="DAT_PAGAMENTO" />
+          <ScalarProperty Name="DAT_EMISSAO" ColumnName="DAT_EMISSAO" />
+          <ScalarProperty Name="NUM_DIGVR_EMPRG" ColumnName="NUM_DIGVR_EMPRG" />
+          <ScalarProperty Name="NUM_RGTRO_EMPRG" ColumnName="NUM_RGTRO_EMPRG" />
+          <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+          <ScalarProperty Name="DAT_REF" ColumnName="DAT_REF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TBL_EXT_UTIL_DADGER">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_EXT_UTIL_DADGER">
+        <MappingFragment StoreEntitySet="SAU_TBL_EXT_UTIL_DADGER">
+          <ScalarProperty Name="IDC_INIBE_EXT" ColumnName="IDC_INIBE_EXT" />
+          <ScalarProperty Name="VAL_PAGAR" ColumnName="VAL_PAGAR" />
+          <ScalarProperty Name="VAL_SERVICOS" ColumnName="VAL_SERVICOS" />
+          <ScalarProperty Name="NOM_RESP" ColumnName="NOM_RESP" />
+          <ScalarProperty Name="NUM_IDNTF_RPTANT" ColumnName="NUM_IDNTF_RPTANT" />
+          <ScalarProperty Name="DAT_MOVIMENTO" ColumnName="DAT_MOVIMENTO" />
+          <ScalarProperty Name="DAT_EMISSAO" ColumnName="DAT_EMISSAO" />
+          <ScalarProperty Name="NUM_DIGVR_EMPRG" ColumnName="NUM_DIGVR_EMPRG" />
+          <ScalarProperty Name="NUM_RGTRO_EMPRG" ColumnName="NUM_RGTRO_EMPRG" />
+          <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+          <ScalarProperty Name="DAT_REF" ColumnName="DAT_REF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_CONVENENTE">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CONVENENTE">
+        <MappingFragment StoreEntitySet="TB_CONVENENTE">
+          <ScalarProperty Name="IDC_EVECONT" ColumnName="IDC_EVECONT" />
+          <ScalarProperty Name="IDC_RECIPROCIDADE" ColumnName="IDC_RECIPROCIDADE" />
+          <ScalarProperty Name="NUM_PIS" ColumnName="NUM_PIS" />
+          <ScalarProperty Name="DAT_ATU_DIARIAS_TAXAS" ColumnName="DAT_ATU_DIARIAS_TAXAS" />
+          <ScalarProperty Name="DAT_ATU_HONORARIOS" ColumnName="DAT_ATU_HONORARIOS" />
+          <ScalarProperty Name="NUM_CLASSIFICACAO" ColumnName="NUM_CLASSIFICACAO" />
+          <ScalarProperty Name="IDC_CONVENIADO_ALTO_CUSTO" ColumnName="IDC_CONVENIADO_ALTO_CUSTO" />
+          <ScalarProperty Name="COD_MOT_SUBST" ColumnName="COD_MOT_SUBST" />
+          <ScalarProperty Name="DAT_PREV_SUBST" ColumnName="DAT_PREV_SUBST" />
+          <ScalarProperty Name="DAT_ULT_ATU" ColumnName="DAT_ULT_ATU" />
+          <ScalarProperty Name="DAT_NASCIMENTO" ColumnName="DAT_NASCIMENTO" />
+          <ScalarProperty Name="TIP_FORMA_LIQUID" ColumnName="TIP_FORMA_LIQUID" />
+          <ScalarProperty Name="NOM_EMP_AUDIT_FATURA" ColumnName="NOM_EMP_AUDIT_FATURA" />
+          <ScalarProperty Name="IDC_AUDITORIA_FATURA" ColumnName="IDC_AUDITORIA_FATURA" />
+          <ScalarProperty Name="IDC_QUALISS" ColumnName="IDC_QUALISS" />
+          <ScalarProperty Name="IDC_NOTIVISA" ColumnName="IDC_NOTIVISA" />
+          <ScalarProperty Name="DES_SITE" ColumnName="DES_SITE" />
+          <ScalarProperty Name="IDC_MEI" ColumnName="IDC_MEI" />
+          <ScalarProperty Name="NUM_INSC_ESTADUAL" ColumnName="NUM_INSC_ESTADUAL" />
+          <ScalarProperty Name="IDC_SIMPLES" ColumnName="IDC_SIMPLES" />
+          <ScalarProperty Name="DAT_PUBLICACAO" ColumnName="DAT_PUBLICACAO" />
+          <ScalarProperty Name="NUM_PAGINA" ColumnName="NUM_PAGINA" />
+          <ScalarProperty Name="NUM_SECAO" ColumnName="NUM_SECAO" />
+          <ScalarProperty Name="NUM_DIARIO_OFICIAL" ColumnName="NUM_DIARIO_OFICIAL" />
+          <ScalarProperty Name="NUM_PROCESSO" ColumnName="NUM_PROCESSO" />
+          <ScalarProperty Name="IDC_NF_POR_GUIA" ColumnName="IDC_NF_POR_GUIA" />
+          <ScalarProperty Name="TIP_NOTA_FISCAL" ColumnName="TIP_NOTA_FISCAL" />
+          <ScalarProperty Name="NOM_DESC_CONVENENTE" ColumnName="NOM_DESC_CONVENENTE" />
+          <ScalarProperty Name="CBOCOD" ColumnName="CBOCOD" />
+          <ScalarProperty Name="IDC_DISP_SERV" ColumnName="IDC_DISP_SERV" />
+          <ScalarProperty Name="NUM_REG_ANS_OPE_INT" ColumnName="NUM_REG_ANS_OPE_INT" />
+          <ScalarProperty Name="TIP_CLASSIF_ESTAB" ColumnName="TIP_CLASSIF_ESTAB" />
+          <ScalarProperty Name="TIP_CONTRATACAO" ColumnName="TIP_CONTRATACAO" />
+          <ScalarProperty Name="COD_MUNICI_IBGE" ColumnName="COD_MUNICI_IBGE" />
+          <ScalarProperty Name="TIP_ESTABELECIMENTO" ColumnName="TIP_ESTABELECIMENTO" />
+          <ScalarProperty Name="NUM_CNS" ColumnName="NUM_CNS" />
+          <ScalarProperty Name="QTD_LEITOS_NEO_NATAL" ColumnName="QTD_LEITOS_NEO_NATAL" />
+          <ScalarProperty Name="QTD_LEITOS_UTI_PEDIAT" ColumnName="QTD_LEITOS_UTI_PEDIAT" />
+          <ScalarProperty Name="QTD_LEITOS_UTI_ADULTO" ColumnName="QTD_LEITOS_UTI_ADULTO" />
+          <ScalarProperty Name="QTD_LEITOS" ColumnName="QTD_LEITOS" />
+          <ScalarProperty Name="IDC_PRONTO_SOCORRO" ColumnName="IDC_PRONTO_SOCORRO" />
+          <ScalarProperty Name="IDC_ISENTO_PISPASEP" ColumnName="IDC_ISENTO_PISPASEP" />
+          <ScalarProperty Name="IDC_ISENTO_COFINS" ColumnName="IDC_ISENTO_COFINS" />
+          <ScalarProperty Name="IDC_ISENTO_CSSL" ColumnName="IDC_ISENTO_CSSL" />
+          <ScalarProperty Name="NUM_CNES" ColumnName="NUM_CNES" />
+          <ScalarProperty Name="COD_MOTIVO" ColumnName="COD_MOTIVO" />
+          <ScalarProperty Name="COD_TIPO_ATEND_PADRAO" ColumnName="COD_TIPO_ATEND_PADRAO" />
+          <ScalarProperty Name="COD_CALEND_GERAL" ColumnName="COD_CALEND_GERAL" />
+          <ScalarProperty Name="TIP_CTCOR" ColumnName="TIP_CTCOR" />
+          <ScalarProperty Name="IDC_ATIVO_ARQUIVO" ColumnName="IDC_ATIVO_ARQUIVO" />
+          <ScalarProperty Name="DES_OBSERVACAO" ColumnName="DES_OBSERVACAO" />
+          <ScalarProperty Name="NUM_REG_CARTORIO" ColumnName="NUM_REG_CARTORIO" />
+          <ScalarProperty Name="NUM_NIRE" ColumnName="NUM_NIRE" />
+          <ScalarProperty Name="NOM_RESPONSAVEL" ColumnName="NOM_RESPONSAVEL" />
+          <ScalarProperty Name="NOM_RAZ_SOC_PJ_COLI" ColumnName="NOM_RAZ_SOC_PJ_COLI" />
+          <ScalarProperty Name="NOM_CONTR_ADM_PROC" ColumnName="NOM_CONTR_ADM_PROC" />
+          <ScalarProperty Name="NOM_CONJUGE_CONV" ColumnName="NOM_CONJUGE_CONV" />
+          <ScalarProperty Name="NOM_MAE_CONV" ColumnName="NOM_MAE_CONV" />
+          <ScalarProperty Name="NOM_PAI_CONV" ColumnName="NOM_PAI_CONV" />
+          <ScalarProperty Name="IDC_PLANTAO" ColumnName="IDC_PLANTAO" />
+          <ScalarProperty Name="IDC_INSS" ColumnName="IDC_INSS" />
+          <ScalarProperty Name="IDC_REDE_REF" ColumnName="IDC_REDE_REF" />
+          <ScalarProperty Name="IDC_DIVULGADO" ColumnName="IDC_DIVULGADO" />
+          <ScalarProperty Name="IDC_CREDENCIADO" ColumnName="IDC_CREDENCIADO" />
+          <ScalarProperty Name="IDC_COOPERADO" ColumnName="IDC_COOPERADO" />
+          <ScalarProperty Name="NUM_CONT_CONV" ColumnName="NUM_CONT_CONV" />
+          <ScalarProperty Name="DAT_PROX_ANALISE" ColumnName="DAT_PROX_ANALISE" />
+          <ScalarProperty Name="DAT_ULT_ANALISE" ColumnName="DAT_ULT_ANALISE" />
+          <ScalarProperty Name="DAT_INI_CONTRATO" ColumnName="DAT_INI_CONTRATO" />
+          <ScalarProperty Name="IDC_CONVENIO_ESP" ColumnName="IDC_CONVENIO_ESP" />
+          <ScalarProperty Name="IDC_AUDITOR" ColumnName="IDC_AUDITOR" />
+          <ScalarProperty Name="IDC_EMPREGADO" ColumnName="IDC_EMPREGADO" />
+          <ScalarProperty Name="NUM_INSCR_INSS" ColumnName="NUM_INSCR_INSS" />
+          <ScalarProperty Name="NOM_INDICACAO" ColumnName="NOM_INDICACAO" />
+          <ScalarProperty Name="VAL_ALIQUOTA_ISS" ColumnName="VAL_ALIQUOTA_ISS" />
+          <ScalarProperty Name="TIP_PAGTO" ColumnName="TIP_PAGTO" />
+          <ScalarProperty Name="IDC_ISENTO_IR" ColumnName="IDC_ISENTO_IR" />
+          <ScalarProperty Name="NUM_CONTA_CORR" ColumnName="NUM_CONTA_CORR" />
+          <ScalarProperty Name="IDC_EXISTE_CONV" ColumnName="IDC_EXISTE_CONV" />
+          <ScalarProperty Name="DES_EMAIL" ColumnName="DES_EMAIL" />
+          <ScalarProperty Name="COD_SEXO" ColumnName="COD_SEXO" />
+          <ScalarProperty Name="COD_UF_IDENT_PROF" ColumnName="COD_UF_IDENT_PROF" />
+          <ScalarProperty Name="NOM_CONTATO" ColumnName="NOM_CONTATO" />
+          <ScalarProperty Name="NUM_BIP" ColumnName="NUM_BIP" />
+          <ScalarProperty Name="NUM_TELEFONE_BIP" ColumnName="NUM_TELEFONE_BIP" />
+          <ScalarProperty Name="NUM_TELEFONE_CELULAR" ColumnName="NUM_TELEFONE_CELULAR" />
+          <ScalarProperty Name="DAT_EMISS_CI" ColumnName="DAT_EMISS_CI" />
+          <ScalarProperty Name="NOM_ORG_EMISS_CI" ColumnName="NOM_ORG_EMISS_CI" />
+          <ScalarProperty Name="NUM_IDENTIDADE" ColumnName="NUM_IDENTIDADE" />
+          <ScalarProperty Name="NUM_INSC_MUNIC" ColumnName="NUM_INSC_MUNIC" />
+          <ScalarProperty Name="NUM_CGC_CPF" ColumnName="NUM_CGC_CPF" />
+          <ScalarProperty Name="NUM_IDENTIDADE_PROF" ColumnName="NUM_IDENTIDADE_PROF" />
+          <ScalarProperty Name="SIT_CONVENENTE" ColumnName="SIT_CONVENENTE" />
+          <ScalarProperty Name="NOM_RAZAO_SOCIAL" ColumnName="NOM_RAZAO_SOCIAL" />
+          <ScalarProperty Name="NOM_CONVENENTE" ColumnName="NOM_CONVENENTE" />
+          <ScalarProperty Name="TIP_PESSOA" ColumnName="TIP_PESSOA" />
+          <ScalarProperty Name="DGV_CONVENENTE" ColumnName="DGV_CONVENENTE" />
+          <ScalarProperty Name="COD_AGBCO" ColumnName="COD_AGBCO" />
+          <ScalarProperty Name="COD_BANCO" ColumnName="COD_BANCO" />
+          <ScalarProperty Name="COD_PORTE_CONV" ColumnName="COD_PORTE_CONV" />
+          <ScalarProperty Name="COD_CAND_CONVENENTE" ColumnName="COD_CAND_CONVENENTE" />
+          <ScalarProperty Name="COD_CLASSE" ColumnName="COD_CLASSE" />
+          <ScalarProperty Name="COD_CONVENENTE" ColumnName="COD_CONVENENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_END_CONVEN">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_END_CONVEN">
+        <MappingFragment StoreEntitySet="TB_END_CONVEN">
+          <ScalarProperty Name="SITGEOLOCALIZACAO" ColumnName="SITGEOLOCALIZACAO" />
+          <ScalarProperty Name="LOC_LONGITUDE" ColumnName="LOC_LONGITUDE" />
+          <ScalarProperty Name="LOC_LATITUDE" ColumnName="LOC_LATITUDE" />
+          <ScalarProperty Name="DAT_ULT_ATU" ColumnName="DAT_ULT_ATU" />
+          <ScalarProperty Name="NUM_CNES" ColumnName="NUM_CNES" />
+          <ScalarProperty Name="PAICOD" ColumnName="PAICOD" />
+          <ScalarProperty Name="ENDARQTIPO" ColumnName="ENDARQTIPO" />
+          <ScalarProperty Name="ENDARQ" ColumnName="ENDARQ" />
+          <ScalarProperty Name="NUM_DDD_FAX" ColumnName="NUM_DDD_FAX" />
+          <ScalarProperty Name="NUM_DDD3" ColumnName="NUM_DDD3" />
+          <ScalarProperty Name="NUM_DDD2" ColumnName="NUM_DDD2" />
+          <ScalarProperty Name="NUM_DDD" ColumnName="NUM_DDD" />
+          <ScalarProperty Name="NUM_INSCR_MUNIC" ColumnName="NUM_INSCR_MUNIC" />
+          <ScalarProperty Name="NUM_CNPJ" ColumnName="NUM_CNPJ" />
+          <ScalarProperty Name="NOM_PAIS_CONV" ColumnName="NOM_PAIS_CONV" />
+          <ScalarProperty Name="NUM_CAIXA_POSTAL" ColumnName="NUM_CAIXA_POSTAL" />
+          <ScalarProperty Name="TLGCOD" ColumnName="TLGCOD" />
+          <ScalarProperty Name="NUM_RAMAL3" ColumnName="NUM_RAMAL3" />
+          <ScalarProperty Name="NUM_TELEFONE3" ColumnName="NUM_TELEFONE3" />
+          <ScalarProperty Name="NUM_RAMAL2" ColumnName="NUM_RAMAL2" />
+          <ScalarProperty Name="NUM_TELEFONE2" ColumnName="NUM_TELEFONE2" />
+          <ScalarProperty Name="IDC_DESATIVADO" ColumnName="IDC_DESATIVADO" />
+          <ScalarProperty Name="IDC_END_CORRESP" ColumnName="IDC_END_CORRESP" />
+          <ScalarProperty Name="IDC_END_RESID" ColumnName="IDC_END_RESID" />
+          <ScalarProperty Name="NUM_FAX" ColumnName="NUM_FAX" />
+          <ScalarProperty Name="NUM_TELEFONE" ColumnName="NUM_TELEFONE" />
+          <ScalarProperty Name="NUM_RAMAL" ColumnName="NUM_RAMAL" />
+          <ScalarProperty Name="NOM_BAIRRO" ColumnName="NOM_BAIRRO" />
+          <ScalarProperty Name="DES_COMPLEMENTO" ColumnName="DES_COMPLEMENTO" />
+          <ScalarProperty Name="NOM_LOGRADOURO" ColumnName="NOM_LOGRADOURO" />
+          <ScalarProperty Name="NUM_LOGRADOURO" ColumnName="NUM_LOGRADOURO" />
+          <ScalarProperty Name="NUM_CEP" ColumnName="NUM_CEP" />
+          <ScalarProperty Name="COD_MUNICI" ColumnName="COD_MUNICI" />
+          <ScalarProperty Name="COD_ESTADO" ColumnName="COD_ESTADO" />
+          <ScalarProperty Name="COD_BAIRRO" ColumnName="COD_BAIRRO" />
+          <ScalarProperty Name="NUM_SEQ_END" ColumnName="NUM_SEQ_END" />
+          <ScalarProperty Name="COD_CONVENENTE" ColumnName="COD_CONVENENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TBL_IMPUGNACAOSUS">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_IMPUGNACAOSUS">
+        <MappingFragment StoreEntitySet="SAU_TBL_IMPUGNACAOSUS">
+          <ScalarProperty Name="CHAVE" ColumnName="CHAVE" />
+          <ScalarProperty Name="MENSALIDADE_SALARIO" ColumnName="MENSALIDADE_SALARIO" />
+          <ScalarProperty Name="S_IMPUG_MOTIV" ColumnName="S_IMPUG_MOTIV" />
+          <ScalarProperty Name="IMPUGNAÇÃO" ColumnName="IMPUGNAÇÃO" />
+          <ScalarProperty Name="PAGAMENTOSUS" ColumnName="PAGAMENTOSUS" />
+          <ScalarProperty Name="A_DEDUZIR" ColumnName="A_DEDUZIR" />
+          <ScalarProperty Name="CO_PARTICIPAÇÃO" ColumnName="CO_PARTICIPAÇÃO" />
+          <ScalarProperty Name="PERCLIMITADOR" ColumnName="PERCLIMITADOR" />
+          <ScalarProperty Name="RESPOSTA" ColumnName="RESPOSTA" />
+          <ScalarProperty Name="CHAMADO" ColumnName="CHAMADO" />
+          <ScalarProperty Name="GLOSA" ColumnName="GLOSA" />
+          <ScalarProperty Name="VALORTOTAL" ColumnName="VALORTOTAL" />
+          <ScalarProperty Name="VALORPROCEDIMENTO" ColumnName="VALORPROCEDIMENTO" />
+          <ScalarProperty Name="DESCRICAOPROCEDIMENTO" ColumnName="DESCRICAOPROCEDIMENTO" />
+          <ScalarProperty Name="CODIGOPROCEDIMENTO" ColumnName="CODIGOPROCEDIMENTO" />
+          <ScalarProperty Name="CODIGOUF" ColumnName="CODIGOUF" />
+          <ScalarProperty Name="MUNICIPIO" ColumnName="MUNICIPIO" />
+          <ScalarProperty Name="NOMEUPS" ColumnName="NOMEUPS" />
+          <ScalarProperty Name="DESC_PLANO" ColumnName="DESC_PLANO" />
+          <ScalarProperty Name="COD_PLANO" ColumnName="COD_PLANO" />
+          <ScalarProperty Name="DATA_CANCELAMENTO" ColumnName="DATA_CANCELAMENTO" />
+          <ScalarProperty Name="TEL_CELULAR_BENEF" ColumnName="TEL_CELULAR_BENEF" />
+          <ScalarProperty Name="DDD_CELULAR" ColumnName="DDD_CELULAR" />
+          <ScalarProperty Name="TEL_BENEF" ColumnName="TEL_BENEF" />
+          <ScalarProperty Name="DDD" ColumnName="DDD" />
+          <ScalarProperty Name="NOMEBENEFICIARIO" ColumnName="NOMEBENEFICIARIO" />
+          <ScalarProperty Name="SUB_MATRICULA" ColumnName="SUB_MATRICULA" />
+          <ScalarProperty Name="MATRICULA" ColumnName="MATRICULA" />
+          <ScalarProperty Name="COD_EMP" ColumnName="COD_EMP" />
+          <ScalarProperty Name="DATANASCBENEFICIARIO" ColumnName="DATANASCBENEFICIARIO" />
+          <ScalarProperty Name="DATAFIMATENDIMENTO" ColumnName="DATAFIMATENDIMENTO" />
+          <ScalarProperty Name="DATAINICIOATENDIMENTO" ColumnName="DATAINICIOATENDIMENTO" />
+          <ScalarProperty Name="COMPETENCIA" ColumnName="COMPETENCIA" />
+          <ScalarProperty Name="CODIGOCCO" ColumnName="CODIGOCCO" />
+          <ScalarProperty Name="CODIGOBENEFICIARIO" ColumnName="CODIGOBENEFICIARIO" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
+          <ScalarProperty Name="NUMEROABI" ColumnName="NUMEROABI" />
+          <ScalarProperty Name="NUMEROPROCESSO" ColumnName="NUMEROPROCESSO" />
+          <ScalarProperty Name="NUMEROOFICIO" ColumnName="NUMEROOFICIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TBL_QUALISIGN">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_QUALISIGN">
+        <MappingFragment StoreEntitySet="SAU_TBL_QUALISIGN">
+          <ScalarProperty Name="DTH_INCLUSAO" ColumnName="DTH_INCLUSAO" />
+          <ScalarProperty Name="LOG_INCLUSAO" ColumnName="LOG_INCLUSAO" />
+          <ScalarProperty Name="COD_QUALISIGN" ColumnName="COD_QUALISIGN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TBL_QUALISIGN_DOC">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_QUALISIGN_DOC">
+        <MappingFragment StoreEntitySet="SAU_TBL_QUALISIGN_DOC">
+          <ScalarProperty Name="DCR_PASSCODE" ColumnName="DCR_PASSCODE" />
+          <ScalarProperty Name="DCR_RETORNO" ColumnName="DCR_RETORNO" />
+          <ScalarProperty Name="COD_RETORNO" ColumnName="COD_RETORNO" />
+          <ScalarProperty Name="COD_STATUS" ColumnName="COD_STATUS" />
+          <ScalarProperty Name="NOM_REF_ARQUIVO" ColumnName="NOM_REF_ARQUIVO" />
+          <ScalarProperty Name="NOM_ARQUIVO" ColumnName="NOM_ARQUIVO" />
+          <ScalarProperty Name="COD_QUALISIGN" ColumnName="COD_QUALISIGN" />
+          <ScalarProperty Name="COD_QUALISIGN_DOC" ColumnName="COD_QUALISIGN_DOC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPRESA">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.EMPRESA">
+        <MappingFragment StoreEntitySet="EMPRESA">
+          <ScalarProperty Name="COD_ORGAO_PUBLICO" ColumnName="COD_ORGAO_PUBLICO" />
+          <ScalarProperty Name="PAICODOPERACAO" ColumnName="PAICODOPERACAO" />
+          <ScalarProperty Name="PAICODREGISTRO" ColumnName="PAICODREGISTRO" />
+          <ScalarProperty Name="PAICOD" ColumnName="PAICOD" />
+          <ScalarProperty Name="TEPCODTIPOEMPRESA" ColumnName="TEPCODTIPOEMPRESA" />
+          <ScalarProperty Name="NUM_ENDER_EMPRS" ColumnName="NUM_ENDER_EMPRS" />
+          <ScalarProperty Name="COD_ORIGEM_EMPRS" ColumnName="COD_ORIGEM_EMPRS" />
+          <ScalarProperty Name="NUM_EMPRESA_EMPRS" ColumnName="NUM_EMPRESA_EMPRS" />
+          <ScalarProperty Name="NUM_GRUPO_EMPRS" ColumnName="NUM_GRUPO_EMPRS" />
+          <ScalarProperty Name="NUM_FUNDAC_EMPRS" ColumnName="NUM_FUNDAC_EMPRS" />
+          <ScalarProperty Name="TIP_EMPRS" ColumnName="TIP_EMPRS" />
+          <ScalarProperty Name="NUM_TELEF_EMPRS" ColumnName="NUM_TELEF_EMPRS" />
+          <ScalarProperty Name="COD_DDD_EMPRS" ColumnName="COD_DDD_EMPRS" />
+          <ScalarProperty Name="COD_DDI_EMPRS" ColumnName="COD_DDI_EMPRS" />
+          <ScalarProperty Name="NOM_CIDADE_EMPRS" ColumnName="NOM_CIDADE_EMPRS" />
+          <ScalarProperty Name="COD_UNDFD_EMPRS" ColumnName="COD_UNDFD_EMPRS" />
+          <ScalarProperty Name="COD_MUNICI" ColumnName="COD_MUNICI" />
+          <ScalarProperty Name="COD_ESTADO" ColumnName="COD_ESTADO" />
+          <ScalarProperty Name="COD_CEP_EMPRS" ColumnName="COD_CEP_EMPRS" />
+          <ScalarProperty Name="NOM_BAIRRO_EMPRS" ColumnName="NOM_BAIRRO_EMPRS" />
+          <ScalarProperty Name="DCR_COMPL_EMPRS" ColumnName="DCR_COMPL_EMPRS" />
+          <ScalarProperty Name="DCR_ENDER_EMPRS" ColumnName="DCR_ENDER_EMPRS" />
+          <ScalarProperty Name="NUM_CGC_EMPRS" ColumnName="NUM_CGC_EMPRS" />
+          <ScalarProperty Name="TIPO_EMPRS" ColumnName="TIPO_EMPRS" />
+          <ScalarProperty Name="NOM_RZSOC_EMPRS" ColumnName="NOM_RZSOC_EMPRS" />
+          <ScalarProperty Name="NOM_ABRVO_EMPRS" ColumnName="NOM_ABRVO_EMPRS" />
+          <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CADTBLSMO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADTBLSMO">
+        <MappingFragment StoreEntitySet="CADTBLSMO">
+          <ScalarProperty Name="SMOIDCDIVERSOS" ColumnName="SMOIDCDIVERSOS" />
+          <ScalarProperty Name="SMOIDCGENERICO" ColumnName="SMOIDCGENERICO" />
+          <ScalarProperty Name="SMOIDCCLASSIFICACAO" ColumnName="SMOIDCCLASSIFICACAO" />
+          <ScalarProperty Name="SMOIDCFRACIONADO" ColumnName="SMOIDCFRACIONADO" />
+          <ScalarProperty Name="SMOTIPALTERACAO" ColumnName="SMOTIPALTERACAO" />
+          <ScalarProperty Name="SMOCODTUSS" ColumnName="SMOCODTUSS" />
+          <ScalarProperty Name="SMOCODTISS" ColumnName="SMOCODTISS" />
+          <ScalarProperty Name="SMONUMVERSAO" ColumnName="SMONUMVERSAO" />
+          <ScalarProperty Name="SMOIDCUSOHOSP" ColumnName="SMOIDCUSOHOSP" />
+          <ScalarProperty Name="SMOVALTIPLISTA" ColumnName="SMOVALTIPLISTA" />
+          <ScalarProperty Name="SMONUMCODBARRA" ColumnName="SMONUMCODBARRA" />
+          <ScalarProperty Name="SMODATVALIDANVISA" ColumnName="SMODATVALIDANVISA" />
+          <ScalarProperty Name="SMONUMREGANVISA" ColumnName="SMONUMREGANVISA" />
+          <ScalarProperty Name="SMOVALIPI" ColumnName="SMOVALIPI" />
+          <ScalarProperty Name="RCOCODPROCEDIMENTO" ColumnName="RCOCODPROCEDIMENTO" />
+          <ScalarProperty Name="COD_RECURSO" ColumnName="COD_RECURSO" />
+          <ScalarProperty Name="SMOPRCDESC" ColumnName="SMOPRCDESC" />
+          <ScalarProperty Name="SMOCODMERCADO" ColumnName="SMOCODMERCADO" />
+          <ScalarProperty Name="FSOSEQ" ColumnName="FSOSEQ" />
+          <ScalarProperty Name="SMOPRCLUCRO" ColumnName="SMOPRCLUCRO" />
+          <ScalarProperty Name="SMOQTDFRC" ColumnName="SMOQTDFRC" />
+          <ScalarProperty Name="SMOQTDEMB" ColumnName="SMOQTDEMB" />
+          <ScalarProperty Name="SMOTIPFRC" ColumnName="SMOTIPFRC" />
+          <ScalarProperty Name="SMOTIPEMB" ColumnName="SMOTIPEMB" />
+          <ScalarProperty Name="SMOVALUSUARIOFRC" ColumnName="SMOVALUSUARIOFRC" />
+          <ScalarProperty Name="SMOVALVENDAFRC" ColumnName="SMOVALVENDAFRC" />
+          <ScalarProperty Name="SMOVALFABRICAFRC" ColumnName="SMOVALFABRICAFRC" />
+          <ScalarProperty Name="SMOVALUSUARIOEMB" ColumnName="SMOVALUSUARIOEMB" />
+          <ScalarProperty Name="SMOVALVENDAEMB" ColumnName="SMOVALVENDAEMB" />
+          <ScalarProperty Name="SMOVALFABRICAEMB" ColumnName="SMOVALFABRICAEMB" />
+          <ScalarProperty Name="SMOCODIDENT" ColumnName="SMOCODIDENT" />
+          <ScalarProperty Name="SMODESPRODUTO" ColumnName="SMODESPRODUTO" />
+          <ScalarProperty Name="SMOCODFRACAO" ColumnName="SMOCODFRACAO" />
+          <ScalarProperty Name="SMOCODUSUARIO" ColumnName="SMOCODUSUARIO" />
+          <ScalarProperty Name="SMODATVALIDADEINI" ColumnName="SMODATVALIDADEINI" />
+          <ScalarProperty Name="SMOCOD" ColumnName="SMOCOD" />
+          <ScalarProperty Name="HDRCODPGR" ColumnName="HDRCODPGR" />
+          <ScalarProperty Name="HDRCODETC" ColumnName="HDRCODETC" />
+          <ScalarProperty Name="HDRCODUSU" ColumnName="HDRCODUSU" />
+          <ScalarProperty Name="HDRDATHOR" ColumnName="HDRDATHOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FATTBLRSP">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.FATTBLRSP">
+        <MappingFragment StoreEntitySet="FATTBLRSP">
+          <ScalarProperty Name="RSPCNDCAIXASELECAO" ColumnName="RSPCNDCAIXASELECAO" />
+          <ScalarProperty Name="RSPCODMERCADO" ColumnName="RSPCODMERCADO" />
+          <ScalarProperty Name="FSOSEQ" ColumnName="FSOSEQ" />
+          <ScalarProperty Name="RSPCODSIMPROFIM" ColumnName="RSPCODSIMPROFIM" />
+          <ScalarProperty Name="RSPCODSIMPROINI" ColumnName="RSPCODSIMPROINI" />
+          <ScalarProperty Name="RSPVALADICAO" ColumnName="RSPVALADICAO" />
+          <ScalarProperty Name="RSPVALTAXA" ColumnName="RSPVALTAXA" />
+          <ScalarProperty Name="RSPTIPPRECO" ColumnName="RSPTIPPRECO" />
+          <ScalarProperty Name="RSPVALPRIORIDADE" ColumnName="RSPVALPRIORIDADE" />
+          <ScalarProperty Name="RSPDATVALIDINI" ColumnName="RSPDATVALIDINI" />
+          <ScalarProperty Name="DAT_VALIDADE" ColumnName="DAT_VALIDADE" />
+          <ScalarProperty Name="COD_TIPO_COND_CONT" ColumnName="COD_TIPO_COND_CONT" />
+          <ScalarProperty Name="HDRCODPGR" ColumnName="HDRCODPGR" />
+          <ScalarProperty Name="HDRCODETC" ColumnName="HDRCODETC" />
+          <ScalarProperty Name="HDRCODUSU" ColumnName="HDRCODUSU" />
+          <ScalarProperty Name="HDRDATHOR" ColumnName="HDRDATHOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_COND_CONTRAT">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_COND_CONTRAT">
+        <MappingFragment StoreEntitySet="TB_COND_CONTRAT">
+          <ScalarProperty Name="USU_GERACAO" ColumnName="USU_GERACAO" />
+          <ScalarProperty Name="DAT_GERACAO" ColumnName="DAT_GERACAO" />
+          <ScalarProperty Name="VRS_SIMPRO" ColumnName="VRS_SIMPRO" />
+          <ScalarProperty Name="VRS_BRASINDICE" ColumnName="VRS_BRASINDICE" />
+          <ScalarProperty Name="IDC_UTILIZ_SIMPRO" ColumnName="IDC_UTILIZ_SIMPRO" />
+          <ScalarProperty Name="IDC_UTILIZ_BRASINDICE" ColumnName="IDC_UTILIZ_BRASINDICE" />
+          <ScalarProperty Name="VAL_PERC_RED_MED" ColumnName="VAL_PERC_RED_MED" />
+          <ScalarProperty Name="VAL_PERC_RED_MAT" ColumnName="VAL_PERC_RED_MAT" />
+          <ScalarProperty Name="IDC_PERC_TX_COMERC_SADT" ColumnName="IDC_PERC_TX_COMERC_SADT" />
+          <ScalarProperty Name="IDC_PERC_TX_COMERC_HONOR" ColumnName="IDC_PERC_TX_COMERC_HONOR" />
+          <ScalarProperty Name="IDC_PERC_TX_COMERC_MED" ColumnName="IDC_PERC_TX_COMERC_MED" />
+          <ScalarProperty Name="IDC_PERC_TX_COMERC_TOTAL" ColumnName="IDC_PERC_TX_COMERC_TOTAL" />
+          <ScalarProperty Name="IDC_PERC_TX_COMERC_MAT" ColumnName="IDC_PERC_TX_COMERC_MAT" />
+          <ScalarProperty Name="IDC_PERC_TX_COMERC_SERV" ColumnName="IDC_PERC_TX_COMERC_SERV" />
+          <ScalarProperty Name="IDC_PERC_TX_COMERC_TAXA" ColumnName="IDC_PERC_TX_COMERC_TAXA" />
+          <ScalarProperty Name="IDC_PERC_TX_COMERC_DIARIA" ColumnName="IDC_PERC_TX_COMERC_DIARIA" />
+          <ScalarProperty Name="VAL_TX_COMERC" ColumnName="VAL_TX_COMERC" />
+          <ScalarProperty Name="IDC_TIP_TX_COMERC" ColumnName="IDC_TIP_TX_COMERC" />
+          <ScalarProperty Name="COD_CALEND_GERAL" ColumnName="COD_CALEND_GERAL" />
+          <ScalarProperty Name="IDC_DIA_UTIL" ColumnName="IDC_DIA_UTIL" />
+          <ScalarProperty Name="IDC_DESC_PROC_LIVRE" ColumnName="IDC_DESC_PROC_LIVRE" />
+          <ScalarProperty Name="VAL_P_TAXA_ADM_INTERC" ColumnName="VAL_P_TAXA_ADM_INTERC" />
+          <ScalarProperty Name="VAL_PERC_DOACAO" ColumnName="VAL_PERC_DOACAO" />
+          <ScalarProperty Name="NUM_DIAS_PAGTO_FAT" ColumnName="NUM_DIAS_PAGTO_FAT" />
+          <ScalarProperty Name="NUM_DIAS_REAP_GLOSA" ColumnName="NUM_DIAS_REAP_GLOSA" />
+          <ScalarProperty Name="IDC_SERV_PROIBIDO" ColumnName="IDC_SERV_PROIBIDO" />
+          <ScalarProperty Name="COD_ROTINA_VERIF" ColumnName="COD_ROTINA_VERIF" />
+          <ScalarProperty Name="IDC_COD_DEPEND_OBRIGAT" ColumnName="IDC_COD_DEPEND_OBRIGAT" />
+          <ScalarProperty Name="IDC_FATURAMENTO_PACOTE" ColumnName="IDC_FATURAMENTO_PACOTE" />
+          <ScalarProperty Name="IDC_LOGO_COMPRADOR" ColumnName="IDC_LOGO_COMPRADOR" />
+          <ScalarProperty Name="DES_MEMO_PACIENTEAUT" ColumnName="DES_MEMO_PACIENTEAUT" />
+          <ScalarProperty Name="DES_MEMO_INSTRUCOESAUT" ColumnName="DES_MEMO_INSTRUCOESAUT" />
+          <ScalarProperty Name="IDC_IMPR_HORA_SENHA" ColumnName="IDC_IMPR_HORA_SENHA" />
+          <ScalarProperty Name="IDC_IMPR_DATA_SENHA" ColumnName="IDC_IMPR_DATA_SENHA" />
+          <ScalarProperty Name="IDC_IMPR_SENHA" ColumnName="IDC_IMPR_SENHA" />
+          <ScalarProperty Name="IDC_IMPR_AUTORIZ_POR" ColumnName="IDC_IMPR_AUTORIZ_POR" />
+          <ScalarProperty Name="IDC_IMPR_FONE_PACIENTE" ColumnName="IDC_IMPR_FONE_PACIENTE" />
+          <ScalarProperty Name="IDC_IMPR_IDENT_PACIENTE_RESP" ColumnName="IDC_IMPR_IDENT_PACIENTE_RESP" />
+          <ScalarProperty Name="IDC_IMPR_VALID_CARTAO" ColumnName="IDC_IMPR_VALID_CARTAO" />
+          <ScalarProperty Name="IDC_IMPR_TITULAR" ColumnName="IDC_IMPR_TITULAR" />
+          <ScalarProperty Name="IDC_MEIO_FATURAM_ELETRONICO" ColumnName="IDC_MEIO_FATURAM_ELETRONICO" />
+          <ScalarProperty Name="IDC_VALOR_FILME_DESTACADO" ColumnName="IDC_VALOR_FILME_DESTACADO" />
+          <ScalarProperty Name="IDC_FABRICANTE_CONTA" ColumnName="IDC_FABRICANTE_CONTA" />
+          <ScalarProperty Name="IDC_ATUALIZ_AUTOBRASINDICE" ColumnName="IDC_ATUALIZ_AUTOBRASINDICE" />
+          <ScalarProperty Name="IDC_ADIC_DH_EXTRAINSTRUMEN" ColumnName="IDC_ADIC_DH_EXTRAINSTRUMEN" />
+          <ScalarProperty Name="IDC_ADIC_DH_EXTRAMEDICO" ColumnName="IDC_ADIC_DH_EXTRAMEDICO" />
+          <ScalarProperty Name="IDC_HONOR_FORA_CONTA" ColumnName="IDC_HONOR_FORA_CONTA" />
+          <ScalarProperty Name="VAL_P_INCID_EXTRA" ColumnName="VAL_P_INCID_EXTRA" />
+          <ScalarProperty Name="HOR_LIMITE_ALTA" ColumnName="HOR_LIMITE_ALTA" />
+          <ScalarProperty Name="IDC_CID_EXTERNO" ColumnName="IDC_CID_EXTERNO" />
+          <ScalarProperty Name="IDC_CID_INTERNO" ColumnName="IDC_CID_INTERNO" />
+          <ScalarProperty Name="IDC_DIGITO_PRESTADOR" ColumnName="IDC_DIGITO_PRESTADOR" />
+          <ScalarProperty Name="IDC_DIGITO_USUARIO" ColumnName="IDC_DIGITO_USUARIO" />
+          <ScalarProperty Name="IDC_PADRAO_IMPRESSAO" ColumnName="IDC_PADRAO_IMPRESSAO" />
+          <ScalarProperty Name="IDC_LAYOUT_MAGNETICO" ColumnName="IDC_LAYOUT_MAGNETICO" />
+          <ScalarProperty Name="IDC_ENVIA_FATELET" ColumnName="IDC_ENVIA_FATELET" />
+          <ScalarProperty Name="QTD_DIAS_LIM_APRESENT" ColumnName="QTD_DIAS_LIM_APRESENT" />
+          <ScalarProperty Name="IDC_PERC_TAXA_TOTAL_CONTA" ColumnName="IDC_PERC_TAXA_TOTAL_CONTA" />
+          <ScalarProperty Name="IDC_PERC_TAXA_SADT" ColumnName="IDC_PERC_TAXA_SADT" />
+          <ScalarProperty Name="IDC_PERC_TAXA_HONORARIO" ColumnName="IDC_PERC_TAXA_HONORARIO" />
+          <ScalarProperty Name="IDC_PERC_TAXA_MEDICAMENTO" ColumnName="IDC_PERC_TAXA_MEDICAMENTO" />
+          <ScalarProperty Name="IDC_PERC_TAXA_MATERIAL" ColumnName="IDC_PERC_TAXA_MATERIAL" />
+          <ScalarProperty Name="IDC_PERC_TAXA_SERVICO" ColumnName="IDC_PERC_TAXA_SERVICO" />
+          <ScalarProperty Name="IDC_PERC_TAXA_TAXA" ColumnName="IDC_PERC_TAXA_TAXA" />
+          <ScalarProperty Name="IDC_PERC_TAXA_DIARIA" ColumnName="IDC_PERC_TAXA_DIARIA" />
+          <ScalarProperty Name="VAL_P_TAXA_ADM" ColumnName="VAL_P_TAXA_ADM" />
+          <ScalarProperty Name="COD_VERSAO_CID" ColumnName="COD_VERSAO_CID" />
+          <ScalarProperty Name="COD_TAB_MAT_MED" ColumnName="COD_TAB_MAT_MED" />
+          <ScalarProperty Name="COD_TAB_PORTE_ANESTESICO" ColumnName="COD_TAB_PORTE_ANESTESICO" />
+          <ScalarProperty Name="COD_TAB_ESPECIAL" ColumnName="COD_TAB_ESPECIAL" />
+          <ScalarProperty Name="COD_TAB_SERVICOS" ColumnName="COD_TAB_SERVICOS" />
+          <ScalarProperty Name="COD_TAB_PROCEDIMENTO" ColumnName="COD_TAB_PROCEDIMENTO" />
+          <ScalarProperty Name="COD_ROTINA" ColumnName="COD_ROTINA" />
+          <ScalarProperty Name="COD_PADRAO_FAT" ColumnName="COD_PADRAO_FAT" />
+          <ScalarProperty Name="COD_PADRAO_INF" ColumnName="COD_PADRAO_INF" />
+          <ScalarProperty Name="DAT_VALIDADE" ColumnName="DAT_VALIDADE" />
+          <ScalarProperty Name="COD_TIPO_COND_CONT" ColumnName="COD_TIPO_COND_CONT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TIPO_COND_CONTRAT">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TIPO_COND_CONTRAT">
+        <MappingFragment StoreEntitySet="TB_TIPO_COND_CONTRAT">
+          <ScalarProperty Name="DES_TIPO_COND_CONT" ColumnName="DES_TIPO_COND_CONT" />
+          <ScalarProperty Name="COD_TIPO_COND_CONT" ColumnName="COD_TIPO_COND_CONT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EQUIP_SIMPRO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_EQUIP_SIMPRO">
+        <MappingFragment StoreEntitySet="TB_EQUIP_SIMPRO">
+          <ScalarProperty Name="DAT_VALIDADE" ColumnName="DAT_VALIDADE" />
+          <ScalarProperty Name="TIPO_PRECO" ColumnName="TIPO_PRECO" />
+          <ScalarProperty Name="TAXA_APLICADA" ColumnName="TAXA_APLICADA" />
+          <ScalarProperty Name="DES_SIMPRO" ColumnName="DES_SIMPRO" />
+          <ScalarProperty Name="COD_SIMPRO" ColumnName="COD_SIMPRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TIPO_COND_CONV">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TIPO_COND_CONV">
+        <MappingFragment StoreEntitySet="TB_TIPO_COND_CONV">
+          <ScalarProperty Name="COD_TIPO_COND_CONT" ColumnName="COD_TIPO_COND_CONT" />
+          <ScalarProperty Name="DAT_VALIDADE" ColumnName="DAT_VALIDADE" />
+          <ScalarProperty Name="COD_CONVENENTE" ColumnName="COD_CONVENENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CADTBLRCORECURSOCODIGO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADTBLRCORECURSOCODIGO">
+        <MappingFragment StoreEntitySet="CADTBLRCORECURSOCODIGO">
+          <ScalarProperty Name="COD_CONVENENTE" ColumnName="COD_CONVENENTE" />
+          <ScalarProperty Name="TPACOD" ColumnName="TPACOD" />
+          <ScalarProperty Name="RCOIDCCBHPM" ColumnName="RCOIDCCBHPM" />
+          <ScalarProperty Name="RCODATDESATIVACAO" ColumnName="RCODATDESATIVACAO" />
+          <ScalarProperty Name="RCODATIMPLANTACAO" ColumnName="RCODATIMPLANTACAO" />
+          <ScalarProperty Name="RCOCODPROCEDIMENTO" ColumnName="RCOCODPROCEDIMENTO" />
+          <ScalarProperty Name="COD_RECURSO" ColumnName="COD_RECURSO" />
+          <ScalarProperty Name="RCOSEQ" ColumnName="RCOSEQ" />
+          <ScalarProperty Name="HDRCODPGR" ColumnName="HDRCODPGR" />
+          <ScalarProperty Name="HDRCODETC" ColumnName="HDRCODETC" />
+          <ScalarProperty Name="HDRCODUSU" ColumnName="HDRCODUSU" />
+          <ScalarProperty Name="HDRDATHOR" ColumnName="HDRDATHOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAD_TBL_UNIMEDARQUIVO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.CAD_TBL_UNIMEDARQUIVO">
+        <MappingFragment StoreEntitySet="CAD_TBL_UNIMEDARQUIVO">
+          <ScalarProperty Name="DES_PLANO" ColumnName="DES_PLANO" />
+          <ScalarProperty Name="COD_PLANO" ColumnName="COD_PLANO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TBL_EXT_UTIL_DADGER_LOG">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_EXT_UTIL_DADGER_LOG">
+        <MappingFragment StoreEntitySet="SAU_TBL_EXT_UTIL_DADGER_LOG">
+          <ScalarProperty Name="IDC_INIBE_EXT_ATUAL" ColumnName="IDC_INIBE_EXT_ATUAL" />
+          <ScalarProperty Name="IDC_INIBE_EXT_ANTIGO" ColumnName="IDC_INIBE_EXT_ANTIGO" />
+          <ScalarProperty Name="NUM_IDNTF_RPTANT" ColumnName="NUM_IDNTF_RPTANT" />
+          <ScalarProperty Name="DAT_MOVIMENTO" ColumnName="DAT_MOVIMENTO" />
+          <ScalarProperty Name="NUM_RGTRO_EMPRG" ColumnName="NUM_RGTRO_EMPRG" />
+          <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+          <ScalarProperty Name="DAT_REF" ColumnName="DAT_REF" />
+          <ScalarProperty Name="HDRCODUSU" ColumnName="HDRCODUSU" />
+          <ScalarProperty Name="HDRDATHOR" ColumnName="HDRDATHOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_RECURSO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_RECURSO">
+        <MappingFragment StoreEntitySet="TB_RECURSO">
+          <ScalarProperty Name="IDC_CPT" ColumnName="IDC_CPT" />
+          <ScalarProperty Name="QTD_FRACAO_MINIMA" ColumnName="QTD_FRACAO_MINIMA" />
+          <ScalarProperty Name="QTD_FRACIONAMENTO" ColumnName="QTD_FRACIONAMENTO" />
+          <ScalarProperty Name="IDC_FRACIONADO" ColumnName="IDC_FRACIONADO" />
+          <ScalarProperty Name="UDMSEQ_FRACAOMINIMA" ColumnName="UDMSEQ_FRACAOMINIMA" />
+          <ScalarProperty Name="UDMSEQ_FRACIONADO" ColumnName="UDMSEQ_FRACIONADO" />
+          <ScalarProperty Name="UDMSEQ" ColumnName="UDMSEQ" />
+          <ScalarProperty Name="COD_UNIDADE_FRAC" ColumnName="COD_UNIDADE_FRAC" />
+          <ScalarProperty Name="COD_GRUPO_ANS" ColumnName="COD_GRUPO_ANS" />
+          <ScalarProperty Name="DES_RECURSO_FONEMA" ColumnName="DES_RECURSO_FONEMA" />
+          <ScalarProperty Name="IDC_EXTRACAO_DENTE" ColumnName="IDC_EXTRACAO_DENTE" />
+          <ScalarProperty Name="DAT_FIM_ANSROL" ColumnName="DAT_FIM_ANSROL" />
+          <ScalarProperty Name="DAT_INI_ANSROL" ColumnName="DAT_INI_ANSROL" />
+          <ScalarProperty Name="IDC_PER_PLANO" ColumnName="IDC_PER_PLANO" />
+          <ScalarProperty Name="NUM_DOSES" ColumnName="NUM_DOSES" />
+          <ScalarProperty Name="NUM_APLIC_2" ColumnName="NUM_APLIC_2" />
+          <ScalarProperty Name="NUM_APLIC_3" ColumnName="NUM_APLIC_3" />
+          <ScalarProperty Name="DES_PERIODO_APLIC" ColumnName="DES_PERIODO_APLIC" />
+          <ScalarProperty Name="NUM_VENCIMENTO" ColumnName="NUM_VENCIMENTO" />
+          <ScalarProperty Name="DES_PERIODO_VENC" ColumnName="DES_PERIODO_VENC" />
+          <ScalarProperty Name="DES_RECURSO_COMPL" ColumnName="DES_RECURSO_COMPL" />
+          <ScalarProperty Name="TIP_AVALIACAO_PREVIA" ColumnName="TIP_AVALIACAO_PREVIA" />
+          <ScalarProperty Name="IDC_EXAME_PERICIAL" ColumnName="IDC_EXAME_PERICIAL" />
+          <ScalarProperty Name="IDC_ANALISE_JUSTIFIC" ColumnName="IDC_ANALISE_JUSTIFIC" />
+          <ScalarProperty Name="COD_DESPESA_ANS" ColumnName="COD_DESPESA_ANS" />
+          <ScalarProperty Name="IDC_PERICIA_FINAL" ColumnName="IDC_PERICIA_FINAL" />
+          <ScalarProperty Name="NOM_ARQ_IMAGEM" ColumnName="NOM_ARQ_IMAGEM" />
+          <ScalarProperty Name="IDC_EXIGE_TRATAMENTO" ColumnName="IDC_EXIGE_TRATAMENTO" />
+          <ScalarProperty Name="IDC_VER_PRECEDENCIA" ColumnName="IDC_VER_PRECEDENCIA" />
+          <ScalarProperty Name="COD_CAPITULO" ColumnName="COD_CAPITULO" />
+          <ScalarProperty Name="IDC_IDENTIF_EVENTO" ColumnName="IDC_IDENTIF_EVENTO" />
+          <ScalarProperty Name="IDC_REC_REALIZ_SOLIC" ColumnName="IDC_REC_REALIZ_SOLIC" />
+          <ScalarProperty Name="TIP_CARATER_ATEND" ColumnName="TIP_CARATER_ATEND" />
+          <ScalarProperty Name="TIP_REGIME_ATEND" ColumnName="TIP_REGIME_ATEND" />
+          <ScalarProperty Name="QTD_LIM_UTILIZ_VIDA" ColumnName="QTD_LIM_UTILIZ_VIDA" />
+          <ScalarProperty Name="QTD_LIM_UTILIZ_ANO" ColumnName="QTD_LIM_UTILIZ_ANO" />
+          <ScalarProperty Name="QTD_LIM_UTILIZ_MES" ColumnName="QTD_LIM_UTILIZ_MES" />
+          <ScalarProperty Name="QTD_MAX_AUTORIZ" ColumnName="QTD_MAX_AUTORIZ" />
+          <ScalarProperty Name="NVACODNIVELAUTORIZ" ColumnName="NVACODNIVELAUTORIZ" />
+          <ScalarProperty Name="COD_DESPESA_INTERN" ColumnName="COD_DESPESA_INTERN" />
+          <ScalarProperty Name="COD_DESPESA_NORMAL" ColumnName="COD_DESPESA_NORMAL" />
+          <ScalarProperty Name="IDC_DESATIVADO" ColumnName="IDC_DESATIVADO" />
+          <ScalarProperty Name="IDC_FICHA_CLINICA" ColumnName="IDC_FICHA_CLINICA" />
+          <ScalarProperty Name="IDC_TRIBUTAVEL" ColumnName="IDC_TRIBUTAVEL" />
+          <ScalarProperty Name="IDC_INSTRUMENTADOR" ColumnName="IDC_INSTRUMENTADOR" />
+          <ScalarProperty Name="DES_OBSERVACAO" ColumnName="DES_OBSERVACAO" />
+          <ScalarProperty Name="IDC_AUDITORIA" ColumnName="IDC_AUDITORIA" />
+          <ScalarProperty Name="IDC_AUTORIZACAO" ColumnName="IDC_AUTORIZACAO" />
+          <ScalarProperty Name="QTD_DIAS_INTERNACAO" ColumnName="QTD_DIAS_INTERNACAO" />
+          <ScalarProperty Name="TIP_PER_INTERVALO" ColumnName="TIP_PER_INTERVALO" />
+          <ScalarProperty Name="NUM_INTERVALO" ColumnName="NUM_INTERVALO" />
+          <ScalarProperty Name="COD_TIPO_ACOMOD" ColumnName="COD_TIPO_ACOMOD" />
+          <ScalarProperty Name="QTD_FREQUENCIA" ColumnName="QTD_FREQUENCIA" />
+          <ScalarProperty Name="QTD_REUTILIZA" ColumnName="QTD_REUTILIZA" />
+          <ScalarProperty Name="IDC_ORT_PROT" ColumnName="IDC_ORT_PROT" />
+          <ScalarProperty Name="VAL_IDADE_FINAL" ColumnName="VAL_IDADE_FINAL" />
+          <ScalarProperty Name="VAL_IDADE_INICIAL" ColumnName="VAL_IDADE_INICIAL" />
+          <ScalarProperty Name="COD_SEXO" ColumnName="COD_SEXO" />
+          <ScalarProperty Name="QTD_MEDIC" ColumnName="QTD_MEDIC" />
+          <ScalarProperty Name="NUM_BRASINDICE" ColumnName="NUM_BRASINDICE" />
+          <ScalarProperty Name="COD_APRESENTACAO" ColumnName="COD_APRESENTACAO" />
+          <ScalarProperty Name="COD_LABORATORIO" ColumnName="COD_LABORATORIO" />
+          <ScalarProperty Name="COD_UNIDADE" ColumnName="COD_UNIDADE" />
+          <ScalarProperty Name="COD_CATEGORIA" ColumnName="COD_CATEGORIA" />
+          <ScalarProperty Name="COD_TIP_RECURSO" ColumnName="COD_TIP_RECURSO" />
+          <ScalarProperty Name="DES_RECURSO" ColumnName="DES_RECURSO" />
+          <ScalarProperty Name="COD_ITEM" ColumnName="COD_ITEM" />
+          <ScalarProperty Name="COD_GRUPO" ColumnName="COD_GRUPO" />
+          <ScalarProperty Name="COD_ESPECIALID" ColumnName="COD_ESPECIALID" />
+          <ScalarProperty Name="COD_RECURSO" ColumnName="COD_RECURSO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TBL_QTDE_MATMED">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_QTDE_MATMED">
+        <MappingFragment StoreEntitySet="SAU_TBL_QTDE_MATMED">
+          <ScalarProperty Name="DESC_MAQTERM" ColumnName="DESC_MAQTERM" />
+          <ScalarProperty Name="DESC_USEROS" ColumnName="DESC_USEROS" />
+          <ScalarProperty Name="DESC_MAQREDE" ColumnName="DESC_MAQREDE" />
+          <ScalarProperty Name="DESC_PROGRAMA" ColumnName="DESC_PROGRAMA" />
+          <ScalarProperty Name="DESC_USERAPL" ColumnName="DESC_USERAPL" />
+          <ScalarProperty Name="DTH_ACAO" ColumnName="DTH_ACAO" />
+          <ScalarProperty Name="COD_ACAO" ColumnName="COD_ACAO" />
+          <ScalarProperty Name="DAT_FIMVIG" ColumnName="DAT_FIMVIG" />
+          <ScalarProperty Name="DAT_INIVIG" ColumnName="DAT_INIVIG" />
+          <ScalarProperty Name="QTD" ColumnName="QTD" />
+          <ScalarProperty Name="COD_RECURSO" ColumnName="COD_RECURSO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FC_SAU_TBL_RO_GERACAO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.FC_SAU_TBL_RO_GERACAO">
+        <MappingFragment StoreEntitySet="FC_SAU_TBL_RO_GERACAO">
+          <ScalarProperty Name="DESC_MAQTERM" ColumnName="DESC_MAQTERM" />
+          <ScalarProperty Name="DESC_USEROS" ColumnName="DESC_USEROS" />
+          <ScalarProperty Name="DESC_MAQREDE" ColumnName="DESC_MAQREDE" />
+          <ScalarProperty Name="DESC_PROGRAMA" ColumnName="DESC_PROGRAMA" />
+          <ScalarProperty Name="DESC_USERAPL" ColumnName="DESC_USERAPL" />
+          <ScalarProperty Name="DTH_ACAO" ColumnName="DTH_ACAO" />
+          <ScalarProperty Name="COD_ANO_RO" ColumnName="COD_ANO_RO" />
+          <ScalarProperty Name="COD_MES_RO" ColumnName="COD_MES_RO" />
+          <ScalarProperty Name="COD_SAU_TBL_RO_GERACAO" ColumnName="COD_SAU_TBL_RO_GERACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FC_SAU_TBL_RO_GERACAO_STATUS">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.FC_SAU_TBL_RO_GERACAO_STATUS">
+        <MappingFragment StoreEntitySet="FC_SAU_TBL_RO_GERACAO_STATUS">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DTH_ACAO" ColumnName="DTH_ACAO" />
+          <ScalarProperty Name="COD_SAU_TBL_RO_GERACAO" ColumnName="COD_SAU_TBL_RO_GERACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRE_TBL_CARGA_PROTHEUS_LOG">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS_LOG">
+        <MappingFragment StoreEntitySet="PRE_TBL_CARGA_PROTHEUS_LOG">
+          <ScalarProperty Name="DCR_ACAO" ColumnName="DCR_ACAO" />
+          <ScalarProperty Name="COD_ACAO" ColumnName="COD_ACAO" />
+          <ScalarProperty Name="LOG_INCLUSAO" ColumnName="LOG_INCLUSAO" />
+          <ScalarProperty Name="DTH_INCLUSAO" ColumnName="DTH_INCLUSAO" />
+          <ScalarProperty Name="COD_CARGA_PROTHEUS" ColumnName="COD_CARGA_PROTHEUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRE_TBL_CARGA_PROTHEUS_STATUS">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS_STATUS">
+        <MappingFragment StoreEntitySet="PRE_TBL_CARGA_PROTHEUS_STATUS">
+          <ScalarProperty Name="DCR_STATUS" ColumnName="DCR_STATUS" />
+          <ScalarProperty Name="COD_STATUS" ColumnName="COD_STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRE_TBL_CARGA_PROTHEUS_TIPO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS_TIPO">
+        <MappingFragment StoreEntitySet="PRE_TBL_CARGA_PROTHEUS_TIPO">
+          <ScalarProperty Name="DCR_PACKAGE_PARAM" ColumnName="DCR_PACKAGE_PARAM" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="IND_PROC_PARCIAL" ColumnName="IND_PROC_PARCIAL" />
+          <ScalarProperty Name="DCR_CARGA_TIPO" ColumnName="DCR_CARGA_TIPO" />
+          <ScalarProperty Name="COD_CARGA_TIPO" ColumnName="COD_CARGA_TIPO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPREGADO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.EMPREGADO">
+        <MappingFragment StoreEntitySet="EMPREGADO">
+          <ScalarProperty Name="EMPRGCODPOSSUIDEP" ColumnName="EMPRGCODPOSSUIDEP" />
+          <ScalarProperty Name="TPGCODTIPOPAGTO" ColumnName="TPGCODTIPOPAGTO" />
+          <ScalarProperty Name="EMPRGDATVERIFICACAO" ColumnName="EMPRGDATVERIFICACAO" />
+          <ScalarProperty Name="EMPRGCODVERIFICADO" ColumnName="EMPRGCODVERIFICADO" />
+          <ScalarProperty Name="DAT_NASC_CJGE_EMPRG" ColumnName="DAT_NASC_CJGE_EMPRG" />
+          <ScalarProperty Name="COD_SEXO_CJGE_EMPRG" ColumnName="COD_SEXO_CJGE_EMPRG" />
+          <ScalarProperty Name="NUM_CPF_CJGE_EMPRG" ColumnName="NUM_CPF_CJGE_EMPRG" />
+          <ScalarProperty Name="EMPRGGRDPASSOCIADO" ColumnName="EMPRGGRDPASSOCIADO" />
+          <ScalarProperty Name="EMPRGCODASSOCIADO" ColumnName="EMPRGCODASSOCIADO" />
+          <ScalarProperty Name="EMPRGNUMASSOCIADO" ColumnName="EMPRGNUMASSOCIADO" />
+          <ScalarProperty Name="EMPRGNOMEASSOCIADO" ColumnName="EMPRGNOMEASSOCIADO" />
+          <ScalarProperty Name="EMPRG_DES_PRVNC_EST" ColumnName="EMPRG_DES_PRVNC_EST" />
+          <ScalarProperty Name="EMPRG_COD_POSTAL_EXT" ColumnName="EMPRG_COD_POSTAL_EXT" />
+          <ScalarProperty Name="NUM_IDT_FISCAL3" ColumnName="NUM_IDT_FISCAL3" />
+          <ScalarProperty Name="NUM_IDT_FISCAL2" ColumnName="NUM_IDT_FISCAL2" />
+          <ScalarProperty Name="NUM_IDT_FISCAL1" ColumnName="NUM_IDT_FISCAL1" />
+          <ScalarProperty Name="PAICODRESIDENCIA3" ColumnName="PAICODRESIDENCIA3" />
+          <ScalarProperty Name="PAICODRESIDENCIA2" ColumnName="PAICODRESIDENCIA2" />
+          <ScalarProperty Name="NOM_CJGE_EMPRG" ColumnName="NOM_CJGE_EMPRG" />
+          <ScalarProperty Name="MRC_DOC_GRNCRD" ColumnName="MRC_DOC_GRNCRD" />
+          <ScalarProperty Name="PAICODPAISEXT3" ColumnName="PAICODPAISEXT3" />
+          <ScalarProperty Name="PAICODPAISEXT2" ColumnName="PAICODPAISEXT2" />
+          <ScalarProperty Name="PAICODPAISEXT1" ColumnName="PAICODPAISEXT1" />
+          <ScalarProperty Name="NOM_PAIS_EXT_3" ColumnName="NOM_PAIS_EXT_3" />
+          <ScalarProperty Name="NOM_PAIS_EXT_2" ColumnName="NOM_PAIS_EXT_2" />
+          <ScalarProperty Name="NOM_PAIS_EXT_1" ColumnName="NOM_PAIS_EXT_1" />
+          <ScalarProperty Name="MRC_RES_EXT_EMPRG" ColumnName="MRC_RES_EXT_EMPRG" />
+          <ScalarProperty Name="DAT_RECAD_EMPRG" ColumnName="DAT_RECAD_EMPRG" />
+          <ScalarProperty Name="NUM_DDICEL_EMPRG" ColumnName="NUM_DDICEL_EMPRG" />
+          <ScalarProperty Name="DAT_VLDGRNCRD_EMPRG" ColumnName="DAT_VLDGRNCRD_EMPRG" />
+          <ScalarProperty Name="NUM_GRNCRD_EMPRG" ColumnName="NUM_GRNCRD_EMPRG" />
+          <ScalarProperty Name="PAICODCIDADANIA2" ColumnName="PAICODCIDADANIA2" />
+          <ScalarProperty Name="PAICODCIDADANIA1" ColumnName="PAICODCIDADANIA1" />
+          <ScalarProperty Name="PAICODRESIDENCIA" ColumnName="PAICODRESIDENCIA" />
+          <ScalarProperty Name="PAICODNASCIMENTO" ColumnName="PAICODNASCIMENTO" />
+          <ScalarProperty Name="GDECOD" ColumnName="GDECOD" />
+          <ScalarProperty Name="MRC_DEFFIS_EMPRG" ColumnName="MRC_DEFFIS_EMPRG" />
+          <ScalarProperty Name="MRC_ASSOC_EMPRG" ColumnName="MRC_ASSOC_EMPRG" />
+          <ScalarProperty Name="DAT_PRIEMP_EMPRG" ColumnName="DAT_PRIEMP_EMPRG" />
+          <ScalarProperty Name="DAT_FIMAPOS4_EMPREG" ColumnName="DAT_FIMAPOS4_EMPREG" />
+          <ScalarProperty Name="DAT_INIAPOS4_EMPRG" ColumnName="DAT_INIAPOS4_EMPRG" />
+          <ScalarProperty Name="DCR_APOS4_EMPRG" ColumnName="DCR_APOS4_EMPRG" />
+          <ScalarProperty Name="DAT_FIMAPOS3_EMPREG" ColumnName="DAT_FIMAPOS3_EMPREG" />
+          <ScalarProperty Name="DAT_INIAPOS3_EMPRG" ColumnName="DAT_INIAPOS3_EMPRG" />
+          <ScalarProperty Name="DCR_APOS3_EMPRG" ColumnName="DCR_APOS3_EMPRG" />
+          <ScalarProperty Name="DAT_FIMAPOS2_EMPREG" ColumnName="DAT_FIMAPOS2_EMPREG" />
+          <ScalarProperty Name="DAT_INIAPOS2_EMPRG" ColumnName="DAT_INIAPOS2_EMPRG" />
+          <ScalarProperty Name="DCR_APOS2_EMPRG" ColumnName="DCR_APOS2_EMPRG" />
+          <ScalarProperty Name="DAT_FIMAPOS1_EMPREG" ColumnName="DAT_FIMAPOS1_EMPREG" />
+          <ScalarProperty Name="DAT_INIAPOS1_EMPRG" ColumnName="DAT_INIAPOS1_EMPRG" />
+          <ScalarProperty Name="DCR_APOS1_EMPRG" ColumnName="DCR_APOS1_EMPRG" />
+          <ScalarProperty Name="PESCODPESSOA" ColumnName="PESCODPESSOA" />
+          <ScalarProperty Name="NUM_CNS_EMPRG" ColumnName="NUM_CNS_EMPRG" />
+          <ScalarProperty Name="NUM_MATFNC_EMPRG" ColumnName="NUM_MATFNC_EMPRG" />
+          <ScalarProperty Name="NUM_SIAPE_EMPRG" ColumnName="NUM_SIAPE_EMPRG" />
+          <ScalarProperty Name="EMPRGDESEMAIL2" ColumnName="EMPRGDESEMAIL2" />
+          <ScalarProperty Name="EMPRGNUMTELEF2" ColumnName="EMPRGNUMTELEF2" />
+          <ScalarProperty Name="EMPRGCODDDD2" ColumnName="EMPRGCODDDD2" />
+          <ScalarProperty Name="EMPRGCODDDI2" ColumnName="EMPRGCODDDI2" />
+          <ScalarProperty Name="NOM_EMPGR_ANS" ColumnName="NOM_EMPGR_ANS" />
+          <ScalarProperty Name="DCR_LOGRAD" ColumnName="DCR_LOGRAD" />
+          <ScalarProperty Name="TLGCODTIPOLOGRAD" ColumnName="TLGCODTIPOLOGRAD" />
+          <ScalarProperty Name="EMPRGDTHEMINATUREZA" ColumnName="EMPRGDTHEMINATUREZA" />
+          <ScalarProperty Name="EMPRGUNFORGEMINATUREZA" ColumnName="EMPRGUNFORGEMINATUREZA" />
+          <ScalarProperty Name="EMPRGORGEMINATUREZA" ColumnName="EMPRGORGEMINATUREZA" />
+          <ScalarProperty Name="EMPRGNUMNATUREZA" ColumnName="EMPRGNUMNATUREZA" />
+          <ScalarProperty Name="EMPRGIDCFATORRH" ColumnName="EMPRGIDCFATORRH" />
+          <ScalarProperty Name="EMPRGIDCGRPSANGUINEO" ColumnName="EMPRGIDCGRPSANGUINEO" />
+          <ScalarProperty Name="DAT_PREVAPOS_EMPRG" ColumnName="DAT_PREVAPOS_EMPRG" />
+          <ScalarProperty Name="EMPRGIDCTIPOMARCACAO" ColumnName="EMPRGIDCTIPOMARCACAO" />
+          <ScalarProperty Name="DCR_MOTOBT_EMPRG" ColumnName="DCR_MOTOBT_EMPRG" />
+          <ScalarProperty Name="DAT_OBTSRS_EMPRG" ColumnName="DAT_OBTSRS_EMPRG" />
+          <ScalarProperty Name="NUM_CELUL2_EMPRG" ColumnName="NUM_CELUL2_EMPRG" />
+          <ScalarProperty Name="MRC_NAOPART_EMPRG" ColumnName="MRC_NAOPART_EMPRG" />
+          <ScalarProperty Name="NUM_IP_EMPRG" ColumnName="NUM_IP_EMPRG" />
+          <ScalarProperty Name="MRC_NEGSEF_EMPRG" ColumnName="MRC_NEGSEF_EMPRG" />
+          <ScalarProperty Name="DCR_IDIOMA_EMPRG" ColumnName="DCR_IDIOMA_EMPRG" />
+          <ScalarProperty Name="COD_ESTRUT_EMPRG" ColumnName="COD_ESTRUT_EMPRG" />
+          <ScalarProperty Name="PAICOD" ColumnName="PAICOD" />
+          <ScalarProperty Name="NAT_DOCIDNT_EMPRG" ColumnName="NAT_DOCIDNT_EMPRG" />
+          <ScalarProperty Name="DCR_RENDIMENTO_EMPRG" ColumnName="DCR_RENDIMENTO_EMPRG" />
+          <ScalarProperty Name="DCR_SITPPE_EMPRG" ColumnName="DCR_SITPPE_EMPRG" />
+          <ScalarProperty Name="VLR_RENDIMENTO_EMPRG" ColumnName="VLR_RENDIMENTO_EMPRG" />
+          <ScalarProperty Name="VLR_PATRIMONIAL_EMPRG" ColumnName="VLR_PATRIMONIAL_EMPRG" />
+          <ScalarProperty Name="ATECODATRIBUTOEMPRG" ColumnName="ATECODATRIBUTOEMPRG" />
+          <ScalarProperty Name="NUM_DDIFAX_EMPRG" ColumnName="NUM_DDIFAX_EMPRG" />
+          <ScalarProperty Name="NUM_FAX_EMPRG" ColumnName="NUM_FAX_EMPRG" />
+          <ScalarProperty Name="NUM_DDDFAX_EMPRG" ColumnName="NUM_DDDFAX_EMPRG" />
+          <ScalarProperty Name="NUM_RGTRORPTANT_EMPRG" ColumnName="NUM_RGTRORPTANT_EMPRG" />
+          <ScalarProperty Name="COD_EMPRSRPTANT_EMPRG" ColumnName="COD_EMPRSRPTANT_EMPRG" />
+          <ScalarProperty Name="NUM_ENDER_EMPRG" ColumnName="NUM_ENDER_EMPRG" />
+          <ScalarProperty Name="NOM_SEGTIT_EMPRG" ColumnName="NOM_SEGTIT_EMPRG" />
+          <ScalarProperty Name="NUM_CPFCTC_EMPRG" ColumnName="NUM_CPFCTC_EMPRG" />
+          <ScalarProperty Name="STECOD" ColumnName="STECOD" />
+          <ScalarProperty Name="AGCCODCODIGODAAGENCIA" ColumnName="AGCCODCODIGODAAGENCIA" />
+          <ScalarProperty Name="DAT_ULT_RCD_EMPRG" ColumnName="DAT_ULT_RCD_EMPRG" />
+          <ScalarProperty Name="NUM_RGORIG_EMPRG" ColumnName="NUM_RGORIG_EMPRG" />
+          <ScalarProperty Name="NUM_SECAO_EMPRG" ColumnName="NUM_SECAO_EMPRG" />
+          <ScalarProperty Name="NUM_ZONA_EMPRG" ColumnName="NUM_ZONA_EMPRG" />
+          <ScalarProperty Name="NUM_TITULO_EMPRG" ColumnName="NUM_TITULO_EMPRG" />
+          <ScalarProperty Name="QTD_ANOANT_EMPRG" ColumnName="QTD_ANOANT_EMPRG" />
+          <ScalarProperty Name="QTD_MESANT_EMPRG" ColumnName="QTD_MESANT_EMPRG" />
+          <ScalarProperty Name="QTD_DIAANT_EMPRG" ColumnName="QTD_DIAANT_EMPRG" />
+          <ScalarProperty Name="QTD_ANOTRB_EMPRG" ColumnName="QTD_ANOTRB_EMPRG" />
+          <ScalarProperty Name="QTD_DIATRB_EMPRG" ColumnName="QTD_DIATRB_EMPRG" />
+          <ScalarProperty Name="COD_DDDCEL_EMPRG" ColumnName="COD_DDDCEL_EMPRG" />
+          <ScalarProperty Name="NUM_TELRES_EMPRG" ColumnName="NUM_TELRES_EMPRG" />
+          <ScalarProperty Name="VLR_01_EMPRG" ColumnName="VLR_01_EMPRG" />
+          <ScalarProperty Name="COD_UFNAT_EMPRG" ColumnName="COD_UFNAT_EMPRG" />
+          <ScalarProperty Name="TIP_CTCOR_EMPRG" ColumnName="TIP_CTCOR_EMPRG" />
+          <ScalarProperty Name="DCR_NACNL_EMPRG" ColumnName="DCR_NACNL_EMPRG" />
+          <ScalarProperty Name="NUM_CELUL_EMPRG" ColumnName="NUM_CELUL_EMPRG" />
+          <ScalarProperty Name="DCR_OCPPROF_EMPRG" ColumnName="DCR_OCPPROF_EMPRG" />
+          <ScalarProperty Name="DCR_COMPL_EMPRG" ColumnName="DCR_COMPL_EMPRG" />
+          <ScalarProperty Name="DAT_EXPCI_EMPRG" ColumnName="DAT_EXPCI_EMPRG" />
+          <ScalarProperty Name="DCR_NATURAL_EMPRG" ColumnName="DCR_NATURAL_EMPRG" />
+          <ScalarProperty Name="DAT_FALEC_EMPRG" ColumnName="DAT_FALEC_EMPRG" />
+          <ScalarProperty Name="NUM_PISPAS_EMPRG" ColumnName="NUM_PISPAS_EMPRG" />
+          <ScalarProperty Name="COD_EMAIL_EMPRG" ColumnName="COD_EMAIL_EMPRG" />
+          <ScalarProperty Name="MRC_PLSAUD_EMPRG" ColumnName="MRC_PLSAUD_EMPRG" />
+          <ScalarProperty Name="DCR_OBSERVACAO" ColumnName="DCR_OBSERVACAO" />
+          <ScalarProperty Name="COD_UNDFD_EMPRG" ColumnName="COD_UNDFD_EMPRG" />
+          <ScalarProperty Name="NOM_CIDRS_EMPRG" ColumnName="NOM_CIDRS_EMPRG" />
+          <ScalarProperty Name="COD_MTDSL" ColumnName="COD_MTDSL" />
+          <ScalarProperty Name="NUM_ORGAO" ColumnName="NUM_ORGAO" />
+          <ScalarProperty Name="COD_ESTADO" ColumnName="COD_ESTADO" />
+          <ScalarProperty Name="COD_MUNICI" ColumnName="COD_MUNICI" />
+          <ScalarProperty Name="NUM_CR" ColumnName="NUM_CR" />
+          <ScalarProperty Name="COD_AGBCO" ColumnName="COD_AGBCO" />
+          <ScalarProperty Name="COD_BANCO" ColumnName="COD_BANCO" />
+          <ScalarProperty Name="NUM_FILIAL" ColumnName="NUM_FILIAL" />
+          <ScalarProperty Name="NUM_CARGO" ColumnName="NUM_CARGO" />
+          <ScalarProperty Name="COD_CEP_EMPRG" ColumnName="COD_CEP_EMPRG" />
+          <ScalarProperty Name="QTD_INSS_EMPRG" ColumnName="QTD_INSS_EMPRG" />
+          <ScalarProperty Name="NUM_SRCTP_EMPRG" ColumnName="NUM_SRCTP_EMPRG" />
+          <ScalarProperty Name="NUM_CTPRF_EMPRG" ColumnName="NUM_CTPRF_EMPRG" />
+          <ScalarProperty Name="VLR_SALAR_EMPRG" ColumnName="VLR_SALAR_EMPRG" />
+          <ScalarProperty Name="NUM_TELEF_EMPRG" ColumnName="NUM_TELEF_EMPRG" />
+          <ScalarProperty Name="NUM_RAMAL_EMPRG" ColumnName="NUM_RAMAL_EMPRG" />
+          <ScalarProperty Name="NUM_GRSAL_EMPRG" ColumnName="NUM_GRSAL_EMPRG" />
+          <ScalarProperty Name="NUM_CXPTL_EMPRG" ColumnName="NUM_CXPTL_EMPRG" />
+          <ScalarProperty Name="NUM_CTCOR_EMPRG" ColumnName="NUM_CTCOR_EMPRG" />
+          <ScalarProperty Name="COD_UFCI_EMPRG" ColumnName="COD_UFCI_EMPRG" />
+          <ScalarProperty Name="COD_OREXCI_EMPRG" ColumnName="COD_OREXCI_EMPRG" />
+          <ScalarProperty Name="NUM_CI_EMPRG" ColumnName="NUM_CI_EMPRG" />
+          <ScalarProperty Name="NUM_CPF_EMPRG" ColumnName="NUM_CPF_EMPRG" />
+          <ScalarProperty Name="NOM_PAIS_EMPRG" ColumnName="NOM_PAIS_EMPRG" />
+          <ScalarProperty Name="NOM_EMPRG" ColumnName="NOM_EMPRG" />
+          <ScalarProperty Name="NOM_BAIRRO_EMPRG" ColumnName="NOM_BAIRRO_EMPRG" />
+          <ScalarProperty Name="DCR_ENDER_EMPRG" ColumnName="DCR_ENDER_EMPRG" />
+          <ScalarProperty Name="DAT_NASCM_EMPRG" ColumnName="DAT_NASCM_EMPRG" />
+          <ScalarProperty Name="DAT_DESLG_EMPRG" ColumnName="DAT_DESLG_EMPRG" />
+          <ScalarProperty Name="DAT_ADMSS_EMPRG" ColumnName="DAT_ADMSS_EMPRG" />
+          <ScalarProperty Name="COD_SEXO_EMPRG" ColumnName="COD_SEXO_EMPRG" />
+          <ScalarProperty Name="COD_ESTCV_EMPRG" ColumnName="COD_ESTCV_EMPRG" />
+          <ScalarProperty Name="COD_DDI_EMPRG" ColumnName="COD_DDI_EMPRG" />
+          <ScalarProperty Name="QTD_MESTRB_EMPRG" ColumnName="QTD_MESTRB_EMPRG" />
+          <ScalarProperty Name="COD_DDD_EMPRG" ColumnName="COD_DDD_EMPRG" />
+          <ScalarProperty Name="COD_CTTRB_EMPRG" ColumnName="COD_CTTRB_EMPRG" />
+          <ScalarProperty Name="COD_CONFL_EMPRG" ColumnName="COD_CONFL_EMPRG" />
+          <ScalarProperty Name="NUM_MATR_PARTF" ColumnName="NUM_MATR_PARTF" />
+          <ScalarProperty Name="NOM_MAE_EMPRG" ColumnName="NOM_MAE_EMPRG" />
+          <ScalarProperty Name="NOM_PAI_EMPRG" ColumnName="NOM_PAI_EMPRG" />
+          <ScalarProperty Name="NUM_DIGVR_EMPRG" ColumnName="NUM_DIGVR_EMPRG" />
+          <ScalarProperty Name="NUM_RGTRO_EMPRG" ColumnName="NUM_RGTRO_EMPRG" />
+          <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FUN_TBL_CONTROLE_PROCESSACI">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.FUN_TBL_CONTROLE_PROCESSACI">
+        <MappingFragment StoreEntitySet="FUN_TBL_CONTROLE_PROCESSACI">
+          <ScalarProperty Name="USU_GERACAO" ColumnName="USU_GERACAO" />
+          <ScalarProperty Name="DAT_PROCESSAMENTO" ColumnName="DAT_PROCESSAMENTO" />
+          <ScalarProperty Name="DESC_PROCESSAMENTO" ColumnName="DESC_PROCESSAMENTO" />
+          <ScalarProperty Name="ID_CONTROLE" ColumnName="ID_CONTROLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRE_TBL_CARGA_PROTHEUS">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS">
+        <MappingFragment StoreEntitySet="PRE_TBL_CARGA_PROTHEUS">
+          <ScalarProperty Name="ID_PROTHEUS" ColumnName="ID_PROTHEUS" />
+          <ScalarProperty Name="COD_CARGA_TIPO" ColumnName="COD_CARGA_TIPO" />
+          <ScalarProperty Name="COD_ASSOCIADO" ColumnName="COD_ASSOCIADO" />
+          <ScalarProperty Name="DTH_DOCUMENTO_FINAL" ColumnName="DTH_DOCUMENTO_FINAL" />
+          <ScalarProperty Name="DTH_DOCUMENTO_INICIAL" ColumnName="DTH_DOCUMENTO_INICIAL" />
+          <ScalarProperty Name="NUM_LOTE" ColumnName="NUM_LOTE" />
+          <ScalarProperty Name="COD_LOTE" ColumnName="COD_LOTE" />
+          <ScalarProperty Name="DTH_COMPLEMENTAR" ColumnName="DTH_COMPLEMENTAR" />
+          <ScalarProperty Name="DTH_SUPLEMENTAR" ColumnName="DTH_SUPLEMENTAR" />
+          <ScalarProperty Name="DTH_FIM_PROCESSO" ColumnName="DTH_FIM_PROCESSO" />
+          <ScalarProperty Name="DTH_INCIO_PROCESSO" ColumnName="DTH_INCIO_PROCESSO" />
+          <ScalarProperty Name="DTH_INCLUSAO" ColumnName="DTH_INCLUSAO" />
+          <ScalarProperty Name="LOG_INCLUSAO" ColumnName="LOG_INCLUSAO" />
+          <ScalarProperty Name="DCR_PARAMETROS" ColumnName="DCR_PARAMETROS" />
+          <ScalarProperty Name="IND_EXEC_IMEDIATA" ColumnName="IND_EXEC_IMEDIATA" />
+          <ScalarProperty Name="DTH_EXECUCAO" ColumnName="DTH_EXECUCAO" />
+          <ScalarProperty Name="COD_CARGA_STATUS" ColumnName="COD_CARGA_STATUS" />
+          <ScalarProperty Name="DTH_PAGAMENTO" ColumnName="DTH_PAGAMENTO" />
+          <ScalarProperty Name="COD_CARGA_PROTHEUS" ColumnName="COD_CARGA_PROTHEUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_VAL_RECURSO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_VAL_RECURSO">
+        <MappingFragment StoreEntitySet="TB_VAL_RECURSO">
+          <ScalarProperty Name="RCOSEQ" ColumnName="RCOSEQ" />
+          <ScalarProperty Name="PCT_BANDA_APLIC" ColumnName="PCT_BANDA_APLIC" />
+          <ScalarProperty Name="VAL_UCO" ColumnName="VAL_UCO" />
+          <ScalarProperty Name="VAL_PESO" ColumnName="VAL_PESO" />
+          <ScalarProperty Name="PRECODPORTEREC" ColumnName="PRECODPORTEREC" />
+          <ScalarProperty Name="QTD_UCO" ColumnName="QTD_UCO" />
+          <ScalarProperty Name="RCOCODPROCEDIMENTO" ColumnName="RCOCODPROCEDIMENTO" />
+          <ScalarProperty Name="QTD_HONORARIO" ColumnName="QTD_HONORARIO" />
+          <ScalarProperty Name="NUM_INCIDENCIAS" ColumnName="NUM_INCIDENCIAS" />
+          <ScalarProperty Name="QTD_AUXILIARES" ColumnName="QTD_AUXILIARES" />
+          <ScalarProperty Name="QTD_FILME" ColumnName="QTD_FILME" />
+          <ScalarProperty Name="VAL_RECURSO" ColumnName="VAL_RECURSO" />
+          <ScalarProperty Name="COD_PORTE_ANEST" ColumnName="COD_PORTE_ANEST" />
+          <ScalarProperty Name="DAT_VAL_RECURSO" ColumnName="DAT_VAL_RECURSO" />
+          <ScalarProperty Name="COD_RECURSO" ColumnName="COD_RECURSO" />
+          <ScalarProperty Name="COD_TAB_RECURSO" ColumnName="COD_TAB_RECURSO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FUN_TBL_MEMORIAL_UNIMED">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.FUN_TBL_MEMORIAL_UNIMED">
+        <MappingFragment StoreEntitySet="FUN_TBL_MEMORIAL_UNIMED">
+          <ScalarProperty Name="COD_PLANO_CESP" ColumnName="COD_PLANO_CESP" />
+          <ScalarProperty Name="COD_UNIMED" ColumnName="COD_UNIMED" />
+          <ScalarProperty Name="MOVIMENTACAO" ColumnName="MOVIMENTACAO" />
+          <ScalarProperty Name="NOM_PARTICIP" ColumnName="NOM_PARTICIP" />
+          <ScalarProperty Name="COD_IDENTIFICACAO" ColumnName="COD_IDENTIFICACAO" />
+          <ScalarProperty Name="SUB_MATRICULA" ColumnName="SUB_MATRICULA" />
+          <ScalarProperty Name="NUM_MATRICULA" ColumnName="NUM_MATRICULA" />
+          <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+          <ScalarProperty Name="DAT_GERACAO" ColumnName="DAT_GERACAO" />
+          <ScalarProperty Name="ID_REG" ColumnName="ID_REG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TBL_VALORCARTUNIMED">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_VALORCARTUNIMED">
+        <MappingFragment StoreEntitySet="SAU_TBL_VALORCARTUNIMED">
+          <ScalarProperty Name="USU_INCLUSAO" ColumnName="USU_INCLUSAO" />
+          <ScalarProperty Name="DAT_FIM_VIGENCIA" ColumnName="DAT_FIM_VIGENCIA" />
+          <ScalarProperty Name="DAT_INICIO_VIGENCIA" ColumnName="DAT_INICIO_VIGENCIA" />
+          <ScalarProperty Name="RENOVACAO" ColumnName="RENOVACAO" />
+          <ScalarProperty Name="SEGUNDA_VIA" ColumnName="SEGUNDA_VIA" />
+          <ScalarProperty Name="INCLUSAO" ColumnName="INCLUSAO" />
+          <ScalarProperty Name="DES_PLANO" ColumnName="DES_PLANO" />
+          <ScalarProperty Name="COD_PLANO" ColumnName="COD_PLANO" />
+          <ScalarProperty Name="ID_REG" ColumnName="ID_REG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FUN_TBL_MEMORIAL_UNIMED_HIST">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.FUN_TBL_MEMORIAL_UNIMED_HIST">
+        <MappingFragment StoreEntitySet="FUN_TBL_MEMORIAL_UNIMED_HIST">
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="DAT_PAGAMENTO" ColumnName="DAT_PAGAMENTO" />
+          <ScalarProperty Name="COD_PLANO_CESP" ColumnName="COD_PLANO_CESP" />
+          <ScalarProperty Name="COD_UNIMED" ColumnName="COD_UNIMED" />
+          <ScalarProperty Name="MOVIMENTACAO" ColumnName="MOVIMENTACAO" />
+          <ScalarProperty Name="NOM_PARTICIP" ColumnName="NOM_PARTICIP" />
+          <ScalarProperty Name="COD_IDENTIFICACAO" ColumnName="COD_IDENTIFICACAO" />
+          <ScalarProperty Name="SUB_MATRICULA" ColumnName="SUB_MATRICULA" />
+          <ScalarProperty Name="NUM_MATRICULA" ColumnName="NUM_MATRICULA" />
+          <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+          <ScalarProperty Name="DAT_GERACAO" ColumnName="DAT_GERACAO" />
+          <ScalarProperty Name="ID_REG_HIST" ColumnName="ID_REG_HIST" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REEMB_FRMCIA">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.REEMB_FRMCIA">
+        <MappingFragment StoreEntitySet="REEMB_FRMCIA">
+          <ScalarProperty Name="ID_REG" ColumnName="ID_REG" />
+          <ScalarProperty Name="DATA_CREDITO" ColumnName="DATA_CREDITO" />
+          <ScalarProperty Name="MRC_LANC_MEDCTR" ColumnName="MRC_LANC_MEDCTR" />
+          <ScalarProperty Name="DATA_ARQUIVO" ColumnName="DATA_ARQUIVO" />
+          <ScalarProperty Name="PROTOCOLO" ColumnName="PROTOCOLO" />
+          <ScalarProperty Name="VLR_REEMB" ColumnName="VLR_REEMB" />
+          <ScalarProperty Name="VLR_MEDCTO" ColumnName="VLR_MEDCTO" />
+          <ScalarProperty Name="NOME" ColumnName="NOME" />
+          <ScalarProperty Name="DIG_MATR_SUB" ColumnName="DIG_MATR_SUB" />
+          <ScalarProperty Name="NUM_MATR_SUB" ColumnName="NUM_MATR_SUB" />
+          <ScalarProperty Name="DIG" ColumnName="DIG" />
+          <ScalarProperty Name="NUM_RGTRO_EMPRG" ColumnName="NUM_RGTRO_EMPRG" />
+          <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+          <ScalarProperty Name="HDRCODPGR" ColumnName="HDRCODPGR" />
+          <ScalarProperty Name="HDRCODETC" ColumnName="HDRCODETC" />
+          <ScalarProperty Name="HDRCODUSU" ColumnName="HDRCODUSU" />
+          <ScalarProperty Name="HDRDATHOR" ColumnName="HDRDATHOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAD_TBL_CONTROLEUNIMED">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.CAD_TBL_CONTROLEUNIMED">
+        <MappingFragment StoreEntitySet="CAD_TBL_CONTROLEUNIMED">
+          <ScalarProperty Name="NUM_CI_EMPRG" ColumnName="NUM_CI_EMPRG" />
+          <ScalarProperty Name="DAT_FIN_PERIDO" ColumnName="DAT_FIN_PERIDO" />
+          <ScalarProperty Name="DAT_INI_PERIODO" ColumnName="DAT_INI_PERIODO" />
+          <ScalarProperty Name="COD_UNDFD_EMPRG" ColumnName="COD_UNDFD_EMPRG" />
+          <ScalarProperty Name="DCR_GRADPC" ColumnName="DCR_GRADPC" />
+          <ScalarProperty Name="DCR_ESTCV" ColumnName="DCR_ESTCV" />
+          <ScalarProperty Name="TITULAR" ColumnName="TITULAR" />
+          <ScalarProperty Name="NOM_MAE_EMPRG" ColumnName="NOM_MAE_EMPRG" />
+          <ScalarProperty Name="NUMERO_VIA" ColumnName="NUMERO_VIA" />
+          <ScalarProperty Name="NUMERO_UNIMED" ColumnName="NUMERO_UNIMED" />
+          <ScalarProperty Name="COBRANCA_MEMORIAL" ColumnName="COBRANCA_MEMORIAL" />
+          <ScalarProperty Name="DAT_CANCELAMENTO" ColumnName="DAT_CANCELAMENTO" />
+          <ScalarProperty Name="SUB_MATRICULA" ColumnName="SUB_MATRICULA" />
+          <ScalarProperty Name="NUM_MATRICULA" ColumnName="NUM_MATRICULA" />
+          <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+          <ScalarProperty Name="COD_PLANO_CESP" ColumnName="COD_PLANO_CESP" />
+          <ScalarProperty Name="DAT_ADESAO" ColumnName="DAT_ADESAO" />
+          <ScalarProperty Name="COD_UNIMED" ColumnName="COD_UNIMED" />
+          <ScalarProperty Name="DT_HIST" ColumnName="DT_HIST" />
+          <ScalarProperty Name="USU_GERACAO" ColumnName="USU_GERACAO" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="ENVIO_UNIMED" ColumnName="ENVIO_UNIMED" />
+          <ScalarProperty Name="DES_PLANO" ColumnName="DES_PLANO" />
+          <ScalarProperty Name="ACOMODACAO" ColumnName="ACOMODACAO" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="COD_SEXO" ColumnName="COD_SEXO" />
+          <ScalarProperty Name="DAT_NASCIMENTO" ColumnName="DAT_NASCIMENTO" />
+          <ScalarProperty Name="NOM_PARTICIP" ColumnName="NOM_PARTICIP" />
+          <ScalarProperty Name="COD_IDENTIFICACAO" ColumnName="COD_IDENTIFICACAO" />
+          <ScalarProperty Name="DAT_GERACAO" ColumnName="DAT_GERACAO" />
+          <ScalarProperty Name="COD_CONTROLEUNIMED" ColumnName="COD_CONTROLEUNIMED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_TAB_RECURSO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TAB_RECURSO">
+        <MappingFragment StoreEntitySet="TB_TAB_RECURSO">
+          <ScalarProperty Name="VLR_FILME_RADIO" ColumnName="VLR_FILME_RADIO" />
+          <ScalarProperty Name="DAT_ULT_PROCESSO" ColumnName="DAT_ULT_PROCESSO" />
+          <ScalarProperty Name="TPACOD" ColumnName="TPACOD" />
+          <ScalarProperty Name="PCT_BANDA_APLIC" ColumnName="PCT_BANDA_APLIC" />
+          <ScalarProperty Name="VAL_UCO" ColumnName="VAL_UCO" />
+          <ScalarProperty Name="IDC_CBHPM" ColumnName="IDC_CBHPM" />
+          <ScalarProperty Name="TIP_RECURSO" ColumnName="TIP_RECURSO" />
+          <ScalarProperty Name="DAT_IMPLANTACAO" ColumnName="DAT_IMPLANTACAO" />
+          <ScalarProperty Name="DES_TAB_RECURSO" ColumnName="DES_TAB_RECURSO" />
+          <ScalarProperty Name="COD_UM" ColumnName="COD_UM" />
+          <ScalarProperty Name="COD_TAB_RECURSO" ColumnName="COD_TAB_RECURSO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_CARTEIRINHA_CARENCIA">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TAB_CARTEIRINHA_CARENCIA">
+        <MappingFragment StoreEntitySet="TAB_CARTEIRINHA_CARENCIA">
+          <ScalarProperty Name="NUM_NACIONAL_SAUDE" ColumnName="NUM_NACIONAL_SAUDE" />
+          <ScalarProperty Name="NUM_REGISTRO_ANS" ColumnName="NUM_REGISTRO_ANS" />
+          <ScalarProperty Name="NUM_SEQ_PARTICIP" ColumnName="NUM_SEQ_PARTICIP" />
+          <ScalarProperty Name="LOCAL_ENTREGA_CI" ColumnName="LOCAL_ENTREGA_CI" />
+          <ScalarProperty Name="IDC_2VIA_CI" ColumnName="IDC_2VIA_CI" />
+          <ScalarProperty Name="DT_GRAFICA" ColumnName="DT_GRAFICA" />
+          <ScalarProperty Name="TIPO_CARTAO" ColumnName="TIPO_CARTAO" />
+          <ScalarProperty Name="DT_SOLIC_CI" ColumnName="DT_SOLIC_CI" />
+          <ScalarProperty Name="SEQUENCIAL" ColumnName="SEQUENCIAL" />
+          <ScalarProperty Name="CEP_CID_CORR" ColumnName="CEP_CID_CORR" />
+          <ScalarProperty Name="BAIRRO_CORR" ColumnName="BAIRRO_CORR" />
+          <ScalarProperty Name="END_CORR" ColumnName="END_CORR" />
+          <ScalarProperty Name="DESC_SIGLA_DEPART" ColumnName="DESC_SIGLA_DEPART" />
+          <ScalarProperty Name="SIGLA_DEPART" ColumnName="SIGLA_DEPART" />
+          <ScalarProperty Name="NOM_TIT_REP" ColumnName="NOM_TIT_REP" />
+          <ScalarProperty Name="MAT" ColumnName="MAT" />
+          <ScalarProperty Name="PONTO" ColumnName="PONTO" />
+          <ScalarProperty Name="EMP" ColumnName="EMP" />
+          <ScalarProperty Name="DT_CARENCIA_PARTO_IA" ColumnName="DT_CARENCIA_PARTO_IA" />
+          <ScalarProperty Name="MSG_CARENCIA_PARTO_IA" ColumnName="MSG_CARENCIA_PARTO_IA" />
+          <ScalarProperty Name="DT_CARENCIA_PARTO" ColumnName="DT_CARENCIA_PARTO" />
+          <ScalarProperty Name="MSG_CARENCIA_PARTO" ColumnName="MSG_CARENCIA_PARTO" />
+          <ScalarProperty Name="DT_CARENCIA_IQ2L" ColumnName="DT_CARENCIA_IQ2L" />
+          <ScalarProperty Name="MSG_CARENCIA_IQ2L" ColumnName="MSG_CARENCIA_IQ2L" />
+          <ScalarProperty Name="DT_CARENCIA_IA" ColumnName="DT_CARENCIA_IA" />
+          <ScalarProperty Name="MSG_CARENCIA_IA" ColumnName="MSG_CARENCIA_IA" />
+          <ScalarProperty Name="DT_CARENCIA_UCETI" ColumnName="DT_CARENCIA_UCETI" />
+          <ScalarProperty Name="MSG_CARENCIA_UCETI" ColumnName="MSG_CARENCIA_UCETI" />
+          <ScalarProperty Name="MSG_CARENCIA" ColumnName="MSG_CARENCIA" />
+          <ScalarProperty Name="MSG_5" ColumnName="MSG_5" />
+          <ScalarProperty Name="MSG_4" ColumnName="MSG_4" />
+          <ScalarProperty Name="MSG_3" ColumnName="MSG_3" />
+          <ScalarProperty Name="MSG_2" ColumnName="MSG_2" />
+          <ScalarProperty Name="MSG_1" ColumnName="MSG_1" />
+          <ScalarProperty Name="DT_LIMIT_CATEG" ColumnName="DT_LIMIT_CATEG" />
+          <ScalarProperty Name="TEXTO_FIXO" ColumnName="TEXTO_FIXO" />
+          <ScalarProperty Name="NOM_RED" ColumnName="NOM_RED" />
+          <ScalarProperty Name="DESC_CART1" ColumnName="DESC_CART1" />
+          <ScalarProperty Name="DESC_CART_EMP" ColumnName="DESC_CART_EMP" />
+          <ScalarProperty Name="DESC_CART" ColumnName="DESC_CART" />
+          <ScalarProperty Name="MATRICULA" ColumnName="MATRICULA" />
+          <ScalarProperty Name="EMPRESA" ColumnName="EMPRESA" />
+          <ScalarProperty Name="COD_USU_SUBDC" ColumnName="COD_USU_SUBDC" />
+          <ScalarProperty Name="COD_USU_SUB" ColumnName="COD_USU_SUB" />
+          <ScalarProperty Name="COD_USU_MATDC" ColumnName="COD_USU_MATDC" />
+          <ScalarProperty Name="COD_USU_MAT" ColumnName="COD_USU_MAT" />
+          <ScalarProperty Name="COD_USU_EMP" ColumnName="COD_USU_EMP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TB_LOG_AND">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TB_LOG_AND">
+        <MappingFragment StoreEntitySet="SAU_TB_LOG_AND">
+          <ScalarProperty Name="COD_TAB_SERV" ColumnName="COD_TAB_SERV" />
+          <ScalarProperty Name="DAT_VIGENCIA_EXPORTADO" ColumnName="DAT_VIGENCIA_EXPORTADO" />
+          <ScalarProperty Name="VALOR_EXPORTADO" ColumnName="VALOR_EXPORTADO" />
+          <ScalarProperty Name="USU_PROCESSAMENTO" ColumnName="USU_PROCESSAMENTO" />
+          <ScalarProperty Name="DAT_PROCESSAMENTO" ColumnName="DAT_PROCESSAMENTO" />
+          <ScalarProperty Name="DESC_PROCESSAMENTO" ColumnName="DESC_PROCESSAMENTO" />
+          <ScalarProperty Name="COD_HOSP" ColumnName="COD_HOSP" />
+          <ScalarProperty Name="COD_SERV" ColumnName="COD_SERV" />
+          <ScalarProperty Name="ID_REG" ColumnName="ID_REG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CADTBLVPRVALORPORTEREC">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADTBLVPRVALORPORTEREC">
+        <MappingFragment StoreEntitySet="CADTBLVPRVALORPORTEREC">
+          <ScalarProperty Name="VPRVALPORTEREC" ColumnName="VPRVALPORTEREC" />
+          <ScalarProperty Name="VPRDATVALIDADE" ColumnName="VPRDATVALIDADE" />
+          <ScalarProperty Name="PRECODPORTEREC" ColumnName="PRECODPORTEREC" />
+          <ScalarProperty Name="HDRCODPGR" ColumnName="HDRCODPGR" />
+          <ScalarProperty Name="HDRCODETC" ColumnName="HDRCODETC" />
+          <ScalarProperty Name="HDRCODUSU" ColumnName="HDRCODUSU" />
+          <ScalarProperty Name="HDRDATHOR" ColumnName="HDRDATHOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_CLASSE_CONVENIADO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CLASSE_CONVENIADO">
+        <MappingFragment StoreEntitySet="TB_CLASSE_CONVENIADO">
+          <ScalarProperty Name="CBOSEQ" ColumnName="CBOSEQ" />
+          <ScalarProperty Name="DES_SERVICOS" ColumnName="DES_SERVICOS" />
+          <ScalarProperty Name="CSMCOD" ColumnName="CSMCOD" />
+          <ScalarProperty Name="CSFCOD" ColumnName="CSFCOD" />
+          <ScalarProperty Name="NUM_CBO" ColumnName="NUM_CBO" />
+          <ScalarProperty Name="IDC_COOPERATIVA" ColumnName="IDC_COOPERATIVA" />
+          <ScalarProperty Name="COD_RETENCAO_IR" ColumnName="COD_RETENCAO_IR" />
+          <ScalarProperty Name="TIP_PESSOA" ColumnName="TIP_PESSOA" />
+          <ScalarProperty Name="DES_CLASSE" ColumnName="DES_CLASSE" />
+          <ScalarProperty Name="COD_TIPO_CONSELHO" ColumnName="COD_TIPO_CONSELHO" />
+          <ScalarProperty Name="COD_CLASSE" ColumnName="COD_CLASSE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TBL_CARGA_PROCEDIMENTO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CARGA_PROCEDIMENTO">
+        <MappingFragment StoreEntitySet="SAU_TBL_CARGA_PROCEDIMENTO">
+          <ScalarProperty Name="OBS_ERRO" ColumnName="OBS_ERRO" />
+          <ScalarProperty Name="PRECO" ColumnName="PRECO" />
+          <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="COD_PROCEDIMENTO" ColumnName="COD_PROCEDIMENTO" />
+          <ScalarProperty Name="COD_CARGA" ColumnName="COD_CARGA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TBL_CARGA_REALIZADA">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CARGA_REALIZADA">
+        <MappingFragment StoreEntitySet="SAU_TBL_CARGA_REALIZADA">
+          <ScalarProperty Name="TOTAL_NAO_INCLUIDO" ColumnName="TOTAL_NAO_INCLUIDO" />
+          <ScalarProperty Name="TOTAL_INCLUIDO" ColumnName="TOTAL_INCLUIDO" />
+          <ScalarProperty Name="HOST_USU" ColumnName="HOST_USU" />
+          <ScalarProperty Name="NM_USU" ColumnName="NM_USU" />
+          <ScalarProperty Name="NM_ARQ_IMPORT" ColumnName="NM_ARQ_IMPORT" />
+          <ScalarProperty Name="DAT_VIG" ColumnName="DAT_VIG" />
+          <ScalarProperty Name="COD_TAB_MAT_MED" ColumnName="COD_TAB_MAT_MED" />
+          <ScalarProperty Name="COD_CONVENENTE" ColumnName="COD_CONVENENTE" />
+          <ScalarProperty Name="DAT_EXEC" ColumnName="DAT_EXEC" />
+          <ScalarProperty Name="COD_CARGA" ColumnName="COD_CARGA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAD_TBL_CONTROLEUNIMED_ETQ">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.CAD_TBL_CONTROLEUNIMED_ETQ">
+        <MappingFragment StoreEntitySet="CAD_TBL_CONTROLEUNIMED_ETQ">
+          <ScalarProperty Name="USU_GERACAO" ColumnName="USU_GERACAO" />
+          <ScalarProperty Name="COD_UNDFD_EMPRG" ColumnName="COD_UNDFD_EMPRG" />
+          <ScalarProperty Name="NOM_CIDRS_EMPRG" ColumnName="NOM_CIDRS_EMPRG" />
+          <ScalarProperty Name="COD_CEP_EMPRG" ColumnName="COD_CEP_EMPRG" />
+          <ScalarProperty Name="NOM_BAIRRO_EMPRG" ColumnName="NOM_BAIRRO_EMPRG" />
+          <ScalarProperty Name="DCR_COMPL_EMPRG" ColumnName="DCR_COMPL_EMPRG" />
+          <ScalarProperty Name="DCR_ENDER_EMPRG" ColumnName="DCR_ENDER_EMPRG" />
+          <ScalarProperty Name="TIP_MOV" ColumnName="TIP_MOV" />
+          <ScalarProperty Name="NOM_PARTICIP" ColumnName="NOM_PARTICIP" />
+          <ScalarProperty Name="NUM_MATRICULA" ColumnName="NUM_MATRICULA" />
+          <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+          <ScalarProperty Name="ID_REG" ColumnName="ID_REG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TB_SERV_X_HOSP_AND">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TB_SERV_X_HOSP_AND">
+        <MappingFragment StoreEntitySet="SAU_TB_SERV_X_HOSP_AND">
+          <ScalarProperty Name="USU_ALTERACAO" ColumnName="USU_ALTERACAO" />
+          <ScalarProperty Name="DAT_PROPOSTA" ColumnName="DAT_PROPOSTA" />
+          <ScalarProperty Name="DAT_FIM_VIGENCIA" ColumnName="DAT_FIM_VIGENCIA" />
+          <ScalarProperty Name="DAT_INI_VIGENCIA" ColumnName="DAT_INI_VIGENCIA" />
+          <ScalarProperty Name="PORC_DESC_PROPOSTO" ColumnName="PORC_DESC_PROPOSTO" />
+          <ScalarProperty Name="PORC_DESCONTO" ColumnName="PORC_DESCONTO" />
+          <ScalarProperty Name="PORC_PROPOSTA" ColumnName="PORC_PROPOSTA" />
+          <ScalarProperty Name="PORCENTAGEM" ColumnName="PORCENTAGEM" />
+          <ScalarProperty Name="VALOR_PROPOSTO" ColumnName="VALOR_PROPOSTO" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="COD_SERV" ColumnName="COD_SERV" />
+          <ScalarProperty Name="COD_HOSP" ColumnName="COD_HOSP" />
+          <ScalarProperty Name="ID_REG" ColumnName="ID_REG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TB_SERVICO_AND">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TB_SERVICO_AND">
+        <MappingFragment StoreEntitySet="SAU_TB_SERVICO_AND">
+          <ScalarProperty Name="USU_ALTERACAO" ColumnName="USU_ALTERACAO" />
+          <ScalarProperty Name="DAT_FIM_ALTERACAO" ColumnName="DAT_FIM_ALTERACAO" />
+          <ScalarProperty Name="DAT_INI_ALTERACAO" ColumnName="DAT_INI_ALTERACAO" />
+          <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="COD_SERV" ColumnName="COD_SERV" />
+          <ScalarProperty Name="ID_REG" ColumnName="ID_REG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TB_HOSP_AND">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TB_HOSP_AND">
+        <MappingFragment StoreEntitySet="SAU_TB_HOSP_AND">
+          <ScalarProperty Name="USU_ALTERACAO" ColumnName="USU_ALTERACAO" />
+          <ScalarProperty Name="DAT_FIM_VIGENCIA" ColumnName="DAT_FIM_VIGENCIA" />
+          <ScalarProperty Name="DAT_INI_VIGENCIA" ColumnName="DAT_INI_VIGENCIA" />
+          <ScalarProperty Name="OBSERVACAOCONTRATUAL" ColumnName="OBSERVACAOCONTRATUAL" />
+          <ScalarProperty Name="CONTATO" ColumnName="CONTATO" />
+          <ScalarProperty Name="REGIONAL" ColumnName="REGIONAL" />
+          <ScalarProperty Name="CIDADE" ColumnName="CIDADE" />
+          <ScalarProperty Name="CREDENCIADOR" ColumnName="CREDENCIADOR" />
+          <ScalarProperty Name="DAT_INICIO_CONTRATO" ColumnName="DAT_INICIO_CONTRATO" />
+          <ScalarProperty Name="NOME_FANTASIA" ColumnName="NOME_FANTASIA" />
+          <ScalarProperty Name="COD_HOSP" ColumnName="COD_HOSP" />
+          <ScalarProperty Name="ID_REG" ColumnName="ID_REG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TBL_CLASSE_PORT_VIG">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CLASSE_PORT_VIG">
+        <MappingFragment StoreEntitySet="SAU_TBL_CLASSE_PORT_VIG">
+          <ScalarProperty Name="DT_ATU" ColumnName="DT_ATU" />
+          <ScalarProperty Name="DT_INCLUSAO" ColumnName="DT_INCLUSAO" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="DT_FIM_ATEND" ColumnName="DT_FIM_ATEND" />
+          <ScalarProperty Name="DT_INI_ATEND" ColumnName="DT_INI_ATEND" />
+          <ScalarProperty Name="DT_VIG_PORTE" ColumnName="DT_VIG_PORTE" />
+          <ScalarProperty Name="COD_TAB_RECURSO" ColumnName="COD_TAB_RECURSO" />
+          <ScalarProperty Name="COD_CLASSE" ColumnName="COD_CLASSE" />
+          <ScalarProperty Name="NUM_SEQ" ColumnName="NUM_SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TBL_CONV_PORTE_VIG">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CONV_PORTE_VIG">
+        <MappingFragment StoreEntitySet="SAU_TBL_CONV_PORTE_VIG">
+          <ScalarProperty Name="DT_ATU" ColumnName="DT_ATU" />
+          <ScalarProperty Name="DT_INCLUSAO" ColumnName="DT_INCLUSAO" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="DT_FIM_VIG" ColumnName="DT_FIM_VIG" />
+          <ScalarProperty Name="DT_INI_VIG" ColumnName="DT_INI_VIG" />
+          <ScalarProperty Name="DT_VIG_PORTE" ColumnName="DT_VIG_PORTE" />
+          <ScalarProperty Name="COD_TAB_RECURSO" ColumnName="COD_TAB_RECURSO" />
+          <ScalarProperty Name="COD_CONVENENTE" ColumnName="COD_CONVENENTE" />
+          <ScalarProperty Name="NUM_SEQ" ColumnName="NUM_SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PARTICIP_PLANO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_PARTICIP_PLANO">
+        <MappingFragment StoreEntitySet="TB_PARTICIP_PLANO">
+          <ScalarProperty Name="HOR_CANCELA" ColumnName="HOR_CANCELA" />
+          <ScalarProperty Name="DAT_HOUR_CANCEL" ColumnName="DAT_HOUR_CANCEL" />
+          <ScalarProperty Name="DAT_PREV_TERM_SUSP" ColumnName="DAT_PREV_TERM_SUSP" />
+          <ScalarProperty Name="NUM_MES_PERIOD_PD" ColumnName="NUM_MES_PERIOD_PD" />
+          <ScalarProperty Name="IDC_REAVAL_REC_PD" ColumnName="IDC_REAVAL_REC_PD" />
+          <ScalarProperty Name="IDC_DEFIC_DEFINIT_PD" ColumnName="IDC_DEFIC_DEFINIT_PD" />
+          <ScalarProperty Name="NUM_DIA_LIQUID_POS" ColumnName="NUM_DIA_LIQUID_POS" />
+          <ScalarProperty Name="NUM_DIA_LIQUID_CONTR" ColumnName="NUM_DIA_LIQUID_CONTR" />
+          <ScalarProperty Name="TIP_FORMA_LIQUID_POS" ColumnName="TIP_FORMA_LIQUID_POS" />
+          <ScalarProperty Name="TIP_FORMA_LIQUID_CONTR" ColumnName="TIP_FORMA_LIQUID_CONTR" />
+          <ScalarProperty Name="COD_TAB_FAIXA" ColumnName="COD_TAB_FAIXA" />
+          <ScalarProperty Name="MES_REAJUSTE" ColumnName="MES_REAJUSTE" />
+          <ScalarProperty Name="IDC_DESCONTO" ColumnName="IDC_DESCONTO" />
+          <ScalarProperty Name="JUDCOD" ColumnName="JUDCOD" />
+          <ScalarProperty Name="VAL_PCT_USU" ColumnName="VAL_PCT_USU" />
+          <ScalarProperty Name="KITCOD" ColumnName="KITCOD" />
+          <ScalarProperty Name="CAMCOD" ColumnName="CAMCOD" />
+          <ScalarProperty Name="NUM_SEQ_RECEB_PARTIC" ColumnName="NUM_SEQ_RECEB_PARTIC" />
+          <ScalarProperty Name="ANO_RECEB_PARTICIP" ColumnName="ANO_RECEB_PARTICIP" />
+          <ScalarProperty Name="DAT_PARCELA_INI" ColumnName="DAT_PARCELA_INI" />
+          <ScalarProperty Name="VAL_PARCELA_INI" ColumnName="VAL_PARCELA_INI" />
+          <ScalarProperty Name="IDC_PARCELA_INI" ColumnName="IDC_PARCELA_INI" />
+          <ScalarProperty Name="DAT_INCLUSAO" ColumnName="DAT_INCLUSAO" />
+          <ScalarProperty Name="DAT_RECALCULO" ColumnName="DAT_RECALCULO" />
+          <ScalarProperty Name="DAT_VALID_CARTEIRA_ANT" ColumnName="DAT_VALID_CARTEIRA_ANT" />
+          <ScalarProperty Name="DAT_EMIS_CARTREVALID" ColumnName="DAT_EMIS_CARTREVALID" />
+          <ScalarProperty Name="TIP_CARTA" ColumnName="TIP_CARTA" />
+          <ScalarProperty Name="DAT_EMIS_CART_IDENTIF" ColumnName="DAT_EMIS_CART_IDENTIF" />
+          <ScalarProperty Name="DES_OBS_PD" ColumnName="DES_OBS_PD" />
+          <ScalarProperty Name="NOM_TEC_SAUDE_PD" ColumnName="NOM_TEC_SAUDE_PD" />
+          <ScalarProperty Name="DAT_EMISSAO_CARTA_PD" ColumnName="DAT_EMISSAO_CARTA_PD" />
+          <ScalarProperty Name="DAT_PROX_AVAL_PD" ColumnName="DAT_PROX_AVAL_PD" />
+          <ScalarProperty Name="IDC_NECESS_REAVAL_PD" ColumnName="IDC_NECESS_REAVAL_PD" />
+          <ScalarProperty Name="DAT_INI_DEFIC_PD" ColumnName="DAT_INI_DEFIC_PD" />
+          <ScalarProperty Name="COD_PD_CONVENENTE" ColumnName="COD_PD_CONVENENTE" />
+          <ScalarProperty Name="COD_CID_PD" ColumnName="COD_CID_PD" />
+          <ScalarProperty Name="COD_VERSAO_CID_PD" ColumnName="COD_VERSAO_CID_PD" />
+          <ScalarProperty Name="DAT_FIM_VALID_PD" ColumnName="DAT_FIM_VALID_PD" />
+          <ScalarProperty Name="DAT_INI_VALID_PD" ColumnName="DAT_INI_VALID_PD" />
+          <ScalarProperty Name="IDC_DEFIC_SEN_AUD_PD" ColumnName="IDC_DEFIC_SEN_AUD_PD" />
+          <ScalarProperty Name="IDC_DEFIC_SEN_VIS_PD" ColumnName="IDC_DEFIC_SEN_VIS_PD" />
+          <ScalarProperty Name="IDC_DEFIC_MENT_PD" ColumnName="IDC_DEFIC_MENT_PD" />
+          <ScalarProperty Name="IDC_DEFIC_FIS_PD" ColumnName="IDC_DEFIC_FIS_PD" />
+          <ScalarProperty Name="SIT_USUAR_PD" ColumnName="SIT_USUAR_PD" />
+          <ScalarProperty Name="DAT_INC_PD" ColumnName="DAT_INC_PD" />
+          <ScalarProperty Name="DAT_ALTERACAO" ColumnName="DAT_ALTERACAO" />
+          <ScalarProperty Name="IDC_ACAO_JUDICIAL" ColumnName="IDC_ACAO_JUDICIAL" />
+          <ScalarProperty Name="DAT_VALID_CARTEIRA" ColumnName="DAT_VALID_CARTEIRA" />
+          <ScalarProperty Name="NUM_MATRICULA_PLANO" ColumnName="NUM_MATRICULA_PLANO" />
+          <ScalarProperty Name="DAT_CONTRIBUICAO" ColumnName="DAT_CONTRIBUICAO" />
+          <ScalarProperty Name="DAT_DOCUMENTO" ColumnName="DAT_DOCUMENTO" />
+          <ScalarProperty Name="IDC_BOLETA_INDIVIDUAL" ColumnName="IDC_BOLETA_INDIVIDUAL" />
+          <ScalarProperty Name="DES_OBSERVACAO" ColumnName="DES_OBSERVACAO" />
+          <ScalarProperty Name="NUM_SUB_MATRIC" ColumnName="NUM_SUB_MATRIC" />
+          <ScalarProperty Name="NUM_MATRICULA" ColumnName="NUM_MATRICULA" />
+          <ScalarProperty Name="COD_EMPRS" ColumnName="COD_EMPRS" />
+          <ScalarProperty Name="DAT_SOLIC_ADESAO" ColumnName="DAT_SOLIC_ADESAO" />
+          <ScalarProperty Name="DAT_LIMIT_CATEG" ColumnName="DAT_LIMIT_CATEG" />
+          <ScalarProperty Name="DAT_CANCELAMENTO" ColumnName="DAT_CANCELAMENTO" />
+          <ScalarProperty Name="SIT_PARTIC_PLANO" ColumnName="SIT_PARTIC_PLANO" />
+          <ScalarProperty Name="COD_CATEGORIA" ColumnName="COD_CATEGORIA" />
+          <ScalarProperty Name="NUM_SEQ_CONTRATO_ANTERIOR" ColumnName="NUM_SEQ_CONTRATO_ANTERIOR" />
+          <ScalarProperty Name="COD_PLANO_ANTERIOR" ColumnName="COD_PLANO_ANTERIOR" />
+          <ScalarProperty Name="DAT_ADESAO" ColumnName="DAT_ADESAO" />
+          <ScalarProperty Name="NUM_SEQ_PARTICIP" ColumnName="NUM_SEQ_PARTICIP" />
+          <ScalarProperty Name="NUM_SEQ_CONTRATO" ColumnName="NUM_SEQ_CONTRATO" />
+          <ScalarProperty Name="COD_PLANO" ColumnName="COD_PLANO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PLANO">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_PLANO">
+        <MappingFragment StoreEntitySet="TB_PLANO">
+          <ScalarProperty Name="DAT_FIM_PLANO" ColumnName="DAT_FIM_PLANO" />
+          <ScalarProperty Name="DAT_INI_PLANO" ColumnName="DAT_INI_PLANO" />
+          <ScalarProperty Name="IDC_CANC_USU_LIM" ColumnName="IDC_CANC_USU_LIM" />
+          <ScalarProperty Name="NUM_PRIORIDADE" ColumnName="NUM_PRIORIDADE" />
+          <ScalarProperty Name="IDC_PLANO_LEI9656" ColumnName="IDC_PLANO_LEI9656" />
+          <ScalarProperty Name="IDC_EXISTE_EXC_COBERTURA" ColumnName="IDC_EXISTE_EXC_COBERTURA" />
+          <ScalarProperty Name="IDC_EXISTE_PARTICIP_FRANQUIA" ColumnName="IDC_EXISTE_PARTICIP_FRANQUIA" />
+          <ScalarProperty Name="COD_CLASSE" ColumnName="COD_CLASSE" />
+          <ScalarProperty Name="COD_ABRANG_GEO_PLANO_ANS" ColumnName="COD_ABRANG_GEO_PLANO_ANS" />
+          <ScalarProperty Name="COD_SEG_ASSIST_PLANO_ANS" ColumnName="COD_SEG_ASSIST_PLANO_ANS" />
+          <ScalarProperty Name="IDC_TIPO_OBS" ColumnName="IDC_TIPO_OBS" />
+          <ScalarProperty Name="IDC_TIPO_ODO" ColumnName="IDC_TIPO_ODO" />
+          <ScalarProperty Name="IDC_TIPO_AMB" ColumnName="IDC_TIPO_AMB" />
+          <ScalarProperty Name="IDC_TIPO_HOSP" ColumnName="IDC_TIPO_HOSP" />
+          <ScalarProperty Name="COD_PROGRAMA" ColumnName="COD_PROGRAMA" />
+          <ScalarProperty Name="DAT_INICIO" ColumnName="DAT_INICIO" />
+          <ScalarProperty Name="DES_ABREVIADA" ColumnName="DES_ABREVIADA" />
+          <ScalarProperty Name="NUM_REGISTRO_PLANO" ColumnName="NUM_REGISTRO_PLANO" />
+          <ScalarProperty Name="DES_OBSERVACAO" ColumnName="DES_OBSERVACAO" />
+          <ScalarProperty Name="DES_PLANO" ColumnName="DES_PLANO" />
+          <ScalarProperty Name="COD_TIPO_ACOMOD" ColumnName="COD_TIPO_ACOMOD" />
+          <ScalarProperty Name="COD_MOD_PLANO" ColumnName="COD_MOD_PLANO" />
+          <ScalarProperty Name="COD_PLANO" ColumnName="COD_PLANO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAU_TBL_CARGA_TEMP">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CARGA_TEMP">
+        <MappingFragment StoreEntitySet="SAU_TBL_CARGA_TEMP">
+          <ScalarProperty Name="PRECO" ColumnName="PRECO" />
+          <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="COD_PROCEDIMENTO" ColumnName="COD_PROCEDIMENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPP_TB_INADIPLENTES">
+      <EntityTypeMapping TypeName="FUNCESP.Integracao.Saude.Aplicacao.DAL.OPP_TB_INADIPLENTES">
+        <MappingFragment StoreEntitySet="OPP_TB_INADIPLENTES">
+          <ScalarProperty Name="GERA_CARTA_DIGNA" ColumnName="GERA_CARTA_DIGNA" />
+          <ScalarProperty Name="GERA_COBRANCA_EJ" ColumnName="GERA_COBRANCA_EJ" />
+          <ScalarProperty Name="GERA_CARTA_AVISO" ColumnName="GERA_CARTA_AVISO" />
+          <ScalarProperty Name="ENDERECO_REPRESENTATE" ColumnName="ENDERECO_REPRESENTATE" />
+          <ScalarProperty Name="TITULAR_ATIVO" ColumnName="TITULAR_ATIVO" />
+          <ScalarProperty Name="TITULA_ATIVO" ColumnName="TITULA_ATIVO" />
+          <ScalarProperty Name="TITULAR" ColumnName="TITULAR" />
+          <ScalarProperty Name="NUM_IDNTF_RPTANT" ColumnName="NUM_IDNTF_RPTANT" />
+          <ScalarProperty Name="FLAG_PAGO" ColumnName="FLAG_PAGO" />
+          <ScalarProperty Name="DEPENDENTES" ColumnName="DEPENDENTES" />
+          <ScalarProperty Name="DAT_COMPETENCIA" ColumnName="DAT_COMPETENCIA" />
+          <ScalarProperty Name="ENDEREÇO" ColumnName="ENDEREÇO" />
+          <ScalarProperty Name="VAL_TOTAL" ColumnName="VAL_TOTAL" />
+          <ScalarProperty Name="VENCIMENTO" ColumnName="VENCIMENTO" />
+          <ScalarProperty Name="NUM_NOSSO_NUMERO" ColumnName="NUM_NOSSO_NUMERO" />
+          <ScalarProperty Name="NOME" ColumnName="NOME" />
+          <ScalarProperty Name="REGISTRO" ColumnName="REGISTRO" />
+          <ScalarProperty Name="EMPRESA" ColumnName="EMPRESA" />
+          <ScalarProperty Name="LOTE" ColumnName="LOTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

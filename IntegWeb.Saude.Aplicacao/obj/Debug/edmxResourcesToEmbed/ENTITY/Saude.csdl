@@ -1,0 +1,2029 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FUNCESP.Integracao.Saude.Aplicacao.DAL" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SAUDE_EntityConn" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="TB_CENTRO_CUSTO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CENTRO_CUSTO" />
+    <EntitySet Name="SAU_VW_CONSULTA_USUARIO_SUS" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_VW_CONSULTA_USUARIO_SUS" />
+    <EntitySet Name="SAU_TBL_CREDITO_RMB" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CREDITO_RMB" />
+    <EntitySet Name="SAU_TBL_EXT_UTIL_DADGER" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_EXT_UTIL_DADGER" />
+    <EntitySet Name="TB_CONVENENTE" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CONVENENTE" />
+    <EntitySet Name="TB_END_CONVEN" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_END_CONVEN" />
+    <AssociationSet Name="CF_END_CONVEN_001" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_END_CONVEN_001">
+      <End Role="TB_CONVENENTE" EntitySet="TB_CONVENENTE" />
+      <End Role="TB_END_CONVEN" EntitySet="TB_END_CONVEN" />
+    </AssociationSet>
+    <EntitySet Name="SAU_TBL_IMPUGNACAOSUS" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_IMPUGNACAOSUS" />
+    <EntitySet Name="SAU_TBL_QUALISIGN" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_QUALISIGN" />
+    <EntitySet Name="SAU_TBL_QUALISIGN_DOC" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_QUALISIGN_DOC" />
+    <AssociationSet Name="FK_SAU_TBL_QUALISIGN_DOC" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_SAU_TBL_QUALISIGN_DOC">
+      <End Role="SAU_TBL_QUALISIGN" EntitySet="SAU_TBL_QUALISIGN" />
+      <End Role="SAU_TBL_QUALISIGN_DOC" EntitySet="SAU_TBL_QUALISIGN_DOC" />
+    </AssociationSet>
+    <EntitySet Name="EMPRESA" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.EMPRESA" />
+    <EntitySet Name="CADTBLSMO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADTBLSMO" />
+    <EntitySet Name="FATTBLRSP" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.FATTBLRSP" />
+    <EntitySet Name="TB_COND_CONTRAT" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_COND_CONTRAT" />
+    <EntitySet Name="TB_TIPO_COND_CONTRAT" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TIPO_COND_CONTRAT" />
+    <EntitySet Name="TB_EQUIP_SIMPRO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_EQUIP_SIMPRO" />
+    <AssociationSet Name="FATCFKRSP002" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.FATCFKRSP002">
+      <End Role="TB_COND_CONTRAT" EntitySet="TB_COND_CONTRAT" />
+      <End Role="FATTBLRSP" EntitySet="FATTBLRSP" />
+    </AssociationSet>
+    <AssociationSet Name="CF_COND_CONTRAT_010" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_010">
+      <End Role="TB_TIPO_COND_CONTRAT" EntitySet="TB_TIPO_COND_CONTRAT" />
+      <End Role="TB_COND_CONTRAT" EntitySet="TB_COND_CONTRAT" />
+    </AssociationSet>
+    <EntitySet Name="TB_TIPO_COND_CONV" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TIPO_COND_CONV" />
+    <AssociationSet Name="CF_TIPO_COND_CONV_001" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_TIPO_COND_CONV_001">
+      <End Role="TB_CONVENENTE" EntitySet="TB_CONVENENTE" />
+      <End Role="TB_TIPO_COND_CONV" EntitySet="TB_TIPO_COND_CONV" />
+    </AssociationSet>
+    <AssociationSet Name="CF_TIPO_COND_CONV_002" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_TIPO_COND_CONV_002">
+      <End Role="TB_TIPO_COND_CONTRAT" EntitySet="TB_TIPO_COND_CONTRAT" />
+      <End Role="TB_TIPO_COND_CONV" EntitySet="TB_TIPO_COND_CONV" />
+    </AssociationSet>
+    <EntitySet Name="CADTBLRCORECURSOCODIGO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADTBLRCORECURSOCODIGO" />
+    <AssociationSet Name="CADCFKRCO002" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADCFKRCO002">
+      <End Role="TB_CONVENENTE" EntitySet="TB_CONVENENTE" />
+      <End Role="CADTBLRCORECURSOCODIGO" EntitySet="CADTBLRCORECURSOCODIGO" />
+    </AssociationSet>
+    <EntitySet Name="CAD_TBL_UNIMEDARQUIVO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.CAD_TBL_UNIMEDARQUIVO" />
+    <EntitySet Name="SAU_TBL_EXT_UTIL_DADGER_LOG" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_EXT_UTIL_DADGER_LOG" />
+    <EntitySet Name="TB_RECURSO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_RECURSO" />
+    <AssociationSet Name="CADCFKRCORECURSO" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADCFKRCORECURSO">
+      <End Role="TB_RECURSO" EntitySet="TB_RECURSO" />
+      <End Role="CADTBLRCORECURSOCODIGO" EntitySet="CADTBLRCORECURSOCODIGO" />
+    </AssociationSet>
+    <EntitySet Name="SAU_TBL_QTDE_MATMED" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_QTDE_MATMED" />
+    <AssociationSet Name="SAU_FRK_QTDE_MATMED_RECURSO" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_FRK_QTDE_MATMED_RECURSO">
+      <End Role="TB_RECURSO" EntitySet="TB_RECURSO" />
+      <End Role="SAU_TBL_QTDE_MATMED" EntitySet="SAU_TBL_QTDE_MATMED" />
+    </AssociationSet>
+    <EntitySet Name="FC_SAU_TBL_RO_GERACAO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.FC_SAU_TBL_RO_GERACAO" />
+    <EntitySet Name="FC_SAU_TBL_RO_GERACAO_STATUS" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.FC_SAU_TBL_RO_GERACAO_STATUS" />
+    <AssociationSet Name="SAU_FRK_RO_STATUS_RO_GERACAO" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_FRK_RO_STATUS_RO_GERACAO">
+      <End Role="FC_SAU_TBL_RO_GERACAO" EntitySet="FC_SAU_TBL_RO_GERACAO" />
+      <End Role="FC_SAU_TBL_RO_GERACAO_STATUS" EntitySet="FC_SAU_TBL_RO_GERACAO_STATUS" />
+    </AssociationSet>
+    <EntitySet Name="PRE_TBL_CARGA_PROTHEUS_LOG" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS_LOG" />
+    <EntitySet Name="PRE_TBL_CARGA_PROTHEUS_STATUS" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS_STATUS" />
+    <EntitySet Name="PRE_TBL_CARGA_PROTHEUS_TIPO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS_TIPO" />
+    <EntitySet Name="SAU_TB_LOG_AND" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TB_LOG_AND" />
+    <EntitySet Name="EMPREGADO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.EMPREGADO" />
+    <AssociationSet Name="CF_EMPREGADO_003" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_EMPREGADO_003">
+      <End Role="EMPREGADO" EntitySet="EMPREGADO" />
+      <End Role="EMPREGADO1" EntitySet="EMPREGADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPRS_EMPRG" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_EMPRS_EMPRG">
+      <End Role="EMPRESA" EntitySet="EMPRESA" />
+      <End Role="EMPREGADO" EntitySet="EMPREGADO" />
+    </AssociationSet>
+    <EntitySet Name="FUN_TBL_CONTROLE_PROCESSACI" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.FUN_TBL_CONTROLE_PROCESSACI" />
+    <EntitySet Name="PRE_TBL_CARGA_PROTHEUS" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS" />
+    <AssociationSet Name="FK_PRE_TBL_CARGA_PROTHEUS_STAT" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_PRE_TBL_CARGA_PROTHEUS_STAT">
+      <End Role="PRE_TBL_CARGA_PROTHEUS_STATUS" EntitySet="PRE_TBL_CARGA_PROTHEUS_STATUS" />
+      <End Role="PRE_TBL_CARGA_PROTHEUS" EntitySet="PRE_TBL_CARGA_PROTHEUS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRE_TBL_CARGA_PROTHEUS_TIPO" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_PRE_TBL_CARGA_PROTHEUS_TIPO">
+      <End Role="PRE_TBL_CARGA_PROTHEUS_TIPO" EntitySet="PRE_TBL_CARGA_PROTHEUS_TIPO" />
+      <End Role="PRE_TBL_CARGA_PROTHEUS" EntitySet="PRE_TBL_CARGA_PROTHEUS" />
+    </AssociationSet>
+    <EntitySet Name="TB_VAL_RECURSO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_VAL_RECURSO" />
+    <AssociationSet Name="CF_VAL_RECURSO_007" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_VAL_RECURSO_007">
+      <End Role="CADTBLRCORECURSOCODIGO" EntitySet="CADTBLRCORECURSOCODIGO" />
+      <End Role="TB_VAL_RECURSO" EntitySet="TB_VAL_RECURSO" />
+    </AssociationSet>
+    <AssociationSet Name="CF_VAL_RECURSO_005" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_VAL_RECURSO_005">
+      <End Role="TB_RECURSO" EntitySet="TB_RECURSO" />
+      <End Role="TB_VAL_RECURSO" EntitySet="TB_VAL_RECURSO" />
+    </AssociationSet>
+    <EntitySet Name="FUN_TBL_MEMORIAL_UNIMED" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.FUN_TBL_MEMORIAL_UNIMED" />
+    <EntitySet Name="SAU_TBL_VALORCARTUNIMED" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_VALORCARTUNIMED" />
+    <EntitySet Name="FUN_TBL_MEMORIAL_UNIMED_HIST" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.FUN_TBL_MEMORIAL_UNIMED_HIST" />
+    <EntitySet Name="REEMB_FRMCIA" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.REEMB_FRMCIA" />
+    <EntitySet Name="CAD_TBL_CONTROLEUNIMED" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.CAD_TBL_CONTROLEUNIMED" />
+    <EntitySet Name="TB_TAB_RECURSO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TAB_RECURSO" />
+    <AssociationSet Name="CF_COND_CONTRAT_001" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_001">
+      <End Role="TB_TAB_RECURSO" EntitySet="TB_TAB_RECURSO" />
+      <End Role="TB_COND_CONTRAT" EntitySet="TB_COND_CONTRAT" />
+    </AssociationSet>
+    <AssociationSet Name="CF_COND_CONTRAT_003" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_003">
+      <End Role="TB_TAB_RECURSO" EntitySet="TB_TAB_RECURSO" />
+      <End Role="TB_COND_CONTRAT" EntitySet="TB_COND_CONTRAT" />
+    </AssociationSet>
+    <AssociationSet Name="CF_COND_CONTRAT_005" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_005">
+      <End Role="TB_TAB_RECURSO" EntitySet="TB_TAB_RECURSO" />
+      <End Role="TB_COND_CONTRAT" EntitySet="TB_COND_CONTRAT" />
+    </AssociationSet>
+    <AssociationSet Name="CF_COND_CONTRAT_008" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_008">
+      <End Role="TB_TAB_RECURSO" EntitySet="TB_TAB_RECURSO" />
+      <End Role="TB_COND_CONTRAT" EntitySet="TB_COND_CONTRAT" />
+    </AssociationSet>
+    <AssociationSet Name="CF_COND_CONTRAT_009" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_009">
+      <End Role="TB_TAB_RECURSO" EntitySet="TB_TAB_RECURSO" />
+      <End Role="TB_COND_CONTRAT" EntitySet="TB_COND_CONTRAT" />
+    </AssociationSet>
+    <AssociationSet Name="CF_VAL_RECURSO_003" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_VAL_RECURSO_003">
+      <End Role="TB_TAB_RECURSO" EntitySet="TB_TAB_RECURSO" />
+      <End Role="TB_VAL_RECURSO" EntitySet="TB_VAL_RECURSO" />
+    </AssociationSet>
+    <EntitySet Name="TAB_CARTEIRINHA_CARENCIA" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TAB_CARTEIRINHA_CARENCIA" />
+    <EntitySet Name="CADTBLVPRVALORPORTEREC" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADTBLVPRVALORPORTEREC" />
+    <EntitySet Name="TB_CLASSE_CONVENIADO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CLASSE_CONVENIADO" />
+    <AssociationSet Name="CF_CONVENENTE_003" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_CONVENENTE_003">
+      <End Role="TB_CLASSE_CONVENIADO" EntitySet="TB_CLASSE_CONVENIADO" />
+      <End Role="TB_CONVENENTE" EntitySet="TB_CONVENENTE" />
+    </AssociationSet>
+    <EntitySet Name="SAU_TBL_CARGA_PROCEDIMENTO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CARGA_PROCEDIMENTO" />
+    <EntitySet Name="SAU_TBL_CARGA_REALIZADA" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CARGA_REALIZADA" />
+    <AssociationSet Name="FK_CARGA_REALIZ_CONV" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_CARGA_REALIZ_CONV">
+      <End Role="TB_CONVENENTE" EntitySet="TB_CONVENENTE" />
+      <End Role="SAU_TBL_CARGA_REALIZADA" EntitySet="SAU_TBL_CARGA_REALIZADA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CARGA_REALIZ_TAB_REC" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_CARGA_REALIZ_TAB_REC">
+      <End Role="TB_TAB_RECURSO" EntitySet="TB_TAB_RECURSO" />
+      <End Role="SAU_TBL_CARGA_REALIZADA" EntitySet="SAU_TBL_CARGA_REALIZADA" />
+    </AssociationSet>
+    <EntitySet Name="CAD_TBL_CONTROLEUNIMED_ETQ" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.CAD_TBL_CONTROLEUNIMED_ETQ" />
+    <EntitySet Name="SAU_TB_SERV_X_HOSP_AND" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TB_SERV_X_HOSP_AND" />
+    <EntitySet Name="SAU_TB_SERVICO_AND" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TB_SERVICO_AND" />
+    <EntitySet Name="SAU_TB_HOSP_AND" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TB_HOSP_AND" />
+    <EntitySet Name="SAU_TBL_CLASSE_PORT_VIG" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CLASSE_PORT_VIG" />
+    <EntitySet Name="SAU_TBL_CONV_PORTE_VIG" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CONV_PORTE_VIG" />
+    <AssociationSet Name="FK_TBL_CONV_PORTE_TAB_RECU" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_TBL_CONV_PORTE_TAB_RECU">
+      <End Role="TB_TAB_RECURSO" EntitySet="TB_TAB_RECURSO" />
+      <End Role="SAU_TBL_CLASSE_PORT_VIG" EntitySet="SAU_TBL_CLASSE_PORT_VIG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_CONV_PORTE_TB_CLASSE" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_TBL_CONV_PORTE_TB_CLASSE">
+      <End Role="TB_CLASSE_CONVENIADO" EntitySet="TB_CLASSE_CONVENIADO" />
+      <End Role="SAU_TBL_CLASSE_PORT_VIG" EntitySet="SAU_TBL_CLASSE_PORT_VIG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_CONV_PORTE_TAB_REC" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_TBL_CONV_PORTE_TAB_REC">
+      <End Role="TB_TAB_RECURSO" EntitySet="TB_TAB_RECURSO" />
+      <End Role="SAU_TBL_CONV_PORTE_VIG" EntitySet="SAU_TBL_CONV_PORTE_VIG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_CONV_PORTE_VIG" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_TBL_CONV_PORTE_VIG">
+      <End Role="TB_CONVENENTE" EntitySet="TB_CONVENENTE" />
+      <End Role="SAU_TBL_CONV_PORTE_VIG" EntitySet="SAU_TBL_CONV_PORTE_VIG" />
+    </AssociationSet>
+    <EntitySet Name="TB_PARTICIP_PLANO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_PARTICIP_PLANO" />
+    <AssociationSet Name="CF_PARTICIP_PLANO_005" Association="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_PARTICIP_PLANO_005">
+      <End Role="EMPRESA" EntitySet="EMPRESA" />
+      <End Role="TB_PARTICIP_PLANO" EntitySet="TB_PARTICIP_PLANO" />
+    </AssociationSet>
+    <EntitySet Name="TB_PLANO" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_PLANO" />
+    <EntitySet Name="SAU_TBL_CARGA_TEMP" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CARGA_TEMP" />
+    <EntitySet Name="OPP_TB_INADIPLENTES" EntityType="FUNCESP.Integracao.Saude.Aplicacao.DAL.OPP_TB_INADIPLENTES" />
+  </EntityContainer>
+  <EntityType Name="TB_CENTRO_CUSTO">
+    <Key>
+      <PropertyRef Name="NUM_ORGAO" />
+      <PropertyRef Name="COD_PLANO" />
+    </Key>
+    <Property Type="Int16" Name="EMPRESA" />
+    <Property Type="String" Name="DS_CCUSTO" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SG_CCUSTO" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="NUM_ORGAO" Nullable="false" Precision="20" Scale="0" />
+    <Property Type="String" Name="COD_PLANO" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CCUSTO_DEB_UTIL" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CCUSTO_CRE_UTIL" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CCUSTO_DEB_GLOSA" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CCUSTO_CRE_GLOSA" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AUX_DEB_UTIL" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AUX_CRE_UTIL" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AUX_DEB_GLOSA" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AUX_CRE_GLOSA" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IR_ACEITA_LANC" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_TAB" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SAU_VW_CONSULTA_USUARIO_SUS">
+    <Key>
+      <PropertyRef Name="NUM_SEQ_PARTICIP" />
+      <PropertyRef Name="COD_EMPRS" />
+      <PropertyRef Name="NUM_SUB_MATRIC" />
+      <PropertyRef Name="NOM_PARTICIP" />
+      <PropertyRef Name="DAT_NASCIMENTO" />
+      <PropertyRef Name="DAT_ADESAO" />
+      <PropertyRef Name="COD_PLANO_PERIODO" />
+    </Key>
+    <Property Type="String" Name="COD_IDENTIFICACAO" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="NUM_SEQ_PARTICIP" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+    <Property Type="String" Name="NUM_RGTRO_EMPRG" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUM_SUB_MATRIC" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_PARTICIP" Nullable="false" MaxLength="70" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SIT_PARTICIP" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_NASCIMENTO" Nullable="false" />
+    <Property Type="DateTime" Name="DAT_ADESAO" Nullable="false" />
+    <Property Type="DateTime" Name="DAT_CANCELAMENTO" />
+    <Property Type="Decimal" Name="COD_PLANO_PERIODO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="DES_PLANO_PERIODO" MaxLength="70" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ENDERECO_TITULAR" MaxLength="140" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NUM_ENDERECO_TITULAR" />
+    <Property Type="String" Name="COMPLEMENTO_TITULAR" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CEP_TITULAR" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_DDD_TEL_TITULAR" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TELEFONE_TITULAR" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_DDD_CEL_TITULAR" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="CELULAR_TITULAR" />
+  </EntityType>
+  <EntityType Name="SAU_TBL_CREDITO_RMB">
+    <Key>
+      <PropertyRef Name="DAT_REF" />
+      <PropertyRef Name="COD_EMPRS" />
+      <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      <PropertyRef Name="DAT_EMISSAO" />
+      <PropertyRef Name="DAT_PAGAMENTO" />
+    </Key>
+    <Property Type="String" Name="DAT_REF" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+    <Property Type="Int32" Name="NUM_RGTRO_EMPRG" Nullable="false" />
+    <Property Type="Int16" Name="NUM_DIGVR_EMPRG" />
+    <Property Type="DateTime" Name="DAT_EMISSAO" Nullable="false" />
+    <Property Type="DateTime" Name="DAT_PAGAMENTO" Nullable="false" />
+    <Property Type="Int32" Name="NUM_IDNTF_RPTANT" />
+    <Property Type="String" Name="NOM_RESP" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="VAL_COMP_REALIZ" Precision="12" Scale="4" />
+    <Property Type="Int16" Name="COD_BANCO" />
+    <Property Type="String" Name="NOM_ABRVO_BANCO" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="COD_AGBCO" />
+    <Property Type="String" Name="NOM_AGBCO" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIP_CTCOR_EMPRG" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_CTCOR_EMPRG" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SAU_TBL_EXT_UTIL_DADGER">
+    <Key>
+      <PropertyRef Name="DAT_REF" />
+      <PropertyRef Name="COD_EMPRS" />
+      <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      <PropertyRef Name="DAT_MOVIMENTO" />
+      <PropertyRef Name="NUM_IDNTF_RPTANT" />
+    </Key>
+    <Property Type="String" Name="DAT_REF" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+    <Property Type="Int32" Name="NUM_RGTRO_EMPRG" Nullable="false" />
+    <Property Type="Int16" Name="NUM_DIGVR_EMPRG" />
+    <Property Type="DateTime" Name="DAT_EMISSAO" Nullable="false" />
+    <Property Type="DateTime" Name="DAT_MOVIMENTO" Nullable="false" />
+    <Property Type="Int32" Name="NUM_IDNTF_RPTANT" Nullable="false" />
+    <Property Type="String" Name="NOM_RESP" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="VAL_SERVICOS" Precision="12" Scale="4" />
+    <Property Type="Decimal" Name="VAL_PAGAR" Precision="12" Scale="4" />
+    <Property Type="String" Name="IDC_INIBE_EXT" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TB_CONVENENTE">
+    <Key>
+      <PropertyRef Name="COD_CONVENENTE" />
+    </Key>
+    <Property Type="Decimal" Name="COD_CONVENENTE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_CLASSE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="COD_CAND_CONVENENTE" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COD_PORTE_CONV" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="COD_BANCO" />
+    <Property Type="Int32" Name="COD_AGBCO" />
+    <Property Type="String" Name="DGV_CONVENENTE" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TIP_PESSOA" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_CONVENENTE" Nullable="false" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_RAZAO_SOCIAL" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIT_CONVENENTE" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_IDENTIDADE_PROF" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_CGC_CPF" MaxLength="14" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_INSC_MUNIC" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_IDENTIDADE" MaxLength="14" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_ORG_EMISS_CI" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_EMISS_CI" />
+    <Property Type="String" Name="NUM_TELEFONE_CELULAR" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_TELEFONE_BIP" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_BIP" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_CONTATO" MaxLength="35" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COD_UF_IDENT_PROF" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COD_SEXO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_EMAIL" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IDC_EXISTE_CONV" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_CONTA_CORR" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_ISENTO_IR" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TIP_PAGTO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="VAL_ALIQUOTA_ISS" Precision="11" Scale="2" />
+    <Property Type="String" Name="NOM_INDICACAO" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_INSCR_INSS" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_EMPREGADO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_AUDITOR" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_CONVENIO_ESP" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_INI_CONTRATO" />
+    <Property Type="DateTime" Name="DAT_ULT_ANALISE" />
+    <Property Type="DateTime" Name="DAT_PROX_ANALISE" />
+    <Property Type="String" Name="NUM_CONT_CONV" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_COOPERADO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_CREDENCIADO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_DIVULGADO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_REDE_REF" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_INSS" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PLANTAO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_PAI_CONV" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_MAE_CONV" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_CONJUGE_CONV" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_CONTR_ADM_PROC" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_RAZ_SOC_PJ_COLI" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_RESPONSAVEL" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_NIRE" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_REG_CARTORIO" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_OBSERVACAO" MaxLength="255" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_ATIVO_ARQUIVO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TIP_CTCOR" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="COD_CALEND_GERAL" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_TIPO_ATEND_PADRAO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_MOTIVO" Precision="38" Scale="0" />
+    <Property Type="String" Name="NUM_CNES" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_ISENTO_CSSL" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_ISENTO_COFINS" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_ISENTO_PISPASEP" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PRONTO_SOCORRO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="QTD_LEITOS" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="QTD_LEITOS_UTI_ADULTO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="QTD_LEITOS_UTI_PEDIAT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="QTD_LEITOS_NEO_NATAL" Precision="38" Scale="0" />
+    <Property Type="String" Name="NUM_CNS" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="TIP_ESTABELECIMENTO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_MUNICI_IBGE" Precision="38" Scale="0" />
+    <Property Type="String" Name="TIP_CONTRATACAO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TIP_CLASSIF_ESTAB" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="NUM_REG_ANS_OPE_INT" Precision="38" Scale="0" />
+    <Property Type="String" Name="IDC_DISP_SERV" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CBOCOD" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_DESC_CONVENENTE" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIP_NOTA_FISCAL" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_NF_POR_GUIA" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_PROCESSO" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_DIARIO_OFICIAL" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_SECAO" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_PAGINA" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_PUBLICACAO" />
+    <Property Type="String" Name="IDC_SIMPLES" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_INSC_ESTADUAL" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IDC_MEI" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_SITE" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IDC_NOTIVISA" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_QUALISS" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_AUDITORIA_FATURA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_EMP_AUDIT_FATURA" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIP_FORMA_LIQUID" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_NASCIMENTO" />
+    <Property Type="DateTime" Name="DAT_ULT_ATU" />
+    <Property Type="DateTime" Name="DAT_PREV_SUBST" />
+    <Property Type="Decimal" Name="COD_MOT_SUBST" Precision="38" Scale="0" />
+    <NavigationProperty Name="TB_END_CONVEN" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_END_CONVEN_001" FromRole="TB_CONVENENTE" ToRole="TB_END_CONVEN" />
+    <Property Type="String" Name="IDC_CONVENIADO_ALTO_CUSTO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="TB_TIPO_COND_CONV" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_TIPO_COND_CONV_001" FromRole="TB_CONVENENTE" ToRole="TB_TIPO_COND_CONV" />
+    <NavigationProperty Name="CADTBLRCORECURSOCODIGO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADCFKRCO002" FromRole="TB_CONVENENTE" ToRole="CADTBLRCORECURSOCODIGO" />
+    <Property Type="Int16" Name="NUM_CLASSIFICACAO" />
+    <Property Type="DateTime" Name="DAT_ATU_HONORARIOS" />
+    <Property Type="DateTime" Name="DAT_ATU_DIARIAS_TAXAS" />
+    <Property Type="String" Name="NUM_PIS" />
+    <NavigationProperty Name="TB_CLASSE_CONVENIADO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_CONVENENTE_003" FromRole="TB_CONVENENTE" ToRole="TB_CLASSE_CONVENIADO" />
+    <NavigationProperty Name="SAU_TBL_CARGA_REALIZADA" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_CARGA_REALIZ_CONV" FromRole="TB_CONVENENTE" ToRole="SAU_TBL_CARGA_REALIZADA" />
+    <NavigationProperty Name="SAU_TBL_CONV_PORTE_VIG" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_TBL_CONV_PORTE_VIG" FromRole="TB_CONVENENTE" ToRole="SAU_TBL_CONV_PORTE_VIG" />
+    <Property Type="String" Name="IDC_RECIPROCIDADE" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_EVECONT" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TB_END_CONVEN">
+    <Key>
+      <PropertyRef Name="COD_CONVENENTE" />
+      <PropertyRef Name="NUM_SEQ_END" />
+    </Key>
+    <Property Type="Decimal" Name="COD_CONVENENTE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NUM_SEQ_END" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_BAIRRO" Precision="38" Scale="0" />
+    <Property Type="String" Name="COD_ESTADO" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_MUNICI" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUM_CEP" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_LOGRADOURO" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_LOGRADOURO" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DES_COMPLEMENTO" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_BAIRRO" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_RAMAL" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_TELEFONE" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_FAX" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_END_RESID" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_END_CORRESP" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_DESATIVADO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_TELEFONE2" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_RAMAL2" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_TELEFONE3" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_RAMAL3" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TLGCOD" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="NUM_CAIXA_POSTAL" Precision="38" Scale="0" />
+    <Property Type="String" Name="NOM_PAIS_CONV" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUM_CNPJ" MaxLength="14" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_INSCR_MUNIC" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_DDD" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_DDD2" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_DDD3" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_DDD_FAX" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ENDARQ" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ENDARQTIPO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PAICOD" />
+    <Property Type="String" Name="NUM_CNES" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_ULT_ATU" />
+    <Property Type="Decimal" Name="LOC_LATITUDE" Precision="10" Scale="8" />
+    <Property Type="Decimal" Name="LOC_LONGITUDE" Precision="10" Scale="8" />
+    <NavigationProperty Name="TB_CONVENENTE" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_END_CONVEN_001" FromRole="TB_END_CONVEN" ToRole="TB_CONVENENTE" />
+    <Property Type="String" Name="SITGEOLOCALIZACAO" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <Association Name="CF_END_CONVEN_001">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CONVENENTE" Role="TB_CONVENENTE" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_END_CONVEN" Role="TB_END_CONVEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CONVENENTE">
+        <PropertyRef Name="COD_CONVENENTE" />
+      </Principal>
+      <Dependent Role="TB_END_CONVEN">
+        <PropertyRef Name="COD_CONVENENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SAU_TBL_IMPUGNACAOSUS">
+    <Key>
+      <PropertyRef Name="CHAVE" />
+    </Key>
+    <Property Type="Decimal" Name="NUMEROOFICIO" Precision="38" Scale="0" />
+    <Property Type="String" Name="NUMEROPROCESSO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUMEROABI" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUMERO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIPO" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CODIGOBENEFICIARIO" Precision="38" Scale="0" />
+    <Property Type="String" Name="CODIGOCCO" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="COMPETENCIA" />
+    <Property Type="DateTime" Name="DATAINICIOATENDIMENTO" />
+    <Property Type="DateTime" Name="DATAFIMATENDIMENTO" />
+    <Property Type="DateTime" Name="DATANASCBENEFICIARIO" />
+    <Property Type="Int16" Name="COD_EMP" />
+    <Property Type="Int64" Name="MATRICULA" />
+    <Property Type="Int16" Name="SUB_MATRICULA" />
+    <Property Type="String" Name="NOMEBENEFICIARIO" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="DDD" />
+    <Property Type="Int32" Name="TEL_BENEF" />
+    <Property Type="Int16" Name="DDD_CELULAR" />
+    <Property Type="Int32" Name="TEL_CELULAR_BENEF" />
+    <Property Type="DateTime" Name="DATA_CANCELAMENTO" />
+    <Property Type="Int16" Name="COD_PLANO" />
+    <Property Type="String" Name="DESC_PLANO" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOMEUPS" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MUNICIPIO" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CODIGOUF" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CODIGOPROCEDIMENTO" />
+    <Property Type="String" Name="DESCRICAOPROCEDIMENTO" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="VALORPROCEDIMENTO" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="VALORTOTAL" Precision="10" Scale="2" />
+    <Property Type="String" Name="GLOSA" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CHAMADO" />
+    <Property Type="String" Name="RESPOSTA" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="PERCLIMITADOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="CO_PARTICIPAÇÃO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="A_DEDUZIR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="PAGAMENTOSUS" Precision="38" Scale="0" />
+    <Property Type="String" Name="IMPUGNAÇÃO" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="S_IMPUG_MOTIV" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="MENSALIDADE_SALARIO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="CHAVE" Nullable="false" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="SAU_TBL_QUALISIGN">
+    <Key>
+      <PropertyRef Name="COD_QUALISIGN" />
+    </Key>
+    <Property Type="Int32" Name="COD_QUALISIGN" Nullable="false" />
+    <Property Type="String" Name="LOG_INCLUSAO" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DTH_INCLUSAO" Nullable="false" />
+    <NavigationProperty Name="SAU_TBL_QUALISIGN_DOC" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_SAU_TBL_QUALISIGN_DOC" FromRole="SAU_TBL_QUALISIGN" ToRole="SAU_TBL_QUALISIGN_DOC" />
+  </EntityType>
+  <EntityType Name="SAU_TBL_QUALISIGN_DOC">
+    <Key>
+      <PropertyRef Name="COD_QUALISIGN_DOC" />
+    </Key>
+    <Property Type="Int32" Name="COD_QUALISIGN_DOC" Nullable="false" />
+    <Property Type="Int32" Name="COD_QUALISIGN" Nullable="false" />
+    <Property Type="String" Name="NOM_ARQUIVO" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_REF_ARQUIVO" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_STATUS" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="COD_RETORNO" />
+    <Property Type="String" Name="DCR_RETORNO" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DCR_PASSCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SAU_TBL_QUALISIGN" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_SAU_TBL_QUALISIGN_DOC" FromRole="SAU_TBL_QUALISIGN_DOC" ToRole="SAU_TBL_QUALISIGN" />
+  </EntityType>
+  <Association Name="FK_SAU_TBL_QUALISIGN_DOC">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_QUALISIGN" Role="SAU_TBL_QUALISIGN" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_QUALISIGN_DOC" Role="SAU_TBL_QUALISIGN_DOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SAU_TBL_QUALISIGN">
+        <PropertyRef Name="COD_QUALISIGN" />
+      </Principal>
+      <Dependent Role="SAU_TBL_QUALISIGN_DOC">
+        <PropertyRef Name="COD_QUALISIGN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EMPRESA">
+    <Key>
+      <PropertyRef Name="COD_EMPRS" />
+    </Key>
+    <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+    <Property Type="String" Name="NOM_ABRVO_EMPRS" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_RZSOC_EMPRS" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIPO_EMPRS" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="NUM_CGC_EMPRS" />
+    <Property Type="String" Name="DCR_ENDER_EMPRS" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DCR_COMPL_EMPRS" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_BAIRRO_EMPRS" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="COD_CEP_EMPRS" />
+    <Property Type="String" Name="COD_ESTADO" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_MUNICI" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_UNDFD_EMPRS" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_CIDADE_EMPRS" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_DDI_EMPRS" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_DDD_EMPRS" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NUM_TELEF_EMPRS" />
+    <Property Type="String" Name="TIP_EMPRS" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="NUM_FUNDAC_EMPRS" />
+    <Property Type="Int16" Name="NUM_GRUPO_EMPRS" />
+    <Property Type="Int16" Name="NUM_EMPRESA_EMPRS" />
+    <Property Type="String" Name="COD_ORIGEM_EMPRS" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NUM_ENDER_EMPRS" />
+    <Property Type="Int16" Name="TEPCODTIPOEMPRESA" />
+    <Property Type="Int32" Name="PAICOD" />
+    <Property Type="Int32" Name="PAICODREGISTRO" />
+    <Property Type="Int32" Name="PAICODOPERACAO" />
+    <NavigationProperty Name="EMPREGADO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_EMPRS_EMPRG" FromRole="EMPRESA" ToRole="EMPREGADO" />
+    <Property Type="String" Name="COD_ORGAO_PUBLICO" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_PARTICIP_PLANO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_PARTICIP_PLANO_005" FromRole="EMPRESA" ToRole="TB_PARTICIP_PLANO" />
+  </EntityType>
+  <EntityType Name="CADTBLSMO">
+    <Key>
+      <PropertyRef Name="SMOCOD" />
+      <PropertyRef Name="SMODATVALIDADEINI" />
+    </Key>
+    <Property Type="String" Name="HDRDATHOR" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODUSU" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODETC" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODPGR" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SMOCOD" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="SMODATVALIDADEINI" Nullable="false" />
+    <Property Type="String" Name="SMOCODUSUARIO" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SMOCODFRACAO" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SMODESPRODUTO" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SMOCODIDENT" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="SMOVALFABRICAEMB" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="SMOVALVENDAEMB" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="SMOVALUSUARIOEMB" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="SMOVALFABRICAFRC" Precision="11" Scale="3" />
+    <Property Type="Decimal" Name="SMOVALVENDAFRC" Precision="11" Scale="3" />
+    <Property Type="Decimal" Name="SMOVALUSUARIOFRC" Precision="11" Scale="3" />
+    <Property Type="String" Name="SMOTIPEMB" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SMOTIPFRC" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="SMOQTDEMB" Precision="7" Scale="2" />
+    <Property Type="Decimal" Name="SMOQTDFRC" Precision="7" Scale="2" />
+    <Property Type="Decimal" Name="SMOPRCLUCRO" Precision="5" Scale="2" />
+    <Property Type="Int64" Name="FSOSEQ" />
+    <Property Type="String" Name="SMOCODMERCADO" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="SMOPRCDESC" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="COD_RECURSO" Precision="38" Scale="0" />
+    <Property Type="String" Name="RCOCODPROCEDIMENTO" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="SMOVALIPI" Precision="10" Scale="2" />
+    <Property Type="String" Name="SMONUMREGANVISA" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SMODATVALIDANVISA" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SMONUMCODBARRA" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SMOVALTIPLISTA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SMOIDCUSOHOSP" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SMONUMVERSAO" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SMOCODTISS" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SMOCODTUSS" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SMOTIPALTERACAO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SMOIDCFRACIONADO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SMOIDCCLASSIFICACAO" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SMOIDCGENERICO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SMOIDCDIVERSOS" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FATTBLRSP">
+    <Key>
+      <PropertyRef Name="COD_TIPO_COND_CONT" />
+      <PropertyRef Name="DAT_VALIDADE" />
+      <PropertyRef Name="RSPDATVALIDINI" />
+      <PropertyRef Name="RSPVALPRIORIDADE" />
+    </Key>
+    <Property Type="String" Name="HDRDATHOR" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODUSU" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODETC" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODPGR" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="COD_TIPO_COND_CONT" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DAT_VALIDADE" Nullable="false" />
+    <Property Type="DateTime" Name="RSPDATVALIDINI" Nullable="false" />
+    <Property Type="Decimal" Name="RSPVALPRIORIDADE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="RSPTIPPRECO" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="RSPVALTAXA" Nullable="false" Precision="5" Scale="4" />
+    <Property Type="Decimal" Name="RSPVALADICAO" Nullable="false" Precision="9" Scale="2" />
+    <Property Type="String" Name="RSPCODSIMPROINI" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="RSPCODSIMPROFIM" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="FSOSEQ" Precision="38" Scale="0" />
+    <Property Type="String" Name="RSPCODMERCADO" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="RSPCNDCAIXASELECAO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="TB_COND_CONTRAT" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FATCFKRSP002" FromRole="FATTBLRSP" ToRole="TB_COND_CONTRAT" />
+  </EntityType>
+  <EntityType Name="TB_COND_CONTRAT">
+    <Key>
+      <PropertyRef Name="COD_TIPO_COND_CONT" />
+      <PropertyRef Name="DAT_VALIDADE" />
+    </Key>
+    <Property Type="Decimal" Name="COD_TIPO_COND_CONT" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DAT_VALIDADE" Nullable="false" />
+    <Property Type="Decimal" Name="COD_PADRAO_INF" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_PADRAO_FAT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_ROTINA" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_TAB_PROCEDIMENTO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_TAB_SERVICOS" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_TAB_ESPECIAL" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_TAB_PORTE_ANESTESICO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_TAB_MAT_MED" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_VERSAO_CID" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="VAL_P_TAXA_ADM" Precision="5" Scale="2" />
+    <Property Type="String" Name="IDC_PERC_TAXA_DIARIA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TAXA_TAXA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TAXA_SERVICO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TAXA_MATERIAL" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TAXA_MEDICAMENTO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TAXA_HONORARIO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TAXA_SADT" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TAXA_TOTAL_CONTA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="QTD_DIAS_LIM_APRESENT" Precision="38" Scale="0" />
+    <Property Type="String" Name="IDC_ENVIA_FATELET" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_LAYOUT_MAGNETICO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PADRAO_IMPRESSAO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_DIGITO_USUARIO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_DIGITO_PRESTADOR" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_CID_INTERNO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_CID_EXTERNO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="HOR_LIMITE_ALTA" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="VAL_P_INCID_EXTRA" Precision="5" Scale="2" />
+    <Property Type="String" Name="IDC_HONOR_FORA_CONTA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_ADIC_DH_EXTRAMEDICO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_ADIC_DH_EXTRAINSTRUMEN" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_ATUALIZ_AUTOBRASINDICE" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_FABRICANTE_CONTA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_VALOR_FILME_DESTACADO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_MEIO_FATURAM_ELETRONICO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_IMPR_TITULAR" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_IMPR_VALID_CARTAO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_IMPR_IDENT_PACIENTE_RESP" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_IMPR_FONE_PACIENTE" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_IMPR_AUTORIZ_POR" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_IMPR_SENHA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_IMPR_DATA_SENHA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_IMPR_HORA_SENHA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_MEMO_INSTRUCOESAUT" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DES_MEMO_PACIENTEAUT" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IDC_LOGO_COMPRADOR" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IDC_FATURAMENTO_PACOTE" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_COD_DEPEND_OBRIGAT" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="COD_ROTINA_VERIF" Precision="38" Scale="0" />
+    <Property Type="String" Name="IDC_SERV_PROIBIDO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="NUM_DIAS_REAP_GLOSA" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NUM_DIAS_PAGTO_FAT" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="VAL_PERC_DOACAO" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="VAL_P_TAXA_ADM_INTERC" Precision="5" Scale="2" />
+    <Property Type="String" Name="IDC_DESC_PROC_LIVRE" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_DIA_UTIL" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="COD_CALEND_GERAL" Precision="38" Scale="0" />
+    <Property Type="String" Name="IDC_TIP_TX_COMERC" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="VAL_TX_COMERC" Precision="5" Scale="2" />
+    <Property Type="String" Name="IDC_PERC_TX_COMERC_DIARIA" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TX_COMERC_TAXA" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TX_COMERC_SERV" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TX_COMERC_MAT" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TX_COMERC_TOTAL" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TX_COMERC_MED" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TX_COMERC_HONOR" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_PERC_TX_COMERC_SADT" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="VAL_PERC_RED_MAT" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="VAL_PERC_RED_MED" Precision="5" Scale="2" />
+    <Property Type="String" Name="IDC_UTILIZ_BRASINDICE" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_UTILIZ_SIMPRO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="VRS_BRASINDICE" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="VRS_SIMPRO" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FATTBLRSP" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FATCFKRSP002" FromRole="TB_COND_CONTRAT" ToRole="FATTBLRSP" />
+    <NavigationProperty Name="TB_TIPO_COND_CONTRAT" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_010" FromRole="TB_COND_CONTRAT" ToRole="TB_TIPO_COND_CONTRAT" />
+    <Property Type="DateTime" Name="DAT_GERACAO" />
+    <Property Type="String" Name="USU_GERACAO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_TAB_RECURSO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_001" FromRole="TB_COND_CONTRAT" ToRole="TB_TAB_RECURSO" />
+    <NavigationProperty Name="TB_TAB_RECURSO1" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_003" FromRole="TB_COND_CONTRAT" ToRole="TB_TAB_RECURSO" />
+    <NavigationProperty Name="TB_TAB_RECURSO2" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_005" FromRole="TB_COND_CONTRAT" ToRole="TB_TAB_RECURSO" />
+    <NavigationProperty Name="TB_TAB_RECURSO3" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_008" FromRole="TB_COND_CONTRAT" ToRole="TB_TAB_RECURSO" />
+    <NavigationProperty Name="TB_TAB_RECURSO4" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_009" FromRole="TB_COND_CONTRAT" ToRole="TB_TAB_RECURSO" />
+  </EntityType>
+  <EntityType Name="TB_TIPO_COND_CONTRAT">
+    <Key>
+      <PropertyRef Name="COD_TIPO_COND_CONT" />
+    </Key>
+    <Property Type="Decimal" Name="COD_TIPO_COND_CONT" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="DES_TIPO_COND_CONT" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="TB_COND_CONTRAT" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_010" FromRole="TB_TIPO_COND_CONTRAT" ToRole="TB_COND_CONTRAT" />
+    <NavigationProperty Name="TB_TIPO_COND_CONV" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_TIPO_COND_CONV_002" FromRole="TB_TIPO_COND_CONTRAT" ToRole="TB_TIPO_COND_CONV" />
+  </EntityType>
+  <EntityType Name="TB_EQUIP_SIMPRO">
+    <Key>
+      <PropertyRef Name="COD_SIMPRO" />
+    </Key>
+    <Property Type="String" Name="COD_SIMPRO" Nullable="false" />
+    <Property Type="String" Name="DES_SIMPRO" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="TAXA_APLICADA" Nullable="false" Precision="3" Scale="2" />
+    <Property Type="String" Name="TIPO_PRECO" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_VALIDADE" Nullable="false" />
+  </EntityType>
+  <Association Name="FATCFKRSP002">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_COND_CONTRAT" Role="TB_COND_CONTRAT" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.FATTBLRSP" Role="FATTBLRSP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_COND_CONTRAT">
+        <PropertyRef Name="COD_TIPO_COND_CONT" />
+        <PropertyRef Name="DAT_VALIDADE" />
+      </Principal>
+      <Dependent Role="FATTBLRSP">
+        <PropertyRef Name="COD_TIPO_COND_CONT" />
+        <PropertyRef Name="DAT_VALIDADE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CF_COND_CONTRAT_010">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TIPO_COND_CONTRAT" Role="TB_TIPO_COND_CONTRAT" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_COND_CONTRAT" Role="TB_COND_CONTRAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TIPO_COND_CONTRAT">
+        <PropertyRef Name="COD_TIPO_COND_CONT" />
+      </Principal>
+      <Dependent Role="TB_COND_CONTRAT">
+        <PropertyRef Name="COD_TIPO_COND_CONT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TB_TIPO_COND_CONV">
+    <Key>
+      <PropertyRef Name="COD_CONVENENTE" />
+      <PropertyRef Name="DAT_VALIDADE" />
+    </Key>
+    <Property Type="Decimal" Name="COD_CONVENENTE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DAT_VALIDADE" Nullable="false" />
+    <Property Type="Decimal" Name="COD_TIPO_COND_CONT" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="TB_CONVENENTE" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_TIPO_COND_CONV_001" FromRole="TB_TIPO_COND_CONV" ToRole="TB_CONVENENTE" />
+    <NavigationProperty Name="TB_TIPO_COND_CONTRAT" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_TIPO_COND_CONV_002" FromRole="TB_TIPO_COND_CONV" ToRole="TB_TIPO_COND_CONTRAT" />
+  </EntityType>
+  <Association Name="CF_TIPO_COND_CONV_001">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CONVENENTE" Role="TB_CONVENENTE" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TIPO_COND_CONV" Role="TB_TIPO_COND_CONV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CONVENENTE">
+        <PropertyRef Name="COD_CONVENENTE" />
+      </Principal>
+      <Dependent Role="TB_TIPO_COND_CONV">
+        <PropertyRef Name="COD_CONVENENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CF_TIPO_COND_CONV_002">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TIPO_COND_CONTRAT" Role="TB_TIPO_COND_CONTRAT" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TIPO_COND_CONV" Role="TB_TIPO_COND_CONV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TIPO_COND_CONTRAT">
+        <PropertyRef Name="COD_TIPO_COND_CONT" />
+      </Principal>
+      <Dependent Role="TB_TIPO_COND_CONV">
+        <PropertyRef Name="COD_TIPO_COND_CONT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CADTBLRCORECURSOCODIGO">
+    <Key>
+      <PropertyRef Name="RCOSEQ" />
+    </Key>
+    <Property Type="String" Name="HDRDATHOR" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODUSU" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODETC" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODPGR" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="RCOSEQ" Nullable="false" />
+    <Property Type="Decimal" Name="COD_RECURSO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="RCOCODPROCEDIMENTO" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RCODATIMPLANTACAO" Nullable="false" />
+    <Property Type="DateTime" Name="RCODATDESATIVACAO" />
+    <Property Type="String" Name="RCOIDCCBHPM" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TPACOD" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="COD_CONVENENTE" Precision="38" Scale="0" />
+    <NavigationProperty Name="TB_CONVENENTE" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADCFKRCO002" FromRole="CADTBLRCORECURSOCODIGO" ToRole="TB_CONVENENTE" />
+    <NavigationProperty Name="TB_RECURSO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADCFKRCORECURSO" FromRole="CADTBLRCORECURSOCODIGO" ToRole="TB_RECURSO" />
+    <NavigationProperty Name="TB_VAL_RECURSO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_VAL_RECURSO_007" FromRole="CADTBLRCORECURSOCODIGO" ToRole="TB_VAL_RECURSO" />
+  </EntityType>
+  <Association Name="CADCFKRCO002">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CONVENENTE" Role="TB_CONVENENTE" Multiplicity="0..1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADTBLRCORECURSOCODIGO" Role="CADTBLRCORECURSOCODIGO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CONVENENTE">
+        <PropertyRef Name="COD_CONVENENTE" />
+      </Principal>
+      <Dependent Role="CADTBLRCORECURSOCODIGO">
+        <PropertyRef Name="COD_CONVENENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CAD_TBL_UNIMEDARQUIVO">
+    <Key>
+      <PropertyRef Name="COD_PLANO" />
+    </Key>
+    <Property Type="Decimal" Name="COD_PLANO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="DES_PLANO" MaxLength="70" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SAU_TBL_EXT_UTIL_DADGER_LOG">
+    <Key>
+      <PropertyRef Name="HDRDATHOR" />
+      <PropertyRef Name="DAT_REF" />
+      <PropertyRef Name="COD_EMPRS" />
+      <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      <PropertyRef Name="DAT_MOVIMENTO" />
+      <PropertyRef Name="NUM_IDNTF_RPTANT" />
+    </Key>
+    <Property Type="DateTime" Name="HDRDATHOR" Nullable="false" />
+    <Property Type="String" Name="HDRCODUSU" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DAT_REF" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+    <Property Type="Int32" Name="NUM_RGTRO_EMPRG" Nullable="false" />
+    <Property Type="DateTime" Name="DAT_MOVIMENTO" Nullable="false" />
+    <Property Type="Int32" Name="NUM_IDNTF_RPTANT" Nullable="false" />
+    <Property Type="String" Name="IDC_INIBE_EXT_ANTIGO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_INIBE_EXT_ATUAL" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TB_RECURSO">
+    <Key>
+      <PropertyRef Name="COD_RECURSO" />
+    </Key>
+    <Property Type="Decimal" Name="COD_RECURSO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="COD_ESPECIALID" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COD_GRUPO" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COD_ITEM" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_RECURSO" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_TIP_RECURSO" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COD_CATEGORIA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COD_UNIDADE" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COD_LABORATORIO" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COD_APRESENTACAO" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_BRASINDICE" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="QTD_MEDIC" Precision="38" Scale="0" />
+    <Property Type="String" Name="COD_SEXO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="VAL_IDADE_INICIAL" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="VAL_IDADE_FINAL" Precision="38" Scale="0" />
+    <Property Type="String" Name="IDC_ORT_PROT" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="QTD_REUTILIZA" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="QTD_FREQUENCIA" Precision="38" Scale="0" />
+    <Property Type="String" Name="COD_TIPO_ACOMOD" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="NUM_INTERVALO" Precision="38" Scale="0" />
+    <Property Type="String" Name="TIP_PER_INTERVALO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="QTD_DIAS_INTERNACAO" Precision="38" Scale="0" />
+    <Property Type="String" Name="IDC_AUTORIZACAO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_AUDITORIA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_OBSERVACAO" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IDC_INSTRUMENTADOR" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_TRIBUTAVEL" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_FICHA_CLINICA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_DESATIVADO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="COD_DESPESA_NORMAL" />
+    <Property Type="Int16" Name="COD_DESPESA_INTERN" />
+    <Property Type="Decimal" Name="NVACODNIVELAUTORIZ" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="QTD_MAX_AUTORIZ" Precision="12" Scale="4" />
+    <Property Type="Decimal" Name="QTD_LIM_UTILIZ_MES" Precision="12" Scale="4" />
+    <Property Type="Decimal" Name="QTD_LIM_UTILIZ_ANO" Precision="12" Scale="4" />
+    <Property Type="Decimal" Name="QTD_LIM_UTILIZ_VIDA" Precision="12" Scale="4" />
+    <Property Type="String" Name="TIP_REGIME_ATEND" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TIP_CARATER_ATEND" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_REC_REALIZ_SOLIC" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_IDENTIF_EVENTO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="COD_CAPITULO" Precision="38" Scale="0" />
+    <Property Type="String" Name="IDC_VER_PRECEDENCIA" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_EXIGE_TRATAMENTO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_ARQ_IMAGEM" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IDC_PERICIA_FINAL" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="COD_DESPESA_ANS" />
+    <Property Type="String" Name="IDC_ANALISE_JUSTIFIC" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_EXAME_PERICIAL" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TIP_AVALIACAO_PREVIA" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_RECURSO_COMPL" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DES_PERIODO_VENC" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="NUM_VENCIMENTO" />
+    <Property Type="String" Name="DES_PERIODO_APLIC" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="NUM_APLIC_3" />
+    <Property Type="Int16" Name="NUM_APLIC_2" />
+    <Property Type="Int16" Name="NUM_DOSES" />
+    <Property Type="String" Name="IDC_PER_PLANO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_INI_ANSROL" />
+    <Property Type="DateTime" Name="DAT_FIM_ANSROL" />
+    <Property Type="String" Name="IDC_EXTRACAO_DENTE" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_RECURSO_FONEMA" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_GRUPO_ANS" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CADTBLRCORECURSOCODIGO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADCFKRCORECURSO" FromRole="TB_RECURSO" ToRole="CADTBLRCORECURSOCODIGO" />
+    <NavigationProperty Name="SAU_TBL_QTDE_MATMED" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_FRK_QTDE_MATMED_RECURSO" FromRole="TB_RECURSO" ToRole="SAU_TBL_QTDE_MATMED" />
+    <Property Type="String" Name="COD_UNIDADE_FRAC" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="UDMSEQ" />
+    <Property Type="Int32" Name="UDMSEQ_FRACIONADO" />
+    <Property Type="Int64" Name="UDMSEQ_FRACAOMINIMA" />
+    <Property Type="String" Name="IDC_FRACIONADO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="QTD_FRACIONAMENTO" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="QTD_FRACAO_MINIMA" Precision="10" Scale="2" />
+    <NavigationProperty Name="TB_VAL_RECURSO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_VAL_RECURSO_005" FromRole="TB_RECURSO" ToRole="TB_VAL_RECURSO" />
+    <Property Type="String" Name="IDC_CPT" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <Association Name="CADCFKRCORECURSO">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_RECURSO" Role="TB_RECURSO" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADTBLRCORECURSOCODIGO" Role="CADTBLRCORECURSOCODIGO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_RECURSO">
+        <PropertyRef Name="COD_RECURSO" />
+      </Principal>
+      <Dependent Role="CADTBLRCORECURSOCODIGO">
+        <PropertyRef Name="COD_RECURSO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SAU_TBL_QTDE_MATMED">
+    <Key>
+      <PropertyRef Name="COD_RECURSO" />
+      <PropertyRef Name="QTD" />
+      <PropertyRef Name="DAT_INIVIG" />
+      <PropertyRef Name="COD_ACAO" />
+      <PropertyRef Name="DTH_ACAO" />
+    </Key>
+    <Property Type="Decimal" Name="COD_RECURSO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Int32" Name="QTD" Nullable="false" />
+    <Property Type="DateTime" Name="DAT_INIVIG" Nullable="false" />
+    <Property Type="DateTime" Name="DAT_FIMVIG" />
+    <Property Type="String" Name="COD_ACAO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DTH_ACAO" Nullable="false" />
+    <Property Type="String" Name="DESC_USERAPL" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESC_PROGRAMA" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESC_MAQREDE" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESC_USEROS" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESC_MAQTERM" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TB_RECURSO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_FRK_QTDE_MATMED_RECURSO" FromRole="SAU_TBL_QTDE_MATMED" ToRole="TB_RECURSO" />
+  </EntityType>
+  <Association Name="SAU_FRK_QTDE_MATMED_RECURSO">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_RECURSO" Role="TB_RECURSO" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_QTDE_MATMED" Role="SAU_TBL_QTDE_MATMED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_RECURSO">
+        <PropertyRef Name="COD_RECURSO" />
+      </Principal>
+      <Dependent Role="SAU_TBL_QTDE_MATMED">
+        <PropertyRef Name="COD_RECURSO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="FC_SAU_TBL_RO_GERACAO">
+    <Key>
+      <PropertyRef Name="COD_SAU_TBL_RO_GERACAO" />
+    </Key>
+    <Property Type="Decimal" Name="COD_SAU_TBL_RO_GERACAO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_MES_RO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_ANO_RO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DTH_ACAO" Nullable="false" />
+    <Property Type="String" Name="DESC_USERAPL" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESC_PROGRAMA" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESC_MAQREDE" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESC_USEROS" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESC_MAQTERM" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FC_SAU_TBL_RO_GERACAO_STATUS" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_FRK_RO_STATUS_RO_GERACAO" FromRole="FC_SAU_TBL_RO_GERACAO" ToRole="FC_SAU_TBL_RO_GERACAO_STATUS" />
+  </EntityType>
+  <EntityType Name="FC_SAU_TBL_RO_GERACAO_STATUS">
+    <Key>
+      <PropertyRef Name="COD_SAU_TBL_RO_GERACAO" />
+      <PropertyRef Name="DTH_ACAO" />
+      <PropertyRef Name="STATUS" />
+    </Key>
+    <Property Type="Decimal" Name="COD_SAU_TBL_RO_GERACAO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DTH_ACAO" Nullable="false" />
+    <Property Type="String" Name="STATUS" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FC_SAU_TBL_RO_GERACAO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_FRK_RO_STATUS_RO_GERACAO" FromRole="FC_SAU_TBL_RO_GERACAO_STATUS" ToRole="FC_SAU_TBL_RO_GERACAO" />
+  </EntityType>
+  <Association Name="SAU_FRK_RO_STATUS_RO_GERACAO">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.FC_SAU_TBL_RO_GERACAO" Role="FC_SAU_TBL_RO_GERACAO" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.FC_SAU_TBL_RO_GERACAO_STATUS" Role="FC_SAU_TBL_RO_GERACAO_STATUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FC_SAU_TBL_RO_GERACAO">
+        <PropertyRef Name="COD_SAU_TBL_RO_GERACAO" />
+      </Principal>
+      <Dependent Role="FC_SAU_TBL_RO_GERACAO_STATUS">
+        <PropertyRef Name="COD_SAU_TBL_RO_GERACAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PRE_TBL_CARGA_PROTHEUS_LOG">
+    <Key>
+      <PropertyRef Name="COD_CARGA_PROTHEUS" />
+      <PropertyRef Name="DTH_INCLUSAO" />
+    </Key>
+    <Property Type="Int32" Name="COD_CARGA_PROTHEUS" Nullable="false" />
+    <Property Type="DateTime" Name="DTH_INCLUSAO" Nullable="false" />
+    <Property Type="String" Name="LOG_INCLUSAO" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="COD_ACAO" />
+    <Property Type="String" Name="DCR_ACAO" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PRE_TBL_CARGA_PROTHEUS_STATUS">
+    <Key>
+      <PropertyRef Name="COD_STATUS" />
+    </Key>
+    <Property Type="Int16" Name="COD_STATUS" Nullable="false" />
+    <Property Type="String" Name="DCR_STATUS" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PRE_TBL_CARGA_PROTHEUS" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_PRE_TBL_CARGA_PROTHEUS_STAT" FromRole="PRE_TBL_CARGA_PROTHEUS_STATUS" ToRole="PRE_TBL_CARGA_PROTHEUS" />
+  </EntityType>
+  <EntityType Name="PRE_TBL_CARGA_PROTHEUS_TIPO">
+    <Key>
+      <PropertyRef Name="COD_CARGA_TIPO" />
+    </Key>
+    <Property Type="Int32" Name="COD_CARGA_TIPO" Nullable="false" />
+    <Property Type="String" Name="DCR_CARGA_TIPO" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="IND_PROC_PARCIAL" />
+    <Property Type="String" Name="AREA" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DCR_PACKAGE_PARAM" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PRE_TBL_CARGA_PROTHEUS" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_PRE_TBL_CARGA_PROTHEUS_TIPO" FromRole="PRE_TBL_CARGA_PROTHEUS_TIPO" ToRole="PRE_TBL_CARGA_PROTHEUS" />
+  </EntityType>
+  <EntityType Name="SAU_TB_LOG_AND">
+    <Key>
+      <PropertyRef Name="ID_REG" />
+    </Key>
+    <Property Type="Decimal" Name="ID_REG" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_SERV" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_HOSP" Precision="38" Scale="0" />
+    <Property Type="String" Name="DESC_PROCESSAMENTO" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_PROCESSAMENTO" />
+    <Property Type="String" Name="USU_PROCESSAMENTO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="VALOR_EXPORTADO" Precision="12" Scale="2" />
+    <Property Type="DateTime" Name="DAT_VIGENCIA_EXPORTADO" />
+    <Property Type="Decimal" Name="COD_TAB_SERV" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="EMPREGADO">
+    <Key>
+      <PropertyRef Name="COD_EMPRS" />
+      <PropertyRef Name="NUM_RGTRO_EMPRG" />
+    </Key>
+    <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+    <Property Type="Int64" Name="NUM_RGTRO_EMPRG" Nullable="false" />
+    <Property Type="Int16" Name="NUM_DIGVR_EMPRG" />
+    <Property Type="String" Name="NOM_PAI_EMPRG" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_MAE_EMPRG" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NUM_MATR_PARTF" />
+    <Property Type="Int16" Name="COD_CONFL_EMPRG" />
+    <Property Type="Int16" Name="COD_CTTRB_EMPRG" />
+    <Property Type="String" Name="COD_DDD_EMPRG" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="QTD_MESTRB_EMPRG" />
+    <Property Type="String" Name="COD_DDI_EMPRG" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="COD_ESTCV_EMPRG" />
+    <Property Type="String" Name="COD_SEXO_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_ADMSS_EMPRG" />
+    <Property Type="DateTime" Name="DAT_DESLG_EMPRG" />
+    <Property Type="DateTime" Name="DAT_NASCM_EMPRG" />
+    <Property Type="String" Name="DCR_ENDER_EMPRG" MaxLength="140" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_BAIRRO_EMPRG" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_PAIS_EMPRG" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="NUM_CPF_EMPRG" />
+    <Property Type="String" Name="NUM_CI_EMPRG" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_OREXCI_EMPRG" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_UFCI_EMPRG" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUM_CTCOR_EMPRG" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NUM_CXPTL_EMPRG" />
+    <Property Type="Int16" Name="NUM_GRSAL_EMPRG" />
+    <Property Type="Int16" Name="NUM_RAMAL_EMPRG" />
+    <Property Type="Int32" Name="NUM_TELEF_EMPRG" />
+    <Property Type="Decimal" Name="VLR_SALAR_EMPRG" Precision="18" Scale="4" />
+    <Property Type="Int64" Name="NUM_CTPRF_EMPRG" />
+    <Property Type="String" Name="NUM_SRCTP_EMPRG" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="QTD_INSS_EMPRG" />
+    <Property Type="Int32" Name="COD_CEP_EMPRG" />
+    <Property Type="Int32" Name="NUM_CARGO" />
+    <Property Type="Int16" Name="NUM_FILIAL" />
+    <Property Type="Int16" Name="COD_BANCO" />
+    <Property Type="Int32" Name="COD_AGBCO" />
+    <Property Type="Int32" Name="NUM_CR" />
+    <Property Type="String" Name="COD_MUNICI" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_ESTADO" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NUM_ORGAO" />
+    <Property Type="Int16" Name="COD_MTDSL" />
+    <Property Type="String" Name="NOM_CIDRS_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_UNDFD_EMPRG" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DCR_OBSERVACAO" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MRC_PLSAUD_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COD_EMAIL_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="NUM_PISPAS_EMPRG" />
+    <Property Type="DateTime" Name="DAT_FALEC_EMPRG" />
+    <Property Type="String" Name="DCR_NATURAL_EMPRG" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_EXPCI_EMPRG" />
+    <Property Type="String" Name="DCR_COMPL_EMPRG" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DCR_OCPPROF_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NUM_CELUL_EMPRG" />
+    <Property Type="String" Name="DCR_NACNL_EMPRG" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIP_CTCOR_EMPRG" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COD_UFNAT_EMPRG" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="VLR_01_EMPRG" Precision="13" Scale="2" />
+    <Property Type="String" Name="NUM_TELRES_EMPRG" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_DDDCEL_EMPRG" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="QTD_DIATRB_EMPRG" />
+    <Property Type="Int16" Name="QTD_ANOTRB_EMPRG" />
+    <Property Type="Int16" Name="QTD_DIAANT_EMPRG" />
+    <Property Type="Int16" Name="QTD_MESANT_EMPRG" />
+    <Property Type="Int16" Name="QTD_ANOANT_EMPRG" />
+    <Property Type="Int64" Name="NUM_TITULO_EMPRG" />
+    <Property Type="Int16" Name="NUM_ZONA_EMPRG" />
+    <Property Type="Int16" Name="NUM_SECAO_EMPRG" />
+    <Property Type="String" Name="NUM_RGORIG_EMPRG" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_ULT_RCD_EMPRG" />
+    <Property Type="Int16" Name="AGCCODCODIGODAAGENCIA" />
+    <Property Type="Int32" Name="STECOD" />
+    <Property Type="Int64" Name="NUM_CPFCTC_EMPRG" />
+    <Property Type="String" Name="NOM_SEGTIT_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NUM_ENDER_EMPRG" />
+    <Property Type="Int16" Name="COD_EMPRSRPTANT_EMPRG" />
+    <Property Type="Int64" Name="NUM_RGTRORPTANT_EMPRG" />
+    <Property Type="String" Name="NUM_DDDFAX_EMPRG" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="NUM_FAX_EMPRG" />
+    <Property Type="String" Name="NUM_DDIFAX_EMPRG" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="ATECODATRIBUTOEMPRG" />
+    <Property Type="Decimal" Name="VLR_PATRIMONIAL_EMPRG" Precision="13" Scale="2" />
+    <Property Type="Decimal" Name="VLR_RENDIMENTO_EMPRG" Precision="13" Scale="2" />
+    <Property Type="String" Name="DCR_SITPPE_EMPRG" MaxLength="2500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DCR_RENDIMENTO_EMPRG" MaxLength="2500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NAT_DOCIDNT_EMPRG" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="PAICOD" />
+    <Property Type="String" Name="COD_ESTRUT_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DCR_IDIOMA_EMPRG" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MRC_NEGSEF_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_IP_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MRC_NAOPART_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_CELUL2_EMPRG" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_OBTSRS_EMPRG" />
+    <Property Type="String" Name="DCR_MOTOBT_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMPRGIDCTIPOMARCACAO" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_PREVAPOS_EMPRG" />
+    <Property Type="String" Name="EMPRGIDCGRPSANGUINEO" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="EMPRGIDCFATORRH" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="EMPRGNUMNATUREZA" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMPRGORGEMINATUREZA" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMPRGUNFORGEMINATUREZA" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="EMPRGDTHEMINATUREZA" />
+    <Property Type="Int16" Name="TLGCODTIPOLOGRAD" />
+    <Property Type="String" Name="DCR_LOGRAD" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_EMPGR_ANS" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMPRGCODDDI2" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="EMPRGCODDDD2" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="EMPRGNUMTELEF2" />
+    <Property Type="String" Name="EMPRGDESEMAIL2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUM_SIAPE_EMPRG" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUM_MATFNC_EMPRG" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUM_CNS_EMPRG" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="PESCODPESSOA" />
+    <Property Type="String" Name="DCR_APOS1_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_INIAPOS1_EMPRG" />
+    <Property Type="DateTime" Name="DAT_FIMAPOS1_EMPREG" />
+    <Property Type="String" Name="DCR_APOS2_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_INIAPOS2_EMPRG" />
+    <Property Type="DateTime" Name="DAT_FIMAPOS2_EMPREG" />
+    <Property Type="String" Name="DCR_APOS3_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_INIAPOS3_EMPRG" />
+    <Property Type="DateTime" Name="DAT_FIMAPOS3_EMPREG" />
+    <Property Type="String" Name="DCR_APOS4_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_INIAPOS4_EMPRG" />
+    <Property Type="DateTime" Name="DAT_FIMAPOS4_EMPREG" />
+    <Property Type="DateTime" Name="DAT_PRIEMP_EMPRG" />
+    <Property Type="String" Name="MRC_ASSOC_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="MRC_DEFFIS_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="GDECOD" />
+    <Property Type="Int32" Name="PAICODNASCIMENTO" />
+    <Property Type="Int32" Name="PAICODRESIDENCIA" />
+    <Property Type="Int32" Name="PAICODCIDADANIA1" />
+    <Property Type="Int32" Name="PAICODCIDADANIA2" />
+    <Property Type="String" Name="NUM_GRNCRD_EMPRG" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_VLDGRNCRD_EMPRG" />
+    <Property Type="String" Name="NUM_DDICEL_EMPRG" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_RECAD_EMPRG" />
+    <Property Type="String" Name="MRC_RES_EXT_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_PAIS_EXT_1" MaxLength="85" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_PAIS_EXT_2" MaxLength="85" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_PAIS_EXT_3" MaxLength="85" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PAICODPAISEXT1" />
+    <Property Type="Int32" Name="PAICODPAISEXT2" />
+    <Property Type="Int32" Name="PAICODPAISEXT3" />
+    <Property Type="String" Name="MRC_DOC_GRNCRD" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NOM_CJGE_EMPRG" MaxLength="80" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EMPREGADO1" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_EMPREGADO_003" FromRole="EMPREGADO" ToRole="EMPREGADO1" />
+    <NavigationProperty Name="EMPREGADO2" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_EMPREGADO_003" FromRole="EMPREGADO1" ToRole="EMPREGADO" />
+    <NavigationProperty Name="EMPRESA" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_EMPRS_EMPRG" FromRole="EMPREGADO" ToRole="EMPRESA" />
+    <Property Type="Int32" Name="PAICODRESIDENCIA2" />
+    <Property Type="Int32" Name="PAICODRESIDENCIA3" />
+    <Property Type="String" Name="NUM_IDT_FISCAL1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUM_IDT_FISCAL2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUM_IDT_FISCAL3" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMPRG_COD_POSTAL_EXT" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMPRG_DES_PRVNC_EST" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMPRGNOMEASSOCIADO" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="EMPRGNUMASSOCIADO" />
+    <Property Type="String" Name="EMPRGCODASSOCIADO" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="EMPRGGRDPASSOCIADO" />
+    <Property Type="Int64" Name="NUM_CPF_CJGE_EMPRG" />
+    <Property Type="String" Name="COD_SEXO_CJGE_EMPRG" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_NASC_CJGE_EMPRG" />
+    <Property Type="String" Name="EMPRGCODVERIFICADO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="EMPRGDATVERIFICACAO" />
+    <Property Type="Int16" Name="TPGCODTIPOPAGTO" />
+    <Property Type="String" Name="EMPRGCODPOSSUIDEP" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <Association Name="CF_EMPREGADO_003">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.EMPREGADO" Role="EMPREGADO" Multiplicity="0..1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.EMPREGADO" Role="EMPREGADO1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPREGADO">
+        <PropertyRef Name="COD_EMPRS" />
+        <PropertyRef Name="NUM_RGTRO_EMPRG" />
+      </Principal>
+      <Dependent Role="EMPREGADO1">
+        <PropertyRef Name="COD_EMPRSRPTANT_EMPRG" />
+        <PropertyRef Name="NUM_RGTRORPTANT_EMPRG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPRS_EMPRG">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.EMPRESA" Role="EMPRESA" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.EMPREGADO" Role="EMPREGADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPRESA">
+        <PropertyRef Name="COD_EMPRS" />
+      </Principal>
+      <Dependent Role="EMPREGADO">
+        <PropertyRef Name="COD_EMPRS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="FUN_TBL_CONTROLE_PROCESSACI">
+    <Key>
+      <PropertyRef Name="ID_CONTROLE" />
+    </Key>
+    <Property Type="Decimal" Name="ID_CONTROLE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="DESC_PROCESSAMENTO" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_PROCESSAMENTO" />
+    <Property Type="String" Name="USU_GERACAO" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PRE_TBL_CARGA_PROTHEUS">
+    <Key>
+      <PropertyRef Name="ID_PROTHEUS" />
+    </Key>
+    <Property Type="Int32" Name="COD_CARGA_PROTHEUS" Nullable="false" />
+    <Property Type="DateTime" Name="DTH_PAGAMENTO" />
+    <Property Type="Int16" Name="COD_CARGA_STATUS" Nullable="false" />
+    <Property Type="DateTime" Name="DTH_EXECUCAO" />
+    <Property Type="String" Name="IND_EXEC_IMEDIATA" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DCR_PARAMETROS" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOG_INCLUSAO" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DTH_INCLUSAO" Nullable="false" />
+    <Property Type="DateTime" Name="DTH_INCIO_PROCESSO" />
+    <Property Type="DateTime" Name="DTH_FIM_PROCESSO" />
+    <Property Type="DateTime" Name="DTH_SUPLEMENTAR" />
+    <Property Type="DateTime" Name="DTH_COMPLEMENTAR" />
+    <Property Type="Int32" Name="COD_LOTE" />
+    <Property Type="Int32" Name="NUM_LOTE" />
+    <Property Type="DateTime" Name="DTH_DOCUMENTO_INICIAL" />
+    <Property Type="DateTime" Name="DTH_DOCUMENTO_FINAL" />
+    <Property Type="Int32" Name="COD_ASSOCIADO" />
+    <Property Type="Int32" Name="COD_CARGA_TIPO" Nullable="false" />
+    <Property Type="Int32" Name="ID_PROTHEUS" Nullable="false" />
+    <NavigationProperty Name="PRE_TBL_CARGA_PROTHEUS_STATUS" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_PRE_TBL_CARGA_PROTHEUS_STAT" FromRole="PRE_TBL_CARGA_PROTHEUS" ToRole="PRE_TBL_CARGA_PROTHEUS_STATUS" />
+    <NavigationProperty Name="PRE_TBL_CARGA_PROTHEUS_TIPO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_PRE_TBL_CARGA_PROTHEUS_TIPO" FromRole="PRE_TBL_CARGA_PROTHEUS" ToRole="PRE_TBL_CARGA_PROTHEUS_TIPO" />
+  </EntityType>
+  <Association Name="FK_PRE_TBL_CARGA_PROTHEUS_STAT">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS_STATUS" Role="PRE_TBL_CARGA_PROTHEUS_STATUS" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS" Role="PRE_TBL_CARGA_PROTHEUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRE_TBL_CARGA_PROTHEUS_STATUS">
+        <PropertyRef Name="COD_STATUS" />
+      </Principal>
+      <Dependent Role="PRE_TBL_CARGA_PROTHEUS">
+        <PropertyRef Name="COD_CARGA_STATUS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRE_TBL_CARGA_PROTHEUS_TIPO">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS_TIPO" Role="PRE_TBL_CARGA_PROTHEUS_TIPO" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.PRE_TBL_CARGA_PROTHEUS" Role="PRE_TBL_CARGA_PROTHEUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRE_TBL_CARGA_PROTHEUS_TIPO">
+        <PropertyRef Name="COD_CARGA_TIPO" />
+      </Principal>
+      <Dependent Role="PRE_TBL_CARGA_PROTHEUS">
+        <PropertyRef Name="COD_CARGA_TIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TB_VAL_RECURSO">
+    <Key>
+      <PropertyRef Name="COD_TAB_RECURSO" />
+      <PropertyRef Name="COD_RECURSO" />
+      <PropertyRef Name="DAT_VAL_RECURSO" />
+    </Key>
+    <Property Type="Decimal" Name="COD_TAB_RECURSO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_RECURSO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DAT_VAL_RECURSO" Nullable="false" />
+    <Property Type="String" Name="COD_PORTE_ANEST" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="VAL_RECURSO" Precision="12" Scale="4" />
+    <Property Type="Decimal" Name="QTD_FILME" Precision="12" Scale="4" />
+    <Property Type="Int64" Name="QTD_AUXILIARES" />
+    <Property Type="Int64" Name="NUM_INCIDENCIAS" />
+    <Property Type="Decimal" Name="QTD_HONORARIO" Precision="12" Scale="4" />
+    <Property Type="String" Name="RCOCODPROCEDIMENTO" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="QTD_UCO" Precision="12" Scale="4" />
+    <Property Type="String" Name="PRECODPORTEREC" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="VAL_PESO" Precision="12" Scale="4" />
+    <Property Type="Decimal" Name="VAL_UCO" Precision="12" Scale="4" />
+    <Property Type="Decimal" Name="PCT_BANDA_APLIC" Precision="12" Scale="4" />
+    <Property Type="Int32" Name="RCOSEQ" />
+    <NavigationProperty Name="CADTBLRCORECURSOCODIGO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_VAL_RECURSO_007" FromRole="TB_VAL_RECURSO" ToRole="CADTBLRCORECURSOCODIGO" />
+    <NavigationProperty Name="TB_RECURSO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_VAL_RECURSO_005" FromRole="TB_VAL_RECURSO" ToRole="TB_RECURSO" />
+    <NavigationProperty Name="TB_TAB_RECURSO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_VAL_RECURSO_003" FromRole="TB_VAL_RECURSO" ToRole="TB_TAB_RECURSO" />
+  </EntityType>
+  <Association Name="CF_VAL_RECURSO_007">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.CADTBLRCORECURSOCODIGO" Role="CADTBLRCORECURSOCODIGO" Multiplicity="0..1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_VAL_RECURSO" Role="TB_VAL_RECURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CADTBLRCORECURSOCODIGO">
+        <PropertyRef Name="RCOSEQ" />
+      </Principal>
+      <Dependent Role="TB_VAL_RECURSO">
+        <PropertyRef Name="RCOSEQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CF_VAL_RECURSO_005">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_RECURSO" Role="TB_RECURSO" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_VAL_RECURSO" Role="TB_VAL_RECURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_RECURSO">
+        <PropertyRef Name="COD_RECURSO" />
+      </Principal>
+      <Dependent Role="TB_VAL_RECURSO">
+        <PropertyRef Name="COD_RECURSO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="FUN_TBL_MEMORIAL_UNIMED">
+    <Key>
+      <PropertyRef Name="ID_REG" />
+    </Key>
+    <Property Type="Decimal" Name="ID_REG" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DAT_GERACAO" Nullable="false" />
+    <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+    <Property Type="Int32" Name="NUM_MATRICULA" Nullable="false" />
+    <Property Type="String" Name="SUB_MATRICULA" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_IDENTIFICACAO" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_PARTICIP" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MOVIMENTACAO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_UNIMED" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_PLANO_CESP" MaxLength="4" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SAU_TBL_VALORCARTUNIMED">
+    <Key>
+      <PropertyRef Name="ID_REG" />
+    </Key>
+    <Property Type="Decimal" Name="ID_REG" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="COD_PLANO" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DES_PLANO" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="INCLUSAO" Precision="11" Scale="2" />
+    <Property Type="Decimal" Name="SEGUNDA_VIA" Precision="11" Scale="2" />
+    <Property Type="Decimal" Name="RENOVACAO" Precision="11" Scale="2" />
+    <Property Type="DateTime" Name="DAT_INICIO_VIGENCIA" />
+    <Property Type="DateTime" Name="DAT_FIM_VIGENCIA" />
+    <Property Type="String" Name="USU_INCLUSAO" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FUN_TBL_MEMORIAL_UNIMED_HIST">
+    <Key>
+      <PropertyRef Name="ID_REG_HIST" />
+      <PropertyRef Name="DAT_GERACAO" />
+      <PropertyRef Name="COD_EMPRS" />
+      <PropertyRef Name="NUM_MATRICULA" />
+      <PropertyRef Name="SUB_MATRICULA" />
+    </Key>
+    <Property Type="Decimal" Name="ID_REG_HIST" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DAT_GERACAO" Nullable="false" />
+    <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+    <Property Type="Int64" Name="NUM_MATRICULA" Nullable="false" />
+    <Property Type="String" Name="SUB_MATRICULA" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_IDENTIFICACAO" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_PARTICIP" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MOVIMENTACAO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_UNIMED" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_PLANO_CESP" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_PAGAMENTO" />
+    <Property Type="Decimal" Name="VALOR" Precision="11" Scale="2" />
+  </EntityType>
+  <EntityType Name="REEMB_FRMCIA">
+    <Key>
+      <PropertyRef Name="ID_REG" />
+    </Key>
+    <Property Type="String" Name="HDRDATHOR" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODUSU" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODETC" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODPGR" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+    <Property Type="Int32" Name="NUM_RGTRO_EMPRG" Nullable="false" />
+    <Property Type="Int16" Name="DIG" />
+    <Property Type="Int16" Name="NUM_MATR_SUB" />
+    <Property Type="Int16" Name="DIG_MATR_SUB" />
+    <Property Type="String" Name="NOME" MaxLength="41" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="VLR_MEDCTO" Precision="11" Scale="2" />
+    <Property Type="Decimal" Name="VLR_REEMB" Precision="11" Scale="2" />
+    <Property Type="Int64" Name="PROTOCOLO" Nullable="false" />
+    <Property Type="DateTime" Name="DATA_ARQUIVO" />
+    <Property Type="String" Name="MRC_LANC_MEDCTR" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DATA_CREDITO" />
+    <Property Type="Decimal" Name="ID_REG" Nullable="false" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="CAD_TBL_CONTROLEUNIMED">
+    <Key>
+      <PropertyRef Name="COD_CONTROLEUNIMED" />
+    </Key>
+    <Property Type="Decimal" Name="COD_CONTROLEUNIMED" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DAT_GERACAO" Nullable="false" />
+    <Property Type="String" Name="COD_IDENTIFICACAO" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_PARTICIP" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_NASCIMENTO" />
+    <Property Type="String" Name="COD_SEXO" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CPF" />
+    <Property Type="String" Name="ACOMODACAO" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DES_PLANO" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ENVIO_UNIMED" />
+    <Property Type="String" Name="TIPO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USU_GERACAO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DT_HIST" />
+    <Property Type="String" Name="COD_UNIMED" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_ADESAO" />
+    <Property Type="String" Name="COD_PLANO_CESP" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="COD_EMPRS" Nullable="false" />
+    <Property Type="Int32" Name="NUM_MATRICULA" Nullable="false" />
+    <Property Type="String" Name="SUB_MATRICULA" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_CANCELAMENTO" />
+    <Property Type="String" Name="COBRANCA_MEMORIAL" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUMERO_UNIMED" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NUMERO_VIA" />
+    <Property Type="String" Name="NOM_MAE_EMPRG" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TITULAR" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DCR_ESTCV" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DCR_GRADPC" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_UNDFD_EMPRG" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_INI_PERIODO" />
+    <Property Type="DateTime" Name="DAT_FIN_PERIDO" />
+    <Property Type="String" Name="NUM_CI_EMPRG" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TB_TAB_RECURSO">
+    <Key>
+      <PropertyRef Name="COD_TAB_RECURSO" />
+    </Key>
+    <Property Type="Decimal" Name="COD_TAB_RECURSO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Int16" Name="COD_UM" Nullable="false" />
+    <Property Type="String" Name="DES_TAB_RECURSO" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_IMPLANTACAO" Nullable="false" />
+    <Property Type="String" Name="TIP_RECURSO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_CBHPM" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="VAL_UCO" Precision="12" Scale="4" />
+    <Property Type="Decimal" Name="PCT_BANDA_APLIC" Precision="12" Scale="4" />
+    <Property Type="String" Name="TPACOD" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_ULT_PROCESSO" />
+    <Property Type="Decimal" Name="VLR_FILME_RADIO" Precision="8" Scale="4" />
+    <NavigationProperty Name="TB_COND_CONTRAT" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_001" FromRole="TB_TAB_RECURSO" ToRole="TB_COND_CONTRAT" />
+    <NavigationProperty Name="TB_COND_CONTRAT1" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_003" FromRole="TB_TAB_RECURSO" ToRole="TB_COND_CONTRAT" />
+    <NavigationProperty Name="TB_COND_CONTRAT2" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_005" FromRole="TB_TAB_RECURSO" ToRole="TB_COND_CONTRAT" />
+    <NavigationProperty Name="TB_COND_CONTRAT3" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_008" FromRole="TB_TAB_RECURSO" ToRole="TB_COND_CONTRAT" />
+    <NavigationProperty Name="TB_COND_CONTRAT4" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_COND_CONTRAT_009" FromRole="TB_TAB_RECURSO" ToRole="TB_COND_CONTRAT" />
+    <NavigationProperty Name="TB_VAL_RECURSO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_VAL_RECURSO_003" FromRole="TB_TAB_RECURSO" ToRole="TB_VAL_RECURSO" />
+    <NavigationProperty Name="SAU_TBL_CARGA_REALIZADA" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_CARGA_REALIZ_TAB_REC" FromRole="TB_TAB_RECURSO" ToRole="SAU_TBL_CARGA_REALIZADA" />
+    <NavigationProperty Name="SAU_TBL_CLASSE_PORT_VIG" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_TBL_CONV_PORTE_TAB_RECU" FromRole="TB_TAB_RECURSO" ToRole="SAU_TBL_CLASSE_PORT_VIG" />
+    <NavigationProperty Name="SAU_TBL_CONV_PORTE_VIG" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_TBL_CONV_PORTE_TAB_REC" FromRole="TB_TAB_RECURSO" ToRole="SAU_TBL_CONV_PORTE_VIG" />
+  </EntityType>
+  <Association Name="CF_COND_CONTRAT_001">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TAB_RECURSO" Role="TB_TAB_RECURSO" Multiplicity="0..1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_COND_CONTRAT" Role="TB_COND_CONTRAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TAB_RECURSO">
+        <PropertyRef Name="COD_TAB_RECURSO" />
+      </Principal>
+      <Dependent Role="TB_COND_CONTRAT">
+        <PropertyRef Name="COD_TAB_PORTE_ANESTESICO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CF_COND_CONTRAT_003">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TAB_RECURSO" Role="TB_TAB_RECURSO" Multiplicity="0..1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_COND_CONTRAT" Role="TB_COND_CONTRAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TAB_RECURSO">
+        <PropertyRef Name="COD_TAB_RECURSO" />
+      </Principal>
+      <Dependent Role="TB_COND_CONTRAT">
+        <PropertyRef Name="COD_TAB_MAT_MED" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CF_COND_CONTRAT_005">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TAB_RECURSO" Role="TB_TAB_RECURSO" Multiplicity="0..1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_COND_CONTRAT" Role="TB_COND_CONTRAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TAB_RECURSO">
+        <PropertyRef Name="COD_TAB_RECURSO" />
+      </Principal>
+      <Dependent Role="TB_COND_CONTRAT">
+        <PropertyRef Name="COD_TAB_PROCEDIMENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CF_COND_CONTRAT_008">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TAB_RECURSO" Role="TB_TAB_RECURSO" Multiplicity="0..1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_COND_CONTRAT" Role="TB_COND_CONTRAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TAB_RECURSO">
+        <PropertyRef Name="COD_TAB_RECURSO" />
+      </Principal>
+      <Dependent Role="TB_COND_CONTRAT">
+        <PropertyRef Name="COD_TAB_ESPECIAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CF_COND_CONTRAT_009">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TAB_RECURSO" Role="TB_TAB_RECURSO" Multiplicity="0..1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_COND_CONTRAT" Role="TB_COND_CONTRAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TAB_RECURSO">
+        <PropertyRef Name="COD_TAB_RECURSO" />
+      </Principal>
+      <Dependent Role="TB_COND_CONTRAT">
+        <PropertyRef Name="COD_TAB_SERVICOS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CF_VAL_RECURSO_003">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TAB_RECURSO" Role="TB_TAB_RECURSO" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_VAL_RECURSO" Role="TB_VAL_RECURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TAB_RECURSO">
+        <PropertyRef Name="COD_TAB_RECURSO" />
+      </Principal>
+      <Dependent Role="TB_VAL_RECURSO">
+        <PropertyRef Name="COD_TAB_RECURSO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TAB_CARTEIRINHA_CARENCIA">
+    <Key>
+      <PropertyRef Name="COD_USU_EMP" />
+      <PropertyRef Name="COD_USU_MAT" />
+      <PropertyRef Name="COD_USU_MATDC" />
+      <PropertyRef Name="COD_USU_SUB" />
+      <PropertyRef Name="COD_USU_SUBDC" />
+      <PropertyRef Name="SEQUENCIAL" />
+      <PropertyRef Name="DT_SOLIC_CI" />
+      <PropertyRef Name="NUM_SEQ_PARTICIP" />
+    </Key>
+    <Property Type="Int16" Name="COD_USU_EMP" Nullable="false" />
+    <Property Type="Int32" Name="COD_USU_MAT" Nullable="false" />
+    <Property Type="Int16" Name="COD_USU_MATDC" Nullable="false" />
+    <Property Type="Int16" Name="COD_USU_SUB" Nullable="false" />
+    <Property Type="Int16" Name="COD_USU_SUBDC" Nullable="false" />
+    <Property Type="Int16" Name="EMPRESA" />
+    <Property Type="Int32" Name="MATRICULA" />
+    <Property Type="String" Name="DESC_CART" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESC_CART_EMP" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESC_CART1" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_RED" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TEXTO_FIXO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DT_LIMIT_CATEG" />
+    <Property Type="String" Name="MSG_1" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MSG_2" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MSG_3" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MSG_4" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MSG_5" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MSG_CARENCIA" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MSG_CARENCIA_UCETI" MaxLength="57" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DT_CARENCIA_UCETI" />
+    <Property Type="String" Name="MSG_CARENCIA_IA" MaxLength="28" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DT_CARENCIA_IA" />
+    <Property Type="String" Name="MSG_CARENCIA_IQ2L" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DT_CARENCIA_IQ2L" />
+    <Property Type="String" Name="MSG_CARENCIA_PARTO" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DT_CARENCIA_PARTO" />
+    <Property Type="String" Name="MSG_CARENCIA_PARTO_IA" MaxLength="38" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DT_CARENCIA_PARTO_IA" />
+    <Property Type="String" Name="EMP" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PONTO" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAT" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_TIT_REP" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SIGLA_DEPART" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESC_SIGLA_DEPART" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="END_CORR" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BAIRRO_CORR" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CEP_CID_CORR" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="SEQUENCIAL" Nullable="false" />
+    <Property Type="DateTime" Name="DT_SOLIC_CI" Nullable="false" />
+    <Property Type="Int16" Name="TIPO_CARTAO" />
+    <Property Type="DateTime" Name="DT_GRAFICA" />
+    <Property Type="String" Name="IDC_2VIA_CI" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="LOCAL_ENTREGA_CI" />
+    <Property Type="Int64" Name="NUM_SEQ_PARTICIP" Nullable="false" />
+    <Property Type="String" Name="NUM_REGISTRO_ANS" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUM_NACIONAL_SAUDE" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CADTBLVPRVALORPORTEREC">
+    <Key>
+      <PropertyRef Name="PRECODPORTEREC" />
+      <PropertyRef Name="VPRDATVALIDADE" />
+    </Key>
+    <Property Type="String" Name="HDRDATHOR" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODUSU" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODETC" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HDRCODPGR" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRECODPORTEREC" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="VPRDATVALIDADE" Nullable="false" />
+    <Property Type="Decimal" Name="VPRVALPORTEREC" Nullable="false" Precision="12" Scale="4" />
+  </EntityType>
+  <EntityType Name="TB_CLASSE_CONVENIADO">
+    <Key>
+      <PropertyRef Name="COD_CLASSE" />
+    </Key>
+    <Property Type="Decimal" Name="COD_CLASSE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="COD_TIPO_CONSELHO" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_CLASSE" Nullable="false" MaxLength="35" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TIP_PESSOA" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COD_RETENCAO_IR" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_COOPERATIVA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_CBO" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CSFCOD" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CSMCOD" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DES_SERVICOS" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CBOSEQ" />
+    <NavigationProperty Name="TB_CONVENENTE" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_CONVENENTE_003" FromRole="TB_CLASSE_CONVENIADO" ToRole="TB_CONVENENTE" />
+    <NavigationProperty Name="SAU_TBL_CLASSE_PORT_VIG" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_TBL_CONV_PORTE_TB_CLASSE" FromRole="TB_CLASSE_CONVENIADO" ToRole="SAU_TBL_CLASSE_PORT_VIG" />
+  </EntityType>
+  <Association Name="CF_CONVENENTE_003">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CLASSE_CONVENIADO" Role="TB_CLASSE_CONVENIADO" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CONVENENTE" Role="TB_CONVENENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CLASSE_CONVENIADO">
+        <PropertyRef Name="COD_CLASSE" />
+      </Principal>
+      <Dependent Role="TB_CONVENENTE">
+        <PropertyRef Name="COD_CLASSE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SAU_TBL_CARGA_PROCEDIMENTO">
+    <Key>
+      <PropertyRef Name="COD_CARGA" />
+      <PropertyRef Name="COD_PROCEDIMENTO" />
+    </Key>
+    <Property Type="Decimal" Name="COD_CARGA" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="COD_PROCEDIMENTO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRICAO" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="PRECO" Precision="10" Scale="2" />
+    <Property Type="String" Name="OBS_ERRO" MaxLength="2000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SAU_TBL_CARGA_REALIZADA">
+    <Key>
+      <PropertyRef Name="COD_CARGA" />
+      <PropertyRef Name="DAT_EXEC" />
+      <PropertyRef Name="COD_CONVENENTE" />
+    </Key>
+    <Property Type="Decimal" Name="COD_CARGA" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DAT_EXEC" Nullable="false" />
+    <Property Type="Decimal" Name="COD_CONVENENTE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_TAB_MAT_MED" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DAT_VIG" Nullable="false" />
+    <Property Type="String" Name="NM_ARQ_IMPORT" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NM_USU" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HOST_USU" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="TOTAL_INCLUIDO" Nullable="false" />
+    <Property Type="Int64" Name="TOTAL_NAO_INCLUIDO" Nullable="false" />
+    <NavigationProperty Name="TB_CONVENENTE" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_CARGA_REALIZ_CONV" FromRole="SAU_TBL_CARGA_REALIZADA" ToRole="TB_CONVENENTE" />
+    <NavigationProperty Name="TB_TAB_RECURSO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_CARGA_REALIZ_TAB_REC" FromRole="SAU_TBL_CARGA_REALIZADA" ToRole="TB_TAB_RECURSO" />
+  </EntityType>
+  <Association Name="FK_CARGA_REALIZ_CONV">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CONVENENTE" Role="TB_CONVENENTE" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CARGA_REALIZADA" Role="SAU_TBL_CARGA_REALIZADA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CONVENENTE">
+        <PropertyRef Name="COD_CONVENENTE" />
+      </Principal>
+      <Dependent Role="SAU_TBL_CARGA_REALIZADA">
+        <PropertyRef Name="COD_CONVENENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CARGA_REALIZ_TAB_REC">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TAB_RECURSO" Role="TB_TAB_RECURSO" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CARGA_REALIZADA" Role="SAU_TBL_CARGA_REALIZADA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TAB_RECURSO">
+        <PropertyRef Name="COD_TAB_RECURSO" />
+      </Principal>
+      <Dependent Role="SAU_TBL_CARGA_REALIZADA">
+        <PropertyRef Name="COD_TAB_MAT_MED" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CAD_TBL_CONTROLEUNIMED_ETQ">
+    <Key>
+      <PropertyRef Name="ID_REG" />
+    </Key>
+    <Property Type="Decimal" Name="ID_REG" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Int16" Name="COD_EMPRS" />
+    <Property Type="Int32" Name="NUM_MATRICULA" />
+    <Property Type="String" Name="NOM_PARTICIP" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIP_MOV" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DCR_ENDER_EMPRG" MaxLength="140" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DCR_COMPL_EMPRG" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_BAIRRO_EMPRG" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_CEP_EMPRG" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_CIDRS_EMPRG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_UNDFD_EMPRG" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USU_GERACAO" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SAU_TB_SERV_X_HOSP_AND">
+    <Key>
+      <PropertyRef Name="ID_REG" />
+    </Key>
+    <Property Type="Decimal" Name="ID_REG" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_HOSP" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_SERV" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="VALOR" Precision="12" Scale="2" />
+    <Property Type="Decimal" Name="VALOR_PROPOSTO" Precision="12" Scale="2" />
+    <Property Type="Decimal" Name="PORCENTAGEM" Precision="12" Scale="2" />
+    <Property Type="Decimal" Name="PORC_PROPOSTA" Precision="12" Scale="2" />
+    <Property Type="Decimal" Name="PORC_DESCONTO" Precision="12" Scale="2" />
+    <Property Type="Decimal" Name="PORC_DESC_PROPOSTO" Precision="12" Scale="2" />
+    <Property Type="DateTime" Name="DAT_INI_VIGENCIA" />
+    <Property Type="DateTime" Name="DAT_FIM_VIGENCIA" />
+    <Property Type="DateTime" Name="DAT_PROPOSTA" />
+    <Property Type="String" Name="USU_ALTERACAO" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SAU_TB_SERVICO_AND">
+    <Key>
+      <PropertyRef Name="ID_REG" />
+    </Key>
+    <Property Type="Decimal" Name="ID_REG" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_SERV" Precision="38" Scale="0" />
+    <Property Type="String" Name="DESCRICAO" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_INI_ALTERACAO" />
+    <Property Type="DateTime" Name="DAT_FIM_ALTERACAO" />
+    <Property Type="String" Name="USU_ALTERACAO" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SAU_TB_HOSP_AND">
+    <Key>
+      <PropertyRef Name="ID_REG" />
+    </Key>
+    <Property Type="Decimal" Name="ID_REG" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_HOSP" Precision="38" Scale="0" />
+    <Property Type="String" Name="NOME_FANTASIA" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DAT_INICIO_CONTRATO" />
+    <Property Type="String" Name="CREDENCIADOR" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CIDADE" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="REGIONAL" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CONTATO" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OBSERVACAOCONTRATUAL" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_INI_VIGENCIA" />
+    <Property Type="DateTime" Name="DAT_FIM_VIGENCIA" />
+    <Property Type="String" Name="USU_ALTERACAO" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SAU_TBL_CLASSE_PORT_VIG">
+    <Key>
+      <PropertyRef Name="NUM_SEQ" />
+      <PropertyRef Name="COD_CLASSE" />
+    </Key>
+    <Property Type="Decimal" Name="NUM_SEQ" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_CLASSE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_TAB_RECURSO" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DT_VIG_PORTE" Nullable="false" />
+    <Property Type="DateTime" Name="DT_INI_ATEND" Nullable="false" />
+    <Property Type="DateTime" Name="DT_FIM_ATEND" />
+    <Property Type="String" Name="USUARIO" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DT_INCLUSAO" />
+    <Property Type="DateTime" Name="DT_ATU" />
+    <NavigationProperty Name="TB_TAB_RECURSO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_TBL_CONV_PORTE_TAB_RECU" FromRole="SAU_TBL_CLASSE_PORT_VIG" ToRole="TB_TAB_RECURSO" />
+    <NavigationProperty Name="TB_CLASSE_CONVENIADO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_TBL_CONV_PORTE_TB_CLASSE" FromRole="SAU_TBL_CLASSE_PORT_VIG" ToRole="TB_CLASSE_CONVENIADO" />
+  </EntityType>
+  <EntityType Name="SAU_TBL_CONV_PORTE_VIG">
+    <Key>
+      <PropertyRef Name="NUM_SEQ" />
+      <PropertyRef Name="COD_CONVENENTE" />
+    </Key>
+    <Property Type="Decimal" Name="NUM_SEQ" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_CONVENENTE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_TAB_RECURSO" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DT_VIG_PORTE" Nullable="false" />
+    <Property Type="DateTime" Name="DT_INI_VIG" Nullable="false" />
+    <Property Type="DateTime" Name="DT_FIM_VIG" />
+    <Property Type="String" Name="USUARIO" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DT_INCLUSAO" />
+    <Property Type="DateTime" Name="DT_ATU" />
+    <NavigationProperty Name="TB_TAB_RECURSO" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_TBL_CONV_PORTE_TAB_REC" FromRole="SAU_TBL_CONV_PORTE_VIG" ToRole="TB_TAB_RECURSO" />
+    <NavigationProperty Name="TB_CONVENENTE" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.FK_TBL_CONV_PORTE_VIG" FromRole="SAU_TBL_CONV_PORTE_VIG" ToRole="TB_CONVENENTE" />
+  </EntityType>
+  <Association Name="FK_TBL_CONV_PORTE_TAB_RECU">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TAB_RECURSO" Role="TB_TAB_RECURSO" Multiplicity="0..1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CLASSE_PORT_VIG" Role="SAU_TBL_CLASSE_PORT_VIG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TAB_RECURSO">
+        <PropertyRef Name="COD_TAB_RECURSO" />
+      </Principal>
+      <Dependent Role="SAU_TBL_CLASSE_PORT_VIG">
+        <PropertyRef Name="COD_TAB_RECURSO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_CONV_PORTE_TB_CLASSE">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CLASSE_CONVENIADO" Role="TB_CLASSE_CONVENIADO" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CLASSE_PORT_VIG" Role="SAU_TBL_CLASSE_PORT_VIG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CLASSE_CONVENIADO">
+        <PropertyRef Name="COD_CLASSE" />
+      </Principal>
+      <Dependent Role="SAU_TBL_CLASSE_PORT_VIG">
+        <PropertyRef Name="COD_CLASSE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_CONV_PORTE_TAB_REC">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_TAB_RECURSO" Role="TB_TAB_RECURSO" Multiplicity="0..1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CONV_PORTE_VIG" Role="SAU_TBL_CONV_PORTE_VIG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TAB_RECURSO">
+        <PropertyRef Name="COD_TAB_RECURSO" />
+      </Principal>
+      <Dependent Role="SAU_TBL_CONV_PORTE_VIG">
+        <PropertyRef Name="COD_TAB_RECURSO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_CONV_PORTE_VIG">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_CONVENENTE" Role="TB_CONVENENTE" Multiplicity="1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.SAU_TBL_CONV_PORTE_VIG" Role="SAU_TBL_CONV_PORTE_VIG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CONVENENTE">
+        <PropertyRef Name="COD_CONVENENTE" />
+      </Principal>
+      <Dependent Role="SAU_TBL_CONV_PORTE_VIG">
+        <PropertyRef Name="COD_CONVENENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TB_PARTICIP_PLANO">
+    <Key>
+      <PropertyRef Name="COD_PLANO" />
+      <PropertyRef Name="NUM_SEQ_CONTRATO" />
+      <PropertyRef Name="NUM_SEQ_PARTICIP" />
+      <PropertyRef Name="DAT_ADESAO" />
+    </Key>
+    <Property Type="Decimal" Name="COD_PLANO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NUM_SEQ_CONTRATO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NUM_SEQ_PARTICIP" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DAT_ADESAO" Nullable="false" />
+    <Property Type="Decimal" Name="COD_PLANO_ANTERIOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NUM_SEQ_CONTRATO_ANTERIOR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_CATEGORIA" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="SIT_PARTIC_PLANO" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_CANCELAMENTO" />
+    <Property Type="DateTime" Name="DAT_LIMIT_CATEG" />
+    <Property Type="DateTime" Name="DAT_SOLIC_ADESAO" />
+    <Property Type="Int16" Name="COD_EMPRS" />
+    <Property Type="String" Name="NUM_MATRICULA" MaxLength="18" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NUM_SUB_MATRIC" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_OBSERVACAO" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IDC_BOLETA_INDIVIDUAL" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_DOCUMENTO" />
+    <Property Type="DateTime" Name="DAT_CONTRIBUICAO" />
+    <Property Type="String" Name="NUM_MATRICULA_PLANO" MaxLength="18" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_VALID_CARTEIRA" />
+    <Property Type="String" Name="IDC_ACAO_JUDICIAL" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_ALTERACAO" />
+    <Property Type="DateTime" Name="DAT_INC_PD" />
+    <Property Type="String" Name="SIT_USUAR_PD" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_DEFIC_FIS_PD" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_DEFIC_MENT_PD" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_DEFIC_SEN_VIS_PD" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_DEFIC_SEN_AUD_PD" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_INI_VALID_PD" />
+    <Property Type="DateTime" Name="DAT_FIM_VALID_PD" />
+    <Property Type="Decimal" Name="COD_VERSAO_CID_PD" Precision="38" Scale="0" />
+    <Property Type="String" Name="COD_CID_PD" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="COD_PD_CONVENENTE" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="DAT_INI_DEFIC_PD" />
+    <Property Type="String" Name="IDC_NECESS_REAVAL_PD" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_PROX_AVAL_PD" />
+    <Property Type="DateTime" Name="DAT_EMISSAO_CARTA_PD" />
+    <Property Type="String" Name="NOM_TEC_SAUDE_PD" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_OBS_PD" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_EMIS_CART_IDENTIF" />
+    <Property Type="Int16" Name="TIP_CARTA" />
+    <Property Type="DateTime" Name="DAT_EMIS_CARTREVALID" />
+    <Property Type="DateTime" Name="DAT_VALID_CARTEIRA_ANT" />
+    <Property Type="DateTime" Name="DAT_RECALCULO" />
+    <Property Type="DateTime" Name="DAT_INCLUSAO" />
+    <Property Type="String" Name="IDC_PARCELA_INI" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="VAL_PARCELA_INI" Precision="12" Scale="4" />
+    <Property Type="DateTime" Name="DAT_PARCELA_INI" />
+    <Property Type="String" Name="ANO_RECEB_PARTICIP" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="NUM_SEQ_RECEB_PARTIC" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="CAMCOD" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="KITCOD" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="VAL_PCT_USU" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="JUDCOD" Precision="38" Scale="0" />
+    <Property Type="String" Name="IDC_DESCONTO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="MES_REAJUSTE" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COD_TAB_FAIXA" Precision="38" Scale="0" />
+    <Property Type="String" Name="TIP_FORMA_LIQUID_CONTR" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TIP_FORMA_LIQUID_POS" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="NUM_DIA_LIQUID_CONTR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NUM_DIA_LIQUID_POS" Precision="38" Scale="0" />
+    <Property Type="String" Name="IDC_DEFIC_DEFINIT_PD" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_REAVAL_REC_PD" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="NUM_MES_PERIOD_PD" />
+    <Property Type="DateTime" Name="DAT_PREV_TERM_SUSP" />
+    <Property Type="DateTime" Name="DAT_HOUR_CANCEL" />
+    <Property Type="String" Name="HOR_CANCELA" MaxLength="4" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EMPRESA" Relationship="FUNCESP.Integracao.Saude.Aplicacao.DAL.CF_PARTICIP_PLANO_005" FromRole="TB_PARTICIP_PLANO" ToRole="EMPRESA" />
+  </EntityType>
+  <Association Name="CF_PARTICIP_PLANO_005">
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.EMPRESA" Role="EMPRESA" Multiplicity="0..1" />
+    <End Type="FUNCESP.Integracao.Saude.Aplicacao.DAL.TB_PARTICIP_PLANO" Role="TB_PARTICIP_PLANO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPRESA">
+        <PropertyRef Name="COD_EMPRS" />
+      </Principal>
+      <Dependent Role="TB_PARTICIP_PLANO">
+        <PropertyRef Name="COD_EMPRS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TB_PLANO">
+    <Key>
+      <PropertyRef Name="COD_PLANO" />
+    </Key>
+    <Property Type="Decimal" Name="COD_PLANO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="COD_MOD_PLANO" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="COD_TIPO_ACOMOD" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_PLANO" Nullable="false" MaxLength="70" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_OBSERVACAO" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUM_REGISTRO_PLANO" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DES_ABREVIADA" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_INICIO" />
+    <Property Type="Decimal" Name="COD_PROGRAMA" Precision="38" Scale="0" />
+    <Property Type="String" Name="IDC_TIPO_HOSP" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_TIPO_AMB" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_TIPO_ODO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="IDC_TIPO_OBS" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="COD_SEG_ASSIST_PLANO_ANS" />
+    <Property Type="Int16" Name="COD_ABRANG_GEO_PLANO_ANS" />
+    <Property Type="Decimal" Name="COD_CLASSE" Precision="38" Scale="0" />
+    <Property Type="Int16" Name="IDC_EXISTE_PARTICIP_FRANQUIA" />
+    <Property Type="Int16" Name="IDC_EXISTE_EXC_COBERTURA" />
+    <Property Type="String" Name="IDC_PLANO_LEI9656" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="NUM_PRIORIDADE" />
+    <Property Type="String" Name="IDC_CANC_USU_LIM" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_INI_PLANO" />
+    <Property Type="DateTime" Name="DAT_FIM_PLANO" />
+  </EntityType>
+  <EntityType Name="SAU_TBL_CARGA_TEMP">
+    <Key>
+      <PropertyRef Name="COD_PROCEDIMENTO" />
+    </Key>
+    <Property Type="String" Name="COD_PROCEDIMENTO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRICAO" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="PRECO" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="OPP_TB_INADIPLENTES">
+    <Key>
+      <PropertyRef Name="LOTE" />
+      <PropertyRef Name="NOME" />
+      <PropertyRef Name="NUM_NOSSO_NUMERO" />
+      <PropertyRef Name="VENCIMENTO" />
+      <PropertyRef Name="VAL_TOTAL" />
+    </Key>
+    <Property Type="Int32" Name="LOTE" Nullable="false" />
+    <Property Type="String" Name="EMPRESA" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REGISTRO" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOME" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUM_NOSSO_NUMERO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="VENCIMENTO" Nullable="false" />
+    <Property Type="Decimal" Name="VAL_TOTAL" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="ENDEREÇO" MaxLength="323" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DAT_COMPETENCIA" />
+    <Property Type="String" Name="DEPENDENTES" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FLAG_PAGO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="NUM_IDNTF_RPTANT" />
+    <Property Type="String" Name="TITULAR" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TITULA_ATIVO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TITULAR_ATIVO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ENDERECO_REPRESENTATE" MaxLength="170" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GERA_CARTA_AVISO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="GERA_COBRANCA_EJ" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="GERA_CARTA_DIGNA" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+</Schema>

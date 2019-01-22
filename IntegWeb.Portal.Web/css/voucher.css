@@ -1,0 +1,33 @@
+/*css incluido para atualização cadastral*/
+body {
+  background: #F2F2F2;
+  text-align: center;
+  padding: 40px 60px; }
+
+.logo-funcesp {
+  float: left; }
+
+.logo-bauducco {
+  float: right; }
+
+.voucher_content {
+  padding: 35px;
+  background: #FFFFFF;
+  width: 100% !important;
+  margin: auto;
+  color: #404040;
+  margin-top: 120px; }
+  .voucher_content .icone_voucher {
+    width: 112px;
+    margin-top: -91px; }
+  .voucher_content h1 {
+    font-size: 24px;
+    color: #D70B32; }
+  .voucher_content p {
+    font-size: 18px;
+    line-height: 27px;
+    margin: 20px 0; }
+  .voucher_content p.validade {
+    color: #D70B32;
+    font-size: 17px;
+    line-height: 24px; }

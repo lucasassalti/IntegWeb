@@ -1,0 +1,1895 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarDocumentoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarDocPorReferencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarDocPorReferenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarDocPorReferenciaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoCadastroDOCUMENTO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoCadastroDOCUMENTOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoCadastroDOCUMENTOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginServico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginServicoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginServicoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoCadastroContrateJa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoCadastroContrateJaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoCadastroContrateJaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarIDUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarIDUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarIDUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocumentoCancelar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocumentoCancelarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentoCancelarResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocumentoExcluir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocumentoExcluirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentoExcluirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EvListarEmailValido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EvListarEmailValidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EvListarEmailValidoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterP7SDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterP7SDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterP7SDocResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarWorkflowDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarWorkflowDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarWorkflowDocResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GerarCarimboTempo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GerarCarimboTempoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GerarCarimboTempoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCarimboTempo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCarimboTempoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarCarimboTempoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoCadastroRelacionamentos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoCadastroRelacionamentosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoCadastroRelacionamentosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarLogAuditoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarLogAuditoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarLogAuditoriaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarAtributosRelacionamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarAtributosRelacionamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarAtributosRelacionamentoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarAtributosRepresentante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarAtributosRepresentanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarAtributosRepresentanteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarRepresentantesRelacionamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarRepresentantesRelacionamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarRepresentantesRelacionamentoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EvExcluirEmailValido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EvExcluirEmailValidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EvExcluirEmailValidoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EvListarLogsEmailValido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EvListarLogsEmailValidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EvListarLogsEmailValidoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EV_DetalhesProcessamento_Listar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EV_DetalhesProcessamento_ListarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EV_DetalhesProcessamento_ListarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EvEnviarEmailValido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EvEnviarEmailValidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EvEnviarEmailValidoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarDocumento" />
+  </wsdl:message>
+  <wsdl:message name="ListarDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarDocPorReferenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarDocPorReferencia" />
+  </wsdl:message>
+  <wsdl:message name="ListarDocPorReferenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarDocPorReferenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroDOCUMENTOSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoCadastroDOCUMENTO" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroDOCUMENTOSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoCadastroDOCUMENTOResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginServicoSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginServico" />
+  </wsdl:message>
+  <wsdl:message name="LoginServicoSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginServicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroContrateJaSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoCadastroContrateJa" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroContrateJaSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoCadastroContrateJaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarIDUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarIDUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarIDUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarIDUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentoCancelarSoapIn">
+    <wsdl:part name="parameters" element="tns:DocumentoCancelar" />
+  </wsdl:message>
+  <wsdl:message name="DocumentoCancelarSoapOut">
+    <wsdl:part name="parameters" element="tns:DocumentoCancelarResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentoExcluirSoapIn">
+    <wsdl:part name="parameters" element="tns:DocumentoExcluir" />
+  </wsdl:message>
+  <wsdl:message name="DocumentoExcluirSoapOut">
+    <wsdl:part name="parameters" element="tns:DocumentoExcluirResponse" />
+  </wsdl:message>
+  <wsdl:message name="EvListarEmailValidoSoapIn">
+    <wsdl:part name="parameters" element="tns:EvListarEmailValido" />
+  </wsdl:message>
+  <wsdl:message name="EvListarEmailValidoSoapOut">
+    <wsdl:part name="parameters" element="tns:EvListarEmailValidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterP7SDocSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterP7SDoc" />
+  </wsdl:message>
+  <wsdl:message name="ObterP7SDocSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterP7SDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarWorkflowDocSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarWorkflowDoc" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarWorkflowDocSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarWorkflowDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="GerarCarimboTempoSoapIn">
+    <wsdl:part name="parameters" element="tns:GerarCarimboTempo" />
+  </wsdl:message>
+  <wsdl:message name="GerarCarimboTempoSoapOut">
+    <wsdl:part name="parameters" element="tns:GerarCarimboTempoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCarimboTempoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarCarimboTempo" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCarimboTempoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarCarimboTempoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroRelacionamentosSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoCadastroRelacionamentos" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroRelacionamentosSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoCadastroRelacionamentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarLogAuditoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarLogAuditoria" />
+  </wsdl:message>
+  <wsdl:message name="ListarLogAuditoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarLogAuditoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarAtributosRelacionamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarAtributosRelacionamento" />
+  </wsdl:message>
+  <wsdl:message name="ListarAtributosRelacionamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarAtributosRelacionamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarAtributosRepresentanteSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarAtributosRepresentante" />
+  </wsdl:message>
+  <wsdl:message name="ListarAtributosRepresentanteSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarAtributosRepresentanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarRepresentantesRelacionamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarRepresentantesRelacionamento" />
+  </wsdl:message>
+  <wsdl:message name="ListarRepresentantesRelacionamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarRepresentantesRelacionamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EvExcluirEmailValidoSoapIn">
+    <wsdl:part name="parameters" element="tns:EvExcluirEmailValido" />
+  </wsdl:message>
+  <wsdl:message name="EvExcluirEmailValidoSoapOut">
+    <wsdl:part name="parameters" element="tns:EvExcluirEmailValidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EvListarLogsEmailValidoSoapIn">
+    <wsdl:part name="parameters" element="tns:EvListarLogsEmailValido" />
+  </wsdl:message>
+  <wsdl:message name="EvListarLogsEmailValidoSoapOut">
+    <wsdl:part name="parameters" element="tns:EvListarLogsEmailValidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EV_DetalhesProcessamento_ListarSoapIn">
+    <wsdl:part name="parameters" element="tns:EV_DetalhesProcessamento_Listar" />
+  </wsdl:message>
+  <wsdl:message name="EV_DetalhesProcessamento_ListarSoapOut">
+    <wsdl:part name="parameters" element="tns:EV_DetalhesProcessamento_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="EvEnviarEmailValidoSoapIn">
+    <wsdl:part name="parameters" element="tns:EvEnviarEmailValido" />
+  </wsdl:message>
+  <wsdl:message name="EvEnviarEmailValidoSoapOut">
+    <wsdl:part name="parameters" element="tns:EvEnviarEmailValidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarDocumentoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarDocumentoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarDocPorReferenciaHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarDocPorReferenciaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroDOCUMENTOHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroDOCUMENTOHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginServicoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginServicoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroContrateJaHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroContrateJaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarIDUsuarioHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarIDUsuarioHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DocumentoCancelarHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DocumentoCancelarHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DocumentoExcluirHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DocumentoExcluirHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EvListarEmailValidoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EvListarEmailValidoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ObterP7SDocHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ObterP7SDocHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarWorkflowDocHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarWorkflowDocHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GerarCarimboTempoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GerarCarimboTempoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCarimboTempoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCarimboTempoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroRelacionamentosHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroRelacionamentosHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarLogAuditoriaHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarLogAuditoriaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarAtributosRelacionamentoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarAtributosRelacionamentoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarAtributosRepresentanteHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarAtributosRepresentanteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarRepresentantesRelacionamentoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarRepresentantesRelacionamentoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EvExcluirEmailValidoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EvExcluirEmailValidoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EvListarLogsEmailValidoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EvListarLogsEmailValidoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EV_DetalhesProcessamento_ListarHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EV_DetalhesProcessamento_ListarHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="EvEnviarEmailValidoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EvEnviarEmailValidoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarDocumentoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarDocumentoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarDocPorReferenciaHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarDocPorReferenciaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroDOCUMENTOHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroDOCUMENTOHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginServicoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginServicoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroContrateJaHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroContrateJaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarIDUsuarioHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarIDUsuarioHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DocumentoCancelarHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DocumentoCancelarHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DocumentoExcluirHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DocumentoExcluirHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EvListarEmailValidoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EvListarEmailValidoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ObterP7SDocHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ObterP7SDocHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarWorkflowDocHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarWorkflowDocHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GerarCarimboTempoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GerarCarimboTempoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCarimboTempoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCarimboTempoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroRelacionamentosHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCadastroRelacionamentosHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarLogAuditoriaHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarLogAuditoriaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarAtributosRelacionamentoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarAtributosRelacionamentoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarAtributosRepresentanteHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarAtributosRepresentanteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarRepresentantesRelacionamentoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarRepresentantesRelacionamentoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EvExcluirEmailValidoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EvExcluirEmailValidoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EvListarLogsEmailValidoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EvListarLogsEmailValidoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EV_DetalhesProcessamento_ListarHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EV_DetalhesProcessamento_ListarHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="EvEnviarEmailValidoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EvEnviarEmailValidoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="qswsdeSoap">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumento">
+      <wsdl:input message="tns:ListarDocumentoSoapIn" />
+      <wsdl:output message="tns:ListarDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocPorReferencia">
+      <wsdl:input message="tns:ListarDocPorReferenciaSoapIn" />
+      <wsdl:output message="tns:ListarDocPorReferenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroDOCUMENTO">
+      <wsdl:input message="tns:AutoCadastroDOCUMENTOSoapIn" />
+      <wsdl:output message="tns:AutoCadastroDOCUMENTOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginServico">
+      <wsdl:input message="tns:LoginServicoSoapIn" />
+      <wsdl:output message="tns:LoginServicoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroContrateJa">
+      <wsdl:input message="tns:AutoCadastroContrateJaSoapIn" />
+      <wsdl:output message="tns:AutoCadastroContrateJaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarIDUsuario">
+      <wsdl:input message="tns:ConsultarIDUsuarioSoapIn" />
+      <wsdl:output message="tns:ConsultarIDUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoCancelar">
+      <wsdl:input message="tns:DocumentoCancelarSoapIn" />
+      <wsdl:output message="tns:DocumentoCancelarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoExcluir">
+      <wsdl:input message="tns:DocumentoExcluirSoapIn" />
+      <wsdl:output message="tns:DocumentoExcluirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvListarEmailValido">
+      <wsdl:input message="tns:EvListarEmailValidoSoapIn" />
+      <wsdl:output message="tns:EvListarEmailValidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterP7SDoc">
+      <wsdl:input message="tns:ObterP7SDocSoapIn" />
+      <wsdl:output message="tns:ObterP7SDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarWorkflowDoc">
+      <wsdl:input message="tns:ConsultarWorkflowDocSoapIn" />
+      <wsdl:output message="tns:ConsultarWorkflowDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GerarCarimboTempo">
+      <wsdl:input message="tns:GerarCarimboTempoSoapIn" />
+      <wsdl:output message="tns:GerarCarimboTempoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCarimboTempo">
+      <wsdl:input message="tns:ConsultarCarimboTempoSoapIn" />
+      <wsdl:output message="tns:ConsultarCarimboTempoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroRelacionamentos">
+      <wsdl:input message="tns:AutoCadastroRelacionamentosSoapIn" />
+      <wsdl:output message="tns:AutoCadastroRelacionamentosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarLogAuditoria">
+      <wsdl:input message="tns:ListarLogAuditoriaSoapIn" />
+      <wsdl:output message="tns:ListarLogAuditoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRelacionamento">
+      <wsdl:input message="tns:ListarAtributosRelacionamentoSoapIn" />
+      <wsdl:output message="tns:ListarAtributosRelacionamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRepresentante">
+      <wsdl:input message="tns:ListarAtributosRepresentanteSoapIn" />
+      <wsdl:output message="tns:ListarAtributosRepresentanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarRepresentantesRelacionamento">
+      <wsdl:input message="tns:ListarRepresentantesRelacionamentoSoapIn" />
+      <wsdl:output message="tns:ListarRepresentantesRelacionamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvExcluirEmailValido">
+      <wsdl:input message="tns:EvExcluirEmailValidoSoapIn" />
+      <wsdl:output message="tns:EvExcluirEmailValidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvListarLogsEmailValido">
+      <wsdl:input message="tns:EvListarLogsEmailValidoSoapIn" />
+      <wsdl:output message="tns:EvListarLogsEmailValidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EV_DetalhesProcessamento_Listar">
+      <wsdl:input message="tns:EV_DetalhesProcessamento_ListarSoapIn" />
+      <wsdl:output message="tns:EV_DetalhesProcessamento_ListarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvEnviarEmailValido">
+      <wsdl:input message="tns:EvEnviarEmailValidoSoapIn" />
+      <wsdl:output message="tns:EvEnviarEmailValidoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="qswsdeHttpGet">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpGetIn" />
+      <wsdl:output message="tns:LoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumento">
+      <wsdl:input message="tns:ListarDocumentoHttpGetIn" />
+      <wsdl:output message="tns:ListarDocumentoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocPorReferencia">
+      <wsdl:input message="tns:ListarDocPorReferenciaHttpGetIn" />
+      <wsdl:output message="tns:ListarDocPorReferenciaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroDOCUMENTO">
+      <wsdl:input message="tns:AutoCadastroDOCUMENTOHttpGetIn" />
+      <wsdl:output message="tns:AutoCadastroDOCUMENTOHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginServico">
+      <wsdl:input message="tns:LoginServicoHttpGetIn" />
+      <wsdl:output message="tns:LoginServicoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroContrateJa">
+      <wsdl:input message="tns:AutoCadastroContrateJaHttpGetIn" />
+      <wsdl:output message="tns:AutoCadastroContrateJaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarIDUsuario">
+      <wsdl:input message="tns:ConsultarIDUsuarioHttpGetIn" />
+      <wsdl:output message="tns:ConsultarIDUsuarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoCancelar">
+      <wsdl:input message="tns:DocumentoCancelarHttpGetIn" />
+      <wsdl:output message="tns:DocumentoCancelarHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoExcluir">
+      <wsdl:input message="tns:DocumentoExcluirHttpGetIn" />
+      <wsdl:output message="tns:DocumentoExcluirHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvListarEmailValido">
+      <wsdl:input message="tns:EvListarEmailValidoHttpGetIn" />
+      <wsdl:output message="tns:EvListarEmailValidoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterP7SDoc">
+      <wsdl:input message="tns:ObterP7SDocHttpGetIn" />
+      <wsdl:output message="tns:ObterP7SDocHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarWorkflowDoc">
+      <wsdl:input message="tns:ConsultarWorkflowDocHttpGetIn" />
+      <wsdl:output message="tns:ConsultarWorkflowDocHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GerarCarimboTempo">
+      <wsdl:input message="tns:GerarCarimboTempoHttpGetIn" />
+      <wsdl:output message="tns:GerarCarimboTempoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCarimboTempo">
+      <wsdl:input message="tns:ConsultarCarimboTempoHttpGetIn" />
+      <wsdl:output message="tns:ConsultarCarimboTempoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroRelacionamentos">
+      <wsdl:input message="tns:AutoCadastroRelacionamentosHttpGetIn" />
+      <wsdl:output message="tns:AutoCadastroRelacionamentosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarLogAuditoria">
+      <wsdl:input message="tns:ListarLogAuditoriaHttpGetIn" />
+      <wsdl:output message="tns:ListarLogAuditoriaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRelacionamento">
+      <wsdl:input message="tns:ListarAtributosRelacionamentoHttpGetIn" />
+      <wsdl:output message="tns:ListarAtributosRelacionamentoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRepresentante">
+      <wsdl:input message="tns:ListarAtributosRepresentanteHttpGetIn" />
+      <wsdl:output message="tns:ListarAtributosRepresentanteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarRepresentantesRelacionamento">
+      <wsdl:input message="tns:ListarRepresentantesRelacionamentoHttpGetIn" />
+      <wsdl:output message="tns:ListarRepresentantesRelacionamentoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvExcluirEmailValido">
+      <wsdl:input message="tns:EvExcluirEmailValidoHttpGetIn" />
+      <wsdl:output message="tns:EvExcluirEmailValidoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvListarLogsEmailValido">
+      <wsdl:input message="tns:EvListarLogsEmailValidoHttpGetIn" />
+      <wsdl:output message="tns:EvListarLogsEmailValidoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EV_DetalhesProcessamento_Listar">
+      <wsdl:input message="tns:EV_DetalhesProcessamento_ListarHttpGetIn" />
+      <wsdl:output message="tns:EV_DetalhesProcessamento_ListarHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvEnviarEmailValido">
+      <wsdl:input message="tns:EvEnviarEmailValidoHttpGetIn" />
+      <wsdl:output message="tns:EvEnviarEmailValidoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="qswsdeHttpPost">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpPostIn" />
+      <wsdl:output message="tns:LoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumento">
+      <wsdl:input message="tns:ListarDocumentoHttpPostIn" />
+      <wsdl:output message="tns:ListarDocumentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocPorReferencia">
+      <wsdl:input message="tns:ListarDocPorReferenciaHttpPostIn" />
+      <wsdl:output message="tns:ListarDocPorReferenciaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroDOCUMENTO">
+      <wsdl:input message="tns:AutoCadastroDOCUMENTOHttpPostIn" />
+      <wsdl:output message="tns:AutoCadastroDOCUMENTOHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginServico">
+      <wsdl:input message="tns:LoginServicoHttpPostIn" />
+      <wsdl:output message="tns:LoginServicoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroContrateJa">
+      <wsdl:input message="tns:AutoCadastroContrateJaHttpPostIn" />
+      <wsdl:output message="tns:AutoCadastroContrateJaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarIDUsuario">
+      <wsdl:input message="tns:ConsultarIDUsuarioHttpPostIn" />
+      <wsdl:output message="tns:ConsultarIDUsuarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoCancelar">
+      <wsdl:input message="tns:DocumentoCancelarHttpPostIn" />
+      <wsdl:output message="tns:DocumentoCancelarHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoExcluir">
+      <wsdl:input message="tns:DocumentoExcluirHttpPostIn" />
+      <wsdl:output message="tns:DocumentoExcluirHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvListarEmailValido">
+      <wsdl:input message="tns:EvListarEmailValidoHttpPostIn" />
+      <wsdl:output message="tns:EvListarEmailValidoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterP7SDoc">
+      <wsdl:input message="tns:ObterP7SDocHttpPostIn" />
+      <wsdl:output message="tns:ObterP7SDocHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarWorkflowDoc">
+      <wsdl:input message="tns:ConsultarWorkflowDocHttpPostIn" />
+      <wsdl:output message="tns:ConsultarWorkflowDocHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GerarCarimboTempo">
+      <wsdl:input message="tns:GerarCarimboTempoHttpPostIn" />
+      <wsdl:output message="tns:GerarCarimboTempoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCarimboTempo">
+      <wsdl:input message="tns:ConsultarCarimboTempoHttpPostIn" />
+      <wsdl:output message="tns:ConsultarCarimboTempoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroRelacionamentos">
+      <wsdl:input message="tns:AutoCadastroRelacionamentosHttpPostIn" />
+      <wsdl:output message="tns:AutoCadastroRelacionamentosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarLogAuditoria">
+      <wsdl:input message="tns:ListarLogAuditoriaHttpPostIn" />
+      <wsdl:output message="tns:ListarLogAuditoriaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRelacionamento">
+      <wsdl:input message="tns:ListarAtributosRelacionamentoHttpPostIn" />
+      <wsdl:output message="tns:ListarAtributosRelacionamentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRepresentante">
+      <wsdl:input message="tns:ListarAtributosRepresentanteHttpPostIn" />
+      <wsdl:output message="tns:ListarAtributosRepresentanteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarRepresentantesRelacionamento">
+      <wsdl:input message="tns:ListarRepresentantesRelacionamentoHttpPostIn" />
+      <wsdl:output message="tns:ListarRepresentantesRelacionamentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvExcluirEmailValido">
+      <wsdl:input message="tns:EvExcluirEmailValidoHttpPostIn" />
+      <wsdl:output message="tns:EvExcluirEmailValidoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvListarLogsEmailValido">
+      <wsdl:input message="tns:EvListarLogsEmailValidoHttpPostIn" />
+      <wsdl:output message="tns:EvListarLogsEmailValidoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EV_DetalhesProcessamento_Listar">
+      <wsdl:input message="tns:EV_DetalhesProcessamento_ListarHttpPostIn" />
+      <wsdl:output message="tns:EV_DetalhesProcessamento_ListarHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvEnviarEmailValido">
+      <wsdl:input message="tns:EvEnviarEmailValidoHttpPostIn" />
+      <wsdl:output message="tns:EvEnviarEmailValidoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="qswsdeSoap" type="tns:qswsdeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumento">
+      <soap:operation soapAction="http://tempuri.org/ListarDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocPorReferencia">
+      <soap:operation soapAction="http://tempuri.org/ListarDocPorReferencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroDOCUMENTO">
+      <soap:operation soapAction="http://tempuri.org/AutoCadastroDOCUMENTO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginServico">
+      <soap:operation soapAction="http://tempuri.org/LoginServico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroContrateJa">
+      <soap:operation soapAction="http://tempuri.org/AutoCadastroContrateJa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarIDUsuario">
+      <soap:operation soapAction="http://tempuri.org/ConsultarIDUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoCancelar">
+      <soap:operation soapAction="http://tempuri.org/DocumentoCancelar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoExcluir">
+      <soap:operation soapAction="http://tempuri.org/DocumentoExcluir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvListarEmailValido">
+      <soap:operation soapAction="http://tempuri.org/EvListarEmailValido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterP7SDoc">
+      <soap:operation soapAction="http://tempuri.org/ObterP7SDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarWorkflowDoc">
+      <soap:operation soapAction="http://tempuri.org/ConsultarWorkflowDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GerarCarimboTempo">
+      <soap:operation soapAction="http://tempuri.org/GerarCarimboTempo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCarimboTempo">
+      <soap:operation soapAction="http://tempuri.org/ConsultarCarimboTempo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroRelacionamentos">
+      <soap:operation soapAction="http://tempuri.org/AutoCadastroRelacionamentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarLogAuditoria">
+      <soap:operation soapAction="http://tempuri.org/ListarLogAuditoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRelacionamento">
+      <soap:operation soapAction="http://tempuri.org/ListarAtributosRelacionamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRepresentante">
+      <soap:operation soapAction="http://tempuri.org/ListarAtributosRepresentante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarRepresentantesRelacionamento">
+      <soap:operation soapAction="http://tempuri.org/ListarRepresentantesRelacionamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvExcluirEmailValido">
+      <soap:operation soapAction="http://tempuri.org/EvExcluirEmailValido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvListarLogsEmailValido">
+      <soap:operation soapAction="http://tempuri.org/EvListarLogsEmailValido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EV_DetalhesProcessamento_Listar">
+      <soap:operation soapAction="http://tempuri.org/EV_DetalhesProcessamento_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvEnviarEmailValido">
+      <soap:operation soapAction="http://tempuri.org/EvEnviarEmailValido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="qswsdeSoap12" type="tns:qswsdeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumento">
+      <soap12:operation soapAction="http://tempuri.org/ListarDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocPorReferencia">
+      <soap12:operation soapAction="http://tempuri.org/ListarDocPorReferencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroDOCUMENTO">
+      <soap12:operation soapAction="http://tempuri.org/AutoCadastroDOCUMENTO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginServico">
+      <soap12:operation soapAction="http://tempuri.org/LoginServico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroContrateJa">
+      <soap12:operation soapAction="http://tempuri.org/AutoCadastroContrateJa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarIDUsuario">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarIDUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoCancelar">
+      <soap12:operation soapAction="http://tempuri.org/DocumentoCancelar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoExcluir">
+      <soap12:operation soapAction="http://tempuri.org/DocumentoExcluir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvListarEmailValido">
+      <soap12:operation soapAction="http://tempuri.org/EvListarEmailValido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterP7SDoc">
+      <soap12:operation soapAction="http://tempuri.org/ObterP7SDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarWorkflowDoc">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarWorkflowDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GerarCarimboTempo">
+      <soap12:operation soapAction="http://tempuri.org/GerarCarimboTempo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCarimboTempo">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarCarimboTempo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroRelacionamentos">
+      <soap12:operation soapAction="http://tempuri.org/AutoCadastroRelacionamentos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarLogAuditoria">
+      <soap12:operation soapAction="http://tempuri.org/ListarLogAuditoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRelacionamento">
+      <soap12:operation soapAction="http://tempuri.org/ListarAtributosRelacionamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRepresentante">
+      <soap12:operation soapAction="http://tempuri.org/ListarAtributosRepresentante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarRepresentantesRelacionamento">
+      <soap12:operation soapAction="http://tempuri.org/ListarRepresentantesRelacionamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvExcluirEmailValido">
+      <soap12:operation soapAction="http://tempuri.org/EvExcluirEmailValido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvListarLogsEmailValido">
+      <soap12:operation soapAction="http://tempuri.org/EvListarLogsEmailValido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EV_DetalhesProcessamento_Listar">
+      <soap12:operation soapAction="http://tempuri.org/EV_DetalhesProcessamento_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvEnviarEmailValido">
+      <soap12:operation soapAction="http://tempuri.org/EvEnviarEmailValido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="qswsdeHttpGet" type="tns:qswsdeHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumento">
+      <http:operation location="/ListarDocumento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocPorReferencia">
+      <http:operation location="/ListarDocPorReferencia" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroDOCUMENTO">
+      <http:operation location="/AutoCadastroDOCUMENTO" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginServico">
+      <http:operation location="/LoginServico" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroContrateJa">
+      <http:operation location="/AutoCadastroContrateJa" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarIDUsuario">
+      <http:operation location="/ConsultarIDUsuario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoCancelar">
+      <http:operation location="/DocumentoCancelar" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoExcluir">
+      <http:operation location="/DocumentoExcluir" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvListarEmailValido">
+      <http:operation location="/EvListarEmailValido" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterP7SDoc">
+      <http:operation location="/ObterP7SDoc" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarWorkflowDoc">
+      <http:operation location="/ConsultarWorkflowDoc" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GerarCarimboTempo">
+      <http:operation location="/GerarCarimboTempo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCarimboTempo">
+      <http:operation location="/ConsultarCarimboTempo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroRelacionamentos">
+      <http:operation location="/AutoCadastroRelacionamentos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarLogAuditoria">
+      <http:operation location="/ListarLogAuditoria" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRelacionamento">
+      <http:operation location="/ListarAtributosRelacionamento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRepresentante">
+      <http:operation location="/ListarAtributosRepresentante" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarRepresentantesRelacionamento">
+      <http:operation location="/ListarRepresentantesRelacionamento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvExcluirEmailValido">
+      <http:operation location="/EvExcluirEmailValido" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvListarLogsEmailValido">
+      <http:operation location="/EvListarLogsEmailValido" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EV_DetalhesProcessamento_Listar">
+      <http:operation location="/EV_DetalhesProcessamento_Listar" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvEnviarEmailValido">
+      <http:operation location="/EvEnviarEmailValido" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="qswsdeHttpPost" type="tns:qswsdeHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumento">
+      <http:operation location="/ListarDocumento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocPorReferencia">
+      <http:operation location="/ListarDocPorReferencia" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroDOCUMENTO">
+      <http:operation location="/AutoCadastroDOCUMENTO" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginServico">
+      <http:operation location="/LoginServico" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroContrateJa">
+      <http:operation location="/AutoCadastroContrateJa" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarIDUsuario">
+      <http:operation location="/ConsultarIDUsuario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoCancelar">
+      <http:operation location="/DocumentoCancelar" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoExcluir">
+      <http:operation location="/DocumentoExcluir" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvListarEmailValido">
+      <http:operation location="/EvListarEmailValido" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterP7SDoc">
+      <http:operation location="/ObterP7SDoc" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarWorkflowDoc">
+      <http:operation location="/ConsultarWorkflowDoc" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GerarCarimboTempo">
+      <http:operation location="/GerarCarimboTempo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCarimboTempo">
+      <http:operation location="/ConsultarCarimboTempo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCadastroRelacionamentos">
+      <http:operation location="/AutoCadastroRelacionamentos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarLogAuditoria">
+      <http:operation location="/ListarLogAuditoria" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRelacionamento">
+      <http:operation location="/ListarAtributosRelacionamento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarAtributosRepresentante">
+      <http:operation location="/ListarAtributosRepresentante" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarRepresentantesRelacionamento">
+      <http:operation location="/ListarRepresentantesRelacionamento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvExcluirEmailValido">
+      <http:operation location="/EvExcluirEmailValido" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvListarLogsEmailValido">
+      <http:operation location="/EvListarLogsEmailValido" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EV_DetalhesProcessamento_Listar">
+      <http:operation location="/EV_DetalhesProcessamento_Listar" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvEnviarEmailValido">
+      <http:operation location="/EvEnviarEmailValido" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="qswsde">
+    <wsdl:port name="qswsdeSoap" binding="tns:qswsdeSoap">
+      <soap:address location="https://www.documentoeletronico.com.br/QSWSDE/QSWSDE.asmx" />
+    </wsdl:port>
+    <wsdl:port name="qswsdeSoap12" binding="tns:qswsdeSoap12">
+      <soap12:address location="https://www.documentoeletronico.com.br/QSWSDE/QSWSDE.asmx" />
+    </wsdl:port>
+    <wsdl:port name="qswsdeHttpGet" binding="tns:qswsdeHttpGet">
+      <http:address location="https://www.documentoeletronico.com.br/QSWSDE/QSWSDE.asmx" />
+    </wsdl:port>
+    <wsdl:port name="qswsdeHttpPost" binding="tns:qswsdeHttpPost">
+      <http:address location="https://www.documentoeletronico.com.br/QSWSDE/QSWSDE.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

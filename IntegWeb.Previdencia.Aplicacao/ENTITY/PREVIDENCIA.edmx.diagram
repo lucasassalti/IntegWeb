@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4aa3ad7cfc0c40dd820baaf950528cc9" Name="Diagram1" ZoomLevel="14" >
+        <EntityTypeShape EntityType="Model.PRE_TBL_ACAO_VR_TIPLTO" Width="2.25" PointX="0.5" PointY="3.875" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_DEPOSITO_JUDIC" Width="2.25" PointX="3.5" PointY="3.875" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_DEPOSITO_JUDIC_PGTO" Width="2.5" PointX="6.875" PointY="3.875" />
+        <AssociationConnector Association="Model.FK_DEPOSITO_JUDIC_VR_TIPLTO" />
+        <AssociationConnector Association="Model.FK_DEPOSITO_JUDIC_PGTO" />
+        <EntityTypeShape EntityType="Model.EMPREGADO" Width="2.625" PointX="20.75" PointY="4.5" />
+        <EntityTypeShape EntityType="Model.REPRES_UNIAO_FSS" Width="2.875" PointX="26.875" PointY="3.875" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_RECADASTRAMENTO" Width="2.375" PointX="0.75" PointY="21.75" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_RECADASTRAMENTO_TIPO" Width="2.25" PointX="3.5" PointY="21.75" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_RECADASTRAMENTO_TP" />
+        <EntityTypeShape EntityType="Model.ASSISTIDO_INSS_FSS" Width="2" PointX="30.625" PointY="21.5" />
+        <EntityTypeShape EntityType="Model.BENEFICIO_PARTIC_FSS" Width="2.875" PointX="23.75" PointY="21.5" />
+        <EntityTypeShape EntityType="Model.CARGOS" Width="2" PointX="15.125" PointY="0.75" />
+        <AssociationConnector Association="Model.FK_CARGO_EMPRG" />
+        <AssociationConnector Association="Model.FK_CARGOS_001" />
+        <EntityTypeShape EntityType="Model.PARTICIPANTE_FSS" Width="2.125" PointX="27.375" PointY="21.5" />
+        <AssociationConnector Association="Model.FK_PARTF_ASINSS" />
+        <AssociationConnector Association="Model.FK_PARTF_BFPART" />
+        <AssociationConnector Association="Model.FK_EMPRG_PARTF" />
+        <EntityTypeShape EntityType="Model.EMPRESA" Width="2.125" PointX="27.375" PointY="30.875" />
+        <EntityTypeShape EntityType="Model.PATROCINADORA_FSS" Width="2.125" PointX="27.375" PointY="27.75" />
+        <AssociationConnector Association="Model.FK_EMPRS_EMPRG" />
+        <AssociationConnector Association="Model.FK_EMPRS_PATROC" />
+        <AssociationConnector Association="Model.FK_PATROC_PARTF" />
+        <EntityTypeShape EntityType="Model.FC_CAD_TBL_MOV_DADOS_BANC" Width="2.375" PointX="0.75" PointY="26.875" />
+        <EntityTypeShape EntityType="Model.FC_CAD_TBL_MOV_DADOS_CAD" Width="2.375" PointX="3.5" PointY="26.875" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_PATROCINA_CRIT_TP" Width="1.5" PointX="4.2665738725413442" PointY="0.61867418914040284" />
+        <EntityTypeShape EntityType="Model.REPRES_DEPEND_FSS" Width="2.25" PointX="30.375" PointY="3.875" />
+        <AssociationConnector Association="Model.CF_EMPREGADO_003" />
+        <EntityTypeShape EntityType="Model.AFASTAMENTO" Width="2.625" PointX="20.375" PointY="36" />
+        <EntityTypeShape EntityType="Model.ORGAO" Width="2.875" PointX="23.75" PointY="35.125" />
+        <AssociationConnector Association="Model.FK_EMPRG_AFAST" />
+        <AssociationConnector Association="Model.FK_ORGAO_EMPRG" />
+        <EntityTypeShape EntityType="Model.FICHA_FINANCEIRA" Width="2" PointX="23.75" PointY="13.375" />
+        <AssociationConnector Association="Model.FK_EMPRG_VERFIN" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_PATROCINA" Width="2.75" PointX="5.5" PointY="34" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_PATROCINA_CARGA" Width="2.625" PointX="9" PointY="36" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_PATROCINA_CRITICA" Width="2.375" PointX="12" PointY="37.5" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_PATROCINA_LINHA" Width="2.625" PointX="15" PointY="39" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_PATROCINA_LOG" Width="2.375" PointX="5.625" PointY="41.875" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_PATROCINA_STATUS" Width="1.875" PointX="3" PointY="39.375" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_PATROCINA_TIPO" Width="1.875" PointX="3" PointY="37.125" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_PATROC_CRITICA" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_PATROCINA" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_PATROCINA_CARGA" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_PATROCINA_LOG" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_PATROCINA_STUS" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_PATROCINA_TIPO" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_PATROC_CARGA" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_PATROCINA_LINHA" />
+        <EntityTypeShape EntityType="Model.ATT_CHARGER_DEPARA" Width="1.875" PointX="3" PointY="34" />
+        <EntityTypeShape EntityType="Model.SCRTBLCDECOMPEMPREGADO" Width="2.625" PointX="8" PointY="26.25" />
+        <EntityTypeShape EntityType="Model.TIPO_AFASTAMENTO" Width="2.625" PointX="20.375" PointY="39.75" />
+        <AssociationConnector Association="Model.FK_TIPAFT_AFAST" />
+        <EntityTypeShape EntityType="Model.AGENCIA" Width="2" PointX="23.75" PointY="17.125" />
+        <AssociationConnector Association="Model.FK_AGBCO_EMPRG" />
+        <AssociationConnector Association="Model.FK_AGBCO_REPRES" />
+        <EntityTypeShape EntityType="Model.ADESAO_PLANO_PARTIC_FSS" Width="2" PointX="30.625" PointY="27.75" />
+        <AssociationConnector Association="Model.FK_EMPRESA_ADPLPR" />
+        <AssociationConnector Association="Model.FK_PARTF_ADPLPR" />
+        <EntityTypeShape EntityType="Model.TB_PARTICIP_PLANO" Width="2" PointX="30.625" PointY="37" />
+        <EntityTypeShape EntityType="Model.IRE_EMPREST_RECEBE" Width="2.875" PointX="23.75" PointY="41.25" />
+        <AssociationConnector Association="Model.CF_PARTICIP_PLANO_005" />
+        <EntityTypeShape EntityType="Model.PLANO_BENEFICIO_FSS" Width="2.125" PointX="27.375" PointY="38" />
+        <EntityTypeShape EntityType="Model.UNIDADE_MONETARIA" Width="2" PointX="30.625" PointY="33.375" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_POR_CONT" Width="1.5" PointX="9.125" PointY="19.25" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_POR_DREF" Width="1.5" PointX="11" PointY="19.25" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_POR_UREF" Width="1.5" PointX="12.875" PointY="19.25" />
+        <AssociationConnector Association="Model.FK_PLBNF_ADPLPR" />
+        <AssociationConnector Association="Model.FK_UM01_PATROC" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="Model.CF_PLANO_BENEF_FSS_002" />
+        <EntityTypeShape EntityType="Model.TB_SCR_SUBGRUPO_FINANC_VERBA" Width="2.375" PointX="14.125" PointY="28" />
+        <EntityTypeShape EntityType="Model.SAU_TBL_DADOS_CARTAO_CASSI" Width="1.5" PointX="14.75" PointY="19.25" />
+        <EntityTypeShape EntityType="Model.MOTIVO_DESLIG_FSS" Width="2" PointX="23.75" PointY="11.25" />
+        <AssociationConnector Association="Model.FK_MTDSL_EMPRG" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_PAT_DEMONSTRA" Width="2.625" PointX="15" PointY="31.5" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_PAT_DEMONSTRA_DET" Width="2.625" PointX="15" PointY="34.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_PAT_VERBA" Width="2.25" PointX="3" PointY="43.75" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_PAT_VERBA_PRODUTO" Width="2.25" PointX="3" PointY="41.875" />
+        <EntityTypeShape EntityType="Model.PRE_VW_ARQ_PAT_DEMONSTRATIVO" Width="2.375" PointX="12" PointY="30.875" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_PAT_DEMONS_DET" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_PAT_DEM_DET_LIN" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_PAT_VERBA_PROD" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_AREA" Width="2.125" PointX="11.875" PointY="44.25" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_ENV_REPASSE" Width="2.25" PointX="14.5" PointY="45.125" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_ENV_REPASSE_LINHA" Width="2.25" PointX="17.25" PointY="45.125" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_ENVIO_HIST" Width="2.75" PointX="14.5" PointY="49.25" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_ENVIO_STATUS" Width="2" PointX="18.375" PointY="49.25" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_ENVIO_TIPO" Width="2.125" PointX="9.375" PointY="49" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_GRUPO_EMPRS" Width="2" PointX="9.5" PointY="46.75" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_ENV_REPASSE_ARE" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_ENV_REPASSE" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_ENVIO_HIST" />
+        <EntityTypeShape EntityType="Model.COTACAO_MES_UM" Width="2.375" PointX="18.25" PointY="33.5" />
+        <AssociationConnector Association="Model.FK_UM_CMESUM" ManuallyRouted="true" >
+          <ConnectorPoint PointX="30.625" PointY="34.038198242187505" />
+          <ConnectorPoint PointX="20.625" PointY="35.672587890624996" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.PRE_TBL_CARGA_PROTHEUS_LOG" PointX="3.625" PointY="48.5" Width="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_CARGA_PROTHEUS_STATUS" PointX="3.625" PointY="46.625" Width="2.5" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_CARGA_PROTHEUS_TIPO" PointX="3.625" PointY="50.625" Width="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DEPENDENTE" Width="1.875" PointX="16.375" PointY="3.5" />
+        <EntityTypeShape EntityType="Model.EMPRG_DPDTE" Width="2.625" PointX="24" PointY="4.625" />
+        <EntityTypeShape EntityType="Model.TB_CONVENENTE" Width="1.875" PointX="18.625" PointY="4.25" />
+        <AssociationConnector Association="Model.CF_CONVENENTE_004" />
+        <AssociationConnector Association="Model.FK_AGBCO_EMPDEP" />
+        <AssociationConnector Association="Model.FK_DPDTE_ASINSS" />
+        <AssociationConnector Association="Model.FK_DPDTE_EMPDEP" />
+        <AssociationConnector Association="Model.FK_EMPRG_EMPDEP" />
+        <AssociationConnector Association="Model.CF_REPRES_DEPEND_001" />
+        <AssociationConnector Association="Model.FK_EMPDEP_REPRES" />
+        <EntityTypeShape EntityType="Model.MUNICIPIO" Width="1.5" PointX="12.375" PointY="5.5" />
+        <EntityTypeShape EntityType="Model.TB_CEP" Width="1.5" PointX="10" PointY="4" />
+        <AssociationConnector Association="Model.FK_MUNICI_AGBCO" />
+        <AssociationConnector Association="Model.FK_MUNICI_DPDTE" />
+        <AssociationConnector Association="Model.FK_MUNICI_EMPRG" />
+        <AssociationConnector Association="Model.CF_EMPRESA_001" ManuallyRouted="true" >
+          <ConnectorPoint PointX="13.875" PointY="7.7074062710062581" />
+          <ConnectorPoint PointX="18.525131301760549" PointY="16.976268884628155" />
+          <ConnectorPoint PointX="18.599868698239455" PointY="17.125239013665265" />
+          <ConnectorPoint PointX="20.587631301760549" PointY="21.087341863009954" />
+          <ConnectorPoint PointX="20.724868698239455" PointY="21.360889961088937" />
+          <ConnectorPoint PointX="27.375" PointY="34.616247584050754" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.CF_CEP_001" />
+        <AssociationConnector Association="Model.FK_MUNICI_ORGAO" />
+        <AssociationConnector Association="Model.FK_MUNICI_REPRES" />
+        <EntityTypeShape EntityType="Model.ESTADO" Width="1.5" PointX="13" PointY="3" />
+        <AssociationConnector Association="Model.FK_ESTADO_MUNICI" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_CARGA_PROTHEUS" Width="2.125" PointX="6.5" PointY="46.625" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_CARGA_PROTHEUS_STAT" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_CARGA_PROTHEUS_TIPO" />
+        <EntityTypeShape EntityType="Model.CAD_TBL_CONTROLECASSI" Width="2.125" PointX="1" PointY="49.875" />
+        <EntityTypeShape EntityType="Model.CTFSS_TIPBNF" Width="1.875" PointX="27.875" PointY="51.25" />
+        <EntityTypeShape EntityType="Model.PLN_PRG_PRV" Width="1.5" PointX="23.25" PointY="49.75" />
+        <EntityTypeShape EntityType="Model.TB_DESC_PLANO_CONTAS" Width="2.25" PointX="31.5" PointY="51.25" />
+        <EntityTypeShape EntityType="Model.TP_MOVTO" Width="1.5" PointX="28.125" PointY="49.75" />
+        <EntityTypeShape EntityType="Model.CTA_TBL_PAIS" Width="1.5" PointX="21.625" PointY="49.75" />
+        <EntityTypeShape EntityType="Model.TB_DEPARA_EMPRESTIMO" Width="2.125" PointX="10" PointY="1.25" />
+        <EntityTypeShape EntityType="Model.TB_SCR_DEPARA_MATRICULA" Width="2.375" PointX="6.875" PointY="1.5" />
+        <EntityTypeShape EntityType="Model.TB_SCR_DEPARA_AUTOPATROC" Width="2.375" PointX="0.5" PointY="1.5" />
+        <EntityTypeShape EntityType="Model.TB_SCR_DEPARA_AUTOPATROC_VERBA" Width="2.75" PointX="3.5" PointY="1.5" />
+        <EntityTypeShape EntityType="Model.TB_SCR_VERBAS_AUTOPATROC" Width="1.5" PointX="13" PointY="1.125" />
+        <EntityTypeShape EntityType="Model.ASSOCIACAO" Width="1.5" PointX="19.5" PointY="51.25" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_SALDO_FUNDO" Width="2.375" PointX="22.875" PointY="45.125" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_PARAM" Width="2.25" PointX="10" PointY="10" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_NOTA_DEBITO" Width="2.25" PointX="20.25" PointY="45.125" />
+        <EntityTypeShape EntityType="Model.HIST_PART_CAPIT_FSS" Width="2.25" PointX="31" PointY="16.625" />
+        <AssociationConnector Association="Model.FK_ADPLPR_HPCAP" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ACAO_JUDIC" Width="1.5" PointX="11.438479335717148" PointY="22.172705809666173" />
+        <AssociationConnector Association="Model.FK_NUM_PLBNF_ACJUDIC" />
+        <AssociationConnector Association="Model.FK_COD_TIPLTO_ACJUDIC" />
+        <EntityTypeShape EntityType="Model.PRE_TBL_ARQ_ENVIO" Width="1.5" PointX="12.125" PointY="48.75" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_ENVIO_AREA_D" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_ENVIO_AREA_O" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_ENVIO" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_ENVIO_EMPRS" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_ENVIO_STATUS" />
+        <AssociationConnector Association="Model.FK_PRE_TBL_ARQ_ENVIO_TIPO" />
+        <EntityTypeShape EntityType="Model.ASSOCIACAO_VERBA" Width="1.5" PointX="15.625" PointY="54.125" />
+        <EntityTypeShape EntityType="Model.EMPREGADO_ATUALIZACAO" Width="1.5" PointX="4.8862232644512424" PointY="1.5725056089332818" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

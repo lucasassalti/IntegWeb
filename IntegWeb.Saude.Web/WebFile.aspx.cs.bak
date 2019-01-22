@@ -1,0 +1,37 @@
+﻿using FUNCESP.Integracao.Entidades.Relatorio;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace FUNCESP.Integracao.Saude.Web
+{
+    public partial class WebFile : BasePage
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            ExportToFile();
+        }
+
+        private void ExportToFile()
+        {
+
+            if (Session["DtRelatorio"] != null)
+            {
+
+                Dictionary<string, DataTable> dt = (Dictionary<string, DataTable>)Session["DtRelatorio"];
+                if (dt.Count>0)
+                {
+                    ExportarArquivo(null, 
+                                    dt.Keys.ToArray()[0].ToString(), 
+                                    dt[dt.Keys.ToArray()[0].ToString()]);
+                }
+               
+
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+/*css incluido para atualização cadastral*/
+body {
+  background: #F2F2F2;
+  text-align: center;
+  padding: 33px; }
+
+.email_content {
+  padding: 35px;
+  background: #FFFFFF;
+  width: 531px !important;
+  margin: auto;
+  color: #404040;
+  margin-top: 40px; }
+  .email_content h1 {
+    font-size: 24px; }
+  .email_content p {
+    font-size: 18px;
+    line-height: 27px;
+    margin: 20px 0; }
+  .email_content a {
+    background: #D70B32;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: bold;
+    width: 1005;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 20px 0;
+    display: block; }

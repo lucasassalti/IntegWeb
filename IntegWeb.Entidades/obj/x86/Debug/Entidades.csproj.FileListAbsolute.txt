@@ -1,0 +1,5 @@
+D:\IntegWeb\IntegWeb\IntegWeb.Entidades\bin\x86\Debug\IntegWeb.Entidades.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Entidades\bin\x86\Debug\IntegWeb.Entidades.pdb
+D:\IntegWeb\IntegWeb\IntegWeb.Entidades\obj\x86\Debug\Entidades.csprojResolveAssemblyReference.cache
+D:\IntegWeb\IntegWeb\IntegWeb.Entidades\obj\x86\Debug\IntegWeb.Entidades.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Entidades\obj\x86\Debug\IntegWeb.Entidades.pdb

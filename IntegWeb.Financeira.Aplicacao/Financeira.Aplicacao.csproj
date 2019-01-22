@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1E06DEA-1824-46C4-B96C-EE7F3B30568F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntegWeb.Financeira.Aplicacao</RootNamespace>
+    <AssemblyName>IntegWeb.Financeira.Aplicacao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.4.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Cadastro\EmpregadoBLL.cs" />
+    <Compile Include="BLL\Emprestimo\BoletoBLL.cs" />
+    <Compile Include="BLL\Emprestimo\EmprestimoDescontoBLL.cs" />
+    <Compile Include="BLL\Tesouraria\AtualizaCcLoteBLL.cs" />
+    <Compile Include="BLL\Tesouraria\ControleFlagsBLL.cs" />
+    <Compile Include="BLL\Tesouraria\DebitoContaBLL.cs" />
+    <Compile Include="BLL\Tesouraria\DebitoContaRetornoBLL.cs" />
+    <Compile Include="BLL\Tesouraria\ExportaRelIntFinContabBLL.cs" />
+    <Compile Include="BLL\Tesouraria\ImportaBaseSerasaBLL.cs" />
+    <Compile Include="BLL\Tesouraria\MovDiarioBLL.cs" />
+    <Compile Include="BLL\Tesouraria\RelatorioBorderoBLL.cs" />
+    <Compile Include="BLL\Tesouraria\TravaDataCorteBLL.cs" />
+    <Compile Include="DAL\Cadastro\EmpregadoDAL.cs" />
+    <Compile Include="BLL\Carga Protheus\IntTabelaMedicaoBLL.cs" />
+    <Compile Include="DAL\Carga Protheus\IntTabelaMedicaoDAL.cs" />
+    <Compile Include="DAL\Emprestimo\BoletoDAL.cs" />
+    <Compile Include="DAL\Emprestimo\EmprestimoDescontoDAL.cs" />
+    <Compile Include="DAL\Tesouraria\AberturaFinanceiraDAL.cs" />
+    <Compile Include="DAL\Tesouraria\AtualizaCcLoteDAL.cs" />
+    <Compile Include="DAL\Tesouraria\ControleFlagsDAL.cs" />
+    <Compile Include="DAL\Tesouraria\DebitoContaRetornoDAL.cs" />
+    <Compile Include="DAL\Tesouraria\DebitoContaDAL.cs" />
+    <Compile Include="DAL\Tesouraria\ExportaRelIntFinContabDAL.cs" />
+    <Compile Include="DAL\Tesouraria\ImportaBaseSerasaDAL.cs" />
+    <Compile Include="DAL\Tesouraria\MovDiarioDAL.cs" />
+    <Compile Include="DAL\Tesouraria\RelatorioBorderoDAL.cs" />
+    <Compile Include="DAL\Tesouraria\TravaDataCorteDAL.cs" />
+    <Compile Include="ENTITY\AAT_TBL_BOLETO.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\AAT_TBL_BOLETO_ITEM.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\AAT_TBL_BOLETO_SUBTIPO.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\AAT_TBL_BOLETO_TIPO.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\AAT_TBL_DEB_CONTA.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\AAT_TBL_DEB_CONTA_PRODUTO.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\AAT_TBL_EMPRESTIMO_DESCONTO.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\AAT_TBL_RET_DEB_CONTA.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\AAT_TBL_RET_DEB_CONTA_CRITICAS.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\AAT_TBL_RET_DEB_CONTA_MOTIVO.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\AGENCIA.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CC_INTEGR_CT.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CTD010.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CTH010.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CTT010.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CV0010.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\DEPENDENTE.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\EMPREGADO.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\EMPRESA.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\EMPRG_DPDTE.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FC_TBL_PARAMETRO.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FINANCEIRA.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINANCEIRA.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FINANCEIRA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FINANCEIRA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINANCEIRA.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FIN_TBL_BOL_CRM.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FIN_TBL_BOL_CRM_AUD.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FIN_TBL_MOV_DIARIO.cs" />
+    <Compile Include="ENTITY\FIN_TBL_RES_ABERT_FINANCEIRA.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FUN_TBL_ATU_CC.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FUN_TBL_ATU_CC_HIST.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FUN_TBL_PARAMETRO_LOG.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\GB_INTEGR_CT.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\HIST_CADASTRO_COMPLEM_FSS.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\HIST_CADASTRO_FSS.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\MEDCTR.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PARTIAL\AAT_TBL_BOLETO.cs" />
+    <Compile Include="ENTITY\PARTIAL\AAT_TBL_DEB_CONTA.cs" />
+    <Compile Include="ENTITY\PRE_TBL_CARGA_PROTHEUS.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_CARGA_PROTHEUS_LOG.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_CARGA_PROTHEUS_STATUS.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_CARGA_PROTHEUS_TIPO.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\REPRES_UNIAO_FSS.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SB1010.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SX5010.cs">
+      <DependentUpon>FINANCEIRA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\IntegWeb.Entidades\Entidades.csproj">
+      <Project>{d2275f51-1452-4e87-875d-a83e3e2612ce}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Framework\Framework.csproj">
+      <Project>{d13806fb-639b-4319-9699-c1a1658f2a17}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="ENTITY\FINANCEIRA.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FINANCEIRA.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="ENTITY\FINANCEIRA.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FINANCEIRA.edmx</DependentUpon>
+      <LastGenOutput>FINANCEIRA.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ENTITY\FINANCEIRA.edmx.diagram">
+      <DependentUpon>FINANCEIRA.edmx</DependentUpon>
+    </None>
+    <None Include="ENTITY\FINANCEIRA.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FINANCEIRA.edmx</DependentUpon>
+      <LastGenOutput>FINANCEIRA.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

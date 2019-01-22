@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60483C86-18AD-4495-9F17-BB373CCFA4B3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntegWeb.Intranet.Web</RootNamespace>
+    <AssemblyName>IntegWeb.Intranet.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\Integracao\FUNCESP.Integracao\DLLS\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker">
+      <HintPath>..\packages\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SpreadsheetLight">
+      <HintPath>..\packages\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AvisoPgto.aspx" />
+    <Content Include="AvisoPgtoPesquisa.aspx" />
+    <Content Include="AvisoPgtoRelatorio.aspx" />
+    <Content Include="BeneficiariosComIncentivo.aspx" />
+    <Content Include="CadBoleto.aspx" />
+    <Content Include="ConsultaExtratoCRM.aspx" />
+    <Content Include="ConsultaProvisoriaAtendimento.aspx" />
+    <Content Include="ContribEsporadica.aspx" />
+    <Content Include="ControleUnimed.aspx" />
+    <Content Include="css\listemailestilo.css" />
+    <Content Include="EmailCancelamentoPlano.aspx" />
+    <Content Include="EMailMarketing.aspx" />
+    <Content Include="CreditoReembolso.aspx" />
+    <Content Include="css\Content\blank.gif" />
+    <Content Include="css\Content\fancybox_loading%402x.gif" />
+    <Content Include="css\Content\fancybox_loading.gif" />
+    <Content Include="css\Content\fancybox_overlay.png" />
+    <Content Include="css\Content\fancybox_sprite%402x.png" />
+    <Content Include="css\Content\fancybox_sprite.png" />
+    <Content Include="css\Content\helpers\fancybox_buttons.png" />
+    <Content Include="css\Content\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="css\Content\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="css\Content\helpers\jquery.fancybox-media.js" />
+    <Content Include="css\Content\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="css\Content\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="css\Content\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\Content\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\Content\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\Content\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\Content\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\Content\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\Content\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\Content\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\Content\jquery-ui.css" />
+    <Content Include="css\Content\jquery.fancybox.css" />
+    <Content Include="css\Content\jquery.fancybox.js" />
+    <Content Include="css\Content\jquery.fancybox.pack.js" />
+    <Content Include="css\Content\login.css" />
+    <Content Include="css\Content\Site.css" />
+    <Content Include="css\Content\style.css" />
+    <Content Include="css\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\Content\themes\base\jquery-ui.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\Content\themes\jquery.fancybox-1.3.1.css" />
+    <Content Include="css\estilo.css" />
+    <Content Include="Exemplo.aspx" />
+    <Content Include="ExclusaoBemEstar.aspx" />
+    <Content Include="ExtratoPrevidenciario.aspx" />
+    <Content Include="ExtratoSaudeCorreio.aspx" />
+    <Content Include="ExtratoUtilizacao.aspx" />
+    <Content Include="ExtratoUtilizacaoComponente.aspx" />
+    <Content Include="GeraMailing.aspx" />
+    <Content Include="img\arrow-down.gif" />
+    <Content Include="img\arrow-up.gif" />
+    <Content Include="img\bg_box_head.jpg" />
+    <Content Include="img\bg_logo_invertido.jpg" />
+    <Content Include="img\bg_top1.jpg" />
+    <Content Include="img\dual-ring-loader.gif" />
+    <Content Include="img\ico_direito_AMARELO_UP.jpg" />
+    <Content Include="img\ico_px_TRANSPARENTE.gif" />
+    <Content Include="img\imgFuncesp.png" />
+    <Content Include="img\loading-gif.gif" />
+    <Content Include="js\uploadify\Change Log.txt" />
+    <Content Include="js\uploadify\jquery.uploadify.js" />
+    <Content Include="js\uploadify\jquery.uploadify.min.js" />
+    <Content Include="js\uploadify\uploadify-cancel.png" />
+    <Content Include="js\uploadify\uploadify.css" />
+    <Content Include="js\uploadify\uploadify.swf" />
+    <Content Include="ListaEnvioEmail.aspx" />
+    <Content Include="Modelos\Idocs\10\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\11\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\12\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\13\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\14\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\15\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\16\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\17\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\1\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\2\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\3\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\4\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\5\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\6\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\7\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\8\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\9\Template_Corpo_Email - Cópia.htm" />
+    <Content Include="Modelos\Idocs\9\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\18\Template_Corpo_Email.htm" />
+    <Content Include="Modelos\Idocs\imagens\colorschememapping.xml" />
+    <Content Include="Modelos\Idocs\imagens\filelist.xml" />
+    <Content Include="Modelos\Idocs\imagens\image001.jpg" />
+    <Content Include="Modelos\Idocs\imagens\image002.jpg" />
+    <Content Include="Modelos\Idocs\imagens\image003.jpg" />
+    <Content Include="Modelos\Idocs\imagens\image004.jpg" />
+    <Content Include="Modelos\Idocs\imagens\image005.jpg" />
+    <Content Include="Modelos\Idocs\Leia me.txt" />
+    <Content Include="OuvRelEstouros.aspx" />
+    <Content Include="PriorizaChamado.aspx" />
+    <Content Include="css\style.css" />
+    <Content Include="DistribuirBoleta.aspx" />
+    <Content Include="img\assinatura_email.jpg" />
+    <Content Include="img\bglogo.bmp" />
+    <Content Include="img\bg_logo.gif" />
+    <Content Include="img\bg_logo.jpg" />
+    <Content Include="img\bg_logo.png" />
+    <Content Include="img\bg_logo2.jpg" />
+    <Content Include="img\bg_logo2.png" />
+    <Content Include="img\bg_logo3.png" />
+    <Content Include="img\img_segunda_via_pagamento.jpg" />
+    <Content Include="img\processando.gif" />
+    <Content Include="Includes\ucReport.ascx" />
+    <Content Include="js\funcoes_gerais.js" />
+    <Content Include="js\highcharts.js" />
+    <Content Include="js\highcharts_init.js" />
+    <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery-1.7.2.min.js" />
+    <Content Include="js\jquery-ui-1.10.3.custom.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.fancybox.js" />
+    <Content Include="js\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="js\jquery.mousewheel.pack.js" />
+    <Content Include="js\jquery.quicksearch.js" />
+    <Content Include="js\Mascara.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebFile.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AvisoPgto.aspx.cs">
+      <DependentUpon>AvisoPgto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AvisoPgto.aspx.designer.cs">
+      <DependentUpon>AvisoPgto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AvisoPgtoPesquisa.aspx.cs">
+      <DependentUpon>AvisoPgtoPesquisa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AvisoPgtoPesquisa.aspx.designer.cs">
+      <DependentUpon>AvisoPgtoPesquisa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AvisoPgtoRelatorio.aspx.cs">
+      <DependentUpon>AvisoPgtoRelatorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AvisoPgtoRelatorio.aspx.designer.cs">
+      <DependentUpon>AvisoPgtoRelatorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BeneficiariosComIncentivo.aspx.cs">
+      <DependentUpon>BeneficiariosComIncentivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BeneficiariosComIncentivo.aspx.designer.cs">
+      <DependentUpon>BeneficiariosComIncentivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadBoleto.aspx.cs">
+      <DependentUpon>CadBoleto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadBoleto.aspx.designer.cs">
+      <DependentUpon>CadBoleto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaExtratoCRM.aspx.cs">
+      <DependentUpon>ConsultaExtratoCRM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaExtratoCRM.aspx.designer.cs">
+      <DependentUpon>ConsultaExtratoCRM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaProvisoriaAtendimento.aspx.cs">
+      <DependentUpon>ConsultaProvisoriaAtendimento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaProvisoriaAtendimento.aspx.designer.cs">
+      <DependentUpon>ConsultaProvisoriaAtendimento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContribEsporadica.aspx.cs">
+      <DependentUpon>ContribEsporadica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContribEsporadica.aspx.designer.cs">
+      <DependentUpon>ContribEsporadica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControleUnimed.aspx.cs">
+      <DependentUpon>ControleUnimed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControleUnimed.aspx.designer.cs">
+      <DependentUpon>ControleUnimed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailCancelamentoPlano.aspx.cs">
+      <DependentUpon>EmailCancelamentoPlano.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailCancelamentoPlano.aspx.designer.cs">
+      <DependentUpon>EmailCancelamentoPlano.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EMailMarketing.aspx.cs">
+      <DependentUpon>EMailMarketing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMailMarketing.aspx.designer.cs">
+      <DependentUpon>EMailMarketing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditoReembolso.aspx.cs">
+      <DependentUpon>CreditoReembolso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditoReembolso.aspx.designer.cs">
+      <DependentUpon>CreditoReembolso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exemplo.aspx.cs">
+      <DependentUpon>Exemplo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exemplo.aspx.designer.cs">
+      <DependentUpon>Exemplo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExclusaoBemEstar.aspx.cs">
+      <DependentUpon>ExclusaoBemEstar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExclusaoBemEstar.aspx.designer.cs">
+      <DependentUpon>ExclusaoBemEstar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtratoPrevidenciario.aspx.cs">
+      <DependentUpon>ExtratoPrevidenciario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtratoPrevidenciario.aspx.designer.cs">
+      <DependentUpon>ExtratoPrevidenciario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtratoSaudeCorreio.aspx.cs">
+      <DependentUpon>ExtratoSaudeCorreio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtratoSaudeCorreio.aspx.designer.cs">
+      <DependentUpon>ExtratoSaudeCorreio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtratoUtilizacao.aspx.cs">
+      <DependentUpon>ExtratoUtilizacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtratoUtilizacao.aspx.designer.cs">
+      <DependentUpon>ExtratoUtilizacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtratoUtilizacaoComponente.aspx.cs">
+      <DependentUpon>ExtratoUtilizacaoComponente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtratoUtilizacaoComponente.aspx.designer.cs">
+      <DependentUpon>ExtratoUtilizacaoComponente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeraMailing.aspx.cs">
+      <DependentUpon>GeraMailing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeraMailing.aspx.designer.cs">
+      <DependentUpon>GeraMailing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaEnvioEmail.aspx.cs">
+      <DependentUpon>ListaEnvioEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaEnvioEmail.aspx.designer.cs">
+      <DependentUpon>ListaEnvioEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OuvRelEstouros.aspx.cs">
+      <DependentUpon>OuvRelEstouros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OuvRelEstouros.aspx.designer.cs">
+      <DependentUpon>OuvRelEstouros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popup.Master.cs">
+      <DependentUpon>Popup.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popup.Master.designer.cs">
+      <DependentUpon>Popup.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PriorizaChamado.aspx.cs">
+      <DependentUpon>PriorizaChamado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PriorizaChamado.aspx.designer.cs">
+      <DependentUpon>PriorizaChamado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DistribuirBoleta.aspx.cs">
+      <DependentUpon>DistribuirBoleta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DistribuirBoleta.aspx.designer.cs">
+      <DependentUpon>DistribuirBoleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Includes\ucReport.ascx.cs">
+      <DependentUpon>ucReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Includes\ucReport.ascx.designer.cs">
+      <DependentUpon>ucReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.Master.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Principal.Master.designer.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorios\AvisoPagamentoAbono.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvisoPagamentoAbono.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Concessao\Rel_Dados_Previdenciarios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Dados_Previdenciarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Concessao\Rel_Extrato_Prev.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Extrato_Prev.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Concessao\Rel_Extrato_Prev_Detalhado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Extrato_Prev_Detalhado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Boleto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Boleto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Cancela_Plano.cs">
+      <DependentUpon>Rel_Cancela_Plano.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\CreditoReembolso.cs">
+      <DependentUpon>CreditoReembolso.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Relatorios\ExtratoUtilizacaoComponente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExtratoUtilizacaoComponente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Rel_Digna.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Digna.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\ExtratoUtilizacao.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExtratoUtilizacao.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_Tela.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Relatorio_Tela.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebFile.aspx.cs">
+      <DependentUpon>WebFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFile.aspx.designer.cs">
+      <DependentUpon>WebFile.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Principal.Master" />
+    <Content Include="Popup.Master" />
+    <Content Include="Modelos\Idocs\imagens\themedata.thmx" />
+    <Content Include="js\uploadify\check-exists.php" />
+    <Content Include="js\uploadify\index.php" />
+    <Content Include="js\uploadify\uploadify.php" />
+    <None Include="Properties\PublishProfiles\IntraDesenv.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntegWeb.Entidades\Entidades.csproj">
+      <Project>{d2275f51-1452-4e87-875d-a83e3e2612ce}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Financeira.Aplicacao\Financeira.Aplicacao.csproj">
+      <Project>{e1e06dea-1824-46c4-b96c-ee7f3b30568f}</Project>
+      <Name>Financeira.Aplicacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Framework\Framework.csproj">
+      <Project>{d13806fb-639b-4319-9699-c1a1658f2a17}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Intranet.Aplicacao\Intranet.Aplicacao.csproj">
+      <Project>{0aa7ea63-1c25-4992-844b-1040d4a610ab}</Project>
+      <Name>Intranet.Aplicacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Previdencia.Aplicacao\Previdencia.Aplicacao.csproj">
+      <Project>{93597edc-a54e-485d-ad0f-2432998f0161}</Project>
+      <Name>Previdencia.Aplicacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Saude.Aplicacao\Saude.Aplicacao.csproj">
+      <Project>{b2c58e5a-ce2b-4150-9f40-9c76d6d9ae77}</Project>
+      <Name>Saude.Aplicacao</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\CreditoReembolso.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CreditoReembolso.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\ExtratoUtilizacao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ExtratoUtilizacao.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Concessao\Rel_Dados_Previdenciarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Dados_Previdenciarios.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Concessao\Rel_Extrato_Prev.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Extrato_Prev.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Concessao\Rel_Extrato_Prev_Detalhado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Extrato_Prev_Detalhado.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\AvisoPagamentoAbono.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AvisoPagamentoAbono.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\ExtratoUtilizacaoComponente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ExtratoUtilizacaoComponente.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Rel_Digna.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Digna.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Relatorio_Tela.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Relatorio_Tela.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Rel_Cancela_Plano.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Cancela_Plano.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Rel_Boleto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Boleto.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55508</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51875/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

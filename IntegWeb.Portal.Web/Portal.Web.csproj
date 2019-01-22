@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56E121DE-3CD8-4C61-9002-A82DD690B22D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntegWeb.Portal.Web</RootNamespace>
+    <AssemblyName>IntegWeb.Portal.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Data.AdoDotNetInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArquivoPatrocinadora.aspx" />
+    <Content Include="Accessdenied.aspx" />
+    <Content Include="AcertoDemonstrativo.aspx" />
+    <Content Include="ArquivoPatrocinadoraEnv.aspx" />
+    <Content Include="AtualizacaoCadastral.aspx" />
+    <Content Include="AtualizacaoCadastralConfirmacao.aspx" />
+    <Content Include="AtualizacaoCadastralErro.aspx" />
+    <Content Include="AtualizacaoCadastralLogin.aspx" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\fonts\pe-icon-7-stroke.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\mail.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\voucher.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\Glyphicons\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\Pe-Icon-Stroke\Pe-icon-7-stroke.svg" />
+    <Content Include="img\bg-house-bauducco%402x.png" />
+    <Content Include="img\bg-house-bauducco.png" />
+    <Content Include="img\delete_2.png" />
+    <Content Include="img\DownloadPanel.png" />
+    <Content Include="img\email\logo-funcesp%402x.png" />
+    <Content Include="img\email\logo-funcesp.png" />
+    <Content Include="img\icones_banner.svg" />
+    <Content Include="img\icone_banner_2.svg" />
+    <Content Include="img\icone_banner_3.svg" />
+    <Content Include="img\icone_calendario.svg" />
+    <Content Include="img\icone_cartinha.svg" />
+    <Content Include="img\icone_celular.svg" />
+    <Content Include="img\icone_check.svg" />
+    <Content Include="img\icone_email.svg" />
+    <Content Include="img\icone_erro.svg" />
+    <Content Include="img\icone_fechar.svg" />
+    <Content Include="img\icone_id.svg" />
+    <Content Include="img\icone_telefone.svg" />
+    <Content Include="img\iconfinder_facebook_circle_294710.svg" />
+    <Content Include="img\iconfinder_instagram_circle_294711.svg" />
+    <Content Include="img\iconfinder_twitter_circle_294709.svg" />
+    <Content Include="img\iconfinder_youtube_circle_294712.svg" />
+    <Content Include="img\Load.gif" />
+    <Content Include="img\logo-bauducco%402x.png" />
+    <Content Include="img\logo-bauducco.png" />
+    <Content Include="img\logo.svg" />
+    <Content Include="img\LogoutPanel.png" />
+    <Content Include="img\logo_rodape.svg" />
+    <Content Include="img\panettone%402x.png" />
+    <Content Include="img\panettone.png" />
+    <Content Include="img\pdf-icon.png" />
+    <Content Include="img\report-icon.png" />
+    <Content Include="img\rodape%402x.png" />
+    <Content Include="img\rodape.png" />
+    <Content Include="img\text-icon.png" />
+    <Content Include="img\UploadPanel.png" />
+    <Content Include="img\voucher\icone_voucher.svg" />
+    <Content Include="img\voucher\logo-bauducco-desktop%402x.png" />
+    <Content Include="img\voucher\logo-bauducco-desktop.png" />
+    <Content Include="img\voucher\logo-funcesp%402x.png" />
+    <Content Include="img\voucher\logo-funcesp.png" />
+    <Content Include="img\zip-icon.png" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\jquery-2.1.1.js" />
+    <Content Include="js\jquery.mask.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\modernizr.js" />
+    <Content Include="TrocaArquivos.aspx" />
+    <Content Include="ExtratoUtilizacaoComponente.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="img\assinatura_email.jpg" />
+    <Content Include="img\i_cancel.png" />
+    <Content Include="img\i_delete.png" />
+    <Content Include="img\i_edit.png" />
+    <Content Include="img\i_search.png" />
+    <Content Include="Timeout.aspx" />
+    <Content Include="css\Content\blank.gif" />
+    <Content Include="css\Content\fancybox_loading%402x.gif" />
+    <Content Include="css\Content\fancybox_loading.gif" />
+    <Content Include="css\Content\fancybox_overlay.png" />
+    <Content Include="css\Content\fancybox_sprite%402x.png" />
+    <Content Include="css\Content\fancybox_sprite.png" />
+    <Content Include="css\Content\helpers\fancybox_buttons.png" />
+    <Content Include="css\Content\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="css\Content\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="css\Content\helpers\jquery.fancybox-media.js" />
+    <Content Include="css\Content\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="css\Content\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="css\Content\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Content\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\Content\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\Content\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\Content\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\Content\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\Content\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\Content\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\Content\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\Content\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\Content\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\Content\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\Content\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\Content\jquery-ui.css" />
+    <Content Include="css\Content\jquery.fancybox.css" />
+    <Content Include="css\Content\jquery.fancybox.js" />
+    <Content Include="css\Content\jquery.fancybox.pack.js" />
+    <Content Include="css\Content\login.css" />
+    <Content Include="css\Content\Site.css" />
+    <Content Include="css\Content\style.css" />
+    <Content Include="css\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\Content\themes\base\jquery-ui.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="css\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="css\Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\Content\themes\jquery.fancybox-1.3.1.css" />
+    <Content Include="css\style_portal.css" />
+    <Content Include="css\estilo.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Global.asax" />
+    <Content Include="img\ans-sig.png" />
+    <Content Include="img\ans.png" />
+    <Content Include="img\arrow-down.gif" />
+    <Content Include="img\arrow-up.gif" />
+    <Content Include="img\bg_box_head.jpg" />
+    <Content Include="img\bg_top1.jpg" />
+    <Content Include="img\delete.png" />
+    <Content Include="img\financial.png" />
+    <Content Include="img\history.png" />
+    <Content Include="img\i_error.png" />
+    <Content Include="img\i_ok.png" />
+    <Content Include="img\i_warning.png" />
+    <Content Include="img\Logo.png" />
+    <Content Include="img\ouvidoria.png" />
+    <Content Include="img\previc.png" />
+    <Content Include="img\processando.gif" />
+    <Content Include="img\sustentabilidade.png" />
+    <Content Include="img\upload.png" />
+    <Content Include="Includes\ucLogin.ascx" />
+    <Content Include="Includes\ucReport.ascx" />
+    <Content Include="js\funcoes_gerais.js" />
+    <Content Include="js\highcharts.js" />
+    <Content Include="js\highcharts_init.js" />
+    <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery-1.7.2.min.js" />
+    <Content Include="js\jquery-ui-1.10.3.custom.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.fancybox.js" />
+    <Content Include="js\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="js\jquery.mousewheel.pack.js" />
+    <Content Include="js\jquery.quicksearch.js" />
+    <Content Include="js\Mascara.js" />
+    <Content Include="js\uploadify\Change Log.txt" />
+    <Content Include="js\uploadify\jquery.uploadify.js" />
+    <Content Include="js\uploadify\jquery.uploadify.min.js" />
+    <Content Include="js\uploadify\uploadify-cancel.png" />
+    <Content Include="js\uploadify\uploadify.css" />
+    <Content Include="js\uploadify\uploadify.swf" />
+    <Content Include="RelatorioWeb.aspx" />
+    <Content Include="SingleSignOn.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebFile.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArquivoPatrocinadora.ashx.cs">
+      <DependentUpon>ArquivoPatrocinadora.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ArquivoPatrocinadora.aspx.cs">
+      <DependentUpon>ArquivoPatrocinadora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArquivoPatrocinadora.aspx.designer.cs">
+      <DependentUpon>ArquivoPatrocinadora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accessdenied.aspx.cs">
+      <DependentUpon>Accessdenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accessdenied.aspx.designer.cs">
+      <DependentUpon>Accessdenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AcertoDemonstrativo.aspx.cs">
+      <DependentUpon>AcertoDemonstrativo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcertoDemonstrativo.aspx.designer.cs">
+      <DependentUpon>AcertoDemonstrativo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArquivoPatrocinadoraEnv.aspx.cs">
+      <DependentUpon>ArquivoPatrocinadoraEnv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArquivoPatrocinadoraEnv.aspx.designer.cs">
+      <DependentUpon>ArquivoPatrocinadoraEnv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AtualizacaoCadastral.aspx.cs">
+      <DependentUpon>AtualizacaoCadastral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AtualizacaoCadastral.aspx.designer.cs">
+      <DependentUpon>AtualizacaoCadastral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AtualizacaoCadastralConfirmacao.aspx.cs">
+      <DependentUpon>AtualizacaoCadastralConfirmacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AtualizacaoCadastralConfirmacao.aspx.designer.cs">
+      <DependentUpon>AtualizacaoCadastralConfirmacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AtualizacaoCadastralErro.aspx.cs">
+      <DependentUpon>AtualizacaoCadastralErro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AtualizacaoCadastralErro.aspx.designer.cs">
+      <DependentUpon>AtualizacaoCadastralErro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AtualizacaoCadastralLogin.aspx.cs">
+      <DependentUpon>AtualizacaoCadastralLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AtualizacaoCadastralLogin.aspx.designer.cs">
+      <DependentUpon>AtualizacaoCadastralLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Cadastro\Rel_Nota_Debito.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Nota_Debito.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SvgHandler .cs" />
+    <Compile Include="TrocaArquivos.aspx.cs">
+      <DependentUpon>TrocaArquivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrocaArquivos.aspx.designer.cs">
+      <DependentUpon>TrocaArquivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtratoUtilizacaoComponente.aspx.cs">
+      <DependentUpon>ExtratoUtilizacaoComponente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtratoUtilizacaoComponente.aspx.designer.cs">
+      <DependentUpon>ExtratoUtilizacaoComponente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Cadastro\Rel_Critica_Arquivo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Critica_Arquivo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Cadastro\Rel_Demo_Repasse.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel_Demo_Repasse.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\ExtratoUtilizacaoComponente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExtratoUtilizacaoComponente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Timeout.aspx.cs">
+      <DependentUpon>Timeout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Timeout.aspx.designer.cs">
+      <DependentUpon>Timeout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Portal.Master.cs">
+      <DependentUpon>Portal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal.Master.designer.cs">
+      <DependentUpon>Portal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Includes\ucLogin.ascx.cs">
+      <DependentUpon>ucLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Includes\ucLogin.ascx.designer.cs">
+      <DependentUpon>ucLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Includes\ucReport.ascx.cs">
+      <DependentUpon>ucReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Includes\ucReport.ascx.designer.cs">
+      <DependentUpon>ucReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Popup.Master.cs">
+      <DependentUpon>Popup.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popup.Master.designer.cs">
+      <DependentUpon>Popup.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelatorioWeb.aspx.cs">
+      <DependentUpon>RelatorioWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatorioWeb.aspx.designer.cs">
+      <DependentUpon>RelatorioWeb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SingleSignOn.aspx.cs">
+      <DependentUpon>SingleSignOn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SingleSignOn.aspx.designer.cs">
+      <DependentUpon>SingleSignOn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFile.aspx.cs">
+      <DependentUpon>WebFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFile.aspx.designer.cs">
+      <DependentUpon>WebFile.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Popup.Master" />
+    <Content Include="js\uploadify\check-exists.php" />
+    <Content Include="js\uploadify\index.php" />
+    <Content Include="js\uploadify\uploadify.php" />
+    <Content Include="ArquivoPatrocinadora.ashx" />
+    <Content Include="Portal.Master" />
+    <Content Include="img\upload.psd" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\Glyphicons\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\Glyphicons\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\Glyphicons\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\Pe-Icon-Stroke\Pe-icon-7-stroke.eot" />
+    <Content Include="fonts\Pe-Icon-Stroke\Pe-icon-7-stroke.ttf" />
+    <Content Include="fonts\Pe-Icon-Stroke\Pe-icon-7-stroke.woff" />
+    <None Include="Properties\PublishProfiles\PortalWeb.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntegWeb.Entidades\Entidades.csproj">
+      <Project>{d2275f51-1452-4e87-875d-a83e3e2612ce}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Framework\Framework.csproj">
+      <Project>{d13806fb-639b-4319-9699-c1a1658f2a17}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Previdencia.Aplicacao\Previdencia.Aplicacao.csproj">
+      <Project>{93597edc-a54e-485d-ad0f-2432998f0161}</Project>
+      <Name>Previdencia.Aplicacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Saude.Aplicacao\Saude.Aplicacao.csproj">
+      <Project>{b2c58e5a-ce2b-4150-9f40-9c76d6d9ae77}</Project>
+      <Name>Saude.Aplicacao</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Cadastro\Rel_Demo_Repasse.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Demo_Repasse.cs</LastGenOutput>
+    </Content>
+    <Content Include="Relatorios\Cadastro\Rel_Nota_Debito.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Nota_Debito.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\ExtratoUtilizacaoComponente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ExtratoUtilizacaoComponente.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Relatorios\Cadastro\Rel_Critica_Arquivo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel_Critica_Arquivo.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>61022</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60425/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

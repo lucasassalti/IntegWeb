@@ -1,0 +1,16 @@
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\bin\Debug\IntegWeb.Previdencia.Aplicacao.dll.config
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\bin\Debug\IntegWeb.Previdencia.Aplicacao.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\bin\Debug\IntegWeb.Previdencia.Aplicacao.pdb
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\bin\Debug\EntityFramework.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\bin\Debug\IntegWeb.Entidades.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\bin\Debug\IntegWeb.Framework.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\bin\Debug\Oracle.DataAccess.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\bin\Debug\EPPlus.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\bin\Debug\DocumentFormat.OpenXml.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\bin\Debug\itextsharp.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\bin\Debug\IntegWeb.Entidades.pdb
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\bin\Debug\IntegWeb.Framework.pdb
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\bin\Debug\EntityFramework.xml
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\obj\Debug\Previdencia.Aplicacao.csprojResolveAssemblyReference.cache
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\obj\Debug\IntegWeb.Previdencia.Aplicacao.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Previdencia.Aplicacao\obj\Debug\IntegWeb.Previdencia.Aplicacao.pdb

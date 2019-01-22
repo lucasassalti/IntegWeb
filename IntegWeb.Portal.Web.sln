@@ -1,0 +1,105 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "IntegWeb.Entidades\Entidades.csproj", "{D2275F51-1452-4E87-875D-A83E3E2612CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "IntegWeb.Framework\Framework.csproj", "{D13806FB-639B-4319-9699-C1A1658F2A17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal.Aplicacao", "IntegWeb.Portal.Aplicacao\Portal.Aplicacao.csproj", "{9FBF8969-1A71-4076-8343-DF45E27B3797}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D2275F51-1452-4E87-875D-A83E3E2612CE} = {D2275F51-1452-4E87-875D-A83E3E2612CE}
+		{D13806FB-639B-4319-9699-C1A1658F2A17} = {D13806FB-639B-4319-9699-C1A1658F2A17}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal.Web", "IntegWeb.Portal.Web\Portal.Web.csproj", "{56E121DE-3CD8-4C61-9002-A82DD690B22D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D2275F51-1452-4E87-875D-A83E3E2612CE} = {D2275F51-1452-4E87-875D-A83E3E2612CE}
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77} = {B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}
+		{D13806FB-639B-4319-9699-C1A1658F2A17} = {D13806FB-639B-4319-9699-C1A1658F2A17}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Previdencia.Aplicacao", "IntegWeb.Previdencia.Aplicacao\Previdencia.Aplicacao.csproj", "{93597EDC-A54E-485D-AD0F-2432998F0161}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saude.Aplicacao", "IntegWeb.Saude.Aplicacao\Saude.Aplicacao.csproj", "{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://fcespwebd001:8080/tfs/funcespcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = IntegWeb.Entidades\\Entidades.csproj
+		SccProjectName1 = IntegWeb.Entidades
+		SccLocalPath1 = IntegWeb.Entidades
+		SccProjectUniqueName2 = IntegWeb.Framework\\Framework.csproj
+		SccProjectName2 = IntegWeb.Framework
+		SccLocalPath2 = IntegWeb.Framework
+		SccProjectUniqueName3 = IntegWeb.Previdencia.Aplicacao\\Previdencia.Aplicacao.csproj
+		SccProjectName3 = IntegWeb.Previdencia.Aplicacao
+		SccLocalPath3 = IntegWeb.Previdencia.Aplicacao
+		SccProjectUniqueName4 = IntegWeb.Portal.Aplicacao\\Portal.Aplicacao.csproj
+		SccProjectName4 = IntegWeb.Portal.Aplicacao
+		SccLocalPath4 = IntegWeb.Portal.Aplicacao
+		SccProjectUniqueName5 = IntegWeb.Portal.Web\\Portal.Web.csproj
+		SccProjectName5 = IntegWeb.Portal.Web
+		SccLocalPath5 = IntegWeb.Portal.Web
+		SccProjectUniqueName6 = IntegWeb.Saude.Aplicacao\\Saude.Aplicacao.csproj
+		SccProjectName6 = IntegWeb.Saude.Aplicacao
+		SccLocalPath6 = IntegWeb.Saude.Aplicacao
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Debug|x86.ActiveCfg = Debug|x86
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Debug|x86.Build.0 = Debug|x86
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Release|x86.ActiveCfg = Release|x86
+		{D2275F51-1452-4E87-875D-A83E3E2612CE}.Release|x86.Build.0 = Release|x86
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Debug|x86.ActiveCfg = Debug|x86
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Debug|x86.Build.0 = Debug|x86
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Release|x86.ActiveCfg = Release|x86
+		{D13806FB-639B-4319-9699-C1A1658F2A17}.Release|x86.Build.0 = Release|x86
+		{9FBF8969-1A71-4076-8343-DF45E27B3797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FBF8969-1A71-4076-8343-DF45E27B3797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FBF8969-1A71-4076-8343-DF45E27B3797}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9FBF8969-1A71-4076-8343-DF45E27B3797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FBF8969-1A71-4076-8343-DF45E27B3797}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FBF8969-1A71-4076-8343-DF45E27B3797}.Release|x86.ActiveCfg = Release|Any CPU
+		{56E121DE-3CD8-4C61-9002-A82DD690B22D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E121DE-3CD8-4C61-9002-A82DD690B22D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E121DE-3CD8-4C61-9002-A82DD690B22D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{56E121DE-3CD8-4C61-9002-A82DD690B22D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E121DE-3CD8-4C61-9002-A82DD690B22D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E121DE-3CD8-4C61-9002-A82DD690B22D}.Release|x86.ActiveCfg = Release|Any CPU
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Debug|x86.ActiveCfg = Debug|x86
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Debug|x86.Build.0 = Debug|x86
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Release|x86.ActiveCfg = Release|x86
+		{93597EDC-A54E-485D-AD0F-2432998F0161}.Release|x86.Build.0 = Release|x86
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Debug|x86.ActiveCfg = Debug|x86
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Debug|x86.Build.0 = Debug|x86
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Release|x86.ActiveCfg = Release|x86
+		{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

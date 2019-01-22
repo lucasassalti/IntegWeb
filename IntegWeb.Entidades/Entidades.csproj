@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2275F51-1452-4E87-875D-A83E3E2612CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntegWeb.Entidades</RootNamespace>
+    <AssemblyName>IntegWeb.Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracao\GrupoAcessos.cs" />
+    <Compile Include="Administracao\GrupoMenu.cs" />
+    <Compile Include="Administracao\GrupoUsuario.cs" />
+    <Compile Include="Administracao\MovimentacaoUsuario.cs" />
+    <Compile Include="Atendimento\Saude\Cancelamento.cs" />
+    <Compile Include="Framework\CargaDados.cs" />
+    <Compile Include="Framework\CargaDadosDePara.cs" />
+    <Compile Include="Framework\ArquivoDownload.cs" />
+    <Compile Include="Framework\ArquivoUpload.cs" />
+    <Compile Include="Framework\Resultado.cs" />
+    <Compile Include="Framework\SingleSignOn.cs" />
+    <Compile Include="Framework\UsuarioPortal.cs" />
+    <Compile Include="CargaProtheus\PessFisicaJuridica.cs" />
+    <Compile Include="Previdencia\Calculo Acao Judicial\AcaoJudicial.cs" />
+    <Compile Include="Previdencia\Calculo Acao Judicial\CoeficientePensao.cs" />
+    <Compile Include="Previdencia\Calculo Acao Judicial\ValorReferencia.cs" />
+    <Compile Include="Previdencia\Calculo Acao Judicial\FichaFinanceira.cs" />
+    <Compile Include="Previdencia\Calculo Acao Judicial\IncideJuros.cs" />
+    <Compile Include="Previdencia\Calculo Acao Judicial\IndiceRevisao.cs" />
+    <Compile Include="Previdencia\Calculo Acao Judicial\RevisaoLei.cs" />
+    <Compile Include="Previdencia\Cartas\BenefRecusado.cs" />
+    <Compile Include="Previdencia\Cartas\PropostaAdesao.cs" />
+    <Compile Include="Previdencia\Cartas\RegraTributaria.cs" />
+    <Compile Include="Previdencia\Cartas\SituacaoFSS.cs" />
+    <Compile Include="Previdencia\Cartas\TempoRecusado.cs" />
+    <Compile Include="Previdencia\Cartas\TipoBeneficio.cs" />
+    <Compile Include="Previdencia\Cartas\TipoServico.cs" />
+    <Compile Include="Framework\UsuarioHistorico.cs" />
+    <Compile Include="Periodico\Area.cs" />
+    <Compile Include="Previdencia\Concessao\DadosPrevidenciarios.cs" />
+    <Compile Include="Previdencia\Concessao\ExtratoPrevidenciario.cs" />
+    <Compile Include="Previdencia\Pagamentos Previdenciarios\ArquivoSisOb.cs" />
+    <Compile Include="Previdencia\Pagamentos Previdenciarios\pagamentos.cs" />
+    <Compile Include="Previdencia\Pagamentos Previdenciarios\pagamentosBloco2.cs" />
+    <Compile Include="Previdencia\Pagamentos Previdenciarios\pagamentosBloco3.cs" />
+    <Compile Include="Previdencia\Pagamentos Previdenciarios\PercentualPensao.cs" />
+    <Compile Include="Previdencia\Pagamentos Previdenciarios\Retorno_Aviso_pagto_ms_ab.cs" />
+    <Compile Include="Saude\Processos\CargaCreditoReembolsoTotal.cs" />
+    <Compile Include="Saude\Auditoria\AuditControle.cs" />
+    <Compile Include="Saude\Auditoria\EmpAudit.cs" />
+    <Compile Include="Saude\Auditoria\PagamentoCRC.cs" />
+    <Compile Include="Saude\Auditoria\RegraCRC.cs" />
+    <Compile Include="Saude\Cidade.cs" />
+    <Compile Include="Saude\Cobranca\AcertoPontualCoparticipacao.cs" />
+    <Compile Include="Saude\Cobranca\CisaoFusao.cs" />
+    <Compile Include="Saude\Controladoria\CentroCusto.cs" />
+    <Compile Include="Saude\Controladoria\ItemOrcIR.cs" />
+    <Compile Include="Saude\Controladoria\ItemOrc.cs" />
+    <Compile Include="Saude\Controladoria\ItemOrcCobranca.cs" />
+    <Compile Include="Saude\Controladoria\ItemOrcInss.cs" />
+    <Compile Include="Saude\Controladoria\ItemoOrcReemb.cs" />
+    <Compile Include="Saude\ExigenciasLegais\MonitoramentoTISS\AssinaturaDigital\tissAssinaturaDigital_v1_01_xmldsig-core-schema.cs" />
+    <Compile Include="Saude\ExigenciasLegais\MonitoramentoTISS\TiposComplexos\tissComplexTypesV3_02_01_xmldsig-core-schema.cs" />
+    <Compile Include="Saude\ExigenciasLegais\MonitoramentoTISS\Guias\tissGuiasV3_02_01_xmldsig-core-schema.cs" />
+    <Compile Include="Saude\ExigenciasLegais\MonitoramentoTISS\tissMonitoramentoV3_02_01.cs" />
+    <Compile Include="Saude\ExigenciasLegais\MonitoramentoTISS\AssinaturaDigital\Core\xmldsig-core-schema.cs" />
+    <Compile Include="Saude\Faturamento\AdinResumo.cs" />
+    <Compile Include="Financeira\MovDiario.cs" />
+    <Compile Include="Saude\Processos\CargaServicoAnexoII.cs" />
+    <Compile Include="Saude\Processos\CreditoReembolso.cs" />
+    <Compile Include="Saude\Processos\ExtratoUtilizacao.cs" />
+    <Compile Include="Saude\Processos\Prestador.cs" />
+    <Compile Include="Saude\Processos\QtdAtendimentos.cs" />
+    <Compile Include="Saude\Relatorio\RelatorioTipo.cs" />
+    <Compile Include="Saude\Cobranca\Cota.cs" />
+    <Compile Include="Periodico\Assinatura.cs" />
+    <Compile Include="Periodico\AssinaturaArea.cs" />
+    <Compile Include="Periodico\Editora.cs" />
+    <Compile Include="Periodico\Orgao.cs" />
+    <Compile Include="Periodico\PeriodicoObj.cs" />
+    <Compile Include="Periodico\PeriodoPeriodico.cs" />
+    <Compile Include="Saude\Financeiro\Boleto.cs" />
+    <Compile Include="Saude\Financeiro\CadastraExtraJudicial.cs" />
+    <Compile Include="Saude\Financeiro\CadastroFlag.cs" />
+    <Compile Include="Administracao\Menu.cs" />
+    <Compile Include="Administracao\Sistema.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Saude\Financeiro\HistProcessaBoleto.cs" />
+    <Compile Include="Saude\Relatorio\Parametro.cs" />
+    <Compile Include="Saude\Relatorio\Relatorio.cs" />
+    <Compile Include="Framework\UsuarioSistema.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RH\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

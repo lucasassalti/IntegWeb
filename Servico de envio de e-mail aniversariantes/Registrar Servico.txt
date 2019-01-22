@@ -1,0 +1,6 @@
+--- Registrar Servico
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\installutil Servico_envio_email_aniversarios.exe
+
+
+--- Desfazer registro de Servico
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\installutil /u Servico_envio_email_aniversarios.exe

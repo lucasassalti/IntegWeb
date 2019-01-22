@@ -1,0 +1,177 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="IntegWeb.Saude.Web.Principal"  %>
+
+
+<%@ Register Src="~/Includes/ucLogin.ascx" TagPrefix="uc1" TagName="ucLogin" %>
+
+<!DOCTYPE html>
+<html>
+<head >
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>FUNCESP - Controle de Periódico</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/navi.css" media="screen" />
+    <link href="css/Content/jquery.fancybox.css" rel="stylesheet" />
+    <link href="css/Content/themes/jquery.fancybox-1.3.1.css" rel="stylesheet" />
+    <link href="Content/jquery-ui.css" rel="stylesheet" />
+
+   
+    <link href="css/themes/base/jquery-ui.css" rel="stylesheet" />
+
+<%--    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>--%>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="js/funcoes_gerais.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.pack.js"></script>
+        <script type="text/javascript" src="js/jquery.quicksearch.js"></script>
+    <script type="text/javascript" src="js/Mascara.js"></script>
+
+    <script type="text/javascript">
+        function MostraMsg(id) {
+            $("#" + id).click(function (id) {
+
+                $(".fancybox").fancybox({
+                    onStart: function (event, ui) {
+                        $(this).parent().appendTo($("form:first"));
+
+                    }
+                });
+            });
+            $(window).load(function () {
+                $("#" + id).click();
+            });
+        }
+        $(function () {
+            //Verifica se existe um Menu lateral e adiciona Margin-left
+            if ($("#sidebar").children(".box").length) {
+                $("#main").addClass("margin");
+            }
+
+          //  $(".box .h_title").not(this).next("ul").hide("normal");
+            // $(".box .h_title").not(this).next("#home").show("normal");
+            $(".box").children(".h_title").click(function () { $(this).next("ul").slideToggle(); });
+
+            $(".date").datepicker({
+                dateFormat: 'dd/mm/yy',
+                dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+                dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+                dayNamesShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+                monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                nextText: 'Próximo',
+                prevText: 'Anterior'
+            });
+            $('input#id_search').quicksearch('table#gridAssinatura tbody tr');
+            $('input#id_search').quicksearch('table#gridEditora tbody tr');
+            $('input#id_search').quicksearch('table#gridPeriodico tbody tr');
+            $('input#id_search').quicksearch('table#gridSetores tbody tr');
+
+            $('#Form1').bind("keyup keypress", function (e) {
+                var code = e.keyCode || e.which;
+                if (code == 13) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            $(".fancybox").fancybox({
+                onStart: function (event, ui) { $(this).parent().appendTo($("form:first")) },
+                autoDimensions: false
+            });
+            $(".nivel").click(function(){
+            $(".full_w").hide();
+            });
+        });
+
+    </script>
+   
+</head>
+<body>
+
+    <div class="wrap">
+        <form id="frm01" method="post" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server" AsyncPostBackTimeout="0" >
+            </asp:ScriptManager>
+            <div id="header">
+                <div id="top">
+                     <uc1:ucLogin runat="server" ID="ucLogin" />
+                     <%--<asp:Label ID="lbldata" runat="server" BorderStyle="None"></asp:Label>--%>
+                       
+                </div>
+                    <div id="nav">
+                        <ul>
+                            <asp:Repeater ID="rptMenuNivel1"  runat="server" OnItemDataBound="rptMenuNivel1_ItemDataBound">
+                                <ItemTemplate>
+                                    <li class="upp"><a href="#"><%# Eval("Nome") %></a>
+                                        <asp:Repeater ID="rptMenuNivel2" runat="server"  OnItemCommand="rptMenuNivel2_ItemCommand">
+                                            <HeaderTemplate>
+                                                <ul>
+                                            </HeaderTemplate>
+                                            <ItemTemplate>
+                                                <li>&#8250;
+                                        <asp:LinkButton ID="lnkMenuNivel2" OnClick="lnkMenuNivel2_Click"  CausesValidation="false" runat="server"
+                                            Text='<%# Eval("Nome") %>' CssClass="nivel"
+                                            CommandArgument='<%# Eval("Codigo") %>' CommandName="NIVEL2"  ></asp:LinkButton>
+                                                </li>
+                                            </ItemTemplate>
+                                            <FooterTemplate>
+                                                </ul>
+                                            </FooterTemplate>
+                                        </asp:Repeater>
+                                    </li>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </ul>
+                    </div>
+                </div>
+                       
+                <div id="content">
+                    <div id="sidebar">
+                        <asp:Repeater ID="rptMenuNivel3" runat="server" OnItemDataBound="rptMenuNivel3_ItemDataBound">
+                            <ItemTemplate>
+                                <div class="box">
+                                    <div class="h_title">&#8250; <%# Eval("Nome") %></div>
+                                    <asp:Repeater ID="rptMenuNivel4" runat="server">
+                                        <HeaderTemplate>
+                                            <ul id="home">
+                                        </HeaderTemplate>
+                                        <ItemTemplate>
+                                            <li class="b1">
+                                                <a class="icon page"  href='<%# Eval("Link") %>'>
+                                                    <%# Eval("Nome") %>
+                                                </a>
+                                            </li>
+                                        </ItemTemplate>
+                                        <FooterTemplate>
+                                            </ul>
+                                        </FooterTemplate>
+                                    </asp:Repeater>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+
+                    <div id="main">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+           
+       
+               
+        </form>
+    </div>
+     <%-- <div id="footer">
+                    <div class="left">
+                        <p>Design: ATD - Desenvolvimento de Sistemas </p>
+                    </div>
+                    <div class="right">
+                        <p><a href="http://integranet.funcesp.com.br/intranet/home.html">Integranet</a> | <a href="http://www.prevcesp.com.br/wps/portal">Portal</a></p>
+                    </div>--%>
+</body>
+</!html>

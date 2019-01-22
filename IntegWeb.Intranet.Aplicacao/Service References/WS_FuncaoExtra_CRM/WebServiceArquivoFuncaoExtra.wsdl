@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://webservice.espec.csi.plusoft.com.br" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://webservice.espec.csi.plusoft.com.br" targetNamespace="http://webservice.espec.csi.plusoft.com.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://webservice.espec.csi.plusoft.com.br">
+      <xsd:element name="adicionarArquivoFuncaoExtra">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="strIdChamado" type="xsd:string" />
+            <xsd:element name="strManiNrSequencia" type="xsd:string" />
+            <xsd:element name="arquivo" type="xsd:base64Binary" />
+            <xsd:element name="strNomeArquivo" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="adicionarArquivoFuncaoExtraResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="adicionarArquivoFuncaoExtraReturn" type="impl:ColClassRetorno" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ColClassRetorno">
+        <xsd:sequence>
+          <xsd:element name="codErro" nillable="true" type="xsd:string" />
+          <xsd:element name="descErro" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="verificaTamanhoArquivoUpload">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="arquivo" type="xsd:base64Binary" />
+            <xsd:element name="idEmprCdEmpresa" type="xsd:long" />
+            <xsd:element name="tamanhoAtual" type="xsd:long" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="verificaTamanhoArquivoUploadResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="verificaTamanhoArquivoUploadReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="verificaTamanhoUpload">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="arquivo" type="xsd:base64Binary" />
+            <xsd:element name="idEmprCdEmpresa" type="xsd:long" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="verificaTamanhoUploadResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="verificaTamanhoUploadReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="verificaTamanhoUploadResponse">
+    <wsdl:part name="parameters" element="impl:verificaTamanhoUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="adicionarArquivoFuncaoExtraRequest">
+    <wsdl:part name="parameters" element="impl:adicionarArquivoFuncaoExtra" />
+  </wsdl:message>
+  <wsdl:message name="adicionarArquivoFuncaoExtraResponse">
+    <wsdl:part name="parameters" element="impl:adicionarArquivoFuncaoExtraResponse" />
+  </wsdl:message>
+  <wsdl:message name="verificaTamanhoArquivoUploadResponse">
+    <wsdl:part name="parameters" element="impl:verificaTamanhoArquivoUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="verificaTamanhoArquivoUploadRequest">
+    <wsdl:part name="parameters" element="impl:verificaTamanhoArquivoUpload" />
+  </wsdl:message>
+  <wsdl:message name="verificaTamanhoUploadRequest">
+    <wsdl:part name="parameters" element="impl:verificaTamanhoUpload" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceArquivoFuncaoExtra">
+    <wsdl:operation name="adicionarArquivoFuncaoExtra">
+      <wsdl:input name="adicionarArquivoFuncaoExtraRequest" message="impl:adicionarArquivoFuncaoExtraRequest" />
+      <wsdl:output name="adicionarArquivoFuncaoExtraResponse" message="impl:adicionarArquivoFuncaoExtraResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="verificaTamanhoArquivoUpload">
+      <wsdl:input name="verificaTamanhoArquivoUploadRequest" message="impl:verificaTamanhoArquivoUploadRequest" />
+      <wsdl:output name="verificaTamanhoArquivoUploadResponse" message="impl:verificaTamanhoArquivoUploadResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="verificaTamanhoUpload">
+      <wsdl:input name="verificaTamanhoUploadRequest" message="impl:verificaTamanhoUploadRequest" />
+      <wsdl:output name="verificaTamanhoUploadResponse" message="impl:verificaTamanhoUploadResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceArquivoFuncaoExtraSoapBinding" type="impl:WebServiceArquivoFuncaoExtra">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="adicionarArquivoFuncaoExtra">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="adicionarArquivoFuncaoExtraRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="adicionarArquivoFuncaoExtraResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificaTamanhoArquivoUpload">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="verificaTamanhoArquivoUploadRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="verificaTamanhoArquivoUploadResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificaTamanhoUpload">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="verificaTamanhoUploadRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="verificaTamanhoUploadResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceArquivoFuncaoExtraService">
+    <wsdl:port name="WebServiceArquivoFuncaoExtra" binding="impl:WebServiceArquivoFuncaoExtraSoapBinding">
+      <wsdlsoap:address location="http://fcespwebp003:8080/csiweb-funcesp/services/WebServiceArquivoFuncaoExtra" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

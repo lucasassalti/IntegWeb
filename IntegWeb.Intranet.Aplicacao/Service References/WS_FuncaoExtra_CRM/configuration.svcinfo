@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;WebServiceArquivoFuncaoExtraSoapBinding&quot; /&gt;" bindingType="basicHttpBinding" name="WebServiceArquivoFuncaoExtraSoapBinding" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://fcespwebp003:8080/csiweb-funcesp/services/WebServiceArquivoFuncaoExtra&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;WebServiceArquivoFuncaoExtraSoapBinding&quot; contract=&quot;WS_FuncaoExtra_CRM.WebServiceArquivoFuncaoExtra&quot; name=&quot;WebServiceArquivoFuncaoExtra&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://fcespwebp003:8080/csiweb-funcesp/services/WebServiceArquivoFuncaoExtra&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;WebServiceArquivoFuncaoExtraSoapBinding&quot; contract=&quot;WS_FuncaoExtra_CRM.WebServiceArquivoFuncaoExtra&quot; name=&quot;WebServiceArquivoFuncaoExtra&quot; /&gt;" contractName="WS_FuncaoExtra_CRM.WebServiceArquivoFuncaoExtra" name="WebServiceArquivoFuncaoExtra" />
+  </endpoints>
+</configurationSnapshot>

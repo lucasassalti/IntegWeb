@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Popup.Master.cs" Inherits="IntegWeb.Previdencia.Web.Popup" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+     <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>FUNCESP - Previdência</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/navi.css" media="screen" />
+    <link href="css/Content/jquery.fancybox.css" rel="stylesheet" />
+    <link href="css/Content/themes/jquery.fancybox-1.3.1.css" rel="stylesheet" />
+    <link href="Content/jquery-ui.css" rel="stylesheet" />
+
+    <link href="css/themes/base/jquery-ui.css" rel="stylesheet" />
+
+<%--    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>--%>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="js/funcoes_gerais.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.pack.js"></script>
+    <script type="text/javascript" src="js/jquery.quicksearch.js"></script>
+    <script type="text/javascript"  src="js/Mascara.js"></script>
+    <script type="text/javascript">
+        function MostraMsg(id) {
+            $("#" + id).click(function (id) {
+
+                $(".fancybox").fancybox({
+                    onStart: function (event, ui) {
+                        $(this).parent().appendTo($("form:first"));
+
+                    }
+                });
+            });
+            $(window).load(function () {
+                $("#" + id).click();
+            });
+        }
+        $(function () {
+
+            //Verifica se existe um Menu lateral e adiciona Margin-left
+            if ($("#sidebar").children(".box").length) {
+                $("#main").addClass("margin");
+                //$("#main").animate({left: '230px'}, 200);
+            }
+            
+            $(".box .h_title").not(this).next("ul").hide("normal");
+            $(".box .h_title").not(this).next("#home").show("normal");
+            $(".box").children(".h_title").click(function () { $(this).next("ul").slideToggle(); });
+
+            $(".date").datepicker({
+                dateFormat: 'dd/mm/yy',
+                dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+                dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+                dayNamesShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+                monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                nextText: 'Próximo',
+                prevText: 'Anterior'
+            });
+            $('input#id_search').quicksearch('table#gridAssinatura tbody tr');
+            $('input#id_search').quicksearch('table#gridEditora tbody tr');
+            $('input#id_search').quicksearch('table#gridPeriodico tbody tr');
+            $('input#id_search').quicksearch('table#gridSetores tbody tr');
+
+            $('#Form1').bind("keyup keypress", function (e) {
+                var code = e.keyCode || e.which;
+                if (code == 13) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            $(".fancybox").fancybox({
+                onStart: function (event, ui) { $(this).parent().appendTo($("form:first")) },
+                autoDimensions: false
+            });
+        });
+        
+    </script>
+
+   
+</head>
+<body>
+
+
+        <form id="frm01" method="post" runat="server">
+            <ajax:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" AsyncPostBackTimeout="9000000" ></ajax:ToolkitScriptManager>
+            <div id="header">                       
+                <div id="content" style="margin-top:0px;">
+                    <div id="main" style="margin-top:0px;">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </form>
+
+     <%-- <div id="footer">
+                    <div class="left">
+                        <p>Design: ATD - Desenvolvimento de Sistemas </p>
+                    </div>
+                    <div class="right">
+                        <p><a href="http://integranet.funcesp.com.br/intranet/home.html">Integranet</a> | <a href="http://www.prevcesp.com.br/wps/portal">Portal</a></p>
+                    </div>--%>
+</body>
+</!html>

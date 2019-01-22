@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="FUNCESPIntegracaoAdministracaoAplicacaoDALStoreContainer">
+          <EntitySet Name="FUN_TBL_RELATORIO" EntityType="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_RELATORIO" store:Type="Tables" Schema="OWN_FUNCESP" />
+          <EntitySet Name="FUN_TBL_RELATORIO_PARAM" EntityType="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_RELATORIO_PARAM" store:Type="Tables" Schema="OWN_FUNCESP" />
+          <EntitySet Name="FUN_TBL_TIPO_RELATORIO" EntityType="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_TIPO_RELATORIO" store:Type="Tables" Schema="OWN_FUNCESP" />
+          <AssociationSet Name="FUN_FRK_REL" Association="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_FRK_REL">
+            <End Role="FUN_TBL_RELATORIO" EntitySet="FUN_TBL_RELATORIO" />
+            <End Role="FUN_TBL_RELATORIO_PARAM" EntitySet="FUN_TBL_RELATORIO_PARAM" />
+          </AssociationSet>
+          <AssociationSet Name="FUN_FRK_REL_TIP" Association="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_FRK_REL_TIP">
+            <End Role="FUN_TBL_TIPO_RELATORIO" EntitySet="FUN_TBL_TIPO_RELATORIO" />
+            <End Role="FUN_TBL_RELATORIO" EntitySet="FUN_TBL_RELATORIO" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="FUN_TBL_RELATORIO">
+          <Key>
+            <PropertyRef Name="ID_RELATORIO" />
+          </Key>
+          <Property Name="ID_RELATORIO" Type="number" Nullable="false" />
+          <Property Name="RELATORIO" Type="varchar2" Nullable="false" MaxLength="200" />
+          <Property Name="TITULO" Type="varchar2" MaxLength="200" />
+          <Property Name="ARQUIVO" Type="varchar2" MaxLength="2000" />
+          <Property Name="ID_TIPO_RELATORIO" Type="number" Precision="3" />
+          <Property Name="RELATORIO_EXTENSAO" Type="varchar2" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="FUN_TBL_RELATORIO_PARAM">
+          <Key>
+            <PropertyRef Name="ID_RELATORIO_PARAMETRO" />
+          </Key>
+          <Property Name="ID_RELATORIO_PARAMETRO" Type="number" Nullable="false" />
+          <Property Name="ID_RELATORIO" Type="number" />
+          <Property Name="PARAMETRO" Type="varchar2" Nullable="false" MaxLength="200" />
+          <Property Name="DESCRICAO" Type="varchar2" MaxLength="2000" />
+          <Property Name="TIPO" Type="varchar2" MaxLength="200" />
+          <Property Name="COMPONENTE_WEB" Type="varchar2" MaxLength="200" />
+          <Property Name="DROPDOWLIST_CONSULTA" Type="varchar2" MaxLength="3000" />
+          <Property Name="VALOR_INICIAL" Type="varchar2" MaxLength="200" />
+          <Property Name="HABILITADO" Type="char" MaxLength="1" />
+          <Property Name="VISIVEL" Type="char" MaxLength="1" />
+          <Property Name="PERMITE_NULL" Type="char" MaxLength="1" />
+          <Property Name="ORDEM" Type="number" />
+        </EntityType>
+        <EntityType Name="FUN_TBL_TIPO_RELATORIO">
+          <Key>
+            <PropertyRef Name="ID_TIPO_RELATORIO" />
+          </Key>
+          <Property Name="ID_TIPO_RELATORIO" Type="number" Nullable="false" Precision="3" />
+          <Property Name="NM_TIPO" Type="varchar2" Nullable="false" MaxLength="100" />
+          <Property Name="DESCRICAO" Type="varchar2" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <Association Name="FUN_FRK_REL">
+          <End Role="FUN_TBL_RELATORIO" Type="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_RELATORIO" Multiplicity="0..1" />
+          <End Role="FUN_TBL_RELATORIO_PARAM" Type="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_RELATORIO_PARAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUN_TBL_RELATORIO">
+              <PropertyRef Name="ID_RELATORIO" />
+            </Principal>
+            <Dependent Role="FUN_TBL_RELATORIO_PARAM">
+              <PropertyRef Name="ID_RELATORIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FUN_FRK_REL_TIP">
+          <End Role="FUN_TBL_TIPO_RELATORIO" Type="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_TIPO_RELATORIO" Multiplicity="0..1" />
+          <End Role="FUN_TBL_RELATORIO" Type="FUNCESP.Integracao.Administracao.Aplicacao.DAL.Store.FUN_TBL_RELATORIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUN_TBL_TIPO_RELATORIO">
+              <PropertyRef Name="ID_TIPO_RELATORIO" />
+            </Principal>
+            <Dependent Role="FUN_TBL_RELATORIO">
+              <PropertyRef Name="ID_TIPO_RELATORIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EntitiesConn" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="FUN_TBL_RELATORIO" EntityType="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_TBL_RELATORIO" />
+          <EntitySet Name="FUN_TBL_RELATORIO_PARAM" EntityType="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_TBL_RELATORIO_PARAM" />
+          <AssociationSet Name="FUN_FRK_REL" Association="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_FRK_REL">
+            <End Role="FUN_TBL_RELATORIO" EntitySet="FUN_TBL_RELATORIO" />
+            <End Role="FUN_TBL_RELATORIO_PARAM" EntitySet="FUN_TBL_RELATORIO_PARAM" />
+          </AssociationSet>
+          <EntitySet Name="FUN_TBL_TIPO_RELATORIO" EntityType="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_TBL_TIPO_RELATORIO" />
+          <AssociationSet Name="FUN_FRK_REL_TIP" Association="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_FRK_REL_TIP">
+            <End Role="FUN_TBL_TIPO_RELATORIO" EntitySet="FUN_TBL_TIPO_RELATORIO" />
+            <End Role="FUN_TBL_RELATORIO" EntitySet="FUN_TBL_RELATORIO" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="FUN_TBL_RELATORIO">
+          <Key>
+            <PropertyRef Name="ID_RELATORIO" />
+          </Key>
+          <Property Name="ID_RELATORIO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="RELATORIO" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="TITULO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ARQUIVO" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="ID_TIPO_RELATORIO" Type="Int16" />
+          <Property Name="RELATORIO_EXTENSAO" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="FUN_TBL_RELATORIO_PARAM" Relationship="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_FRK_REL" FromRole="FUN_TBL_RELATORIO" ToRole="FUN_TBL_RELATORIO_PARAM" />
+          <NavigationProperty Name="FUN_TBL_TIPO_RELATORIO" Relationship="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_FRK_REL_TIP" FromRole="FUN_TBL_RELATORIO" ToRole="FUN_TBL_TIPO_RELATORIO" />
+        </EntityType>
+        <EntityType Name="FUN_TBL_RELATORIO_PARAM">
+          <Key>
+            <PropertyRef Name="ID_RELATORIO_PARAMETRO" />
+          </Key>
+          <Property Type="Decimal" Name="ID_RELATORIO_PARAMETRO" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="ID_RELATORIO" Precision="38" Scale="0" />
+          <Property Type="String" Name="PARAMETRO" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DESCRICAO" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TIPO" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMPONENTE_WEB" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DROPDOWLIST_CONSULTA" MaxLength="3000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VALOR_INICIAL" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HABILITADO" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="VISIVEL" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="PERMITE_NULL" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Decimal" Name="ORDEM" Precision="38" Scale="0" />
+          <NavigationProperty Name="FUN_TBL_RELATORIO" Relationship="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_FRK_REL" FromRole="FUN_TBL_RELATORIO_PARAM" ToRole="FUN_TBL_RELATORIO" />
+        </EntityType>
+        <Association Name="FUN_FRK_REL">
+          <End Type="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_TBL_RELATORIO" Role="FUN_TBL_RELATORIO" Multiplicity="0..1" />
+          <End Type="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_TBL_RELATORIO_PARAM" Role="FUN_TBL_RELATORIO_PARAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUN_TBL_RELATORIO">
+              <PropertyRef Name="ID_RELATORIO" />
+            </Principal>
+            <Dependent Role="FUN_TBL_RELATORIO_PARAM">
+              <PropertyRef Name="ID_RELATORIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="FUN_TBL_TIPO_RELATORIO">
+          <Key>
+            <PropertyRef Name="ID_TIPO_RELATORIO" />
+          </Key>
+          <Property Type="Int16" Name="ID_TIPO_RELATORIO" Nullable="false" />
+          <Property Type="String" Name="NM_TIPO" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DESCRICAO" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="FUN_TBL_RELATORIO" Relationship="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_FRK_REL_TIP" FromRole="FUN_TBL_TIPO_RELATORIO" ToRole="FUN_TBL_RELATORIO" />
+        </EntityType>
+        <Association Name="FUN_FRK_REL_TIP">
+          <End Type="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_TBL_TIPO_RELATORIO" Role="FUN_TBL_TIPO_RELATORIO" Multiplicity="0..1" />
+          <End Type="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_TBL_RELATORIO" Role="FUN_TBL_RELATORIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUN_TBL_TIPO_RELATORIO">
+              <PropertyRef Name="ID_TIPO_RELATORIO" />
+            </Principal>
+            <Dependent Role="FUN_TBL_RELATORIO">
+              <PropertyRef Name="ID_TIPO_RELATORIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FUNCESPIntegracaoAdministracaoAplicacaoDALStoreContainer" CdmEntityContainer="EntitiesConn">
+          <EntitySetMapping Name="FUN_TBL_RELATORIO">
+            <EntityTypeMapping TypeName="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_TBL_RELATORIO">
+              <MappingFragment StoreEntitySet="FUN_TBL_RELATORIO">
+                <ScalarProperty Name="ID_RELATORIO" ColumnName="ID_RELATORIO" />
+                <ScalarProperty Name="RELATORIO" ColumnName="RELATORIO" />
+                <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+                <ScalarProperty Name="ARQUIVO" ColumnName="ARQUIVO" />
+                <ScalarProperty Name="ID_TIPO_RELATORIO" ColumnName="ID_TIPO_RELATORIO" />
+                <ScalarProperty Name="RELATORIO_EXTENSAO" ColumnName="RELATORIO_EXTENSAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FUN_TBL_RELATORIO_PARAM">
+            <EntityTypeMapping TypeName="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_TBL_RELATORIO_PARAM">
+              <MappingFragment StoreEntitySet="FUN_TBL_RELATORIO_PARAM">
+                <ScalarProperty Name="ORDEM" ColumnName="ORDEM" />
+                <ScalarProperty Name="PERMITE_NULL" ColumnName="PERMITE_NULL" />
+                <ScalarProperty Name="VISIVEL" ColumnName="VISIVEL" />
+                <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
+                <ScalarProperty Name="VALOR_INICIAL" ColumnName="VALOR_INICIAL" />
+                <ScalarProperty Name="DROPDOWLIST_CONSULTA" ColumnName="DROPDOWLIST_CONSULTA" />
+                <ScalarProperty Name="COMPONENTE_WEB" ColumnName="COMPONENTE_WEB" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+                <ScalarProperty Name="PARAMETRO" ColumnName="PARAMETRO" />
+                <ScalarProperty Name="ID_RELATORIO" ColumnName="ID_RELATORIO" />
+                <ScalarProperty Name="ID_RELATORIO_PARAMETRO" ColumnName="ID_RELATORIO_PARAMETRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FUN_TBL_TIPO_RELATORIO">
+            <EntityTypeMapping TypeName="FUNCESP.IntegWeb.Administracao.Aplicacao.DAL.FUN_TBL_TIPO_RELATORIO">
+              <MappingFragment StoreEntitySet="FUN_TBL_TIPO_RELATORIO">
+                <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+                <ScalarProperty Name="NM_TIPO" ColumnName="NM_TIPO" />
+                <ScalarProperty Name="ID_TIPO_RELATORIO" ColumnName="ID_TIPO_RELATORIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

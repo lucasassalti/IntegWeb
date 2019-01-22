@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <IgnoreDeployManagedRuntimeVersion>True</IgnoreDeployManagedRuntimeVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2C58E5A-CE2B-4150-9F40-9C76D6D9AE77}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntegWeb.Saude.Aplicacao</RootNamespace>
+    <AssemblyName>IntegWeb.Saude.Aplicacao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.4.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.0.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.0.0-beta1\lib\net40\Renci.SshNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Auditoria\AuditEmpPlanoBLL.cs" />
+    <Compile Include="BLL\Auditoria\ControleAuditBLL.cs" />
+    <Compile Include="BLL\Auditoria\ControleCRCBLL.cs" />
+    <Compile Include="BLL\Auditoria\EmpAuditBLL.cs" />
+    <Compile Include="BLL\Cadastro\CadEmissaoCartasBLL.cs" />
+    <Compile Include="BLL\Cadastro\CadTabelaPorteBLL.cs" />
+    <Compile Include="BLL\Cadastro\ExtratorCiBLL.cs" />
+    <Compile Include="BLL\CidadesBLL.cs" />
+    <Compile Include="BLL\Cobranca\AcertoPontualCoparticipacaoBLL.cs" />
+    <Compile Include="BLL\Cobranca\BoletoCobrancaSaudeBLL.cs" />
+    <Compile Include="BLL\Cobranca\CisaoFusaoBLL.cs" />
+    <Compile Include="BLL\Controladoria\CentroCustoBLL.cs" />
+    <Compile Include="BLL\Controladoria\ItemOrcBLL.cs" />
+    <Compile Include="BLL\Controladoria\ItemOrcCobrancaBLL.cs" />
+    <Compile Include="BLL\Controladoria\ItemOrcInssBLL.cs" />
+    <Compile Include="BLL\Controladoria\ItemOrcIRBLL.cs" />
+    <Compile Include="BLL\ControleUnimedBLL.cs" />
+    <Compile Include="BLL\ExigenciasLegais\RetornoMonitoramentoContratadoExecutanteBLL.cs" />
+    <Compile Include="BLL\ExigenciasLegais\RetornoMonitoramentoEpilogoBLL.cs" />
+    <Compile Include="BLL\ExigenciasLegais\RetornoMonitoramentoResumoProcessamentoTotaisBLL.cs" />
+    <Compile Include="BLL\ExigenciasLegais\RetornoMonitoramentoResumoProcessamentoBLL.cs" />
+    <Compile Include="BLL\ExigenciasLegais\RetornoMonitoramentoAnsParaOperadoraBLL.cs" />
+    <Compile Include="BLL\ExigenciasLegais\RetornoMonitoramentoMensagemBLL.cs" />
+    <Compile Include="BLL\ExigenciasLegais\RetornoMonitoramentoIdentificacaoTransacaoBLL.cs" />
+    <Compile Include="BLL\ExigenciasLegais\RetornoMonitoramentoCabecalhoBLL.cs" />
+    <Compile Include="BLL\ExigenciasLegais\RetornoMonitoramentoBLL.cs" />
+    <Compile Include="BLL\Faturamento\AdinResumoBLL.cs" />
+    <Compile Include="BLL\Faturamento\CargaEquipSimproBLL.cs" />
+    <Compile Include="BLL\Faturamento\CargaMatMedPrestadoresBLL.cs" />
+    <Compile Include="BLL\Financeiro\BoletoBLL.cs" />
+    <Compile Include="BLL\Financeiro\CartasBLL.cs" />
+    <Compile Include="BLL\Financeiro\HistoricoBoletoBLL.cs" />
+    <Compile Include="BLL\Cobranca\CotaBLL.cs" />
+    <Compile Include="BLL\Auditoria\RegraCRCBLL.cs" />
+    <Compile Include="BLL\Controladoria\ItemoOrcReembBLL.cs" />
+    <Compile Include="BLL\Processos\AtendimentosBLL.cs" />
+    <Compile Include="BLL\Processos\CadAnaliseSuSBLL.cs" />
+    <Compile Include="BLL\Processos\ConvenenteBLL.cs" />
+    <Compile Include="BLL\Processos\ExtratoComponenteBLL.cs" />
+    <Compile Include="BLL\Processos\CreditoReembolsoBLL.cs" />
+    <Compile Include="BLL\Processos\extratoUtilizacaoBLL.cs" />
+    <Compile Include="BLL\Processos\MemorialCalculoUnimedBLL.cs" />
+    <Compile Include="BLL\Processos\ParticipantesBLL.cs" />
+    <Compile Include="BLL\Processos\PrestadorBLL.cs" />
+    <Compile Include="BLL\Processos\provisoriaAtendimentoBLL.cs" />
+    <Compile Include="BLL\Processos\RegistrosOficiaisBLL.cs" />
+    <Compile Include="BLL\Processos\SaudeAnexoIIBLL.cs" />
+    <Compile Include="BLL\Processos\StatusExtratoUtilizacaoSaudeBLL.cs" />
+    <Compile Include="BLL\Processos\WsQualiSignBLL.cs" />
+    <Compile Include="BLL\Protheus\CadProtheusBLL.cs" />
+    <Compile Include="BLL\UploadSFTPBLL.cs" />
+    <Compile Include="DAL\Auditoria\AuditEmpPlanoDAL.cs" />
+    <Compile Include="DAL\Cadastro\CadEmissaoCartasDAL.cs" />
+    <Compile Include="DAL\Cadastro\CadTabelaPorteDAL.cs" />
+    <Compile Include="DAL\Cadastro\ExtratorCiDAL.cs" />
+    <Compile Include="DAL\Cobranca\BoletoCobrancaSaudeDAL.cs" />
+    <Compile Include="DAL\Faturamento\CargaMatMedPrestadoresDAL.cs" />
+    <Compile Include="DAL\Financeiro\GerarRelatorioAtuarialDAL.cs" />
+    <Compile Include="DAL\Processos\MemorialCalculoUnimedDAL.cs" />
+    <Compile Include="DAL\Processos\SaudeAnexoIIDAL.cs" />
+    <Compile Include="DAL\Protheus\CadProtheusDAL.cs" />
+    <Compile Include="DAL\CidadesDAL.cs" />
+    <Compile Include="DAL\Cobranca\AcertoPontualCoparticipacaoDAL.cs" />
+    <Compile Include="DAL\Cobranca\CisaoFusaoDAL.cs" />
+    <Compile Include="DAL\Auditoria\ControleAuditDAL.cs" />
+    <Compile Include="DAL\Auditoria\ControleCRCDAL.cs" />
+    <Compile Include="DAL\Auditoria\EmpAuditDAL.cs" />
+    <Compile Include="DAL\Auditoria\RegraCRCDAL.cs" />
+    <Compile Include="DAL\Controladoria\CentroCustoDAL.cs" />
+    <Compile Include="DAL\Controladoria\ItemoOrcReembDAL.cs" />
+    <Compile Include="DAL\Controladoria\ItemOrcCobrancaDAL.cs" />
+    <Compile Include="DAL\Controladoria\ItemOrcDal.cs" />
+    <Compile Include="DAL\Controladoria\ItemOrcInssDAL.cs" />
+    <Compile Include="DAL\Controladoria\ItemOrcIRDAL.cs" />
+    <Compile Include="DAL\ControleUnimedDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoMensagemEnvioANSDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoEpilogoDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoRelacaoErrosDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoProcedimentoDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoIdentProcedimentoDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoErrosItensGuiaDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoErrosGuiaDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoContratadoExecutanteDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoResumoProcessamentoTotaisDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoRegistrosRejeitadosDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoResumoProcessamentoDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoAnsParaOperadoraDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoIdentificacaoTransacaoDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoCabecalhoDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoDAL.cs" />
+    <Compile Include="DAL\ExigenciasLegais\RetornoMonitoramentoMensagemDAL.cs" />
+    <Compile Include="DAL\Faturamento\AdinResumoDAL.cs" />
+    <Compile Include="DAL\Faturamento\CargaEquipSimproDAL.cs" />
+    <Compile Include="DAL\Faturamento\ExportaRelCiDAL.cs" />
+    <Compile Include="DAL\Financeiro\CartasDAL.cs" />
+    <Compile Include="DAL\Financeiro\BoletoDAL.cs" />
+    <Compile Include="DAL\Financeiro\CadastroFlagDAL.cs" />
+    <Compile Include="BLL\Financeiro\CadastroFlagBLL.cs" />
+    <Compile Include="DAL\Financeiro\HistoricoBoletoDAL.cs" />
+    <Compile Include="DAL\Cobranca\CotaDAL.cs" />
+    <Compile Include="DAL\Processos\AtendimentosDAL.cs" />
+    <Compile Include="DAL\Processos\CadAnaliseSusDAL.cs" />
+    <Compile Include="DAL\Processos\ConvenenteDAL.cs" />
+    <Compile Include="DAL\Processos\ExtratoComponenteDAL.cs" />
+    <Compile Include="DAL\Processos\CreditoReembolsoDAL.cs" />
+    <Compile Include="DAL\Processos\extratoUtilizacaoDAL.cs" />
+    <Compile Include="DAL\Processos\ParticipanteDAL.cs" />
+    <Compile Include="DAL\Processos\provisoriaAtendimentoDAL.cs" />
+    <Compile Include="DAL\Processos\RegistrosOficiaisDAL.cs" />
+    <Compile Include="DAL\Processos\StatusExtratoUtilizacaoSaudeDAL.cs" />
+    <Compile Include="DAL\Processos\WsQualiSignDAL.cs" />
+    <Compile Include="DAL\ProcPortalDAL.cs" />
+    <Compile Include="ENTITY\CADTBLRCORECURSOCODIGO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CADTBLSMO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CADTBLVPRVALORPORTEREC.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CAD_TBL_CONTROLEUNIMED.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CAD_TBL_CONTROLEUNIMED_ETQ.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CAD_TBL_UNIMEDARQUIVO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\EMPREGADO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\EMPRESA.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FATTBLRSP.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FC_SAU_TBL_RO_GERACAO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FC_SAU_TBL_RO_GERACAO_STATUS.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FUN_TBL_CONTROLE_PROCESSACI.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FUN_TBL_MEMORIAL_UNIMED.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FUN_TBL_MEMORIAL_UNIMED_HIST.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\OPP_TB_INADIPLENTES.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_CARGA_PROTHEUS.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_CARGA_PROTHEUS_LOG.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_CARGA_PROTHEUS_STATUS.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\PRE_TBL_CARGA_PROTHEUS_TIPO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\REEMB_FRMCIA.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\Saude.Context.cs">
+      <DependentUpon>Saude.Context.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ENTITY\Saude.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ENTITY\Saude.Designer.cs">
+      <DependentUpon>Saude.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_CARGA_PROCEDIMENTO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_CARGA_REALIZADA.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_CARGA_TEMP.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_CLASSE_PORT_VIG.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_CONV_PORTE_VIG.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_CREDITO_RMB.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_EXT_UTIL_DADGER.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_EXT_UTIL_DADGER_LOG.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_IMPUGNACAOSUS.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_QTDE_MATMED.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_QUALISIGN.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_QUALISIGN_DOC.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TBL_VALORCARTUNIMED.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TB_HOSP_AND.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TB_LOG_AND.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TB_SERVICO_AND.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_TB_SERV_X_HOSP_AND.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SAU_VW_CONSULTA_USUARIO_SUS.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TAB_CARTEIRINHA_CARENCIA.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_CENTRO_CUSTO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_CLASSE_CONVENIADO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_COND_CONTRAT.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_CONVENENTE.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_END_CONVEN.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_EQUIP_SIMPRO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_PARTICIP_PLANO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_PLANO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_RECURSO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_TAB_RECURSO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_TIPO_COND_CONTRAT.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_TIPO_COND_CONV.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_VAL_RECURSO.cs">
+      <DependentUpon>Saude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\WS_QualiSign\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntegWeb.Entidades\Entidades.csproj">
+      <Project>{d2275f51-1452-4e87-875d-a83e3e2612ce}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Framework\Framework.csproj">
+      <Project>{d13806fb-639b-4319-9699-c1a1658f2a17}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ENTITY\Saude.Context.tt">
+      <DependentUpon>Saude.edmx</DependentUpon>
+      <SubType>Designer</SubType>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Saude.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ENTITY\Saude.edmx.diagram">
+      <DependentUpon>Saude.edmx</DependentUpon>
+    </None>
+    <None Include="ENTITY\Saude.tt">
+      <DependentUpon>Saude.edmx</DependentUpon>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Saude.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Service References\WS_QualiSign\QSWSDE.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WS_QualiSign\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_QualiSign\QSWSDE.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_QualiSign\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_QualiSign\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_QualiSign\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="ENTITY\Saude.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Saude.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

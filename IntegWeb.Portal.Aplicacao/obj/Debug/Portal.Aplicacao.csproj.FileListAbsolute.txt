@@ -1,0 +1,5 @@
+D:\IntegWeb\IntegWeb\IntegWeb.Portal.Aplicacao\bin\Debug\IntegWeb.Portal.Aplicacao.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Portal.Aplicacao\bin\Debug\IntegWeb.Portal.Aplicacao.pdb
+D:\IntegWeb\IntegWeb\IntegWeb.Portal.Aplicacao\obj\Debug\Portal.Aplicacao.csprojResolveAssemblyReference.cache
+D:\IntegWeb\IntegWeb\IntegWeb.Portal.Aplicacao\obj\Debug\IntegWeb.Portal.Aplicacao.dll
+D:\IntegWeb\IntegWeb\IntegWeb.Portal.Aplicacao\obj\Debug\IntegWeb.Portal.Aplicacao.pdb

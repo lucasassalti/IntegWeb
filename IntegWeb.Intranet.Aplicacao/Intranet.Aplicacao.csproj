@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0AA7EA63-1C25-4992-844B-1040D4A610AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntegWeb.Intranet.Aplicacao</RootNamespace>
+    <AssemblyName>IntegWeb.Intranet.Aplicacao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.0.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.0.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.0.0-beta1\lib\net40\Renci.SshNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BeneficiariosComIncentivoBLL.cs" />
+    <Compile Include="ConsultaExtratoCRMBLL.cs" />
+    <Compile Include="ControleUnimedCrmBLL.cs" />
+    <Compile Include="DAL\BeneficiariosComIncentivoDAL.cs" />
+    <Compile Include="DAL\ConsultaExtratoCRMDAL.cs" />
+    <Compile Include="DAL\ControleUnimedCrmDAL.cs" />
+    <Compile Include="DAL\EmailCancelamentoPlanoDAL.cs" />
+    <Compile Include="DAL\ExclusaoBemEstarDAL.cs" />
+    <Compile Include="DAL\ExtratoSaudeCorreioDAL.cs" />
+    <Compile Include="DAL\GeraMailingDAL.cs" />
+    <Compile Include="DAL\ListaEnvioEmailDAL.cs" />
+    <Compile Include="DAL\OuvRelEstourosDAL.cs" />
+    <Compile Include="EmailCancelamentoPlanoBLL.cs" />
+    <Compile Include="EMailMarketingBLL.cs" />
+    <Compile Include="ENTITY\EMPREGADO.cs">
+      <DependentUpon>ATD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FCESP_EXT_AMH_EXCECAO.cs">
+      <DependentUpon>ATD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FCESP_EXT_AMH_EXCECAO_LOG.cs">
+      <DependentUpon>ATD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FUN_TBL_EXCLUSAO_REVISTA.cs">
+      <DependentUpon>ATD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FUN_TBL_EXCLUSAO_REVISTA_LOG.cs">
+      <DependentUpon>ATD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FUN_TBL_USUARIO.cs">
+      <DependentUpon>ATD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\TB_PRIORIZACHAMADO.cs">
+      <DependentUpon>ATD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\VW_PRIORIZACHAMADO.cs">
+      <DependentUpon>ATD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\UsuariosDAL.cs" />
+    <Compile Include="ExclusaoBemEstarBLL.cs" />
+    <Compile Include="ExtratoSaudeCorreioBLL.cs" />
+    <Compile Include="GeraMailingBLL.cs" />
+    <Compile Include="ListaEnvioEmailBLL.cs" />
+    <Compile Include="OuvRelEstourosBLL.cs" />
+    <Compile Include="Service References\WS_FuncaoExtra_CRM\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosBLL.cs" />
+    <Compile Include="PriorizaChamadoBLL.cs" />
+    <Compile Include="CidadesBLL.cs" />
+    <Compile Include="DAL\PriorizaChamadoDAL.cs" />
+    <Compile Include="DAL\CidadesDAL.cs" />
+    <Compile Include="DAL\pagamentosDAL.cs" />
+    <Compile Include="ENTITY\ATD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ATD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\ATD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ATD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\ATD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ATD.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="pagamentosBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="ENTITY\ATD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ATD.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ENTITY\ATD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ATD.edmx</DependentUpon>
+      <LastGenOutput>ATD.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ENTITY\ATD.edmx.diagram">
+      <DependentUpon>ATD.edmx</DependentUpon>
+    </None>
+    <None Include="ENTITY\ATD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ATD.edmx</DependentUpon>
+      <LastGenOutput>ATD.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\WS_FuncaoExtra_CRM\IntegWeb.Intranet.Aplicacao.WS_FuncaoExtra_CRM.adicionarArquivoFuncaoExtraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_FuncaoExtra_CRM\IntegWeb.Intranet.Aplicacao.WS_FuncaoExtra_CRM.ColClassRetorno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_FuncaoExtra_CRM\IntegWeb.Intranet.Aplicacao.WS_FuncaoExtra_CRM.verificaTamanhoArquivoUploadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_FuncaoExtra_CRM\IntegWeb.Intranet.Aplicacao.WS_FuncaoExtra_CRM.verificaTamanhoUploadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_FuncaoExtra_CRM\WebServiceArquivoFuncaoExtra.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntegWeb.Entidades\Entidades.csproj">
+      <Project>{d2275f51-1452-4e87-875d-a83e3e2612ce}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Framework\Framework.csproj">
+      <Project>{d13806fb-639b-4319-9699-c1a1658f2a17}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegWeb.Saude.Aplicacao\Saude.Aplicacao.csproj">
+      <Project>{b2c58e5a-ce2b-4150-9f40-9c76d6d9ae77}</Project>
+      <Name>Saude.Aplicacao</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WS_FuncaoExtra_CRM\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_FuncaoExtra_CRM\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_FuncaoExtra_CRM\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_FuncaoExtra_CRM\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

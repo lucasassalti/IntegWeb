@@ -1,0 +1,210 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Servico_envio_email_aniversarios.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionBD" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=NewDev;User ID=sys_aniversariante;Password=sys_aniversariante;Unicode=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OracleClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=NewDev;User ID=sys_aniversariante;Password=sys_aniversariante;Unicode=True</Value>
+    </Setting>
+    <Setting Name="Log_Path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\</Value>
+    </Setting>
+    <Setting Name="Notificacao_Cabecalho" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;&lt;title&gt;Aniversario Funcesp&lt;/title&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;table id="Tabela_01" width="800" border="0" cellpadding="0" cellspacing="0"&gt;
+	
+	&lt;tr&gt;
+		&lt;td&gt;
+			X_SERVERIMG00_X&lt;/td&gt;
+		&lt;td colspan="2"&gt;
+			X_SERVERIMG01_X&lt;/td&gt;
+		&lt;td colspan="2"&gt;
+			X_SERVERIMG02_X&lt;/td&gt;
+	&lt;/tr&gt;
+ 
+  &lt;!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+    			INICIO - NOTIFICAÇÃO - NOME FUNCIONARIO
+	     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX--&gt;
+	&lt;tr&gt;
+		&lt;td style="width:104px !important"&gt;
+			X_SERVERIMG03_X&lt;/td&gt;
+		&lt;td colspan="2"&gt;
+	    &lt;span style="font-family:Arial, Helvetica, sans-serif; color:#E1003A; font-size:35px"&gt;&lt;strong&gt;X_DESTINATARIO_X&lt;/strong&gt;,&lt;/span&gt;&lt;/td&gt;
+		&lt;td align="right" colspan="2"&gt;
+			X_SERVERIMG04_X&lt;/td&gt;
+	&lt;/tr&gt;
+    &lt;!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+    					FIM - NOTIFICAÇÃO
+	     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX--&gt;
+    &lt;tr&gt;
+		&lt;td style="width:104px !important"&gt;
+			X_SERVERIMG05_X&lt;/td&gt;
+		&lt;td colspan="3" width="612"&gt;
+            &lt;span style="font-family:Arial, Helvetica, sans-serif; color:#E1003A; font-size:30px"&gt;
+                &lt;strong&gt;Hoje &amp;eacute; dia de comemora&amp;ccedil;&amp;atilde;o!&lt;br&gt; Olha quem est&amp;aacute; fazendo anivers&amp;aacute;rio:&lt;/strong&gt;
+            &lt;/span&gt;
+    	&lt;/td&gt;
+		&lt;td align="right" style="width:84px !important"&gt;
+			X_SERVERIMG06_X&lt;/td&gt;
+	&lt;/tr&gt;
+  
+  
+  
+   &lt;!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+    			INICIO - FOTO(S) ANIVERSARIANTE(S) DO DIA
+	     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX--&gt;
+
+</Value>
+    </Setting>
+    <Setting Name="Notificacao_Corpo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;tr&gt;
+		&lt;td&gt;
+			X_SERVERIMG07_X&lt;/td&gt;
+		&lt;td colspan="3"&gt;
+        	 &lt;table width="100%" border="0" cellspacing="0" cellpadding="0"&gt;
+              &lt;tr&gt;
+                &lt;td width="150" align="center" style="width:150px"&gt;
+        	&lt;!-- FOTO --&gt;
+				X_SERVERIMG08_X
+        	&lt;!-- XXXX --&gt;
+        &lt;/td&gt;
+		&lt;td width="462"&gt;
+        	&lt;!-- NOME --&gt;
+				&lt;span style="font-family:Arial, Helvetica, sans-serif; color:#E1003A; font-size:25px"&gt;&lt;strong&gt;X_ANIVERSARIANTE_X, do X_AREA_X&lt;/strong&gt;&lt;/span&gt;
+        	&lt;!-- XXXX --&gt;
+&lt;/td&gt;
+              &lt;/tr&gt;
+     &lt;/table&gt;
+&lt;/td&gt;
+		&lt;td align="right" width="84"&gt;
+			X_SERVERIMG09_X&lt;/td&gt;
+	&lt;/tr&gt;
+</Value>
+    </Setting>
+    <Setting Name="Notificacao_Rodape" Type="System.String" Scope="User">
+      <Value Profile="(Default)">    &lt;!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+    					FIM - FOTO(S) ANIVERSARIANTE(S)
+	     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX--&gt;
+     &lt;tr&gt;
+		&lt;td colspan="5"&gt;
+			X_SERVERIMG10_X&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;
+		  X_SERVERIMG11_X&lt;/td&gt;
+		&lt;td&gt;
+			X_SERVERIMG12_X&lt;/td&gt;
+		&lt;td&gt;
+			X_SERVERIMG13_X&lt;/td&gt;
+		&lt;td&gt;X_SERVERIMG14_X&lt;/td&gt;
+		&lt;td&gt;
+			X_SERVERIMG15_X&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</Value>
+    </Setting>
+    <Setting Name="Parabenizacao_Cabecalho" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;&lt;title&gt;Aniversario Funcesp&lt;/title&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;table id="Tabela_01" width="800" border="0" cellpadding="0" cellspacing="0"&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;
+			X_SERVERIMG00_X&lt;/td&gt;
+	&lt;/tr&gt;</Value>
+    </Setting>
+    <Setting Name="Parabenizacao_Corpo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;tr&gt;
+	  &lt;td width="128" align="left"&gt;
+			X_SERVERIMG01_X&lt;/td&gt;
+		&lt;td width="581" align="left"&gt;&lt;p style="font-family:Arial, Helvetica, sans-serif; color:#E1003A; font-size:35px"&gt;
+        &lt;strong style="font-size:35px"&gt;X_ANIVERSARIANTE_X&lt;/strong&gt;,&lt;br&gt;
+			Hoje é um dia muito especial...	&lt;/p&gt;&lt;/td&gt;
+		&lt;td width="91" align="right"&gt;
+			X_SERVERIMG02_X&lt;/td&gt;
+	&lt;/tr&gt;
+    &lt;tr&gt;
+		&lt;td align="left"&gt;
+			X_SERVERIMG03_X&lt;/td&gt;
+		&lt;td align="left" valign="top"&gt;&lt;p style="font-family:Arial, Helvetica, sans-serif; color:#E1003A; font-size:45px"&gt;&lt;span style="font-family:Arial, Helvetica, sans-serif; color:#E1003A; font-size:45px"&gt;A &lt;strong style="font-size:50px"&gt;Funcesp&lt;/strong&gt;&lt;br&gt;
+deseja a você um&lt;br&gt;
+&lt;strong style="font-size:50px"&gt;Feliz aniversário!&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+		&lt;td align="right"&gt;
+			X_SERVERIMG04_X&lt;/td&gt;
+	&lt;/tr&gt;</Value>
+    </Setting>
+    <Setting Name="Parabenizacao_Rodape" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;tr&gt;
+		&lt;td colspan="3"&gt;
+			X_SERVERIMG05_X&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;
+			X_SERVERIMG06_X&lt;/td&gt;
+	&lt;/tr&gt;
+	
+ 
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</Value>
+    </Setting>
+    <Setting Name="Email_Status_Servico" Type="System.String" Scope="User">
+      <Value Profile="(Default)">lucas.leite@funcesp.com.br</Value>
+    </Setting>
+    <Setting Name="Select_Aniversariantes" Type="System.String" Scope="User">
+      <Value Profile="(Default)">select LTRIM (vi.NUM_RGTRO_EMPRG, 0) as num_rgtro_emprg
+                  , vi.nome as nom_emprg
+                  , vi.cod_email_emprg
+                  , vi.nom_area as area
+                  from  OWN_PORTAL.RH_VIW_EMAIL_ANIVER vi
+                  where  lower(vi.cod_email_emprg) like '%funcesp.com.br'
+                  and vi.NUM_RGTRO_EMPRG not in ('1612','502','2568') /* empregados EXCLUIDOS "502 -   CARLOS ALBERTO DE SOUZA OLIVEIRA"; "1612 - CARLOS FELIPE FRANCA"; 2568 - ALESSANDRA BARLOTTI SILVA */
+                  and vi.aniver = to_char(sysdate, 'DD/MM')</Value>
+    </Setting>
+    <Setting Name="Select_Destinatarios" Type="System.String" Scope="User">
+      <Value Profile="(Default)">
+ select LTRIM(vi.NUM_RGTRO_EMPRG, 0) as num_rgtro_emprg
+                  , vi.NOME_ABREV as nom_emprg
+                  , vi.cod_email_emprg
+                  , vi.nom_area as area
+                  from OWN_PORTAL.RH_VIW_EMAIL_ANIVER vi
+                  where lower(vi.cod_email_emprg) like '%funcesp.com.br'
+                  and vi.NUM_RGTRO_EMPRG NOT in ('1612', '502') /* empregados cedidos "502 -   CARLOS ALBERTO DE SOUZA OLIVEIRA"; "1612 - CARLOS FELIPE FRANCA" */
+                  and vi.aniver != to_char(sysdate, 'DD/MM')</Value>
+    </Setting>
+    <Setting Name="Tempo_de_espera_em_minutos" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="Server_Email" Type="System.String" Scope="User">
+      <Value Profile="(Default)">smtp.office365.com</Value>
+    </Setting>
+    <Setting Name="Email_Notificacao" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Aniversariantes Funcesp &lt;aniversariantes@funcesp.com.br&gt;</Value>
+    </Setting>
+    <Setting Name="Email_Com_Copia1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">aldo.santos@funcesp.com.br</Value>
+    </Setting>
+    <Setting Name="Email_Com_Copia2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">tatiana.lazzarotto@funcesp.com.br</Value>
+    </Setting>
+    <Setting Name="Server_Email_Login" Type="System.String" Scope="User">
+      <Value Profile="(Default)">aniversariantes@funcesp.com.br</Value>
+    </Setting>
+    <Setting Name="Server_Email_Key" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pr#jet@Ani</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
